@@ -109,7 +109,7 @@ If you're having issues submitting your project, watch this [interactive tutoria
 We look forward to seeing your creative and insightful analyses!
 
 # Example Submission template
-Here's an example project that fulfills all requirements and would be eligible for cash prizes. Feel free to use this template for your submission. We also recommend diving into the winner's submissions from our recent NBA Data Modeling Challenge for inspiration.
+Here's an example project that fulfills all requirements and would be elligble eligible for cash prizes. Feel free to use this template for your submission. We also recommend diving into the the [winner's submissions](#need-a-spark-of-inspiration) from our recent NBA Data Modeling Challenge for inspiration. 
 
 ## Table of Contents
 1. [Introduction](#introduction)
