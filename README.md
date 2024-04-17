@@ -61,7 +61,7 @@ Now that you're set up, you have until May 26th, 2024 to complete and submit you
 
 ### Step 2: Getting to Know the Movie Data
 
-Paradime has pre-loaded your Snowflake account with 3 Movie datasets. These data sets contain roughly 17,000 rows of details Movie and TV Show data. 
+Paradime has pre-loaded your Snowflake account with 3 Movie datasets. These data sets contain roughly 1,700,000 rows of detailed Movie and TV Show data. 
 Please understand that these data sets are not entirely accurate; They're are simply a starting point - you will need to bring in your own datasets to truly excel in this challenge. 
 - **In Snowflake**: Directly explore the datasets in [Snowflake](https://app.snowflake.com/kbuwhsf/xrb98600) for hands-on analysis.
 - **GitHub Repository Resources**:
