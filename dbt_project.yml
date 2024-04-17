@@ -15,11 +15,12 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-query-comment:
-  comment: '{{ get_query_comment(node) }}'
-  append: true
-
 models:
-  paradime_movie_challenge:
-    example:
+  paradime_movie_challenge: 
+    sources:
+      +schema: staging
       +materialized: view
+    example_transformations:
+      intermediate:
+        +schema: intermediate
+        +materialized: view  
