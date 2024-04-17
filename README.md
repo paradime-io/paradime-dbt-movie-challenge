@@ -43,9 +43,9 @@ Note: If you login to snowflake, your default role is public. Swith your role to
 ---
 
 ## Competition Details
-- **[[Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**  
-- **[[Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**  
-- **[[Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
+- **[Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**  
+- **[Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**  
+- **[Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
 
 ---
 ## Building Your Project
