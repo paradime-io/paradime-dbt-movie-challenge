@@ -114,7 +114,7 @@ Here's an example project that fulfills all requirements and would be elligble e
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
+2. [Data Sources](#data-sources-and-data-lineage)
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
    - [Applied Techniques](#applied-techniques)
@@ -136,17 +136,27 @@ My analysis leverages four key data sets:
 - *data set name #3*
 - *data set name #4*
 
-Data Lineage
-[Image]
+### Data Lineage
+- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how. 
 
-### Tools Used
+
+
+## Methodology
+#### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
 - **Other tool(s) used** and why.
 
+### Data Sources
+My analysis leverages four key data sets:
+- *data set name #1*
+- *data set name #2*
+- *data set name #3*
+- *data set name #4*
+
 ### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how. 
+[Image]
 
 ## Visualizations
 
