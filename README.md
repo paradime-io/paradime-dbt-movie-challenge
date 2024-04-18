@@ -53,11 +53,12 @@ Note: If you log in to Snowflake, your default role is public. Switch your role 
 
 Now that you're set up, you have until May 26th, 2024, to complete and submit your project!
 
-### Step 1: Getting to Know the Paradime
+### Step 1: Getting to Know the Tools
 - **The Paradime Editor**: Dive into the Paradime Editor with this step-by-step, [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). It's designed to familiarize you with the core functionalities and of the editor and get you familiar with the Project. You can also watch our YouTube videos:
    - [All features in our intuitive IDE Apps Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg)
    - [AI-enabled IDE for dbt™ development | DinoAI | Paradime.io](https://www.youtube.com/watch?v=-WG4JUv3sI8)
 - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
+- **Snowflake Data Warehouse**: Learn about the data warehouse and the pre-loaded data in this step-by-step, [interactive guide](https://app.arcade.software/share/O1IALc6CLFgaEyvIJE2T).
 
 ### Step 2: Getting to Know the Movie Data
 
