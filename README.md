@@ -36,6 +36,9 @@ Note: A step-by-step tutorial is available in your Snowflake credentials email, 
 - **Create a New Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "movie-<your_email>"
 - **Start Developing**: Begin crafting SQL queries, developing dbt™ models, and generating insights!
 
+### Step 5: Create your Lightdash Cloud Account
+- Follow this [documentation](https://docs.google.com/document/d/1ZL1l3pzd0adMlJit1uGOtdEq0BYZAUuAYNI2tZC7TzI/edit?usp=sharing) or watch this [step-by-step tutorial](https://app.arcade.software/share/f1MIwv6ROzyPxTKoWRyH). 
+
 Note: If you log in to Snowflake, your default role is public. Switch your role to the one we provide in the Snowflake email (ex. "[your_name]_transformer").
 
 **Need Help?**: Check out [this step-by-step video tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY), and join the #movie-competition channel on [Slack](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email) for assistance.
@@ -54,11 +57,13 @@ Note: If you log in to Snowflake, your default role is public. Switch your role 
 Now that you're set up, you have until May 26th, 2024, to complete and submit your project!
 
 ### Step 1: Getting to Know the Tools
-- **The Paradime Editor**: Dive into the Paradime Editor with this step-by-step, [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). It's designed to familiarize you with the core functionalities and of the editor and get you familiar with the Project. You can also watch our YouTube videos:
+- **Paradime**:
+   - Dive into the Paradime Editor with this step-by-step, [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). It's designed to familiarize you with the core functionalities and of the editor and get you familiar with the Project. You can also watch our YouTube videos:
    - [All features in our intuitive IDE Apps Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg)
    - [AI-enabled IDE for dbt™ development | DinoAI | Paradime.io](https://www.youtube.com/watch?v=-WG4JUv3sI8)
-- **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
+  - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
 - **Snowflake Data Warehouse**: Learn about the data warehouse and the pre-loaded data in this step-by-step, [interactive guide](https://app.arcade.software/share/O1IALc6CLFgaEyvIJE2T).
+- **Lightdash**: Learn about lightdash via this [instructional video](https://www.loom.com/share/c0805a236a994de397ac5142fdfe4b7f).
 
 ### Step 2: Getting to Know the Movie Data
 
