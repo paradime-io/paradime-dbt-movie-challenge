@@ -1,3 +1,4 @@
+movie_pierre-zigzag-dog
 # dbt™ Data Modeling Challenge - Movie Edition
 
 Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition)!
