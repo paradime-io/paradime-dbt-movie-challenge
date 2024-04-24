@@ -1,6 +1,6 @@
 WITH source AS (
     SELECT 
-TMDB_ID,
+        TMDB_ID,
         TITLE,
         ORIGINAL_TITLE,
         OVERVIEW,

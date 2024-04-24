@@ -6,3 +6,10 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+
+  - name: ADDITIONAL_SOURCES
+    database: PIERRE7AMHK_ANALYTICS
+    schema: ADDITIONAL_SOURCES
+    tables:
+      - name: IMDB_BASICS_MOVIES
+      - name: IMDB_RATINGS
