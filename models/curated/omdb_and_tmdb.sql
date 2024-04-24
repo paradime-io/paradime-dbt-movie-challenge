@@ -1,3 +1,13 @@
+{{
+  config(
+
+    materialized = 'table',
+    schema       = 'curated'
+  )
+}}
+
+
+
 WITH tmdb AS (
     SELECT
         imdb_id,
