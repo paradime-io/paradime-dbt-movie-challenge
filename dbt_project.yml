@@ -24,3 +24,7 @@ models:
       intermediate:
         +schema: intermediate
         +materialized: view  
+    transformations:
+      curated:
+        +schema: curated
+        +materialized: table
