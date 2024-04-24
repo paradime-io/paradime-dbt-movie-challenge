@@ -26,5 +26,5 @@ models:
         +materialized: view  
     transformations:
       curated:
-        +schema: curated
+        +schema: movie_curated
         +materialized: table
