@@ -2,8 +2,9 @@ version: 2
 models:
   - name: clean_movie_data_set
     meta:
-      tags:
-        - lightdash
+      config:
+        tags:
+          - lightdash
     columns:
       - name: imdb_id
         description: IMDB movie ID. Always starts with 'tt', followed by numbers.
