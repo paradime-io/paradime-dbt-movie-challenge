@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: stg_imdb_ratings
+    columns:
+      - name: imdb_id
+        description: "IMDB movie ID."
+        meta:
+          dimension:
+            type: string
+      - name: average_rating
+        description: "IMDB movie average rating."
+        meta:
+          dimension:
+            type: number
+      - name: number_of_votes
+        description: "Total number of raitng votes given on IMDB."
+        meta:
+          dimension:
+            type: number

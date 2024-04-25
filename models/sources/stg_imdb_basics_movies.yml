@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: stg_imdb_basics_movies
+    columns:
+      - name: imdb_id
+        description: "IMDB movie ID."
+        meta:
+          dimension:
+            type: string
+      - name: type
+        description: "Type of content."
+        meta:
+          dimension:
+            type: string
+      - name: primary_title
+        description: "Movie title in English, when available."
+        meta:
+          dimension:
+            type: string
+      - name: original_title
+        description: "Movie title in original language."
+        meta:
+          dimension:
+            type: string
+      - name: is_adult
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: start_year
+        description: "Movie release year."
+        meta:
+          dimension:
+            type: number
+      - name: end_year
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: runtime_minutes
+        description: "Movie runtime in minutes"
+        meta:
+          dimension:
+            type: number
+      - name: genres
+        description: "List of genres associated with the movie"
+        meta:
+          dimension:
+            type: string

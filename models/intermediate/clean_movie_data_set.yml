@@ -68,3 +68,11 @@ models:
         meta:
           dimension:
             type: string
+      - name: era
+        description: >-
+          Cinema era during which the movie was released.
+          We acknowledge that this is one arbitrary way to breakdown the years,
+          and there could be different ways to group those eras.
+        meta:
+          dimension:
+            type: string

@@ -1,0 +1,94 @@
+version: 2
+models:
+  - name: stg_tmdb_tv_series
+    columns:
+      - name: id
+        description: Unique identifier for each TV show.
+        meta:
+          dimension:
+            type: number
+      - name: name
+        description: Title of the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: overview
+        description: Brief description or summary of the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: tagline
+        description: Catchphrase or memorable line associated with the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: genre_names
+        description: Genres associated with the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: created_by_names
+        description: Names of individuals or entities credited for creating the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: original_language
+        description: Original language in which the TV show was produced.
+        meta:
+          dimension:
+            type: string
+      - name: status
+        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
+        meta:
+          dimension:
+            type: string
+      - name: in_production
+        description: Indicates if the TV show is currently in production.
+        meta:
+          dimension:
+            type: boolean
+      - name: first_air_date
+        description: Date when the TV show was first aired.
+        meta:
+          dimension:
+            type: date
+      - name: last_air_date
+        description: Date when the TV show was last aired.
+        meta:
+          dimension:
+            type: date
+      - name: number_of_seasons
+        description: Number of seasons in the TV show.
+        meta:
+          dimension:
+            type: number
+      - name: number_of_episodes
+        description: Number of episodes in the TV show.
+        meta:
+          dimension:
+            type: number
+      - name: vote_average
+        description: Average vote or rating given by viewers.
+        meta:
+          dimension:
+            type: number
+      - name: vote_count
+        description: Total number of votes received by the TV show.
+        meta:
+          dimension:
+            type: number
+      - name: popularity
+        description: Popularity score of the TV show.
+        meta:
+          dimension:
+            type: number
+      - name: poster_path
+        description: URL path of the poster image for the TV show.
+        meta:
+          dimension:
+            type: string
+      - name: production_company_names
+        description: Names of production companies associated with the TV show.
+        meta:
+          dimension:
+            type: string

@@ -73,7 +73,7 @@ CLEAN_IDS AS (
 ),
 
 -- Now, we can use the IDMB additional source as a basis for all movies
-TMP AS (
+BACKFILL AS (
     SELECT
         IDB.IMDB_ID AS IMDB_ID,
         CLE.TMDB_ID AS TMDB_ID,
@@ -214,6 +214,33 @@ TMP AS (
     LEFT JOIN TMDB AS TD2 ON CLE.TMDB_ID = TD2.TMDB_ID
     LEFT JOIN OMDB AS OD2 ON CLE.TMDB_ID = OD2.TMDB_ID
 
+),
+
+CUSTOM_LOGIC AS (
+    SELECT
+        IMDB_ID,
+        TMDB_ID,
+        TITLE,
+        GENRES,
+        RELEASE_YEAR,
+        CASE
+            WHEN RELEASE_YEAR < 1930 THEN 'Silent Era <1930'
+            WHEN RELEASE_YEAR < 1950 THEN 'Golden Age 1930-1949'
+            WHEN RELEASE_YEAR < 1970 THEN 'Color and Widescreen 1950-1969'
+            WHEN RELEASE_YEAR < 1980 THEN 'New Hollywood and Blockbusters 1970-1989'
+            WHEN RELEASE_YEAR < 2010 THEN 'Digital Revolution 1990-2009'
+            WHEN RELEASE_YEAR < 2024 THEN 'Streaming Era 2010-Present'
+            ELSE 'Unknown'
+        END
+            AS ERA,
+        RUNTIME,
+        COUNTRY,
+        DIRECTOR,
+        ACTORS,
+        RATING,
+        VOTES,
+        REVENUE
+    FROM BACKFILL
 )
 
-SELECT * FROM TMP
+SELECT * FROM CUSTOM_LOGIC
