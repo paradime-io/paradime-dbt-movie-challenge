@@ -6,3 +6,9 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: MOVIE_CHALLENGE_EXTRA
+    database: ANDREVSILVA981MU6B_ANALYTICS
+    schema: RAW
+    tables:
+      - name: LANGUAGE_CODES
+      - name: DOMESTIC_BOX_OFFICE

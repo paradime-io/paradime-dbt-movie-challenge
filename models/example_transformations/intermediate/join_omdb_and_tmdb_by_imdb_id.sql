@@ -64,6 +64,6 @@ joined AS (
 )
 
 SELECT
-    *
+    count(*)
 FROM
     joined
