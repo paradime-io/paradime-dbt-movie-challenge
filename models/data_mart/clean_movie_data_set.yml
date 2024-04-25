@@ -39,6 +39,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            average_weighted_rating:
+              label: Average Weighted Rating
+              description: >-
+                This rating is taking into account the number of IMDB votes
+                associated with each movie rating.
+              type: number
+              sql: SUM(rating * votes) / SUM(votes)
+              round: 2
       - name: votes
         description: Total number of IMDB rating votes given to the movie.
         meta:

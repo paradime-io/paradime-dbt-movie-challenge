@@ -20,6 +20,6 @@ models:
     sources:
       +schema: staging
       +materialized: view
-    intermediate:
+    data_mart:
       +schema: data_mart
       +materialized: view
