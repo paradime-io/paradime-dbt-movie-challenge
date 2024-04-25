@@ -84,22 +84,23 @@ Before diving in, ensure you're familiar with the [Judging Criteria](https://www
 [What's in it for you?](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)
 
 #### Need a spark of inspiration?
-Check out the [example submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge?tab=readme-ov-file#example-submission) from Paradime's recent NBA Data Modeling Challenge, as well as the winning submissions from the NBA data modeling Challenge:
-- First Place - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md)
-- Second Place - [Chris Hughes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-cahughes95-gmail-com/README.md)
-- Third Place - [István Mózes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-istvan-mozes-90-gmail-com/README.md)
+- Blog - [Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge)
 
-Additionally, Here are some questions you might consider answering:
-- **Highest grossing films of all time**:
+- Explore top submissions Paradime's recent NBA Data Modeling Challenge
+   - First Place - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md)
+   - Second Place - [Chris Hughes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-cahughes95-gmail-com/README.md)
+   - Third Place - [István Mózes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-istvan-mozes-90-gmail-com/README.md)
+
+- Additionally, Here are some questions you might consider answering:
+   - **Highest grossing films of all time**:
       - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql).
-     You might also consider bringing in third party data to understand highest grossing films by country.
-- **Highest/lowest ROI films of all time**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql).
-     See columns "budget", "revenue", and "box office".
-- **Actors who appear in most films**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql), column "actors"
-- **Highest grossing directors and writers**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql), column "director" and "writer"
+      - You might also consider bringing in third party data to understand highest grossing films by country.
+   - **Highest/lowest ROI films of all time**:
+      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql). See columns "budget", "revenue", and "box office".
+   - **Actors who appear in most films**:
+      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See column "actors"
+   - **Highest grossing directors and writers**:
+      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See columns "director" and "writer"
 
 ### Creating Data Visualizations
 
