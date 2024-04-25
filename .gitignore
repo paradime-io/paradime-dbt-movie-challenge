@@ -1,4 +1,7 @@
 target/
 dbt_packages/
 logs/
+*.log
+/*.log
 snowflake.log
+/snowflake.log
