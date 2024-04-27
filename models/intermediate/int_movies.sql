@@ -1,4 +1,5 @@
--- have to remove nulls to generate unique movie ids
+-- have to temporarily remove nulls to generate unique movie ids, these are replaced back in for ease of querying
+-- this might result in different ids generated if the imdb or tmdb data gets updated since md5 will hash 'na' for movies with null values in either tmdb_id or imdb_id
 
 with removing_nulls as (
     select
