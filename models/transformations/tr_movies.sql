@@ -17,7 +17,7 @@ with omdb_movies as (
 )
 
 select
-    tm.tmdb_id
+    coalesce(tm.tmdb_id, om.tmdb_id) as tmdb_id
     , coalesce(tm.imdb_id, om.imdb_id) as imdb_id
     , omdb_title
     , tmdb_title
