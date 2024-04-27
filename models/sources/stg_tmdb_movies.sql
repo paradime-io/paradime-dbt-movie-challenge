@@ -1,6 +1,6 @@
 WITH source AS (
     SELECT 
-TMDB_ID,
+        TMDB_ID,
         TITLE,
         ORIGINAL_TITLE,
         OVERVIEW,
@@ -19,7 +19,9 @@ TMDB_ID,
         POSTER_PATH,
         BACKDROP_PATH,
         BELONGS_TO_COLLECTION,
-        IMDB_ID,
+        case when IMDB_ID = '' then null -- might want to automate this later across all columns, removing blanks and replacing as nulls manually for now where needed
+        else imdb_id
+        end as imdb_id,
         GENRE_NAMES,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
