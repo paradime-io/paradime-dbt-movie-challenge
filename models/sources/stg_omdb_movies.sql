@@ -1,4 +1,9 @@
-WITH source AS (
+WITH omdb AS (
+    select *
+    from {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+)
+
+, cleaned_omdb as (
     SELECT 
         IMDB_ID,
         TITLE,
@@ -24,9 +29,14 @@ WITH source AS (
         PRODUCTION,
         WEBSITE,
         AWARDS,
-        TMDB_ID
-    FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+        TMDB_ID,
+        regexp_substr(awards, '\\d{1,3} win') AS num_award_wins,
+        regexp_substr(awards, '\\d{1,3} nominations') AS num_nominations,
+        regexp_substr(awards, '\\d{1,3} Oscar') AS num_oscars,
+        regexp_substr(awards, '\\d{1,3} Primetime Emmy') AS num_primetime_emmys,
+        regexp_substr(awards, '\\d{1,3} Golden Globe') AS num_golden_globes,
+        regexp_substr(awards, '\\d{1,3} BAFTA') AS num_baftas,
+    FROM omdb
 )
 , rt_scores as (
     select
@@ -34,14 +44,14 @@ WITH source AS (
         rats.value:Source, 
         -- get rotten tomatoes score from json object
         max(substring(rats.value:Value, 0, length(rats.value:Value)-1)::int) as rotten_tomatoes_score
-    from source mov, lateral flatten (input => mov.ratings) rats
+    from omdb mov, lateral flatten (input => mov.ratings) rats
     where rats.value:Source = 'Rotten Tomatoes'
     group by 1, 2
 )
 SELECT 
-    source.*,
+    cleaned_omdb.*,
     rt_scores.rotten_tomatoes_score
 FROM 
-    source
+    cleaned_omdb
 left join rt_scores
-    on source.imdb_id = rt_scores.imdb_id
+    on cleaned_omdb.imdb_id = rt_scores.imdb_id
