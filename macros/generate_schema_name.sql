@@ -9,11 +9,11 @@
 
         {%- if target.name == 'dev' -%}
 
-            {{ default_schema | trim }}_{{ custom_schema_name | trim }} 
+            {{ custom_schema_name }}
 
         {%- else -%}
-        
-            {{ custom_schema_name }}
+
+            {{ default_schema | trim }}_{{ custom_schema_name | trim }} 
 
         {% endif %}    
 
