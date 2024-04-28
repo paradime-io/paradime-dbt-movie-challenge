@@ -30,12 +30,19 @@ WITH omdb AS (
         WEBSITE,
         AWARDS,
         TMDB_ID,
-        regexp_substr(awards, '\\d{1,3} win') AS num_award_wins,
-        regexp_substr(awards, '\\d{1,3} nominations') AS num_nominations,
-        regexp_substr(awards, '\\d{1,3} Oscar') AS num_oscars,
-        regexp_substr(awards, '\\d{1,3} Primetime Emmy') AS num_primetime_emmys,
-        regexp_substr(awards, '\\d{1,3} Golden Globe') AS num_golden_globes,
-        regexp_substr(awards, '\\d{1,3} BAFTA') AS num_baftas,
+        regexp_substr(awards, '\\d{1,3} win') AS award_wins,
+        regexp_substr(awards, '\\d{1,3} nominations') AS nominations,
+        regexp_substr(awards, '\\d{1,3} Oscar') AS oscars,
+        regexp_substr(awards, '\\d{1,3} Primetime Emmy') AS primetime_emmys,
+        regexp_substr(awards, '\\d{1,3} Golden Globe') AS golden_globes,
+        regexp_substr(awards, '\\d{1,3} BAFTA') AS baftas,
+        coalesce(regexp_substr(award_wins, '\\d{1,3}'), 0)::int AS num_award_wins,
+        coalesce(regexp_substr(nominations, '\\d{1,3}'), 0)::int AS num_nominations,
+        coalesce(regexp_substr(oscars, '\\d{1,3}'), 0)::int AS num_oscars,
+        coalesce(regexp_substr(primetime_emmys, '\\d{1,3}'), 0)::int AS num_primetime_emmys,
+        coalesce(regexp_substr(golden_globes, '\\d{1,3}'), 0)::int AS num_golden_globes,
+        coalesce(regexp_substr(baftas, '\\d{1,3}'), 0)::int AS num_baftas
+
     FROM omdb
 )
 , rt_scores as (
