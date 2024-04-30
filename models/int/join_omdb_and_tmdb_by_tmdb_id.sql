@@ -1,4 +1,6 @@
-WITH tmdb AS (
+WITH 
+
+tmdb AS (
     SELECT
         tmdb_id,
         title,
@@ -10,13 +12,14 @@ WITH tmdb AS (
         runtime,
         vote_average,
         revenue,
-        budget
-    FROM
-        {{ ref('stg_tmdb_movies') }}
+        budget,
+        status
+    FROM {{ ref('stg_tmdb_movies') }}
 ), 
 
 omdb AS (
     SELECT 
+        IMDB_ID,
         tmdb_id,
         director,
         writer,
@@ -29,8 +32,7 @@ omdb AS (
         imdb_rating,
         imdb_votes,
         box_office
-    FROM
-        {{ ref('stg_omdb_movies') }}
+    FROM {{ ref('stg_omdb_movies') }}
 ), 
 
 joined AS (
@@ -46,6 +48,8 @@ joined AS (
         tmdb.vote_average,
         tmdb.revenue,
         tmdb.budget,
+        tmdb.status,
+        omdb.IMDB_ID,
         omdb.director,
         omdb.writer,
         omdb.actors,
@@ -56,13 +60,12 @@ joined AS (
         omdb.metascore,
         omdb.imdb_votes,
         omdb.box_office
-    FROM
-        tmdb
-    LEFT JOIN
-        omdb ON tmdb.tmdb_id = omdb.tmdb_id
+    FROM tmdb
+    inner JOIN omdb using (tmdb_id)
 )
 
-SELECT
-    *
-FROM
-    joined
+SELECT *
+FROM joined
+-- tmdb data points are entered by users, sometimes, repeatedly 
+-- so we need to exclude possible duplicates by no particular criteria
+QUALIFY ROW_NUMBER() OVER (PARTITION BY imdb_id ORDER BY tmdb_id) = 1

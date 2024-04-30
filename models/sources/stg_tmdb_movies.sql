@@ -1,6 +1,8 @@
-WITH source AS (
+WITH 
+
+source AS (
     SELECT 
-TMDB_ID,
+        TMDB_ID,
         TITLE,
         ORIGINAL_TITLE,
         OVERVIEW,
@@ -24,12 +26,8 @@ TMDB_ID,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
         PRODUCTION_COUNTRY_NAMES
-    FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
+    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 )
 
-SELECT 
-    * 
-FROM 
-    source
-
+SELECT * 
+FROM source

@@ -1,4 +1,6 @@
-WITH source AS (
+WITH 
+
+source AS (
     SELECT 
         IMDB_ID,
         TITLE,
@@ -25,11 +27,10 @@ WITH source AS (
         WEBSITE,
         AWARDS,
         TMDB_ID
-    FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+    -- bad data when imdb_id != imdbid. All of them have title = '#DUPE#'
+    where IMDB_ID = IMDBID
 )
 
-SELECT 
-    * 
-FROM 
-    source
+SELECT * 
+FROM source
