@@ -33,3 +33,4 @@ SELECT
     * 
 FROM 
     source
+qualify row_number() over (partition by IMDB_ID order by RELEASED_DATE) = 1
