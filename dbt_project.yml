@@ -28,3 +28,6 @@ models:
       intermediate:
         +schema: intermediate
         +materialized: view  
+    entities:
+      intermediate:
+        +schema: entities_intermediate
