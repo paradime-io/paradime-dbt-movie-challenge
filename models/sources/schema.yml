@@ -475,12 +475,10 @@ models:
   - name: tmdb_movies
     columns:
       - name: tmdb_id
-        description: >-
-          Unique identifier for each movie. This unique identifier comes from
-          the tmdb API: https://developer.themoviedb.org/
+        description: Unique identifier for each movie from https://developer.themoviedb.org/. .
         meta:
           dimension:
-            type: number
+            type: string            
       - name: title
         description: Title of the movie.
         meta:
