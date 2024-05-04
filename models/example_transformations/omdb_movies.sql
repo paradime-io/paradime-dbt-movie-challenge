@@ -78,5 +78,7 @@ select i.*
     , t.STATUS as tmdb_STATUS
     , t.VOTE_AVERAGE as tmdb_VOTE_AVERAGE
     , t.VOTE_COUNT as tmdb_VOTE_COUNT
+    , t.REVENUE as tmdb_revenue
+    , t.BUDGET as tmdb_budget
 from omdb i
 left join tmdb t on t.IMDB_ID = i.IMDB_ID
