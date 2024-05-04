@@ -16,8 +16,7 @@ WITH source AS (
         VOTE_AVERAGE,
         VOTE_COUNT,
         POPULARITY,
-        POSTER_PATH,
-        PRODUCTION_COMPANY_NAMES
+        POSTER_PATH
     FROM 
         {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_TV_SERIES') }}
 )

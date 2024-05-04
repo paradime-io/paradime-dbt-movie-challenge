@@ -1,4 +1,4 @@
-WITH source AS (
+WITH src_omdb_movies AS (
     SELECT 
         IMDB_ID,
         TITLE,
@@ -32,4 +32,4 @@ WITH source AS (
 SELECT 
     * 
 FROM 
-    source
+    src_omdb_movies

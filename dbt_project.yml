@@ -24,6 +24,8 @@ models:
     sources:
       +schema: staging
       +materialized: view
+    dmarts:
+      +materialized: table
     example_transformations:
       intermediate:
         +schema: intermediate
