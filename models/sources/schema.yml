@@ -472,6 +472,27 @@ models:
         meta:
           dimension:
             type: number
+      - name: tmdb_vote_count
+        description: Vote Count
+        meta:
+          dimension:
+            type: number        
+      - name: tmdb_vote_average
+        description: Vote Average
+        meta:
+          dimension:
+            type: number                             
+      - name: tmdb_revenue
+        description: Revenue
+        meta:
+          dimension:
+            type: number
+      - name: tmdb_budget
+        description: Budget
+        meta:
+          dimension:
+            type: number            
+
   - name: tmdb_movies
     columns:
       - name: tmdb_id
