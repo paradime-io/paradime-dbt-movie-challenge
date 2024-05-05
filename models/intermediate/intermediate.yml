@@ -32,12 +32,22 @@ models:
         meta:
           dimension:
             type: string
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
       - name: runtime
         description: ""
         meta:
           dimension:
             type: number
       - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_count
         description: ""
         meta:
           dimension:
@@ -82,12 +92,17 @@ models:
         meta:
           dimension:
             type: string
-      - name: imdb_rating
+      - name: rated
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metascore
         description: ""
         meta:
           dimension:
             type: number
-      - name: metascore
+      - name: imdb_rating
         description: ""
         meta:
           dimension:
@@ -102,10 +117,105 @@ models:
         meta:
           dimension:
             type: number
-      - name: genre_names
+      - name: language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: type
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: plot
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: poster
         description: ""
         meta:
           dimension:
             type: string
 
-ask dino;
+
+
+  - name: int_movie_keywords
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: keyword
+        description: ""
+        meta:
+          dimension:
+            type: string
+
+
+  - name: int_movie_genres
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: genre_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+
+
+  - name: int_movie_directors
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+
+
+  - name: int_movie_actors
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: actor_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+    description: "**Business Summary:**\n\nThe business summary of the model explanation\
+      \ is that it retrieves the imdb_id and actor_name from the `int_movies_enriched`\
+      \ table. It splits the values in the `actors` column using the comma as a delimiter\
+      \ and assigns each split value to the `actor_name` column. Finally, it eliminates\
+      \ any rows where the `actors` column contains 'N/A' as the value.\n\n**Technical\
+      \ Summary:**\n\nThis dbt model selects the imdb_id and actor_name values from\
+      \ the `int_movies_enriched` table. It uses the SPLIT_TO_TABLE function to split\
+      \ the `actors` column values by comma and assigns each split value to the `actor_name`\
+      \ column. It then filters out any rows where the `actors` column has the value\
+      \ 'N/A'."
