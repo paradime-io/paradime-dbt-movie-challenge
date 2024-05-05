@@ -209,13 +209,3 @@ models:
         meta:
           dimension:
             type: string
-    description: "**Business Summary:**\n\nThe business summary of the model explanation\
-      \ is that it retrieves the imdb_id and actor_name from the `int_movies_enriched`\
-      \ table. It splits the values in the `actors` column using the comma as a delimiter\
-      \ and assigns each split value to the `actor_name` column. Finally, it eliminates\
-      \ any rows where the `actors` column contains 'N/A' as the value.\n\n**Technical\
-      \ Summary:**\n\nThis dbt model selects the imdb_id and actor_name values from\
-      \ the `int_movies_enriched` table. It uses the SPLIT_TO_TABLE function to split\
-      \ the `actors` column values by comma and assigns each split value to the `actor_name`\
-      \ column. It then filters out any rows where the `actors` column has the value\
-      \ 'N/A'."
