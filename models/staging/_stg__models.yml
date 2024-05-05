@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_tmdb_movies
+  - name: base__tmdb_movies
     columns:
       - name: tmdb_id
         description: >-
@@ -126,7 +126,7 @@ models:
         meta:
           dimension:
             type: string
-  - name: stg_omdb_movies
+  - name: base__omdb_movies
     columns:
       - name: imdb_id
         description: IMDb ID of the movie.
@@ -253,7 +253,7 @@ models:
         meta:
           dimension:
             type: number
-  - name: stg_tmdb_tv_series
+  - name: base__tmdb_tv_series
     columns:
       - name: id
         description: Unique identifier for each TV show.

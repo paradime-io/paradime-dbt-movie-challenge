@@ -1,4 +1,5 @@
 WITH source AS (
+    
     SELECT 
         ID,
         NAME,
@@ -18,11 +19,10 @@ WITH source AS (
         POPULARITY,
         POSTER_PATH,
         PRODUCTION_COMPANY_NAMES
-    FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_TV_SERIES') }}
+
+    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_TV_SERIES') }}
+
 )
 
-SELECT 
-    * 
-FROM 
-    source
+SELECT * 
+FROM source

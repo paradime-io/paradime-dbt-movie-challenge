@@ -1,4 +1,5 @@
 WITH source AS (
+    
     SELECT 
         IMDB_ID,
         TITLE,
@@ -25,11 +26,10 @@ WITH source AS (
         WEBSITE,
         AWARDS,
         TMDB_ID
-    FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+    
+    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+
 )
 
-SELECT 
-    * 
-FROM 
-    source
+SELECT * 
+FROM source

@@ -12,7 +12,7 @@ WITH tmdb AS (
         revenue,
         budget
     FROM
-        {{ ref('stg_tmdb_movies') }}
+        {{ ref('stg__tmdb_movies') }}
 ), 
 
 omdb AS (
@@ -30,7 +30,7 @@ omdb AS (
         imdb_votes,
         box_office
     FROM
-        {{ ref('stg_omdb_movies') }}
+        {{ ref('stg__omdb_movies') }}
 ), 
 
 joined AS (
