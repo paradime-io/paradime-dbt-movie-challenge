@@ -27,6 +27,8 @@ WITH source AS (
         TMDB_ID
     FROM 
         {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+    WHERE 
+        title != '#DUPE#'
 )
 
 SELECT 
