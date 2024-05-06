@@ -66,3 +66,4 @@ SELECT
     *
 FROM
     joined
+WHERE 1=1
