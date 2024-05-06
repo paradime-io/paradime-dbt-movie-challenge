@@ -1,36 +1,42 @@
-WITH 
+with 
 
-source AS (
-    SELECT 
-        IMDB_ID,
-        TITLE,
-        DIRECTOR,
-        WRITER,
-        ACTORS,
-        GENRE,
-        LANGUAGE,
-        COUNTRY,
-        TYPE,
-        PLOT,
-        RATED,
-        RATINGS,
-        METASCORE,
-        IMDB_RATING,
-        IMDB_VOTES,
-        RELEASED_DATE,
-        RELEASE_YEAR,
-        RUNTIME,
-        DVD,
-        BOX_OFFICE,
-        POSTER,
-        PRODUCTION,
-        WEBSITE,
-        AWARDS,
-        TMDB_ID
-    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+source as (
+    select *
+    from {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+),
+
+basic_cleanup as (
+    select 
+        -- ids
+        imdb_id,
+        tmdb_id,
+        -- dimensions
+        title,
+        iff(director != 'N/A', director, null) as director,
+        iff(writer != 'N/A', writer, null) as writer,
+        iff(actors != 'N/A', actors, null) as actors,
+        genre,
+        language,
+        country,
+        type,
+        rated,
+        ratings,
+        metascore,
+        iff(dvd != 'N/A', dvd, null) as dvd,
+        iff(production != 'N/A', production, null) as production,
+        iff(awards != 'N/A', awards, null) as awards,
+        -- metrics
+        imdb_rating,
+        imdb_votes,
+        iff(runtime != 0, runtime, null) as runtime,
+        iff(box_office != 0, box_office, null) as box_office,
+        -- datetime
+        released_date as o_release_date,
+        release_year as o_release_year
+    FROM source
     -- bad data when imdb_id != imdbid. All of them have title = '#DUPE#'
-    where IMDB_ID = IMDBID
+    where imdb_id = imdbid
 )
 
 SELECT * 
-FROM source
+FROM basic_cleanup

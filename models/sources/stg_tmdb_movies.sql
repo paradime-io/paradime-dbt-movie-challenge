@@ -1,33 +1,38 @@
-WITH 
+with 
 
-source AS (
-    SELECT 
-        TMDB_ID,
-        TITLE,
-        ORIGINAL_TITLE,
-        OVERVIEW,
-        TAGLINE,
-        KEYWORDS,
-        ORIGINAL_LANGUAGE,
-        STATUS,
-        VIDEO,
-        RELEASE_DATE,
-        RUNTIME,
-        BUDGET,
-        REVENUE,
-        VOTE_AVERAGE,
-        VOTE_COUNT,
-        HOMEPAGE,
-        POSTER_PATH,
-        BACKDROP_PATH,
-        BELONGS_TO_COLLECTION,
-        IMDB_ID,
-        GENRE_NAMES,
-        SPOKEN_LANGUAGES,
-        PRODUCTION_COMPANY_NAMES,
-        PRODUCTION_COUNTRY_NAMES
-    FROM {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
+source as (
+    select *
+    from {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
+),
+
+basic_cleanup as (
+    select 
+        -- ids
+        tmdb_id,
+        imdb_id,
+        -- dimensions
+        title,
+        tagline,
+        keywords,
+        original_language,
+        status,
+        video,
+        belongs_to_collection,
+        genre_names,
+        spoken_languages,
+        production_company_names,
+        production_country_names,
+        -- metrics
+        vote_average,
+        vote_count,
+        iff(runtime != 0, runtime, null) as runtime,
+        iff(budget != 0, budget, null) as budget,
+        iff(revenue != 0, revenue, null) as revenue,
+        -- datetime
+        release_date as t_release_date,
+        year(release_date) as t_release_year
+    from {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 )
 
-SELECT * 
-FROM source
+select * 
+from basic_cleanup
