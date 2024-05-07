@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: unnest_country
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: country
+        description: ""
+        meta:
+          dimension:
+            type: string

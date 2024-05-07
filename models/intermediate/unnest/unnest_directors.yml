@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: unnest_directors
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string

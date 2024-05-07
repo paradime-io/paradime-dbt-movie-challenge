@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: unnest_language
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: language
+        description: ""
+        meta:
+          dimension:
+            type: string

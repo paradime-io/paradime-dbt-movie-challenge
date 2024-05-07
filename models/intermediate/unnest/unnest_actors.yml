@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: unnest_actors
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: actor
+        description: ""
+        meta:
+          dimension:
+            type: string

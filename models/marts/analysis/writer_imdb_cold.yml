@@ -1,0 +1,74 @@
+version: 2
+models:
+  - name: writer_imdb_cold
+    columns:
+      - name: writer
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: threefilm_avg_profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: threefilm_avg_imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: threeday_avg_metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: film_cnt_writer
+        description: ""
+        meta:
+          dimension:
+            type: number
