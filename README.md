@@ -137,10 +137,10 @@ A simple intro. Example - "Explore my project for the _dbt™ data modeling chal
 
 ## Data Sources and Data Lineage
 My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
+- *OMDB_MOVIES*
+- *TMDB_MOVIES*
+- *TMDB_TV_SERIES*
+- [*STREAMING_PLATFORMS*](https://www.kaggle.com/datasets/ruchi798/movies-on-netflix-prime-video-hulu-and-disney)
 
 ### Data Lineage
 - Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
@@ -149,18 +149,8 @@ My analysis leverages four key data sets:
 #### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **[Lightdash](https://www.lightdash.com/)** for data visualization.
+- **[Looker](https://lookerstudio.google.com/)** for data visualization. To improve performance and speed up the project, queries moving data from Snowflake to Looker limited the imported rows to only the ones needed for the visualizations.     
 - **Other tool(s) used** and why.
-
-### Data Sources
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
-### Data Lineage
-[Image]
 
 ## Visualizations
 
