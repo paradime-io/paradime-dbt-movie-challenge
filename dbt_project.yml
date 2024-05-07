@@ -28,17 +28,9 @@ models:
       +schema: marts
       +materialized: table
       analysis: 
-        +schema: analysis
+        +schema: marts
         +materialized: view
     staging:
       +schema: staging
       +materialized: view
-
-
-    # sources:
-    #   +schema: staging
-    #   +materialized: view
-    # example_transformations:
-    #   intermediate:
-    #     +schema: intermediate
-    #     +materialized: view  
+      
