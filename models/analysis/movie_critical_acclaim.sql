@@ -3,8 +3,8 @@ WITH movie_data AS (
         O.TITLE,
         O.DIRECTOR,
         O.WRITER,
+        O.IMDB_VOTES,
         O.IMDB_RATING,
-        O.IMBD_VOTES AS IMDB_VOTES,  -- Fixed potential typo in column name
         CASE
             WHEN O.AWARDS LIKE '%win%' THEN
                 TRY_CAST(REGEXP_SUBSTR(O.AWARDS, '[0-9]+', 1, 1) AS INTEGER)
@@ -23,15 +23,16 @@ WITH movie_data AS (
         T.REVENUE,
         T.REVENUE - T.BUDGET AS ROI
     FROM 
-        {{ ref('STG_OMDB_MOVIES') }} AS O
+        {{ ref('stg_omdb_movies') }} AS O
     INNER JOIN 
-        {{ ref('STG_TMDB_MOVIES') }} AS T
+        {{ ref('stg_tmdb_movies') }} AS T
         ON O.IMDB_ID = T.IMDB_ID
     WHERE 
         T.RELEASE_DATE < CURRENT_DATE 
         AND T.REVENUE <> 0
         AND T.BUDGET <> 0
         AND O.IMDB_VOTES > 10
+        AND NOMINATIONS > 0
 )
 
-SELECT * FROM movie_data -- Ensure you add this line to select from your CTE
+SELECT * FROM movie_data
