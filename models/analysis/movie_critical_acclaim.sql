@@ -1,5 +1,6 @@
 WITH movie_data AS (
     SELECT
+        O.IMDB_ID
         O.TITLE,
         O.DIRECTOR,
         O.WRITER,
