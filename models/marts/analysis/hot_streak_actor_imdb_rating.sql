@@ -2,7 +2,7 @@ with cte1 as (
 select actor, film_cnt_actor
 from {{ ref('mart_actors')}}
 where film_cnt_actor > 2
-qualify row_number() over (order by threefilm_avg_profit, actor) = 1
+qualify row_number() over (order by threefilm_avg_imdb_rating desc, actor)=1
 )
 select *
 from {{ ref('mart_actors')}}

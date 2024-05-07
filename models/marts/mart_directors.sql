@@ -8,10 +8,10 @@ select u.director
      , m.runtime
      , m.metascore 
      , m.imdb_rating
-     , avg(m.profit)      over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threeday_avg_profit
-     , avg(m.imdb_rating) over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threeday_avg_imdb_rating
-     , avg(m.metascore)   over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threeday_avg_meta_score
-     , row_number()       over (partition by u.director order by m.release_date) as movie_cnt_director
+     , avg(m.profit)      over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threefilm_avg_profit
+     , avg(m.imdb_rating) over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threefilm_avg_imdb_rating
+     , avg(m.metascore)   over (partition by u.director order by m.release_date rows between 2 preceding and current row)   as threefilm_avg_meta_score
+     , row_number()       over (partition by u.director order by m.release_date) as film_cnt_director
 from {{ ref('unnest_directors')}} u
 join {{ ref('stg_omdb_tmdb_movies_join')}} m 
   on u.imdb_id = m.imdb_id
