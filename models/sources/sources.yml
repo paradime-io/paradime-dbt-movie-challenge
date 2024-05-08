@@ -6,3 +6,9 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: EXTRA_DATASETS
+    database: DARKOCOMPAGNONIRVXSH_ANALYTICS
+    schema: STAGING
+    tables:
+      - name: MOVIE_GENRES
+      - name: STREAMING_PLATFORMS

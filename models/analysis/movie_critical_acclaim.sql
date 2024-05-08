@@ -1,6 +1,6 @@
 WITH movie_data AS (
     SELECT
-        O.IMDB_ID
+        O.IMDB_ID,
         O.TITLE,
         O.DIRECTOR,
         O.WRITER,
@@ -8,12 +8,12 @@ WITH movie_data AS (
         O.IMDB_RATING,
         CASE
             WHEN O.AWARDS LIKE '%win%' THEN
-                TRY_CAST(REGEXP_SUBSTR(O.AWARDS, '[0-9]+', 1, 1) AS INTEGER)
+                TRY_CAST(REGEXP_SUBSTR(O.AWARDS, '\\d+', 1, 1) AS INTEGER)
             ELSE 0
         END AS wins,
         CASE
             WHEN O.AWARDS LIKE '%nomination%' THEN
-                TRY_CAST(REGEXP_SUBSTR(O.AWARDS, '[0-9]+', 1, 
+                TRY_CAST(REGEXP_SUBSTR(O.AWARDS, '\\d+', 1, 
                     CASE 
                         WHEN O.AWARDS LIKE '%win%' THEN 2 
                         ELSE 1 
@@ -33,7 +33,8 @@ WITH movie_data AS (
         AND T.REVENUE <> 0
         AND T.BUDGET <> 0
         AND O.IMDB_VOTES > 10
-        AND NOMINATIONS > 0
 )
 
-SELECT * FROM movie_data
+SELECT * 
+FROM movie_data
+WHERE nominations > 0
