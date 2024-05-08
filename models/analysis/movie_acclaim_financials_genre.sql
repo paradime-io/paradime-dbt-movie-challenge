@@ -51,3 +51,6 @@ SELECT
     *
 FROM
     movie_acclaim_financials_genre
+WHERE 
+    genre is not null
+    AND nominations > 0
