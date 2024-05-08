@@ -7,7 +7,9 @@ SELECT
     SUM(wins)/SUM(nominations)*100 AS wins_nominations_ratio_percent
 FROM   
     {{ ref('join_tmbd_ombd') }}
-WHERE NOMINATIONS > WINS
+WHERE 
+    NOMINATIONS > WINS
+    AND GENRE not in ('N/A')
 GROUP BY 
     GENRE
 
