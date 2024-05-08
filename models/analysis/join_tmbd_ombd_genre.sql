@@ -13,7 +13,7 @@ WITH movies_data_with_financials AS (
         REVENUE,
         ROI
     FROM 
-        {{ ref('movie_critical_acclaim_and_financials') }}
+        {{ ref('join_tmbd_ombd') }}
 )
 ,
 
