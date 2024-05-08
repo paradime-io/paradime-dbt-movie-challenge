@@ -16,7 +16,6 @@ where
     and number_of_seasons > 0
     and vote_count > 10
     and main_genre is not null
-    and 
 )
 
 SELECT

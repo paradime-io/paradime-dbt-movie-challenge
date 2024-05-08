@@ -6,7 +6,7 @@ SELECT
     SUM(nominations) AS nominations_count,
     SUM(wins)/SUM(nominations) AS wins_nominations_ratio
 FROM   
-    {{ ref('movie_acclaim_financials_genre') }}
+    {{ ref('join_tmbd_ombd_genre') }}
 WHERE NOMINATIONS > WINS
 GROUP BY 
     GENRE
