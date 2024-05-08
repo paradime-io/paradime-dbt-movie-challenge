@@ -1,6 +1,7 @@
 WITH movies_data AS (
     SELECT
         O.IMDB_ID AS IMDB_ID,
+        SPLIT_PART(O.GENRE, ',', 1) AS GENRE
         O.TITLE AS TITLE,
         O.DIRECTOR AS DIRECTOR,
         O.WRITER AS WRITER,
@@ -31,6 +32,7 @@ movies_financials AS (
 movies_data_with_financials AS (
     SELECT
         md.IMDB_ID AS IMDB_ID,
+        md.GENRE AS GENRE,
         md.TITLE AS TITLE,
         md.DIRECTOR AS DIRECTOR,
         md.WRITER AS WRITER,
@@ -50,4 +52,8 @@ movies_data_with_financials AS (
         md.IMDB_ID = mf.IMDB_ID
 )
 
-SELECT * FROM movies_data_with_financials
+SELECT 
+    RELEASE_YEAR,
+
+
+FROM movies_data_with_financials
