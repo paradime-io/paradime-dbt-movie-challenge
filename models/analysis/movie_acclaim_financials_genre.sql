@@ -1,58 +1,13 @@
-WITH movies_data_with_financials AS (
-     SELECT
-        IMDB_ID,
-        TITLE,
-        DIRECTOR,
-        WRITER,
-        RELEASE_YEAR,
-        IMDB_VOTES,
-        IMDB_RATING,
-        WINS,
-        NOMINATIONS,
-        BUDGET,
-        REVENUE,
-        ROI
-    FROM 
-        {{ ref('movie_critical_acclaim_and_financials') }}
-)
-,
+SELECT
+    GENRE,
+    COUNT(IMDB_ID) as movie_count,
+    AVG(IMDB_RATING) AS rating_avg,
+    SUM(wins) AS wins_count,
+    SUM(nominations) AS nominations_count,
+    SUM(wins)/SUM(nominations) AS wins_nominations_ratio
+FROM   
+    {{ ref('movie_acclaim_financials_genre') }}
+WHERE NOMINATIONS > WINS
+GROUP BY 
+    GENRE
 
-movie_genres AS (
-    SELECT
-        MOVIE_ID,
-        MAIN_GENRE
-    FROM
-        {{ ref('stg_movie_genres') }}
-)    
-,
-
-movie_acclaim_financials_genre AS (
-    SELECT 
-        IMDB_ID,
-        TITLE,
-        MAIN_GENRE AS GENRE,
-        DIRECTOR,
-        WRITER,
-        RELEASE_YEAR,
-        IMDB_VOTES,
-        IMDB_RATING,
-        WINS,
-        NOMINATIONS,
-        BUDGET,
-        REVENUE,
-        ROI
-    FROM 
-        movies_data_with_financials
-    LEFT JOIN
-        movie_genres
-    ON 
-        IMDB_ID = MOVIE_ID
-)
-
-SELECT 
-    *
-FROM
-    movie_acclaim_financials_genre
-WHERE 
-    genre is not null
-    AND nominations > 0
