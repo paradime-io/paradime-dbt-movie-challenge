@@ -28,3 +28,10 @@ models:
       intermediate:
         +schema: intermediate
         +materialized: view  
+    intermediate_layer:
+      +schema: intermediate_layer
+      +materialized: view
+    reporting_layer:
+      +schema: reporting_layer
+      +materialized: view
+    
