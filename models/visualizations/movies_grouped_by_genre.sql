@@ -12,5 +12,3 @@ WHERE
     AND GENRE not in ('N/A')
 GROUP BY 
     GENRE
-
-WITH

@@ -23,7 +23,7 @@ TMDB_ID,
         GENRE_NAMES,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
-        PRODUCTION_COUNTRY_NAMES
+        SPLIT_PART(PRODUCTION_COUNTRY_NAMES,',',1) AS production_country
     FROM 
         {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 )
@@ -32,4 +32,5 @@ SELECT
     * 
 FROM 
     source
+WHERE production_country IS NOT NULL
 
