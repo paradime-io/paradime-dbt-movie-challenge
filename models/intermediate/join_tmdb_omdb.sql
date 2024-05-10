@@ -1,58 +1,80 @@
-WITH movies_data AS (
+WITH omdb AS (
     SELECT
-        O.IMDB_ID AS IMDB_ID,
-        SPLIT_PART(O.GENRE, ',', 1) AS GENRE,
-        O.TITLE AS TITLE,
-        O.DIRECTOR AS DIRECTOR,
-        O.WRITER AS WRITER,
-        O.RELEASE_YEAR AS RELEASE_YEAR,
-        O.IMDB_VOTES AS IMDB_VOTES,
-        O.IMDB_RATING AS IMDB_RATING,
-        {{ parse_awards('o.awards') }}
+        o.IMDB_ID,
+        SPLIT_PART(o.GENRE, ',', 1) AS GENRE,
+        o.TITLE,
+        o.DIRECTOR,
+        o.WRITER,
+        o.RELEASE_YEAR,
+        o.IMDB_VOTES,
+        o.IMDB_RATING,
+        {{ parse_awards('o.awards') }},
+        o.ACTORS,
+        o.BOX_OFFICE,
+        o.COUNTRY,
+        o.DVD,
+        o.LANGUAGE,
+        o.METASCORE,
+        o.PLOT,
+        o.POSTER,
+        o.PRODUCTION,
+        o.RATED,
+        o.RATINGS,
+        o.RELEASED_DATE,
+        o.RUNTIME,
+        o.TMDB_ID,
+        o.TYPE,
+        o.WEBSITE
     FROM
-        {{ ref('stg_omdb_movies') }} AS o 
-    WHERE
-        O.IMDB_VOTES > 10
-)
-,
-movies_financials AS (
+        {{ ref('stg_omdb_movies') }} o 
+
+),
+tmdb AS (
     SELECT 
-        T.IMDB_ID AS IMDB_ID,
-        T.BUDGET AS BUDGET,
-        T.REVENUE AS REVENUE,
-        T.REVENUE - T.BUDGET AS ROI
+        t.IMDB_ID,
+        t.BUDGET,
+        t.REVENUE,
+        t.REVENUE - t.BUDGET AS ROI,
+        t.BACKDROP_PATH,
+        t.BELONGS_TO_COLLECTION,
+        t.GENRE_NAMES,
+        t.HOMEPAGE,
+        t.KEYWORDS,
+        t.ORIGINAL_LANGUAGE,
+        t.ORIGINAL_TITLE,
+        t.OVERVIEW,
+        t.POSTER_PATH,
+        t.PRODUCTION_COMPANY_NAMES,
+        t.PRODUCTION_COUNTRY,
+        t.RELEASE_DATE,
+        t.RUNTIME,
+        t.SPOKEN_LANGUAGES,
+        t.STATUS,
+        t.TAGLINE,
+        t.TITLE AS TMDB_TITLE,
+        t.TMDB_ID,
+        t.VIDEO,
+        t.VOTE_AVERAGE,
+        t.VOTE_COUNT
     FROM 
-        {{ ref('stg_tmdb_movies') }} AS t
+        {{ ref('stg_tmdb_movies') }} t
     WHERE 
-        T.RELEASE_DATE < CURRENT_DATE 
-        AND T.REVENUE <> 0
-        AND T.BUDGET <> 0
-)
-,
-movies_data_with_financials AS (
+        t.RELEASE_DATE < CURRENT_DATE 
+        AND t.REVENUE <> 0
+        AND t.BUDGET <> 0
+),
+joined_tables AS (
     SELECT
-        md.IMDB_ID AS IMDB_ID,
-        md.GENRE AS GENRE,
-        md.TITLE AS TITLE,
-        md.DIRECTOR AS DIRECTOR,
-        md.WRITER AS WRITER,
-        md.RELEASE_YEAR AS RELEASE_YEAR,
-        md.IMDB_VOTES AS IMDB_VOTES,
-        md.IMDB_RATING AS IMDB_RATING,
-        md.WINS AS WINS,
-        md.NOMINATIONS AS NOMINATIONS,
-        mf.BUDGET AS BUDGET,
-        mf.REVENUE AS REVENUE,
-        mf.ROI AS ROI
+        md.*,
+        mf.*
     FROM 
-        movies_data AS md
+        omdb md
     LEFT JOIN 
-        movies_financials AS mf
+        tmdb mf
     ON 
         md.IMDB_ID = mf.IMDB_ID
 )
-
 SELECT 
     *
 FROM 
-    movies_data_with_financials
+    joined_tables
