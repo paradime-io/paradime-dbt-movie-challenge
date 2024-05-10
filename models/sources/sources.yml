@@ -6,3 +6,9 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: PARADIME_MOVIE_CHALLENGE_EXTERNAL_DATA
+    database: RASOFGLVO_ANALYTICS
+    schema: EXTERNAL_DATA
+    tables:
+      - name: TMDB_POPULAR_PEOPLE
+      - name: TMDB_POPULAR_MOVIES

@@ -1,6 +1,72 @@
 version: 2
 models:
-  - name: join_omdb_and_tmdb_by_tmdb_id
+  - name: popular_people
+    columns:
+      - name: gender
+        description: Gender of the person.
+        meta:
+          dimension:
+            type: number
+      - name: known_for_department
+        description: Department for which the person is known for.
+        meta:
+          dimension:
+            type: string
+      - name: name
+        description: Name of the person.
+        meta:
+          dimension:
+            type: string
+      - name: popularity
+        description: Popularity score of the person.
+        meta:
+          dimension:
+            type: number
+  - name: popular_movies
+    columns:
+      - name: id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: popularity
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+  - name: int_movies_enriched
+    meta:
+      joins:
+        - join: int_movie_actors
+          sql_on: ${int_movie_actors.imdb_id} = ${int_movies_enriched.imdb_id}
+        - join: int_movie_genres
+          sql_on: ${int_movie_genres.imdb_id} = ${int_movies_enriched.imdb_id}
+        - join: int_movie_keywords
+          sql_on: ${int_movie_keywords.imdb_id} = ${int_movies_enriched.imdb_id}
+        - join: int_movie_directors
+          sql_on: ${int_movie_directors.imdb_id} = ${int_movies_enriched.imdb_id}
+        - join: popular_movies
+          sql_on: ${popular_movies.id} = ${int_movies_enriched.tmdb_id}
     columns:
       - name: tmdb_id
         description: ""
@@ -32,12 +98,25 @@ models:
         meta:
           dimension:
             type: string
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
       - name: runtime
         description: ""
         meta:
           dimension:
             type: number
       - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            average_tmdb_rating:
+              type: average
+      - name: vote_count
         description: ""
         meta:
           dimension:
@@ -82,16 +161,24 @@ models:
         meta:
           dimension:
             type: string
-      - name: imdb_rating
+      - name: rated
         description: ""
         meta:
           dimension:
-            type: number
+            type: string
       - name: metascore
         description: ""
         meta:
           dimension:
             type: number
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            average_imdb_rating:
+              type: average
       - name: imdb_votes
         description: ""
         meta:
@@ -102,114 +189,70 @@ models:
         meta:
           dimension:
             type: number
-      - name: genre_names
+      - name: language
         description: ""
         meta:
           dimension:
             type: string
-  - name: join_omdb_and_tmdb_by_imdb_id
-    columns:
+      - name: country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: type
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: plot
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: poster
+        description: ""
+        meta:
+          dimension:
+            type: string
       - name: imdb_id
         description: ""
         meta:
           dimension:
             type: string
-      - name: title
+          metrics:
+            movie_count:
+              type: count_distinct
+      - name: original_title
         description: ""
         meta:
           dimension:
             type: string
-      - name: release_date
-        description: ""
-        meta:
-          dimension:
-            type: date
-      - name: overview
+      - name: original_language
         description: ""
         meta:
           dimension:
             type: string
-      - name: tagline
+      - name: status
         description: ""
         meta:
           dimension:
             type: string
-      - name: keywords
+      - name: video
         description: ""
         meta:
           dimension:
-            type: string
-      - name: runtime
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: vote_average
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: revenue
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: budget
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: director
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: writer
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: actors
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: awards
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: production
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: dvd
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: imdb_rating
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: metascore
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: imdb_votes
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: box_office
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: genre_names
+            type: boolean
+      - name: genre
         description: ""
         meta:
           dimension:

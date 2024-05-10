@@ -126,7 +126,7 @@ models:
         meta:
           dimension:
             type: string
-  - name: stg_omdb_movies
+  - name: stg_imdb_movies
     columns:
       - name: imdb_id
         description: IMDb ID of the movie.
@@ -291,7 +291,9 @@ models:
           dimension:
             type: string
       - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
+        description: >-
+          Current status of the TV show (e.g., returning series, ended,
+          cancelled, etc.).
         meta:
           dimension:
             type: string
@@ -345,3 +347,117 @@ models:
         meta:
           dimension:
             type: string
+  - name: stg_tmdb_popular_people
+    columns:
+      - name: adult
+        description: Indicates if the person is an adult or not.
+        meta:
+          dimension:
+            type: boolean
+      - name: gender
+        description: Gender of the person.
+        meta:
+          dimension:
+            type: number
+      - name: id
+        description: Unique identifier for each person.
+        meta:
+          dimension:
+            type: number
+      - name: known_for_department
+        description: Department for which the person is known for.
+        meta:
+          dimension:
+            type: string
+      - name: name
+        description: Name of the person.
+        meta:
+          dimension:
+            type: string
+      - name: original_name
+        description: Original name of the person.
+        meta:
+          dimension:
+            type: string
+      - name: popularity
+        description: Popularity score of the person.
+        meta:
+          dimension:
+            type: number
+      - name: profile_path
+        description: Path to the profile picture of the person.
+        meta:
+          dimension:
+            type: string
+  - name: stg_tmdb_popular_movies
+    columns:
+      - name: ADULT
+        description: Indicates if the movie is suitable for adults or not.
+        meta:
+          dimension:
+            type: boolean
+      - name: BACKDROP_PATH
+        description: Path to the backdrop image of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: GENRE_IDS
+        description: List of genre IDs associated with the movie.
+        meta:
+          dimension:
+            type: string
+      - name: ID
+        description: Unique identifier for each movie.
+        meta:
+          dimension:
+            type: number
+      - name: ORIGINAL_LANGUAGE
+        description: Original language of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: ORIGINAL_TITLE
+        description: Original title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: OVERVIEW
+        description: Brief overview or summary of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: POPULARITY
+        description: Popularity score of the movie.
+        meta:
+          dimension:
+            type: number
+      - name: POSTER_PATH
+        description: Path to the poster image of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: RELEASE_DATE
+        description: Release date of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: TITLE
+        description: Title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: VIDEO
+        description: Indicates if the movie has a video available.
+        meta:
+          dimension:
+            type: boolean
+      - name: VOTE_AVERAGE
+        description: Average rating of the movie.
+        meta:
+          dimension:
+            type: number
+      - name: VOTE_COUNT
+        description: Number of votes for the movie.
+        meta:
+          dimension:
+            type: number

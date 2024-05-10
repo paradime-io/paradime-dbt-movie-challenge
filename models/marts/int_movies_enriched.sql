@@ -29,7 +29,7 @@ WITH tmdb AS (
         {{ ref('stg_tmdb_movies') }}
 ), 
 
-omdb AS (
+imdb AS (
     SELECT 
         imdb_id,
         director,
@@ -54,7 +54,7 @@ omdb AS (
         poster,
         website
     FROM
-        {{ ref('stg_omdb_movies') }}
+        {{ ref('stg_imdb_movies') }}
 ), 
 
 joined AS (
@@ -76,29 +76,29 @@ joined AS (
         tmdb.original_language, 
         tmdb.status, 
         tmdb.video,
-        omdb.director,
-        omdb.writer,
-        omdb.actors,
-        omdb.awards,
-        omdb.production,
-        omdb.dvd,
-        omdb.rated,
-        omdb.metascore,
-        omdb.imdb_rating,
-        omdb.imdb_votes,
-        omdb.box_office,
-        omdb.genre,
-        omdb.language,
-        omdb.country,
-        omdb.type,
-        omdb.plot,
-        omdb.released_date,
-        omdb.release_year,
-        omdb.poster
+        imdb.director,
+        imdb.writer,
+        imdb.actors,
+        imdb.awards,
+        imdb.production,
+        imdb.dvd,
+        imdb.rated,
+        imdb.metascore,
+        imdb.imdb_rating,
+        imdb.imdb_votes,
+        imdb.box_office,
+        imdb.genre,
+        imdb.language,
+        imdb.country,
+        imdb.type,
+        imdb.plot,
+        imdb.released_date,
+        imdb.release_year,
+        imdb.poster
     FROM
         tmdb
     INNER JOIN
-        omdb ON tmdb.imdb_id = omdb.imdb_id
+        imdb ON tmdb.imdb_id = imdb.imdb_id
 )
 
 SELECT

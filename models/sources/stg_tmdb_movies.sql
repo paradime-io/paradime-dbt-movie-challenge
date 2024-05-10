@@ -19,7 +19,11 @@ TMDB_ID,
         POSTER_PATH,
         BACKDROP_PATH,
         BELONGS_TO_COLLECTION,
-        IMDB_ID,
+        CASE
+            WHEN IMDB_ID = ''
+                then null
+            ELSE IMDB_ID
+        END as IMDB_ID,
         GENRE_NAMES,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
