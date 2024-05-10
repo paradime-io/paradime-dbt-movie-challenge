@@ -61,3 +61,5 @@ JOIN
     platforms p
 ON
     LOWER(REPLACE(tv.NAME, ' ', '')) = LOWER(REPLACE(p.title, ' ', ''))
+
+    
