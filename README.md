@@ -34,7 +34,7 @@ Using the the infomations outlinied in the confirmation emails, set up the follo
 Note: A step-by-step tutorial for setting up Paradime and Snowflake is available in your Snowflake credentials email, "*Start Your Movie Data Modeling Challenge – Your Snowflake Credentials*".
 
 ### Step 4: Kickstart Your Project
-- **Create a New Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "movie-<your_email>"
+- **Create a New Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "movie-<your_email>". For guidance, see this [step-by-step tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
 - **Start Developing**: Begin crafting SQL queries, developing dbt™ models, and generating insights!
 
 **Need Additional Help?** join the #movie-competition channel on [Slack](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email) and contact the team. 
