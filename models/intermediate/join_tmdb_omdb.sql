@@ -31,7 +31,6 @@ WITH omdb AS (
 ),
 tmdb AS (
     SELECT 
-        t.IMDB_ID,
         t.BUDGET,
         t.REVENUE,
         t.REVENUE - t.BUDGET AS ROI,
