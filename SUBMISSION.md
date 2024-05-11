@@ -27,8 +27,8 @@ My analysis leverages four key data sets:
 - *TMDB Popular People*
 
 ### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
+<img width="1703" alt="image" src="https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/102802709/066af418-a3a9-49ff-903d-841f6b0ed492">
 
 
 ## Methodology
