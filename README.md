@@ -9,8 +9,8 @@
    - [Tools Used](#tools-used)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
-   - [What's Popular?](#whats-popular-) 
-   - [Temporal Insights](#temporal-insights-)
+   - [What's Popular?](#whats-popular) 
+   - [Temporal Insights](#temporal-insights)
    - [TMDb vs IMDb](#tmdb--imdb)
 5. [Conclusions](#conclusions)
 
@@ -49,9 +49,9 @@ The relations are visualised in the below Data Lineage.
 
 ## Visualizations
 
-### What's Popular? 📈
+### What's Popular
 
-### Temporal Insights 🕰️
+### Temporal Insights
 
 ### TMDb 🆚 IMDb
 
