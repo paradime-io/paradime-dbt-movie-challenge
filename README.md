@@ -9,6 +9,9 @@
    - [Tools Used](#tools-used)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
+   - [What's Popular?](#whats-popular-) 
+   - [Temporal Insights](#temporal-insights-%EF%B8%8F-)
+   - [TMDb vs IMDb](#tmdb--imdb)
 5. [Conclusions](#conclusions)
 
 ## Introduction
