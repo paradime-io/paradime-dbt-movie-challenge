@@ -19,6 +19,8 @@ Welcome to my submission for the _dbt™ data modeling challenge - Movie Edition
 In this project, I analyze and visualize data from various sources to uncover insights into the movie industry. 
 Leveraging datasets from IMDB and TMDB, along with additional data extracted through the TMDB API, I explore trends, preferences, and patterns in movie popularity, temporal dynamics, and user ratings.
 
+Feel free to link up with me through my [LinkedIn](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)!
+
 ## Data Sources
 My analysis leverages four key data sets:
 - *IMDB Movies*
