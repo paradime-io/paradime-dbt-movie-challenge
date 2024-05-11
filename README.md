@@ -47,7 +47,9 @@ The relations are visualised in the below Data Lineage.
 - **[Mage.ai](https://www.mage.ai/)** data pipeline tool for extracting, transforming and integrating data.
 - **[TMDb API](https://developer.themoviedb.org/reference/intro/getting-started)** API with data for enrichment.
 
-
+I decided to incorporate additional datasets from the [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started) to enrich the existing data and increase the complexity of my findings.
+I used [Mage.ai](https://www.mage.ai/) to extract the data from the API and load it into Snowflake.
+Most of the models were joined together in the `marts.yml` file, so all of the data didn't have to be pre-aggregated in dbt models.
 
 ## Visualizations
 
