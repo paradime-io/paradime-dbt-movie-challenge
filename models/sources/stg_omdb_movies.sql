@@ -1,35 +1,34 @@
-WITH source AS (
-    SELECT 
-        IMDB_ID,
-        TITLE,
-        DIRECTOR,
-        WRITER,
-        ACTORS,
-        GENRE,
-        LANGUAGE,
-        COUNTRY,
-        TYPE,
-        PLOT,
-        RATED,
-        RATINGS,
-        METASCORE,
-        IMDB_RATING,
-        IMDB_VOTES,
-        RELEASED_DATE,
-        RELEASE_YEAR,
-        RUNTIME,
-        DVD,
-        BOX_OFFICE,
-        POSTER,
-        PRODUCTION,
-        WEBSITE,
-        AWARDS,
-        TMDB_ID
-    FROM 
+with source as (
+    select
+        imdb_id,
+        title,
+        director,
+        writer,
+        actors,
+        genre,
+        language,
+        country,
+        type,
+        plot,
+        rated,
+        ratings,
+        metascore,
+        imdb_rating,
+        imdb_votes,
+        released_date,
+        release_year,
+        runtime,
+        dvd,
+        box_office,
+        poster,
+        production,
+        website,
+        awards,
+        tmdb_id
+    from
         {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
 )
 
-SELECT 
-    * 
-FROM 
+select *
+from
     source

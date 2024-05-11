@@ -13,30 +13,23 @@ with final as (
         omdb.director,
         omdb.writer,
         omdb.actors,
+        omdb.type,
         coalesce(omdb.title, tmdb.title) as title,
         coalesce(omdb.genre, tmdb.genre_names) as genre,
-        omdb.type,
-        tmdb.status,
-        tmdb.homepage,
-        tmdb.poster_path,
-        tmdb.spoken_languages,
         coalesce(omdb.language, tmdb.original_language) as language,
+        tmdb.status,
         tmdb.production_company_names,
         tmdb.production_country_names,
 
         -- Numbers
-        tmdb.budget,
         omdb.imdb_rating,
+        round(try_to_number(replace(iff(f.value:Source = 'Rotten Tomatoes', f.value:Value, null), '%', '')) / 10, 1) as rt_rating,
         omdb.imdb_votes,
-        omdb.box_office,
+        omdb.awards,
         tmdb.vote_average,
         tmdb.vote_count,
         tmdb.revenue,
-        omdb.awards,
         coalesce(omdb.runtime, tmdb.runtime) as runtime,
-
-        -- Booleans
-        tmdb.video as is_video,
 
         -- Dates/Timestamps
         coalesce(omdb.released_date, tmdb.release_date) as release_date,
@@ -45,7 +38,8 @@ with final as (
     from
         {{ ref('stg_tmdb_movies') }} as tmdb
         left join {{ ref('stg_omdb_movies') }} as omdb
-            on tmdb.imdb_id = omdb.imdb_id
+            on tmdb.imdb_id = omdb.imdb_id,
+        lateral flatten(input => omdb.ratings) f
 )
 
 select *
