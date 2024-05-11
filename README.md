@@ -26,7 +26,7 @@ My analysis leverages four key data sets:
 - *TMDB Popular Movies [Extracted through TMDb API]*
 - *TMDB Popular People  [Extracted through TMDb API]*
 
-In addition the following tables were created based on the TMDb and IMDb Movies datasets, by using the SPLIT_TO_TABLE function:
+In addition the following tables were created based on the TMDb and IMDb Movies datasets, by using the `SPLIT_TO_TABLE` function:
 - *Movie Actors*
 - *Movie Directors*
 - *Movie Genres*
@@ -48,6 +48,7 @@ The relations are visualised in the below Data Lineage.
 - **[Github](https://www.github.com/)** for version control.
 - **[Mage.ai](https://www.mage.ai/)** data pipeline tool for extracting, transforming and integrating data.
 - **[TMDb API](https://developer.themoviedb.org/reference/intro/getting-started)** API with data for enrichment.
+- **[ChatGPT](https://chatgpt.com/)** assistance for writing findings more clean and grammar/spelling checks.
 
 I decided to incorporate additional datasets from the [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started) to enrich the existing data and increase the complexity of my findings.
 I used [Mage.ai](https://www.mage.ai/) to extract the data from the API and load it into Snowflake.
