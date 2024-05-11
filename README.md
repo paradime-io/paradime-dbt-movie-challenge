@@ -1,8 +1,6 @@
-# dbt™ Data Modeling Challenge - Movie Edition
+# dbt™ Data Modeling Challenge: Movie Insights by [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/) 🍿
 
-# Movie Insights by Rasmus Engelbrecht
-
-## Table of Contents
+## Table of Contents 📝
 1. [Introduction](#introduction)
 2. [Data Sources](#data-sources-and-data-lineage)
 3. [Methodology](#methodology)
@@ -21,7 +19,7 @@ Leveraging datasets from IMDB and TMDB, along with additional data extracted thr
 
 Feel free to link up with me through my [LinkedIn](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)!
 
-## Data Sources
+## Data Sources 💿
 My analysis leverages four key data sets:
 - *IMDB Movies*
 - *TMDB Movies*
@@ -36,13 +34,13 @@ In addition the following tables were created based on the TMDb and IMDb Movies 
 
 The relations are visualised in the below Data Lineage.
 
-### Data Lineage
+### Data Lineage 🔗
 
 ![Data Lineage](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-raso-lunar-app/images/MovieChallengeDataLineage.png)
 
 *Please note that* `int_movies_enriched` *should have been named* `movies_enriched`, *but changing the model name would break all my existing Saved Charts in Lightdash, as explained in this* [Issue](https://github.com/lightdash/lightdash/issues/5264).
 
-## Methodology
+## Methodology 🛠️
 #### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
@@ -55,7 +53,7 @@ I decided to incorporate additional datasets from the [TMDb API](https://develop
 I used [Mage.ai](https://www.mage.ai/) to extract the data from the API and load it into Snowflake.
 Most of the models were joined together in the `marts.yml` file, so all of the data didn't have to be pre-aggregated in dbt models.
 
-## Visualizations
+## Visualizations 📊
 
 ### What's Popular
 ![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
