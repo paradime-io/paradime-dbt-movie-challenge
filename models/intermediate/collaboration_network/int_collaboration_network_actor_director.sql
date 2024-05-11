@@ -26,11 +26,11 @@ with collaborations as (
         and m.actors is not null and m.actors != 'N/A'
         and m.imdb_rating between 0 and 10
         and m.imdb_id is not null
-        and m.runtime > 30 -- we don't want small video snippets in this dataset
-        and a.index <= 1 -- we only want the main actors
-        and d.index <= 1 -- we only want the main director
         and m.imdb_votes is not null
-        and trim(d.value) != trim(a.value)
+        and m.runtime > 30 -- we don't want small video snippets in this dataset
+        and a.index = 1 -- we only want the main actor
+        and d.index = 1 -- we only want the main director
+        and trim(d.value) != trim(a.value) -- actor and director should be different than each other
     group by all
 )
 

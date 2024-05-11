@@ -22,9 +22,9 @@ with final as (
         tmdb.production_country_names,
 
         -- Numbers
-        omdb.imdb_rating,
+        imdb.imdb_rating,
+        imdb.number_of_votes as imdb_votes,
         round(try_to_number(replace(iff(f.value:Source = 'Rotten Tomatoes', f.value:Value, null), '%', '')) / 10, 1) as rt_rating,
-        omdb.imdb_votes,
         omdb.awards,
         tmdb.vote_average,
         tmdb.vote_count,
@@ -33,13 +33,16 @@ with final as (
 
         -- Dates/Timestamps
         coalesce(omdb.released_date, tmdb.release_date) as release_date,
-        omdb.release_year,
+        omdb.release_year
 
     from
         {{ ref('stg_tmdb_movies') }} as tmdb
+        left join {{ ref('stg_imdb_ratings') }} as imdb
+            on tmdb.imdb_id = imdb.imdb_title_id
         left join {{ ref('stg_omdb_movies') }} as omdb
             on tmdb.imdb_id = omdb.imdb_id,
-        lateral flatten(input => omdb.ratings) f
+        lateral flatten(input => omdb.ratings) as f
+
 )
 
 select *
