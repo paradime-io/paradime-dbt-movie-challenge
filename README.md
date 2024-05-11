@@ -10,7 +10,7 @@
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
    - [What's Popular?](#whats-popular-) 
-   - [Temporal Insights](#temporal-insights-%EF%B8%8F-)
+   - [Temporal Insights](#temporal-insights-)
    - [TMDb vs IMDb](#tmdb--imdb)
 5. [Conclusions](#conclusions)
 
