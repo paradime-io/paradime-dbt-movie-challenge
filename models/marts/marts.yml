@@ -257,3 +257,19 @@ models:
         meta:
           dimension:
             type: string
+exposures:
+  - name: movie_dashboard_tables
+    description: Tables used in the Movie Dashboard
+    depends_on:
+      - ref('popular_people')
+      - ref('popular_movies')
+      - ref('int_movies_enriched')
+      - ref('int_movie_keywords')
+      - ref('int_movie_genres')
+      - ref('int_movie_directors')
+      - ref('int_movie_actors')
+    owner:
+      name: Rasmus
+      email: raso@lunar.app
+    type: dashboard
+    label: "Movie Challenge Lightdash Dashboards!"
