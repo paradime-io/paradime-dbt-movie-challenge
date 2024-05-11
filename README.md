@@ -7,13 +7,8 @@
 2. [Data Sources](#data-sources-and-data-lineage)
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
-   - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
-   - etc
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -26,7 +21,7 @@ My analysis leverages four key data sets:
 - *TMDB Popular Movies [Extracted through TMDb API]*
 - *TMDB Popular People  [Extracted through TMDb API]*
 
-In addition the following tables were created based on the TMDb and IMDb Movies datasets:
+In addition the following tables were created based on the TMDb and IMDb Movies datasets, by using the SPLIT_TO_TABLE function:
 - *Movie Actors*
 - *Movie Directors*
 - *Movie Genres*
@@ -45,10 +40,17 @@ The relations are visualised in the below Data Lineage.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
 - **[Github](https://www.github.com/)** for version control.
 - **[Mage.ai](https://www.mage.ai/)** data pipeline tool for extracting, transforming and integrating data.
+- **[TMDb API](https://developer.themoviedb.org/reference/intro/getting-started)** API with data for enrichment.
+
 
 
 ## Visualizations
 
+### What's Popular? 📈
+
+### Temporal Insights 🕰️
+
+### TMDb 🆚 IMDb
 
 
 ## Conclusions
