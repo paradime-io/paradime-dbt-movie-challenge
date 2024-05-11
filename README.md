@@ -50,11 +50,13 @@ The relations are visualised in the below Data Lineage.
 ## Visualizations
 
 ### What's Popular
+![What's Popular](Popular_.png)
 
 ### Temporal Insights
+![Temporal Insights](Temporal_.png)
 
 ### TMDb 🆚 IMDb
-
+![TMDb 🆚 IMDb](TMDBvsIMDB.png)
 
 ## Conclusions
 In conclusion, my analysis across three main topics shed light on several key insights in the film industry:
