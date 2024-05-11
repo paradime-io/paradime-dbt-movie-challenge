@@ -34,6 +34,8 @@ The relations are visualised in the below Data Lineage.
 
 ### Data Lineage
 
+![Data Lineage](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-raso-lunar-app/images/MovieChallengeDataLineage.png)
+
 *Please note that* `int_movies_enriched` *should have been named* `movies_enriched`, *but changing the model name would break all my existing Saved Charts in Lightdash, as explained in this* [Issue](https://github.com/lightdash/lightdash/issues/5264).
 
 ## Methodology
