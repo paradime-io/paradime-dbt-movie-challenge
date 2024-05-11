@@ -32,8 +32,11 @@ In addition the following tables were created based on the TMDb and IMDb Movies 
 - *Movie Genres*
 - *Movie Keywords*
 
+The relations are visualised in the below Data Lineage.
+
 ### Data Lineage
 
+*Please note that* `int_movies_enriched` *should have been named* `movies_enriched`, *but changing the model name would break all my existing Saved Charts in Lightdash, as explained in this* [Issue](https://github.com/lightdash/lightdash/issues/5264).
 
 ## Methodology
 #### Tools Used
