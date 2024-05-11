@@ -214,3 +214,10 @@ models:
         meta:
           dimension:
             type: string
+  - name: agg_tmdb
+    columns:
+      - name: revenue
+        description: "some idea"
+        meta:
+          dimension:
+            type: number
