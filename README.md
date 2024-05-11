@@ -55,16 +55,16 @@ The relations are visualised in the below Data Lineage.
 In conclusion, my analysis across three main topics shed light on several key insights in the film industry:
 
 ### What's Popular? 📈
-**Dominance of Action and Sci-Fi:** The top 20 most popular movies on TMDb predominantly belong to the Action and Sci-Fi genres, indicating a strong preference for adrenaline-pumping narratives and futuristic storytelling.
-**Audience Preferences:** Titles like "Godzilla Minus One," "Dune: Part Two," and "Oppenheimer" not only rank high in popularity but also boast impressive ratings, reflecting audience appreciation for epic narratives and visually captivating spectacles.
-**Gender Distribution:** Notably, there's a gender disparity among the top 20 most popular actors, with women occupying a significant portion of the list, potentially indicating a trend towards stronger female star quality.
+- **Dominance of Action and Sci-Fi:** The top 20 most popular movies on TMDb predominantly belong to the Action and Sci-Fi genres, indicating a strong preference for adrenaline-pumping narratives and futuristic storytelling.
+- **Audience Preferences:** Titles like "Godzilla Minus One," "Dune: Part Two," and "Oppenheimer" not only rank high in popularity but also boast impressive ratings, reflecting audience appreciation for epic narratives and visually captivating spectacles.
+- **Gender Distribution:** Notably, there's a gender disparity among the top 20 most popular actors, with women occupying a significant portion of the list, potentially indicating a trend towards stronger female star quality.
 
 ### Temporal Insights 🕰️
-**Impact of COVID-19:** The film industry experienced a sharp decline in Box Office revenue and Profit during the COVID-19 outbreak years (2020-2022) due to widespread theater closures and audience reluctance.
-**Recovery and Resurgence:** However, there has been a noticeable recovery in 2023 and 2024, signaling a resurgence in movie theater attendance and box office success, potentially indicating a return to normalcy for the industry.
+- **Impact of COVID-19:** The film industry experienced a sharp decline in Box Office revenue and Profit during the COVID-19 outbreak years (2020-2022) due to widespread theater closures and audience reluctance.
+- **Recovery and Resurgence:** However, there has been a noticeable recovery in 2023 and 2024, signaling a resurgence in movie theater attendance and box office success, potentially indicating a return to normalcy for the industry.
 
 ### TMDb 🆚 IMDb
-**Differences in User Bases:** TMDb users exhibit preferences for genres like TV Movies, Family, Horror, and Music, which tend to have lower average quality ratings compared to other genres. This divergence raises questions about the demographics and preferences of the TMDb user base, suggesting a potential younger audience or specific interests in these genres.
+- **Differences in User Bases:** TMDb users exhibit preferences for genres like TV Movies, Family, Horror, and Music, which tend to have lower average quality ratings compared to other genres. This divergence raises questions about the demographics and preferences of the TMDb user base, suggesting a potential younger audience or specific interests in these genres.
 
 
 
