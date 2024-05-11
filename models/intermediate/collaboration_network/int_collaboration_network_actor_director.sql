@@ -11,10 +11,17 @@ with collaborations as (
         m.original_title,
         m.genre,
         m.keywords,
-        round(m.imdb_votes, 0) as imdb_votes,
         m.runtime,
+
+        -- Features
         m.imdb_rating,
-        m.rt_rating,
+        round(m.imdb_votes, 0) as imdb_votes,
+        m.omdb_rt_rating,
+        round(m.audience_score, 0) as audience_score,
+        round(m.tomato_meter, 0) as tomato_meter,
+        m.number_of_awards_won,
+        m.viewer_vote_average,
+        m.viewer_vote_count,
         m.revenue
     from
         {{ ref('int_movies_mapping') }} as m,
@@ -26,7 +33,6 @@ with collaborations as (
         and m.actors is not null and m.actors != 'N/A'
         and m.imdb_rating between 0 and 10
         and m.imdb_id is not null
-        and m.imdb_votes is not null
         and m.runtime > 30 -- we don't want small video snippets in this dataset
         and a.index = 1 -- we only want the main actor
         and d.index = 1 -- we only want the main director

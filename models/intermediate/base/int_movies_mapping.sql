@@ -1,6 +1,26 @@
 -- int_movies_mapping.sql
+with rotten_tomatoes_ratings as(
+select
+    a.imdb_id,
+    b.*
+from (
+    select
+        imdb_id,
+        lower(regexp_replace(title, '[^a-zA-Z0-9]', '')) as clean_title
+    from {{ ref('stg_tmdb_movies') }}
+) as a
+        join (
+        select
+            audience_score/10 as audience_score,
+            tomato_meter/10 as tomato_meter,
+            lower(regexp_replace(title, '[^a-zA-Z0-9]', '')) as clean_title
+        from {{ ref('stg_rotten_tomatoes') }}
+    ) as b
+        on a.clean_title = b.clean_title
+),
 
-with final as (
+
+final as (
     select
     -- IDs
         tmdb.tmdb_id,
@@ -17,17 +37,16 @@ with final as (
         coalesce(omdb.title, tmdb.title) as title,
         coalesce(omdb.genre, tmdb.genre_names) as genre,
         coalesce(omdb.language, tmdb.original_language) as language,
-        tmdb.status,
-        tmdb.production_company_names,
-        tmdb.production_country_names,
 
         -- Numbers
         imdb.imdb_rating,
         imdb.number_of_votes as imdb_votes,
-        round(try_to_number(replace(iff(f.value:Source = 'Rotten Tomatoes', f.value:Value, null), '%', '')) / 10, 1) as rt_rating,
-        omdb.awards,
-        tmdb.vote_average,
-        tmdb.vote_count,
+        omdb.omdb_rt_rating,
+        rt.audience_score,
+        rt.tomato_meter,
+        omdb.number_of_awards_won,
+        tmdb.viewer_vote_average,
+        tmdb.viewer_vote_count,
         tmdb.revenue,
         coalesce(omdb.runtime, tmdb.runtime) as runtime,
 
@@ -37,11 +56,12 @@ with final as (
 
     from
         {{ ref('stg_tmdb_movies') }} as tmdb
+        left join rotten_tomatoes_ratings rt
+            on rt.imdb_id  = tmdb.imdb_id
         left join {{ ref('stg_imdb_ratings') }} as imdb
             on tmdb.imdb_id = imdb.imdb_title_id
         left join {{ ref('stg_omdb_movies') }} as omdb
             on tmdb.imdb_id = omdb.imdb_id,
-        lateral flatten(input => omdb.ratings) as f
 
 )
 
