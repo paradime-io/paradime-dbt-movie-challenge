@@ -50,13 +50,13 @@ The relations are visualised in the below Data Lineage.
 ## Visualizations
 
 ### What's Popular
-![What's Popular](Popular_.png)
+![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
 
 ### Temporal Insights
-![Temporal Insights](Temporal_.png)
+![Temporal Insights](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Temporal_.png)
 
 ### TMDb 🆚 IMDb
-![TMDb 🆚 IMDb](TMDBvsIMDB.png)
+![TMDb 🆚 IMDb](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/TMDBvsIMDB_.png)
 
 ## Conclusions
 In conclusion, my analysis across three main topics shed light on several key insights in the film industry:
