@@ -27,6 +27,7 @@ final as (
         tmdb.imdb_id,
 
         -- Strings
+        coalesce(omdb.title, tmdb.title) as title,
         tmdb.original_title,
         tmdb.overview,
         tmdb.keywords,
@@ -34,13 +35,13 @@ final as (
         omdb.writer,
         omdb.actors,
         omdb.type,
-        coalesce(omdb.title, tmdb.title) as title,
         coalesce(omdb.genre, tmdb.genre_names) as genre,
         coalesce(omdb.language, tmdb.original_language) as language,
 
         -- Numbers
-        imdb.imdb_rating,
-        imdb.number_of_votes as imdb_votes,
+        coalesce(omdb.runtime, tmdb.runtime) as runtime,
+        coalesce(imdb.imdb_rating, omdb.imdb_rating) as imdb_rating,
+        coalesce(imdb.number_of_votes, omdb.imdb_votes) as imdb_votes,
         omdb.omdb_rt_rating,
         rt.audience_score,
         rt.tomato_meter,
@@ -48,11 +49,10 @@ final as (
         tmdb.viewer_vote_average,
         tmdb.viewer_vote_count,
         tmdb.revenue,
-        coalesce(omdb.runtime, tmdb.runtime) as runtime,
+        mr.normalized_revenue,
 
         -- Dates/Timestamps
-        coalesce(omdb.released_date, tmdb.release_date) as release_date,
-        omdb.release_year
+        coalesce(omdb.released_date, tmdb.release_date) as release_date
 
     from
         {{ ref('stg_tmdb_movies') }} as tmdb
@@ -61,8 +61,12 @@ final as (
         left join {{ ref('stg_imdb_ratings') }} as imdb
             on tmdb.imdb_id = imdb.imdb_title_id
         left join {{ ref('stg_omdb_movies') }} as omdb
-            on tmdb.imdb_id = omdb.imdb_id,
+            on tmdb.imdb_id = omdb.imdb_id
+        left join {{ ref('normalized_revenue_movies') }} as mr
+            on tmdb.imdb_id = mr.imdb_id
 
+where tmdb.imdb_id is not null
+and tmdb.imdb_id != ''
 )
 
 select *
