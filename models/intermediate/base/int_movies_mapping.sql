@@ -1,22 +1,22 @@
 -- int_movies_mapping.sql
-with rotten_tomatoes_ratings as(
-select
-    a.imdb_id,
-    b.*
-from (
+with rotten_tomatoes_ratings as (
     select
-        imdb_id,
-        lower(regexp_replace(title, '[^a-zA-Z0-9]', '')) as clean_title
-    from {{ ref('stg_tmdb_movies') }}
-) as a
-        join (
+        a.imdb_id,
+        b.*
+    from (
         select
-            audience_score/10 as audience_score,
-            tomato_meter/10 as tomato_meter,
+            imdb_id,
             lower(regexp_replace(title, '[^a-zA-Z0-9]', '')) as clean_title
-        from {{ ref('stg_rotten_tomatoes') }}
-    ) as b
-        on a.clean_title = b.clean_title
+        from {{ ref('stg_tmdb_movies') }}
+    ) as a
+        inner join (
+            select
+                audience_score / 10 as audience_score,
+                tomato_meter / 10 as tomato_meter,
+                lower(regexp_replace(title, '[^a-zA-Z0-9]', '')) as clean_title
+            from {{ ref('stg_rotten_tomatoes') }}
+        ) as b
+            on a.clean_title = b.clean_title
 ),
 
 
@@ -56,8 +56,8 @@ final as (
 
     from
         {{ ref('stg_tmdb_movies') }} as tmdb
-        left join rotten_tomatoes_ratings rt
-            on rt.imdb_id  = tmdb.imdb_id
+        left join rotten_tomatoes_ratings as rt
+            on tmdb.imdb_id = rt.imdb_id
         left join {{ ref('stg_imdb_ratings') }} as imdb
             on tmdb.imdb_id = imdb.imdb_title_id
         left join {{ ref('stg_omdb_movies') }} as omdb
@@ -65,8 +65,9 @@ final as (
         left join {{ ref('normalized_revenue_movies') }} as mr
             on tmdb.imdb_id = mr.imdb_id
 
-where tmdb.imdb_id is not null
-and tmdb.imdb_id != ''
+    where
+        tmdb.imdb_id is not null
+        and tmdb.imdb_id != ''
 )
 
 select *

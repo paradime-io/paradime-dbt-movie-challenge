@@ -2,8 +2,8 @@
 with source as (
     select
         tconst as imdb_title_id,
-        averageRating as imdb_rating,
-        numVotes as number_of_votes
+        averagerating as imdb_rating,
+        numvotes as number_of_votes
     from {{ ref('imdb_ratings') }}
 )
 
