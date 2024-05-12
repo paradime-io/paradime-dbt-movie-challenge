@@ -30,7 +30,6 @@ with collaborations as (
         -- Adding filters to get rid of bad data
         m.director is not null and m.director != 'N/A'
         and m.actors is not null and m.actors != 'N/A'
-        and m.imdb_id is not null
         and m.runtime > 30 -- we don't want small video snippets in this dataset
         and a.index = 1 -- we only want the main actor
         and d.index = 1 -- we only want the main director
