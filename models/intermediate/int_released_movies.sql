@@ -33,11 +33,11 @@ released as (
         -- date/datetime
         o_release_date,
         o_release_year,
-        t_released_date
+        t_release_date
     from movies
     where status = 'Released' 
         -- movies cannot be released in the future
-        and release_year <= year(current_date())
+        and o_release_year <= year(current_date())
 )
 
 SELECT *

@@ -33,7 +33,7 @@ complete_data as (
         -- date/datetime
         o_release_date,
         o_release_year,
-        t_released_date
+        t_release_date
     from released
     where budget is not null and (revenue is not null or box_office is not null)
         and runtime is not null and genre_names is not null and o_release_date is not null

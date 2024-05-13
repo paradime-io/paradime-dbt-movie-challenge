@@ -5,7 +5,6 @@ tmdb as (
         imdb_id,
         tmdb_id,
         title,
-        overview,
         genre_names,
         tagline,
         keywords,
@@ -34,8 +33,8 @@ omdb as (
         imdb_rating,
         imdb_votes,
         box_office,
-        release_year,
-        released_date
+        o_release_year,
+        o_release_date
     from {{ ref('stg_omdb_movies') }}
 ), 
 
@@ -44,7 +43,6 @@ joined as (
         t.imdb_id,
         t.tmdb_id,
         t.title,
-        t.overview,
         t.genre_names,
         t.tagline,
         t.keywords,
@@ -54,7 +52,7 @@ joined as (
         t.revenue,
         t.budget,
         t.t_release_date,
-        t.t_release_year
+        t.t_release_year,
 
         o.director,
         o.writer,
@@ -67,8 +65,8 @@ joined as (
         o.imdb_rating,
         o.imdb_votes,
         o.box_office,
-        o.release_year,
-        o.released_date
+        o.o_release_year,
+        o.o_release_date
     FROM tmdb as t
     inner join omdb as o using (imdb_id)
 )

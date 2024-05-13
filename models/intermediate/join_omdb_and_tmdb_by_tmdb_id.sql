@@ -4,8 +4,7 @@ tmdb AS (
     SELECT
         tmdb_id,
         title,
-        release_date,
-        overview,
+        t_release_date,
         genre_names,
         tagline,
         keywords,
@@ -39,8 +38,7 @@ joined AS (
     SELECT
         tmdb.tmdb_id,
         tmdb.title,
-        tmdb.release_date,
-        tmdb.overview,
+        tmdb.t_release_date,
         tmdb.genre_names,
         tmdb.tagline,
         tmdb.keywords,
