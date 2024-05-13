@@ -1,0 +1,43 @@
+version: 2
+models:            
+  - name: mart_imdb_directors
+    description: Directors for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: Director of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+  - name: mart_imdb_writers
+    description: Writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: Writer of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+  - name: mart_imdb_genres
+    description: Genres assigned to each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: genre
+        description: Genre of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string

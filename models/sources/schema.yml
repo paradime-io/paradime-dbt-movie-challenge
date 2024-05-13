@@ -1,6 +1,9 @@
 version: 2
 models:
   - name: stg_tmdb_movies
+    description: >-
+      The Movie Database (TMDb) is a community built movie and TV database.
+      Data is available at https://www.themoviedb.org
     columns:
       - name: tmdb_id
         description: >-
@@ -128,6 +131,7 @@ models:
             type: string
 
   - name: stg_omdb_movies
+    description: Crowdsourced movie information available at https://www.omdbapi.com/
     columns:
       - name: imdb_id
         description: IMDb ID of the movie.
@@ -344,6 +348,93 @@ models:
             type: string
       - name: production_company_names
         description: Names of production companies associated with the TV show.
+        meta:
+          dimension:
+            type: string
+
+
+  - name: stg_imdb_crew
+    description: Directors and writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: Director of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: Writer of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+  - name: stg_imdb_directors
+    description: Directors for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: Director of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+  - name: stg_imdb_writers
+    description: Writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: Writer of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+  - name: stg_imdb_movies
+    description: Basic info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: titletype
+        description: Type (short, movie, game, video, etc).
+        meta:
+          dimension:
+            type: string
+      - name: primarytitle
+        description: Title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: originaltitle
+        description: Original title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: startyear
+        description: Release year (or start year for TV series).
+        meta:
+          dimension:
+            type: number
+      - name: runtimeminutes
+        description: Runtime in minutes.
+        meta:
+          dimension:
+            type: number
+      - name: genres
+        description: Genres assigned to the movie.
         meta:
           dimension:
             type: string

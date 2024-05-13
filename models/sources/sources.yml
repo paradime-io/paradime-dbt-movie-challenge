@@ -6,3 +6,10 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+
+  - name: MOVIES_ADDITIONAL
+    database: LETICIABUENO8DKEQ_ANALYTICS
+    schema: RAW
+    tables:
+      - name: IMDB_CREW
+      - name: IMDB_MOVIES
