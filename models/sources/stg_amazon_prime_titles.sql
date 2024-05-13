@@ -1,5 +1,7 @@
 WITH source AS (
-    SELECT * FROM {{ source('ADDITIONAL_DATASETS', 'AMAZON_PRIME_TITLES') }}
+    SELECT *
+    FROM 
+        {{ source('ADDITIONAL_DATASETS', 'AMAZON_PRIME_TITLES') }}
 )
 
 SELECT
@@ -7,12 +9,11 @@ SELECT
     type,
     title,
     director,
-    cast,
     country,
-    date_added::DATE,
+    TRY_TO_DATE(date_added) AS date_added_converted, -- Correct use of 'AS' for function result aliasing
     release_year,
     rating,
     duration,
     listed_in,
     description
-FROM source;
+FROM source

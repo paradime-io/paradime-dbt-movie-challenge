@@ -1,5 +1,9 @@
 WITH source AS (
-    SELECT * FROM {{ source('ADDITIONAL_DATASETS', 'DISNEY_PLUS_TITLES') }}
+    SELECT 
+        * 
+    FROM       
+        {{ source('ADDITIONAL_DATASETS', 'HULU_TITLES') }}
+
 )
 
 SELECT
@@ -8,7 +12,7 @@ SELECT
     title,
     director,
     country,
-    date_added,
+    date_added::DATE,
     release_year,
     rating,
     duration,
