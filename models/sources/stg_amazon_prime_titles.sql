@@ -10,7 +10,7 @@ SELECT
     title,
     director,
     country,
-    TRY_TO_DATE(date_added) AS date_added_converted, -- Correct use of 'AS' for function result aliasing
+    date_added,
     release_year,
     rating,
     duration,
