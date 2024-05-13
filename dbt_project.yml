@@ -19,6 +19,9 @@ query-comment:
   comment: '{{ get_query_comment(node) }}'
   append: true
 
+on-run-start: 
+  - '{{create_udfs()}}'
+
 models:
   paradime_movie_challenge: 
     sources:
@@ -30,7 +33,7 @@ models:
         +materialized: view  
     intermediate:
       +schema: intermediate
-      +materialized: table
+      +materialized: view
     warehouse:
       +schema: warehouse
       +materialized: table
