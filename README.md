@@ -170,7 +170,7 @@ My analysis leverages four key data sets:
 ### vizualization 3
 - #### Number of movies per Genre per Publication Year
 - #### Intro sentence to vizualization
-- #### ![Number of movies per Genre per Publication Year](https://github.com/darko-nimbus/paradime-dbt-movie-challenge/blob/9b275d376a95615c732ad4e6ac424d897a5ea042/images/Number%20of%20movies%20per%20Genre%20per%20Publication%20Year.png)
+- #### 
 - #### Insights
 
 ## Conclusions
