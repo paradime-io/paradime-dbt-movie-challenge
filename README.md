@@ -148,22 +148,29 @@ My analysis leverages four key data sets:
 
 ## Visualizations
 
-### vizualization 1
+### 
+![Top 25 directors and Top 25 writers for gross revenue](https://github.com/darko-nimbus/paradime-dbt-movie-challenge/blob/9b275d376a95615c732ad4e6ac424d897a5ea042/images/Top%2025%20directors%20and%20top%2025%20writers%20for%20gross%20revenue.png)
+
+### 25 Movies with the Highest / Lowest ROI
 - #### Visualizations title
 - #### Intro sentence to vizualization
 - #### Image of vizualization
 - #### Insights
 
-### vizualization 2
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
+### 25 Movies with the Highest / Lowest ROI
+- #### The ROI was calculated using the difference between the revenue and the budget for each of the movies. Only the movies that have already been published were included.
+
+<p align="center">
+  <img src="https://github.com/darko-nimbus/paradime-dbt-movie-challenge/raw/9b275d376a95615c732ad4e6ac424d897a5ea042/images/25%20movies%20with%20the%20highest%20ROI.png" alt="25 Movies with the Highest ROI" width="45%" style="margin-right:10px;"/>
+  <img src="https://github.com/darko-nimbus/paradime-dbt-movie-challenge/raw/9b275d376a95615c732ad4e6ac424d897a5ea042/images/25%20movies%20with%20the%20lowest%20ROI.png" alt="25 Movies with the Lowest ROI" width="45%"/>
+</p>
+
 - #### Insights
 
 ### vizualization 3
-- #### Visualizations title
+- #### Number of movies per Genre per Publication Year
 - #### Intro sentence to vizualization
-- #### Image of vizualization
+- #### ![Number of movies per Genre per Publication Year](https://github.com/darko-nimbus/paradime-dbt-movie-challenge/blob/9b275d376a95615c732ad4e6ac424d897a5ea042/images/Number%20of%20movies%20per%20Genre%20per%20Publication%20Year.png)
 - #### Insights
 
 ## Conclusions
