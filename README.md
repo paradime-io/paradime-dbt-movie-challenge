@@ -130,30 +130,19 @@ Here's an example project that fulfills all requirements and would be elligble e
 ## Introduction
 A simple intro. Example - "Explore my project for the _dbt™ data modeling challenge - Movie Edition_, Hosted by [Paradime](https://www.paradime.io/)! This project dives into the analysis and visualization of Movie and TV data!"
 
-## Data Sources and Data Lineage
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
-### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
-
 ## Methodology
 #### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
+- **[Looker](https://www.looker.com/)** for data visualization.
+- **ChatGPT 4** to do the heavy lifting when writing code.
 
 ### Data Sources
 My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
+- *TMDB_MOVIES*
+- *OMDB_MOVIES*
+- *TMDB_TV_SERIES*
+  
 ### Data Lineage
 [Image]
 
