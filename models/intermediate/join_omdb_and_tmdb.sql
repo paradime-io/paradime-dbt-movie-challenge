@@ -96,6 +96,8 @@ omdb AS (
         released_date as omdb_released_date,
         runtime as omdb_runtime,
         ratings as omdb_ratings,
+        imdb_rating as omdb_imdb_rating,
+        imdb_votes as omdb_imdb_votes,
         tmdb_id as omdb_tmdb_id,
         {{ dbt_utils.generate_surrogate_key([
                 'imdb_id',
@@ -113,6 +115,8 @@ omdb AS (
                 'released_date',
                 'runtime',
                 'ratings',
+                'imdb_rating',
+                'imdb_votes',
                 'tmdb_id'
             ])
         }} as omdb_unique_key
@@ -212,8 +216,16 @@ joined AS (
         omdb_released_date,
         omdb_runtime,
         omdb_ratings,
+        omdb_imdb_votes,
         omdb_tmdb_id,
-        omdb_unique_key
+        omdb_unique_key,
+        {{ dbt_utils.generate_surrogate_key([
+                'omdb_imdb_id',
+                'tmdb_imdb_id',
+                'omdb_tmdb_id',
+                'tmdb_tmdb_id'
+            ])
+        }} as identifier_unique_key
     FROM 
         joined_deduped_omdb_unique_key
 )
