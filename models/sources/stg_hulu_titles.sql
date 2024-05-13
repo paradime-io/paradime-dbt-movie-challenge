@@ -12,7 +12,7 @@ SELECT
     title,
     director,
     country,
-    date_added::DATE,
+    date_added,
     release_year,
     rating,
     duration,
