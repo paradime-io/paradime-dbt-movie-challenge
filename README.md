@@ -136,7 +136,6 @@ My analysis leverages four key data sets:
 - *TMDB_MOVIES*
 - *TMDB_TV_SERIES*
 - [*STREAMING_PLATFORMS*](https://www.kaggle.com/datasets/ruchi798/movies-on-netflix-prime-video-hulu-and-disney)
-- [*IMDb Movie Dataset: All Movies by Genre*](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?resource=download)
 
 ### Data Lineage
 - Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
@@ -146,7 +145,6 @@ My analysis leverages four key data sets:
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Looker](https://lookerstudio.google.com/)** for data visualization. To improve performance and speed up the project, queries moving data from Snowflake to Looker limited the imported rows to only the ones needed for the visualizations.     
-- **Other tool(s) used** and why.
 
 ## Visualizations
 
