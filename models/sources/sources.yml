@@ -6,3 +6,13 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: ADDITIONAL_DATASETS
+    database: DARKOCOMPAGNONIRVXSH_ANALYTICS
+    schema: RAW
+    tables: 
+      - name: AMAZON_PRIME_TITLES
+      - name: DISNEY_PLUS_TITLES
+      - name: HULU_TITLES
+      - name: NETFLIX_TITLES
+
+    
