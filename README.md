@@ -1,5 +1,4 @@
 # dbt™ Data Modeling Challenge - Movie Edition
-[Jump to my submission](https://github.com/darko-nimbus/paradime-dbt-movie-challenge/edit/movie-darko-compagnoni-nimbusintelligence-com/README.md#example-submission-template)
 
 Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition)!
 
