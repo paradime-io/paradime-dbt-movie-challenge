@@ -1,6 +1,6 @@
 with movies_src as (
     select 
-        identifier_unique_key,
+        identifier_unique_key as movie_id,
         omdb_director,
         omdb_writer,
         omdb_actors
@@ -10,7 +10,7 @@ with movies_src as (
 
 all_movies_and_people  as (
     SELECT 
-        identifier_unique_key,
+        movie_id,
         trim(dir.value) AS person_name,
         'DIRECTOR' AS person_role
     FROM movies_src,
@@ -19,7 +19,7 @@ all_movies_and_people  as (
     UNION	
 
     SELECT 
-        identifier_unique_key,
+        movie_id,
         trim(wri.value) AS person_name,
         'WRITER' AS person_role
     FROM movies_src,
@@ -28,7 +28,7 @@ all_movies_and_people  as (
     UNION
 
     SELECT 
-        identifier_unique_key,
+        movie_id,
         trim(act.value) AS person_name,
         'ACTOR' AS person_role
     FROM movies_src,
@@ -41,28 +41,49 @@ deduped as (
     FROM
         all_movies_and_people
     QUALIFY ROW_NUMBER() OVER (
-            PARTITION BY identifier_unique_key, person_name, person_role
-            ORDER BY identifier_unique_key -- this is arbitrary
+            PARTITION BY movie_id, person_name, person_role
+            ORDER BY movie_id -- this is arbitrary
         ) = 1
+),
+
+role_details as (
+    SELECT
+        *,
+        REGEXP_REPLACE(REGEXP_SUBSTR(PERSON_NAME, '\\(\.\*\\)$'), '\\(|\\)', '') as person_role_details
+    FROM 
+        deduped
+    WHERE  
+        person_role = 'DIRECTOR'
+        OR person_role = 'WRITER'
 ),
 
 cleaned as (
     select 
-        identifier_unique_key as movie_id,
+        movie_id,
+        RTRIM(REGEXP_REPLACE(REPLACE(person_name, person_role_details, ''), '\\(|\\)', '')) as person_name,
+        person_role,
+        UPPER(person_role_details) as person_role_details
+    from 
+        role_details
+    where 
+        person_name != 'N/A'
+),
+
+identified as (
+    select 
+        movie_id,
         {{ dbt_utils.generate_surrogate_key([
                 'person_name'
             ])
         }} as person_id,
         person_name,
-        person_role
+        person_role,
+        person_role_details
     from 
-        deduped
-    where 
-        person_name != 'N/A'
-
+        cleaned
 )
 
 select 
     *
 from 
-    cleaned
+    identified
