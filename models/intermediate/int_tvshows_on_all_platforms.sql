@@ -104,7 +104,10 @@ SELECT
     title,
     director,
     country,
-    TO_CHAR(TO_DATE(date_added, 'MMMM DD, YYYY'), 'YYYY-MM-DD') AS date_added,
+    COALESCE(
+        TRY_TO_DATE(TRIM(date_added), 'MMMM D, YYYY'),
+        TRY_TO_DATE(TRIM(date_added), 'MMMM DD, YYYY')
+    ) AS date_added,
     release_year,
     rating,
     TO_NUMBER(REGEXP_SUBSTR(duration, '^[0-9]+')) AS seasons,

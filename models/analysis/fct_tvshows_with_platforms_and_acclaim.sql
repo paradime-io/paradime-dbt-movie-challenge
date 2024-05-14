@@ -70,5 +70,6 @@ joined_tables AS (
         platforms p
     ON
         LOWER(REPLACE(p.title, ' ', '')) = LOWER(REPLACE(f.NAME, ' ', ''))
+        AND release_year <= year(first_air_date)
 )
 SELECT * FROM joined_tables
