@@ -7,10 +7,10 @@ WITH netflix_titles AS (
         title, 
         director, 
         country, 
-        date_added, 
+        date_added,  
         release_year, 
         rating, 
-        duration, 
+        duration,
         listed_in, 
         description
     FROM 
@@ -28,10 +28,10 @@ disney_plus_titles AS (
         title, 
         director, 
         country, 
-        date_added, 
+        date_added,  
         release_year, 
         rating, 
-        duration, 
+        duration,
         listed_in, 
         description
     FROM 
@@ -51,10 +51,10 @@ AS (
         title, 
         director, 
         country, 
-        date_added, 
+        date_added,  
         release_year, 
         rating, 
-        duration, 
+        duration,
         listed_in, 
         description
     FROM 
@@ -73,10 +73,10 @@ amazon_prime_titles AS (
         title, 
         director, 
         country, 
-        date_added, 
+        date_added,  
         release_year, 
         rating, 
-        duration, 
+        duration,
         listed_in, 
         description
     FROM 
@@ -86,11 +86,29 @@ amazon_prime_titles AS (
 
 )
 
+,
+combined_titles AS (
+    SELECT * FROM netflix_titles
+    UNION ALL
+    SELECT * FROM disney_plus_titles
+    UNION ALL
+    SELECT * FROM hulu_titles
+    UNION ALL
+    SELECT * FROM amazon_prime_titles
+)
 
-SELECT * FROM netflix_titles
-UNION ALL
-SELECT * FROM disney_plus_titles
-UNION ALL
-SELECT * FROM hulu_titles
-UNION ALL
-SELECT * FROM amazon_prime_titles
+SELECT
+    platform,
+    show_id,
+    type,
+    title,
+    director,
+    country,
+    TO_CHAR(TO_DATE(date_added, 'MMMM DD, YYYY'), 'YYYY-MM-DD') AS date_added,
+    release_year,
+    rating,
+    TO_NUMBER(REGEXP_SUBSTR(duration, '^[0-9]+')) AS seasons,
+    listed_in,
+    description
+FROM 
+    combined_titles
