@@ -1,5 +1,6 @@
--- models/union_all_titles.sql
-WITH netflix_titles AS (
+WITH 
+
+netflix_titles AS (
     SELECT 
         'Netflix' as platform, 
         show_id, 

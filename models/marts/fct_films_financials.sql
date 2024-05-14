@@ -5,7 +5,7 @@ SELECT
     T.REVENUE - T.BUDGET AS ROI,
     ROUND((T.REVENUE - T.BUDGET)/T.BUDGET*100, 2) AS ROI_PERCENT 
 FROM 
-    {{ ref('int_join_tmdb_imdb') }} 
+    {{ ref('int_join_tmdb_omdb') }} 
 WHERE 
     T.RELEASE_DATE < CURRENT_DATE 
     AND REVENUE <> 0
