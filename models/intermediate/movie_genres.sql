@@ -12,9 +12,17 @@ all_movies_and_genres  as (
         trim(gen.value) AS genre
     FROM movies_src,
         LATERAL SPLIT_TO_TABLE(genres, ',') AS gen
+),
+
+consolidated as (
+    SELECT
+        movie_id,
+        replace(genre, 'Sci-Fi', 'Science Fiction') as genre
+    FROM 
+        all_movies_and_genres
 )
 
 select 
     *
 from 
-    all_movies_and_genres
+    consolidated
