@@ -1,0 +1,12 @@
+SELECT 
+    md_TITLE as TITLE, 
+    REVENUE, 
+    BUDGET,
+    REVENUE - BUDGET AS ROI,
+    ROUND((REVENUE - BUDGET)/BUDGET*100, 2) AS ROI_PERCENT 
+FROM 
+    {{ ref('int_join_tmdb_omdb') }} 
+WHERE 
+    RELEASE_DATE < CURRENT_DATE 
+    AND REVENUE <> 0
+    AND BUDGET <> 0

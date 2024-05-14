@@ -20,7 +20,6 @@ WITH omdb AS (
         o.PRODUCTION,
         o.RATED,
         o.RATINGS,
-        o.RELEASED_DATE,
         o.RUNTIME,
         o.TMDB_ID as o_tmdb_id, -- Aliasing to distinguish from t.TMDB_ID
         o.TYPE,
@@ -45,8 +44,8 @@ tmdb AS (
         t.POSTER_PATH,
         t.PRODUCTION_COMPANY_NAMES,
         t.PRODUCTION_COUNTRY,
-        t.RELEASE_DATE,
         t.RUNTIME as t_runtime, -- Aliased because o.RUNTIME exists
+        t.RELEASE_DATE,
         t.SPOKEN_LANGUAGES,
         t.STATUS,
         t.TAGLINE,
@@ -85,7 +84,7 @@ joined_tables AS (
         md.PRODUCTION,
         md.RATED,
         md.RATINGS,
-        md.RELEASED_DATE,
+        mf.RELEASE_DATE,
         md.RUNTIME,
         md.TYPE,
         md.WEBSITE,
@@ -103,7 +102,6 @@ joined_tables AS (
         mf.POSTER_PATH,
         mf.PRODUCTION_COMPANY_NAMES,
         mf.PRODUCTION_COUNTRY,
-        mf.RELEASE_DATE as mf_release_date, -- Aliased to differentiate from md.RELEASED_DATE
         mf.t_runtime,
         mf.SPOKEN_LANGUAGES,
         mf.STATUS,

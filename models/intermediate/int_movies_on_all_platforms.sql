@@ -3,7 +3,7 @@ WITH
 netflix_titles AS (
     SELECT 
         'Netflix' as platform, 
-        show_id, 
+        CONCAT('Netflix_',show_id) as movie_id, 
         type, 
         title, 
         director, 
@@ -24,7 +24,7 @@ netflix_titles AS (
 disney_plus_titles AS (
     SELECT 
         'Disney+' as platform, 
-        show_id, 
+        CONCAT('Disney_',show_id) as movie_id, 
         type, 
         title, 
         director, 
@@ -47,7 +47,7 @@ hulu_titles
 AS (
     SELECT
         'Hulu' as platform, 
-        show_id, 
+        CONCAT('Hulu_',show_id) as movie_id, 
         type, 
         title, 
         director, 
@@ -69,7 +69,7 @@ AS (
 amazon_prime_titles AS (
     SELECT 
         'Amazon Prime' as platform, 
-        show_id, 
+        CONCAT('Amazon_',show_id) as movie_id, 
         type, 
         title, 
         director, 
@@ -99,7 +99,7 @@ combined_titles AS (
 
 SELECT
     platform,
-    show_id,
+    movie_id,
     type,
     title,
     director,
