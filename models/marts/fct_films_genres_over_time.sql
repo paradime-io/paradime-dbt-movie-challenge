@@ -4,6 +4,6 @@ SELECT
     IMDB_ID,
     IMDB_RATING
 FROM 
-    {{ ref('join_tmdb_omdb') }}
+    {{ ref('int_join_tmdb_omdb') }}
 WHERE
     GENRE <> 'N/A'
