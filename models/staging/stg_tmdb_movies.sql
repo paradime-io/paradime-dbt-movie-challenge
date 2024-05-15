@@ -1,6 +1,7 @@
 WITH source AS (
     SELECT 
-TMDB_ID,
+        TMDB_ID,
+        IMDB_ID,
         TITLE,
         ORIGINAL_TITLE,
         OVERVIEW,
@@ -19,7 +20,6 @@ TMDB_ID,
         POSTER_PATH,
         BACKDROP_PATH,
         BELONGS_TO_COLLECTION,
-        IMDB_ID,
         GENRE_NAMES,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
@@ -28,8 +28,19 @@ TMDB_ID,
         {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 )
 
-SELECT 
-    * 
-FROM 
-    source
 
+/* How many records are there?
+908351
+*/
+--  select count(*) from source
+
+/* Which ID should we use? 
+    - TMDB is unique and non-null, so this makes most sense.
+*/
+--  select
+--      count(distinct tmdb_id) = count(*) as TMDB_ID_count,
+--      count(distinct imdb_id) = count(*) as IMDB_ID_count,
+--  from source
+
+
+select * from source
