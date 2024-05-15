@@ -49,18 +49,25 @@ deduped as (
 role_details as (
     SELECT
         *,
-        REGEXP_REPLACE(REGEXP_SUBSTR(PERSON_NAME, '\\(\.\*\\)$'), '\\(|\\)', '') as person_role_details
+        case 
+            when person_role = 'DIRECTOR' OR person_role = 'WRITER'
+                then REGEXP_REPLACE(REGEXP_SUBSTR(PERSON_NAME, '\\(\.\*\\)$'), '\\(|\\)', '')
+            else 
+                NULL
+        end as person_role_details
     FROM 
         deduped
-    WHERE  
-        person_role = 'DIRECTOR'
-        OR person_role = 'WRITER'
 ),
 
 cleaned as (
     select 
         movie_id,
-        RTRIM(REGEXP_REPLACE(REPLACE(person_name, person_role_details, ''), '\\(|\\)', '')) as person_name,
+        case 
+            when person_role_details is not null 
+                then RTRIM(REGEXP_REPLACE(REPLACE(person_name, person_role_details, ''), '\\(|\\)', '')) 
+            else 
+                person_name
+            end as person_name,
         person_role,
         UPPER(person_role_details) as person_role_details
     from 
