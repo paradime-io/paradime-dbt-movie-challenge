@@ -100,7 +100,7 @@ List of production country names associated with the movie.
 
 # stg_omdb_movies
 {% docs stg_omdb_movies__imdb_id %}
-blobbb
+IMDb ID of the movie.
 {% enddocs %}
 
 {% docs stg_omdb_movies__title %}
@@ -197,4 +197,51 @@ Awards won or nominations received by the movie.
 
 {% docs stg_omdb_movies__tmdb_id %}
 TMDB ID of the movie.
+{% enddocs %}
+
+
+
+# stg_rotten_tomatoes
+{% docs stg_rotten_tomatoes__rotten_tomatoes_id %}
+Unique ID
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__title %}
+Title of the movie.
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__audience_score %}
+Tomatoe score from the audience
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__tomato_meter %}
+Rotten tomatoe rating
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__runtime_minutes %}
+Runtime
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__genre %}
+Genre
+{% enddocs %}
+
+{% docs stg_rotten_tomatoes__box_office %}
+Box office
+{% enddocs %}
+
+
+
+# stg_imdb_ratings
+
+{% docs stg_imdb_ratings__imdb_title_id %}
+Unique Id, IMDB Id.
+{% enddocs %}
+
+{% docs stg_imdb_ratings__imdb_rating %}
+IMDB rating
+{% enddocs %}
+
+{% docs stg_imdb_ratings__number_of_votes %}
+Number of votes
 {% enddocs %}

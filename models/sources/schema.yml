@@ -453,3 +453,61 @@ models:
         meta:
           dimension:
             type: string
+
+
+  - name: stg_rotten_tomatoes
+    description: |
+      Staging model for storing information about movies from the rotten tomatoes API.
+
+    columns:
+      - name: rotten_tomatoes_id
+        description: |
+          {{ doc("stg_rotten_tomatoes__rotten_tomatoes_id") }}
+        tests:
+          - unique
+          - not_null
+  
+      - name: title
+        description: |
+          {{ doc("stg_rotten_tomatoes__title") }}
+
+      - name: audience_score
+        description: |
+          {{ doc("stg_rotten_tomatoes__audience_score") }}
+
+      - name: tomato_meter
+        description: |
+          {{ doc("stg_rotten_tomatoes__tomato_meter") }}
+
+      - name: runtime_minutes
+        description: |
+          {{ doc("stg_rotten_tomatoes__runtime_minutes") }}
+
+      - name: genre
+        description: |
+          {{ doc("stg_rotten_tomatoes__genre") }}
+
+      - name: box_office
+        description: |
+          {{ doc("stg_rotten_tomatoes__box_office") }}
+
+
+  - name: stg_imdb_ratings
+    description: |
+      Staging model for storing information about movies from the IMDB API.
+
+    columns:
+      - name: imdb_title_id
+        description: |
+          {{ doc("stg_imdb_ratings__imdb_title_id") }}
+        tests:
+          - unique
+          - not_null
+  
+      - name: imdb_rating
+        description: |
+          {{ doc("stg_imdb_ratings__imdb_rating") }}
+
+      - name: number_of_votes
+        description: |
+          {{ doc("stg_imdb_ratings__number_of_votes") }}
