@@ -214,3 +214,4 @@ models:
         meta:
           dimension:
             type: string
+    meta: {}
