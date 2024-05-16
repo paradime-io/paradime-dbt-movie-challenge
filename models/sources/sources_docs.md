@@ -199,6 +199,14 @@ Awards won or nominations received by the movie.
 TMDB ID of the movie.
 {% enddocs %}
 
+{% docs stg_omdb_movies__number_of_awards_won %}
+Number of awards won, extracted from awards column
+{% enddocs %}
+
+{% docs stg_omdb_movies__omdb_rt_rating %}
+Rotten tomato rating, extracted from ratings column
+{% enddocs %}
+
 
 
 # stg_rotten_tomatoes
