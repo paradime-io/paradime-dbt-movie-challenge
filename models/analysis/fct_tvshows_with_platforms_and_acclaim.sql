@@ -53,7 +53,7 @@ joined_tables AS (
         f.POPULARITY,
         f.POSTER_PATH,
         f.PRODUCTION_COMPANY_NAMES,
-        p.platform,
+        CASE WHEN p.platform IS NULL THEN 'None' ELSE p.platform END as platform,
         p.show_id,
         p.type,
         p.title,
@@ -66,7 +66,7 @@ joined_tables AS (
         p.listed_in
     FROM
         financials f
-    INNER JOIN
+    LEFT JOIN
         platforms p
     ON
         LOWER(REPLACE(p.title, ' ', '')) = LOWER(REPLACE(f.NAME, ' ', ''))
