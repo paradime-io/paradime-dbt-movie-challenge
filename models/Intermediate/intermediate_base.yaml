@@ -1,0 +1,75 @@
+version: 2
+models:
+  - name: omdb_tmdb_join_english_only
+    columns:
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: vote_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: box_office
+        description: ""
+        meta:
+          dimension:
+            type: number
+
