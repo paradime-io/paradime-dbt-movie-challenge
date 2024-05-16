@@ -1,6 +1,6 @@
 -- stg_rotten_tomatoes.sql
 with source as (
-    select
+    select distinct
         id as rotten_tomatoes_id,
         title,
         audienceScore as audience_score,
@@ -9,6 +9,7 @@ with source as (
         genre as genre,
         boxOffice as box_office
     from {{ ref('rotten_tomatoes_ratings') }}
+    where title is not null --remove bad data
 )
 
 select *

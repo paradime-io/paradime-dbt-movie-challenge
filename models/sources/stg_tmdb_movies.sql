@@ -1,5 +1,5 @@
 with source as (
-    select
+    select distinct
         tmdb_id,
         title,
         original_title,

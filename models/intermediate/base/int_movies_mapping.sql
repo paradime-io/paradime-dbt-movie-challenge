@@ -19,11 +19,9 @@ with rotten_tomatoes_ratings as (
             on a.clean_title = b.clean_title
 ),
 
-
 final as (
-    select
-    -- IDs
-        tmdb.tmdb_id,
+    select distinct
+        -- IDs
         tmdb.imdb_id,
 
         -- Strings
@@ -64,10 +62,27 @@ final as (
             on tmdb.imdb_id = omdb.imdb_id
         left join {{ ref('normalized_revenue_movies') }} as mr
             on tmdb.imdb_id = mr.imdb_id
-
     where
         tmdb.imdb_id is not null
         and tmdb.imdb_id != ''
+    qualify row_number() over (
+        partition by tmdb.imdb_id
+        order by
+        -- Count of non-null columns in descending order
+            (
+                (case when imdb.imdb_rating is not null then 1 else 0 end)
+                + (case when imdb.number_of_votes is not null then 1 else 0 end)
+                + (case when omdb.omdb_rt_rating is not null then 1 else 0 end)
+                + (case when rt.audience_score is not null then 1 else 0 end)
+                + (case when rt.tomato_meter is not null then 1 else 0 end)
+                + (case when omdb.number_of_awards_won is not null then 1 else 0 end)
+                + (case when tmdb.viewer_vote_average is not null then 1 else 0 end)
+                + (case when tmdb.viewer_vote_count is not null then 1 else 0 end)
+                + (case when tmdb.revenue is not null then 1 else 0 end)
+                + (case when mr.normalized_revenue is not null then 1 else 0 end)
+            ) desc
+    ) = 1
+
 )
 
 select *
