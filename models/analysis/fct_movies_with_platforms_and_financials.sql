@@ -74,7 +74,7 @@ joined_tables AS (
         f.STATUS,
         f.VOTE_AVERAGE,
         f.VOTE_COUNT,
-        p.platform,
+        CASE WHEN p.platform IS NULL THEN 'None' ELSE p.platform END as platform,
         p.movie_id,
         p.country,
         p.date_added,
@@ -83,7 +83,7 @@ joined_tables AS (
         p.listed_in
     FROM
         financials f
-    INNER JOIN
+    LEFT JOIN
         platforms p
     ON
         LOWER(REPLACE(p.title, ' ', '')) = LOWER(REPLACE(f.original_title, ' ', ''))
