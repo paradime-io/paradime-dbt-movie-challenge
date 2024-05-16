@@ -24,6 +24,7 @@ omdb AS (
         release_year
     FROM
         {{ ref('stg_omdb_movies') }}
+    where box_office is not null
 ), 
 
 joined AS (
