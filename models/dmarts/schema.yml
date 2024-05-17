@@ -278,7 +278,7 @@ models:
         description: ""
         meta:
           dimension:
-            type: string  
+            type: string
   - name: dim_movies_genre
     columns:
       - name: release_year
@@ -286,97 +286,192 @@ models:
         meta:
           dimension:
             type: number
-      - name: "'comedy'"
+      - name: comedy
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'war'"
+      - name: war
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'science fiction'"
+      - name: science_fiction
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'horror'"
+      - name: horror
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'action'"
+      - name: action
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'crime'"
+      - name: crime
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'drama'"
+      - name: drama
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'animation'"
+      - name: animation
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'history'"
+      - name: history
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'western'"
+      - name: western
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'family'"
+      - name: family
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'romance'"
+      - name: romance
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'music'"
+      - name: music
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'thriller'"
+      - name: thriller
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'mystery'"
+      - name: mystery
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'tv movie'"
+      - name: tv_movie
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'documentary'"
+      - name: documentary
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'fantasy'"
+      - name: fantasy
         description: ""
         meta:
           dimension:
             type: number
-      - name: "'adventure'"
+      - name: adventure
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: total_movies
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: comedy_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: war_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: science_fiction_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: horror_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: action_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: crime_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: drama_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: animation_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: history_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: western_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: family_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: romance_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: music_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: thriller_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: tv_movie_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: documentary_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: fantasy_percentage
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: adventure_percentage
         description: ""
         meta:
           dimension:

@@ -1,0 +1,109 @@
+version: 2
+models:
+  - name: inter_movies_genre_per_year
+    columns:
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: comedy
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: war
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: science_fiction
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: horror
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: action
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: crime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: drama
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: animation
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: history
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: western
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: family
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: romance
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: music
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: thriller
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: mystery
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: tv_movie
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: documentary
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: fantasy
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: adventure
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: total_movies
+        description: ""
+        meta:
+          dimension:
+            type: number
