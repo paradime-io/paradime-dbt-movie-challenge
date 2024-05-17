@@ -50,6 +50,7 @@ omdb AS (
 joined AS (
     SELECT
         tmdb.imdb_id,
+        tmdb.tmdb_id,
         tmdb.title as tmdb_title,
         tmdb.status,
         tmdb.overview,

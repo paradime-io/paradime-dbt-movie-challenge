@@ -9,5 +9,6 @@ select
         when (tmdb_release_date != omdb_release_date) then tmdb_release_date
         when (tmdb_release_date = omdb_release_date) then omdb_release_date
         else Null
-        end AS release_date2
+        end AS release_date,
+    extract(year from release_date) as release_year
 from combine_movies_db
