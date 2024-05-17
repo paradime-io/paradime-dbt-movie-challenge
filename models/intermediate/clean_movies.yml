@@ -1,0 +1,194 @@
+version: 2
+models:
+  - name: clean_movies
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: tmdb_title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: status
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: overview
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tagline
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: keywords
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: video
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_rated
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_writer
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_actors
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_plot
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_original_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_spoken_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_awards
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_production_country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_production
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: omdb_dvd
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: omdb_release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: tmdb_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: tmdb_vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: tmdb_vote_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_ratings
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: omdb_box_office
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number

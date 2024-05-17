@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: inter_dim_genre
+    columns:
+      - name: tv_series_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre_name
+        description: ""
+        meta:
+          dimension:
+            type: string

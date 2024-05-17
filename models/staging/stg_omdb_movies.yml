@@ -1,0 +1,129 @@
+version: 2
+models:
+  - name: stg_omdb_movies
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: actors
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: type
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: plot
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: rated
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: ratings
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: dvd
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: box_office
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: poster
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: website
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: awards
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number

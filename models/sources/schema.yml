@@ -291,7 +291,9 @@ models:
           dimension:
             type: string
       - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
+        description: >-
+          Current status of the TV show (e.g., returning series, ended,
+          cancelled, etc.).
         meta:
           dimension:
             type: string
@@ -337,11 +339,6 @@ models:
             type: number
       - name: poster_path
         description: URL path of the poster image for the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: production_company_names
-        description: Names of production companies associated with the TV show.
         meta:
           dimension:
             type: string
