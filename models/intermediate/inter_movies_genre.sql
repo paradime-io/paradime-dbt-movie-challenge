@@ -10,4 +10,7 @@ SELECT
 FROM 
     clean_movies,
 LATERAL FLATTEN(input=>split(genre_names, ', ')) C
-WHERE release_year IS NOT NULL
+WHERE
+    (release_year IS NOT NULL) AND
+    (release_year < 2025)
+ORDER BY release_date DESC
