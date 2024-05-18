@@ -12,7 +12,7 @@ Avg IMDB rating from omdb and imdb combined
 Avg IMDB votes from omdb and imdb combined
 {% enddocs %}
 
-{% docs actor_director_success__normalized_revenue %}
+{% docs actor_director_success__revenue %}
 Agv revenue 
 {% enddocs %}
 
