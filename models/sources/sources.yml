@@ -13,3 +13,8 @@ sources:
     tables:
       - name: IMDB_CREW
       - name: IMDB_MOVIES
+      - name: IMDB_PEOPLE
+      - name: IMDB_MOVIES_PEOPLE
+      - name: IMDB_RATINGS
+      - name: ACADEMY_AWARDS
+      - name: CONSUMER_PRICE_INDEX

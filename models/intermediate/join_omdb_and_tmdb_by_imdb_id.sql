@@ -11,8 +11,8 @@ tmdb as (
         status,
         runtime,
         vote_average,
-        revenue,
-        budget,
+        revenue_usd,
+        budget_usd,
         t_release_date,
         t_release_year
     from {{ ref('stg_tmdb_movies') }}
@@ -49,8 +49,8 @@ joined as (
         t.status,
         t.runtime,
         t.vote_average,
-        t.revenue,
-        t.budget,
+        t.revenue_usd,
+        t.budget_usd,
         t.t_release_date,
         t.t_release_year,
 

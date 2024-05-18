@@ -26,8 +26,8 @@ basic_cleanup as (
         vote_average,
         vote_count,
         iff(runtime != 0, runtime, null) as runtime,
-        iff(budget != 0, budget, null) as budget,
-        iff(revenue != 0, revenue, null) as revenue,
+        iff(budget != 0, budget, null) as budget_usd,
+        iff(revenue != 0, revenue, null) as revenue_usd,
         -- datetime
         release_date as t_release_date,
         year(release_date) as t_release_year

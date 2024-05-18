@@ -28,8 +28,8 @@ released as (
         box_office,
         runtime,
         vote_average,
-        revenue,
-        budget,
+        revenue_usd,
+        budget_usd,
         -- date/datetime
         o_release_date,
         o_release_year,

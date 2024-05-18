@@ -10,8 +10,8 @@ tmdb AS (
         keywords,
         runtime,
         vote_average,
-        revenue,
-        budget,
+        revenue_usd,
+        budget_usd,
         status
     FROM {{ ref('stg_tmdb_movies') }}
 ), 
@@ -44,8 +44,8 @@ joined AS (
         tmdb.keywords,
         tmdb.runtime,
         tmdb.vote_average,
-        tmdb.revenue,
-        tmdb.budget,
+        tmdb.revenue_usd,
+        tmdb.budget_usd,
         tmdb.status,
         omdb.IMDB_ID,
         omdb.director,
