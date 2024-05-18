@@ -43,3 +43,18 @@ Ultimate combined success metric calculated by using all the other succes metric
 {% docs int_combined_movie_success__combined_rotten_tomato_rating %}
 Tomatoe rating combining omdb_rt_rating, tomato_meter, audience_score
 {% enddocs %}
+
+
+# int_collaboration_network_actor_director
+
+{% docs int_collaboration_network_actor_director__director_actor_key %}
+Unique actor director key
+{% enddocs %}
+
+{% docs int_collaboration_network_actor_director__director %}
+Flattened director
+{% enddocs %}
+
+{% docs int_collaboration_network_actor_director__actor %}
+Main actor
+{% enddocs %}

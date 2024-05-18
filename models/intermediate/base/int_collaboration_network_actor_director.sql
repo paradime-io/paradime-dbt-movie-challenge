@@ -4,7 +4,7 @@
 with collaborations as (
     select
         {{ dbt_utils.generate_surrogate_key(['d.value', 'a.value']) }} as director_actor_key,
-        trim(d.value) as director, -- Cleaning up any extra spaces around actor names
+        trim(d.value) as director, -- Cleaning up any extra spaces around director names
         trim(a.value) as actor,  -- Cleaning up any extra spaces around actor names
         m.imdb_id,
         m.title,

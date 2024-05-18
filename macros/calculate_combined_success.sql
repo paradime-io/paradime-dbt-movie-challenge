@@ -16,6 +16,6 @@
         coalesce(viewer_vote_average, 0) * {{ viewer_vote_average_weight }} +
         coalesce(viewer_vote_count, 0) * {{ viewer_vote_count_weight }} +
         coalesce(normalized_revenue, 0) * {{ normalized_revenue_weight }},
-    1) as combined_success_rating
+    1) as combined_success
 
 {% endmacro %}
