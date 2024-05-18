@@ -45,3 +45,16 @@ Avg ultimate combined success metric calculated by using all the other succes me
 {% enddocs %}
 
 
+# movie_success_yearly
+
+{% docs movie_success_yearly__release_year %}
+Release year of the movie
+{% enddocs %}
+
+{% docs movie_success_yearly__movie_count %}
+Count of movies released that year
+{% enddocs %}
+
+{% docs movie_success_yearly__avg_combined_success_rating %}
+Avg combined success rating
+{% enddocs %}

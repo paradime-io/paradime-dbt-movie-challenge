@@ -254,3 +254,31 @@ models:
         meta:
           dimension:
             type: number
+
+  - name: movie_success_yearly
+    description: |
+      Final model showing combined success metrics of each movie
+
+    columns:
+      - name: release_year
+        description: |
+          {{ doc("movie_success_yearly__release_year") }}
+        meta:
+          dimension:
+            type: date
+        tests:
+          - not_null
+
+      - name: movie_count
+        description: |
+          {{ doc("movie_success_yearly__movie_count") }}
+        meta:
+          dimension:
+            type:  number
+
+      - name: avg_combined_success_rating
+        description: |
+          {{ doc("movie_success_yearly__avg_combined_success_rating") }}
+        meta:
+          dimension:
+            type: number
