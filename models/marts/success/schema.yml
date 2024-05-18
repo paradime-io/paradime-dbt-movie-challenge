@@ -1,0 +1,146 @@
+version: 2
+models:
+  - name: movie_success
+    description: |
+      Final model showing combined success metrics of each movie
+
+    columns:
+      - name: imdb_id
+        description: |
+          {{ doc("stg_tmdb_movies__imdb_id") }}
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: |
+          {{ doc("int_movies_mapping__title") }}
+
+      - name: original_title
+        description: |
+          {{ doc("stg_tmdb_movies__original_title") }}
+
+      - name: director
+        description: |
+          {{ doc("stg_omdb_movies__director") }}
+
+      - name: actors
+        description: |
+          {{ doc("stg_omdb_movies__actors") }}
+
+      - name: genre
+        description: |
+          {{ doc("int_movies_mapping__genre") }}
+
+      - name: language
+        description: |
+          {{ doc("int_movies_mapping__language") }}
+
+      - name: runtime
+        description: |
+          {{ doc("int_movies_mapping__runtime") }}
+
+      - name: imdb_rating
+        description: |
+          {{ doc("int_movies_mapping__imdb_rating") }}
+
+      - name: imdb_votes
+        description: |
+          {{ doc("int_movies_mapping__imdb_votes") }}
+
+      - name: omdb_rt_rating
+        description: |
+          {{ doc("stg_omdb_movies__omdb_rt_rating") }}
+
+      - name: number_of_awards_won
+        description: |
+          {{ doc("stg_omdb_movies__number_of_awards_won") }}
+
+      - name: combined_rotten_tomato_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
+
+      - name: viewer_vote_average
+        description: |
+          {{ doc("stg_tmdb_movies__vote_average") }}
+
+      - name: viewer_vote_count
+        description: |
+          {{ doc("stg_tmdb_movies__vote_count") }}
+
+      - name: revenue
+        description: |
+          {{ doc("stg_tmdb_movies__revenue") }}
+
+      - name: normalized_revenue
+        description: |
+          {{ doc("int_movies_mapping__normalized_revenue") }}
+
+      - name: release_date
+        description: |
+          {{ doc("int_movies_mapping__release_date") }}
+
+      - name: combined_success_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_success_rating") }}
+  
+
+  - name: actor_director_success
+    description: |
+      Final model showing success metrics for actor director pair.
+
+    columns:
+      - name: director_actor_key
+        description: |
+          {{ doc("int_collaboration_network_actor_director__director_actor_key") }}
+        tests:
+          - not_null
+          - unique
+    
+      - name: title
+        description: |
+          {{ doc("int_movies_mapping__title") }}
+
+      - name: director
+        description: |
+          {{ doc("int_collaboration_network_actor_director__director") }}
+
+      - name: actor
+        description: |
+          {{ doc("int_collaboration_network_actor_director__actor") }}
+
+      - name: avg_imdb_rating
+        description: |
+          {{ doc("int_movies_mapping__imdb_rating") }}
+
+      - name: avg_imdb_votes
+        description: |
+          {{ doc("int_movies_mapping__imdb_votes") }}
+
+      - name: avg_number_of_awards_won
+        description: |
+          {{ doc("stg_omdb_movies__number_of_awards_won") }}
+
+      - name: avg_combined_rotten_tomato_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
+
+      - name: avg_viewer_vote_average
+        description: |
+          {{ doc("stg_tmdb_movies__vote_average") }}
+
+      - name: avg_viewer_vote_count
+        description: |
+          {{ doc("stg_tmdb_movies__vote_count") }}
+
+      - name: avg_revenue
+        description: |
+          {{ doc("stg_tmdb_movies__revenue") }}
+
+      - name: avg_normalized_revenue
+        description: |
+          {{ doc("int_movies_mapping__normalized_revenue") }}
+
+      - name: avg_combined_success_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_success_rating") }}
