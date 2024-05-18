@@ -1,6 +1,10 @@
 # actor_director_success
 
 {% docs actor_director_success__best_movie_of_director_actor %}
+Title of the succesful movie of the actor-director pair based on combined success rating
+{% enddocs %}
+
+{% docs actor_director_success__movie_occurence_count %}
 Distinct number of movies occurences of the actor-director pair
 {% enddocs %}
 

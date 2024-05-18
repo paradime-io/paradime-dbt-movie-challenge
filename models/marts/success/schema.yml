@@ -178,9 +178,19 @@ models:
           dimension:
             type: string
 
+      - name: movie_occurence_count
+        description: |
+          {{ doc("actor_director_success__movie_occurence_count") }}
+        meta:
+          dimension:
+            type: number
+
       - name: best_movie_of_director_actor
         description: |
           {{ doc("actor_director_success__best_movie_of_director_actor") }}
+        meta:
+          dimension:
+            type: string
 
       - name: avg_imdb_rating
         description: |
