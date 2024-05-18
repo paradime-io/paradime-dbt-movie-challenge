@@ -353,6 +353,84 @@ models:
             type: string
 
 
+  - name: stg_academy_awards
+    description: >-
+      Academy awards for each movie provided by IMDB. Available at https://github.com/DLu/oscar_data
+    columns:
+      - name: imdb_id
+        description: Same id provided by IMDB.
+        meta:
+          dimension:
+            type: string        
+      - name: movie_name
+        description: The movie title.
+        meta:
+          dimension:
+            type: string      
+      - name: person_name
+        description: The person who worked in the movie and was nominated to an academy award.
+        meta:
+          dimension:
+            type: string        
+      - name: winner
+        description: If the nominated was the winner or not.
+        meta:
+          dimension:
+            type: boolean
+      - name: canonical_category
+        description: Canonical category.
+        meta:
+          dimension:
+            type: string        
+      - name: category
+        description: Category of the award nomination.
+        meta:
+          dimension:
+            type: string        
+      - name: class
+        description: Class.
+        meta:
+          dimension:
+            type: string      
+      - name: ceremony_year
+        description: Year of the academy award ceremony. 
+        meta:
+          dimension:
+            type: string        
+      - name: nominee_ids
+        description: Person id of the nominated people.
+        meta:
+          dimension:
+            type: string        
+      - name: nominee_names
+        description: Name(s) of the person (or people) nominated.
+        meta:
+          dimension:
+            type: string        
+
+
+  - name: stg_consumer_price_index
+    description: >-
+      Consumer Price Index for All Urban Consumers to find out how inflation affected the value of a dollar
+      over time. Available at https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years
+    columns:
+      - name: cpi_year
+        description: Year.
+        meta:
+          dimension:
+            type: number
+      - name: cpi_month
+        description: Month.
+        meta:
+          dimension:
+            type: number
+      - name: cpi_value
+        description: CPI value.
+        meta:
+          dimension:
+            type: number
+
+
   - name: stg_imdb_crew
     description: Directors and writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
     columns:
@@ -372,33 +450,10 @@ models:
           dimension:
             type: string
 
-  - name: stg_imdb_directors
-    description: Directors for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-    columns:
-      - name: imdb_id
-        description: IMDb ID of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: director
-        description: Director of the movie. Each movie can have more than one.
-        meta:
-          dimension:
-            type: string
 
-  - name: stg_imdb_writers
-    description: Writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-    columns:
-      - name: imdb_id
-        description: IMDb ID of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: writer
-        description: Writer of the movie. Each movie can have more than one.
-        meta:
-          dimension:
-            type: string
+  - name: stg_imdb_movies_people
+    description: Join movies and people info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+
 
   - name: stg_imdb_movies
     description: Basic info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
@@ -439,21 +494,10 @@ models:
           dimension:
             type: string
 
-  - name: stg_consumer_price_index
-    description: Consumer Price Index for All Urban Consumers to find out how inflation affected the value of a dollar over time. Available at https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years
-    columns:
-      - name: cpi_year
-        description: Year.
-        meta:
-          dimension:
-            type: number
-      - name: cpi_month
-        description: Month.
-        meta:
-          dimension:
-            type: number
-      - name: cpi_value
-        description: CPI value.
-        meta:
-          dimension:
-            type: number
+
+  - name: stg_imdb_people
+    description: People who worked in each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+
+
+  - name: stg_imdb_ratings
+    description: Ratings for each movie provided by IMDB and available at https://www.imdb.com/interfaces/

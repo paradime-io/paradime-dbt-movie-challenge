@@ -10,7 +10,13 @@ formatted as (
         {{ get_month_number('field_name') }} as cpi_month,
         value::float as cpi_value
     from source
+),
+
+filtered as (
+    select *
+    from formatted
+    where cpi_value is not null
 )
 
 SELECT *
-FROM formatted
+FROM filtered
