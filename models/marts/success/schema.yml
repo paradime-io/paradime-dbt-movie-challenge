@@ -8,6 +8,9 @@ models:
       - name: imdb_id
         description: |
           {{ doc("stg_tmdb_movies__imdb_id") }}
+        meta:
+          dimension:
+            type: string
         tests:
           - unique
           - not_null
@@ -15,75 +18,129 @@ models:
       - name: title
         description: |
           {{ doc("int_movies_mapping__title") }}
+        meta:
+          dimension:
+            type: string
 
       - name: original_title
         description: |
           {{ doc("stg_tmdb_movies__original_title") }}
+        meta:
+          dimension:
+            type: string
 
       - name: director
         description: |
           {{ doc("stg_omdb_movies__director") }}
+        meta:
+          dimension:
+            type: string
 
       - name: actors
         description: |
           {{ doc("stg_omdb_movies__actors") }}
+        meta:
+          dimension:
+            type: string
 
       - name: genre
         description: |
           {{ doc("int_movies_mapping__genre") }}
+        meta:
+          dimension:
+            type: string
 
       - name: language
         description: |
           {{ doc("int_movies_mapping__language") }}
+        meta:
+          dimension:
+            type: string
 
       - name: runtime
         description: |
           {{ doc("int_movies_mapping__runtime") }}
+        meta:
+          dimension:
+            type: number
 
       - name: imdb_rating
         description: |
           {{ doc("int_movies_mapping__imdb_rating") }}
+        meta:
+          dimension:
+            type: number
 
       - name: imdb_votes
         description: |
           {{ doc("int_movies_mapping__imdb_votes") }}
+        meta:
+          dimension:
+            type: number
 
       - name: omdb_rt_rating
         description: |
           {{ doc("stg_omdb_movies__omdb_rt_rating") }}
+        meta:
+          dimension:
+            type: number
 
       - name: number_of_awards_won
         description: |
           {{ doc("stg_omdb_movies__number_of_awards_won") }}
+        meta:
+          dimension:
+            type: number
 
       - name: combined_rotten_tomato_rating
         description: |
           {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
+        meta:
+          dimension:
+            type: number
 
       - name: viewer_vote_average
         description: |
           {{ doc("stg_tmdb_movies__vote_average") }}
+        meta:
+          dimension:
+            type: number
 
       - name: viewer_vote_count
         description: |
           {{ doc("stg_tmdb_movies__vote_count") }}
+        meta:
+          dimension:
+            type: number
 
       - name: revenue
         description: |
           {{ doc("stg_tmdb_movies__revenue") }}
+        meta:
+          dimension:
+            type: number
 
       - name: normalized_revenue
         description: |
           {{ doc("int_movies_mapping__normalized_revenue") }}
+        meta:
+          dimension:
+            type: number
 
       - name: release_date
         description: |
           {{ doc("int_movies_mapping__release_date") }}
+        meta:
+          dimension:
+            type: number
 
       - name: combined_success_rating
         description: |
           {{ doc("int_combined_movie_success__combined_success_rating") }}
-  
+        meta:
+          dimension:
+            type: number
+
 
   - name: actor_director_success
     description: |
@@ -93,6 +150,9 @@ models:
       - name: director_actor_key
         description: |
           {{ doc("int_collaboration_network_actor_director__director_actor_key") }}
+        meta:
+          dimension:
+            type: number
         tests:
           - not_null
           - unique
@@ -100,47 +160,87 @@ models:
       - name: title
         description: |
           {{ doc("int_movies_mapping__title") }}
+        meta:
+          dimension:
+            type: string
 
       - name: director
         description: |
           {{ doc("int_collaboration_network_actor_director__director") }}
+        meta:
+          dimension:
+            type: string
 
       - name: actor
         description: |
           {{ doc("int_collaboration_network_actor_director__actor") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: best_movie_of_director_actor
+        description: |
+          {{ doc("actor_director_success__best_movie_of_director_actor") }}
 
       - name: avg_imdb_rating
         description: |
-          {{ doc("int_movies_mapping__imdb_rating") }}
+          {{ doc("actor_director_success__imdb_rating") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_imdb_votes
         description: |
-          {{ doc("int_movies_mapping__imdb_votes") }}
+          {{ doc("actor_director_success__imdb_votes") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_number_of_awards_won
         description: |
-          {{ doc("stg_omdb_movies__number_of_awards_won") }}
+          {{ doc("actor_director_success__number_of_awards_won") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_combined_rotten_tomato_rating
         description: |
-          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
+          {{ doc("actor_director_success__combined_rotten_tomato_rating") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_viewer_vote_average
         description: |
-          {{ doc("stg_tmdb_movies__vote_average") }}
+          {{ doc("actor_director_success__vote_average") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_viewer_vote_count
         description: |
-          {{ doc("stg_tmdb_movies__vote_count") }}
+          {{ doc("actor_director_success__vote_count") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_revenue
         description: |
-          {{ doc("stg_tmdb_movies__revenue") }}
+          {{ doc("actor_director_success__revenue") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_normalized_revenue
         description: |
-          {{ doc("int_movies_mapping__normalized_revenue") }}
+          {{ doc("actor_director_success__normalized_revenue") }}
+        meta:
+          dimension:
+            type: number
 
       - name: avg_combined_success_rating
         description: |
-          {{ doc("int_combined_movie_success__combined_success_rating") }}
+          {{ doc("actor_director_success__combined_success_rating") }}
+        meta:
+          dimension:
+            type: number

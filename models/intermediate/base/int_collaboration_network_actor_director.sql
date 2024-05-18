@@ -31,8 +31,8 @@ with collaborations as (
         m.director is not null and m.director != 'N/A'
         and m.actors is not null and m.actors != 'N/A'
         and m.runtime > 30 -- we don't want small video snippets in this dataset
-        and a.index = 1 -- we only want the main actor
-        and d.index = 1 -- we only want the main director
+        and a.index = 0 -- we only want the main actor
+        and d.index = 0 -- we only want the main director 
         and trim(d.value) != trim(a.value) -- actor and director should be different than each other
     group by all
 )
