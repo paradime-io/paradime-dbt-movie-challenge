@@ -6,3 +6,13 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: ADDITIONAL_SOURCE_DATA
+    database: IMOGENSSFORDTFJJM_ANALYTICS
+    schema: SOURCE
+    tables:
+      - name: MOVIES_BECHDEL_TEST
+      - name: WIKIDATA_ACTORS
+      - name: WIKIDATA_DIRECTORS
+      - name: KAGGLE_ACADEMY_AWARDS
+      - name: WIKIDATA_ACADEMY_AWARD_NOMINEES
+      - name: WIKIDATA_ACADEMY_AWARD_WINNERS
