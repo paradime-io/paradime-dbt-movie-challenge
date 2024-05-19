@@ -164,7 +164,6 @@ models:
               round: 1
   
 
-
   - name: actor_director_success
     description: |
       Final model showing success metrics for actor director pair.
