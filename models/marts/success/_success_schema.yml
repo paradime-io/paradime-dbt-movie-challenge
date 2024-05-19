@@ -188,7 +188,7 @@ models:
           metrics:
             distinct_movie_occurences:
               type: count_distinct
-              label: "Distinct number of movie_occurences"
+              label: "Distinct number of movie occurences"
 
       - name: title
         description: |
