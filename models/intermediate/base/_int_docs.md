@@ -33,7 +33,6 @@ Release date from omdb and tmdb combined
 {% enddocs %}
 
 
-
 # int_combined_movie_success
 
 {% docs int_combined_movie_success__combined_success_rating %}
@@ -44,17 +43,3 @@ Ultimate combined success metric calculated by using all the other succes metric
 Tomatoe rating combining omdb_rt_rating, tomato_meter, audience_score
 {% enddocs %}
 
-
-# int_collaboration_network_actor_director
-
-{% docs int_collaboration_network_actor_director__director_actor_key %}
-Unique actor director key
-{% enddocs %}
-
-{% docs int_collaboration_network_actor_director__director %}
-Flattened director
-{% enddocs %}
-
-{% docs int_collaboration_network_actor_director__actor %}
-Main actor
-{% enddocs %}

@@ -2,18 +2,22 @@ version: 2
 models:
   - name: movie_success
     description: |
-      Final model showing combined success metrics of each movie
+      Final model for calculating combined success movie success.
 
     columns:
       - name: imdb_id
         description: |
           {{ doc("stg_tmdb_movies__imdb_id") }}
-        meta:
-          dimension:
-            type: string
         tests:
           - unique
           - not_null
+        meta:
+          dimension:
+            type: string
+          metrics:
+            movie_count:
+              type: count_distinct
+              label: "Number of distinct movies"
 
       - name: title
         description: |
@@ -70,6 +74,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_imdb_rating:
+              type: sum
+              label: "Total IMDB rating"
+              round: 1
+            avg_imdb_rating:
+              type: average
+              label: "Avg IMDB rating"
+              round: 1
 
       - name: imdb_votes
         description: |
@@ -132,7 +145,7 @@ models:
           {{ doc("int_movies_mapping__release_date") }}
         meta:
           dimension:
-            type: number
+            type: date
 
       - name: combined_success_rating
         description: |
@@ -140,6 +153,16 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_combined_success_rating:
+              type: sum
+              label: "Total combined success rating"
+              round: 1
+            avg_combined_success_rating:
+              type: average
+              label: "Avg combined success rating"
+              round: 1
+  
 
 
   - name: actor_director_success
@@ -149,14 +172,24 @@ models:
     columns:
       - name: director_actor_key
         description: |
-          {{ doc("int_collaboration_network_actor_director__director_actor_key") }}
-        meta:
-          dimension:
-            type: number
+          {{ doc("actor_director_success__director_actor_key") }}
         tests:
           - not_null
-          - unique
-    
+        meta:
+          dimension:
+            type: string
+      
+      - name: imdb_id
+        description: |
+          {{ doc("stg_tmdb_movies__imdb_id") }}
+        meta:
+          dimension:
+            type: string
+          metrics:
+            distinct_movie_occurences:
+              type: count_distinct
+              label: "Distinct number of movie_occurences"
+
       - name: title
         description: |
           {{ doc("int_movies_mapping__title") }}
@@ -164,27 +197,13 @@ models:
           dimension:
             type: string
 
-      - name: director
+      - name: original_title
         description: |
-          {{ doc("int_collaboration_network_actor_director__director") }}
+          {{ doc("stg_tmdb_movies__original_title") }}
         meta:
           dimension:
             type: string
-
-      - name: actor
-        description: |
-          {{ doc("int_collaboration_network_actor_director__actor") }}
-        meta:
-          dimension:
-            type: string
-
-      - name: movie_occurence_count
-        description: |
-          {{ doc("actor_director_success__movie_occurence_count") }}
-        meta:
-          dimension:
-            type: number
-
+      
       - name: best_movie_of_director_actor
         description: |
           {{ doc("actor_director_success__best_movie_of_director_actor") }}
@@ -192,93 +211,138 @@ models:
           dimension:
             type: string
 
-      - name: avg_imdb_rating
+      - name: director
         description: |
-          {{ doc("actor_director_success__imdb_rating") }}
+          {{ doc("actor_director_success__director") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: actor
+        description: |
+          {{ doc("actor_director_success__actor") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: genre
+        description: |
+          {{ doc("int_movies_mapping__genre") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: runtime
+        description: |
+          {{ doc("int_movies_mapping__runtime") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: imdb_rating
+        description: |
+          {{ doc("int_movies_mapping__imdb_rating") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_imdb_rating:
+              type: average
+              label: "Avg IMDB rating"
+              round: 1
 
-      - name: avg_imdb_votes
+      - name: imdb_votes
         description: |
-          {{ doc("actor_director_success__imdb_votes") }}
+          {{ doc("int_movies_mapping__imdb_votes") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_imdb_votes:
+              type: average
+              label: "Avg IMDB votes"
+              round: 1
 
-      - name: avg_number_of_awards_won
+      - name: number_of_awards_won
         description: |
-          {{ doc("actor_director_success__number_of_awards_won") }}
+          {{ doc("stg_omdb_movies__number_of_awards_won") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_number_of_awards_won:
+              type: average
+              label: "Avg number of awards won"
+              round: 1
 
-      - name: avg_combined_rotten_tomato_rating
+      - name: combined_rotten_tomato_rating
         description: |
-          {{ doc("actor_director_success__combined_rotten_tomato_rating") }}
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_combined_rotten_tomato_rating:
+              type: average
+              label: "Avg combined rotten tomato rating"
+              round: 1
 
-      - name: avg_viewer_vote_average
+      - name: viewer_vote_average
         description: |
-          {{ doc("actor_director_success__vote_average") }}
+          {{ doc("stg_tmdb_movies__vote_average") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_viewer_vote:
+              type: average
+              label: "Avg viewer vote"
+              round: 1
 
-      - name: avg_viewer_vote_count
+      - name: viewer_vote_count
         description: |
-          {{ doc("actor_director_success__vote_count") }}
+          {{ doc("stg_tmdb_movies__vote_count") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_viewer_vote_count:
+              type: average
+              label: "Avg viewer vote count"
+              round: 1
 
-      - name: avg_revenue
+      - name: revenue
         description: |
-          {{ doc("actor_director_success__revenue") }}
+          {{ doc("stg_tmdb_movies__revenue") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_revenue:
+              type: average
+              label: "Avg Irevenue"
+              round: 1
 
-      - name: avg_normalized_revenue
+      - name: normalized_revenue
         description: |
-          {{ doc("actor_director_success__normalized_revenue") }}
+          {{ doc("int_movies_mapping__normalized_revenue") }}
         meta:
           dimension:
             type: number
+          metrics:
+            avg_normalized_revenue:
+              type: average
+              label: "Avg normalized revenue"
+              round: 1
 
-      - name: avg_combined_success_rating
+      - name: combined_success_rating
         description: |
-          {{ doc("actor_director_success__combined_success_rating") }}
+          {{ doc("int_combined_movie_success__combined_success_rating") }}
         meta:
           dimension:
             type: number
-
-  - name: movie_success_yearly
-    description: |
-      Final model showing combined success metrics of each movie
-
-    columns:
-      - name: release_year
-        description: |
-          {{ doc("movie_success_yearly__release_year") }}
-        meta:
-          dimension:
-            type: date
-        tests:
-          - not_null
-
-      - name: movie_count
-        description: |
-          {{ doc("movie_success_yearly__movie_count") }}
-        meta:
-          dimension:
-            type:  number
-
-      - name: avg_combined_success_rating
-        description: |
-          {{ doc("movie_success_yearly__avg_combined_success_rating") }}
-        meta:
-          dimension:
-            type: number
+          metrics:
+            avg_combined_success_rating:
+              type: average
+              label: "Avg combined success rating"
+              round: 1

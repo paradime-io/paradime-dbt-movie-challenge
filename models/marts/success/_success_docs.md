@@ -1,60 +1,17 @@
 # actor_director_success
 
 {% docs actor_director_success__best_movie_of_director_actor %}
-Title of the succesful movie of the actor-director pair based on combined success rating
+Title of the most succesful movie of the actor-director pair based on combined success rating
 {% enddocs %}
 
-{% docs actor_director_success__movie_occurence_count %}
-Distinct number of movies occurences of the actor-director pair
+{% docs actor_director_success__director_actor_key %}
+Unique actor director key
 {% enddocs %}
 
-{% docs actor_director_success__imdb_rating %}
-Avg IMDB rating from omdb and imdb combined
+{% docs actor_director_success__director %}
+Flattened director
 {% enddocs %}
 
-{% docs actor_director_success__imdb_votes %}
-Avg IMDB votes from omdb and imdb combined
-{% enddocs %}
-
-{% docs actor_director_success__revenue %}
-Agv revenue 
-{% enddocs %}
-
-{% docs actor_director_success__normalized_revenue %}
-Agv revenue normalized according to the inflation rates in US.
-{% enddocs %}
-
-{% docs actor_director_success__number_of_awards_won %}
-Avg number of awards won
-{% enddocs %}
-
-{% docs actor_director_success__combined_success_rating %}
-Avg ultimate combined success metric calculated by using all the other succes metrics.
-{% enddocs %}
-
-{% docs actor_director_success__combined_rotten_tomato_rating %}
-Avg tomatoe rating combining omdb_rt_rating, tomato_meter, audience_score
-{% enddocs %}
-
-{% docs actor_director_success__vote_average %}
-Avg release date from omdb and tmdb combined
-{% enddocs %}
-
-{% docs actor_director_success__vote_count %}
-Avg ultimate combined success metric calculated by using all the other succes metrics.
-{% enddocs %}
-
-
-# movie_success_yearly
-
-{% docs movie_success_yearly__release_year %}
-Release year of the movie
-{% enddocs %}
-
-{% docs movie_success_yearly__movie_count %}
-Count of movies released that year
-{% enddocs %}
-
-{% docs movie_success_yearly__avg_combined_success_rating %}
-Avg combined success rating
+{% docs actor_director_success__actor %}
+Main actor
 {% enddocs %}
