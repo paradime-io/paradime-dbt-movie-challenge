@@ -4,7 +4,7 @@ source as (
     {{ dbt_utils.unpivot(ref('stg_bls__cpi_values'), cast_to='varchar', exclude=['cpi_year']) }}
 ),
 
-formatted as (
+format_source as (
     select 
         cpi_year,
         {{ get_month_number('field_name') }} as cpi_month,
@@ -12,11 +12,11 @@ formatted as (
     from source
 ),
 
-filtered as (
+filter_data as (
     select *
-    from formatted
+    from format_source
     where cpi_value is not null
 )
 
 SELECT *
-FROM filtered
+FROM filter_data

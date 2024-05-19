@@ -2,7 +2,7 @@ with
 
 movies as (
     select * 
-    from {{ ref('int_complete_data_points') }}
+    from {{ ref('int_omdb_and_tmdb_movies_released_filtered') }}
 ),
 
 financial as (
@@ -16,8 +16,7 @@ movies_summary as (
         m.imdb_id,
         f.movie_year,
         f.adjusted_budget_usd,
-        f.adjusted_revenue_usd,
-        f.adjusted_roi_usd
+        f.adjusted_revenue_usd
     from movies as m 
     left join financial as f on m.imdb_id = f.imdb_id
 )

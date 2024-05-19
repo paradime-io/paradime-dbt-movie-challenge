@@ -1,11 +1,11 @@
 with 
 
-movies as (
+released as (
     select *
-    from {{ ref('int_omdb_and_tmdb_joined') }}
+    from {{ ref('int_omdb_and_tmdb_movies_released') }}
 ),
 
-released as (
+filter_data as (
     select 
         -- ids
         imdb_id,
@@ -25,7 +25,7 @@ released as (
         -- metrics
         imdb_rating,
         imdb_votes,
-        box_office,
+        --  box_office,
         runtime,
         vote_average,
         revenue_usd,
@@ -34,11 +34,12 @@ released as (
         o_release_date,
         o_release_year,
         t_release_date
-    from movies
-    where status = 'Released' 
-        -- movies cannot be released in the future
-        and o_release_year <= year(current_date())
+    from released
+    where budget_usd is not null and revenue_usd is not null 
+        and runtime is not null and genre_names is not null and o_release_date is not null
+        and keywords is not null and director is not null and writer is not null
+        and country is not null
 )
 
 SELECT *
-FROM released
+FROM filter_data

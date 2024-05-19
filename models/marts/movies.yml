@@ -1,0 +1,72 @@
+version: 2
+models:            
+  - name: movies
+    description: Data about movies.
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: movie_year
+        description: Year of the release of the movie.
+        meta:
+          dimension:
+            type: number
+      - name: movie_month
+        description: Month of the release of the movie.
+        meta:
+          dimension:
+            type: number
+
+# semantic_models:
+#   - name: movies
+#     description: |
+#       Model containing movies data. The grain of the table is the imdb_id.
+#     model: ref('int_financial_metrics')
+#     entities:
+#       - name: imdb_id
+#         type: primary
+#     dimensions:
+#       - name: movies_year
+#         type: categorical
+#       - name: movies_month
+#         type: categorical
+#     measures:
+#       - name: adjusted_budget_usd
+#         description: The adjusted budget in USD for each movie.
+#         agg: sum
+#       - name: adjusted_revenue_usd
+#         description: The adjusted revenue in USD for each movie.
+#         agg: sum
+#       - name: adjusted_roi_usd
+#         description: The adjusted ROI in USD for each movie.
+#         agg: sum
+
+# metrics:
+#   # Simple metrics
+#   - name: adjusted_budget_usd
+#     description: Sum of the adjusted budget in USD for each movie.
+#     type: simple
+#     label: Budget (USD)
+#     type_params:
+#       measure: adjusted_budget_usd
+#   - name: adjusted_revenue_usd
+#     description: Sum of the adjusted revenue in USD for each movie.
+#     type: simple
+#     label: Revenue (USD)
+#     type_params:
+#       measure: adjusted_revenue_usd
+
+  #Derived Metrics
+  # - name: roi_usd
+  #   description: ROI in USD for each movie.
+  #   type: derived
+  #   label: ROI (USD)
+  #   type_params:
+  #     expr: revenue - budget
+  #     metrics:
+  #       - name: adjusted_revenue_usd
+  #         alias: revenue
+  #       - name: adjusted_budget_usd
+  #         alias: budget
