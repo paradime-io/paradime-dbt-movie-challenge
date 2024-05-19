@@ -46,6 +46,9 @@ deduped as (
         ) = 1
 ),
 
+-- In some cases there are details about the role after the person's name, in parentheses
+-- Eg. A director may appear as "Joe Bloggs (co-director)"
+-- Extract this information and insert into PERSON_ROLE_DETAILS field
 role_details as (
     SELECT
         *,
@@ -59,6 +62,9 @@ role_details as (
         deduped
 ),
 
+-- Update the PERSON_NAME value to remove any extra information about the role in parentheses
+-- Will use PERSON_NAME to generate a unique identifier so only want each person appearing once.
+-- "Joe Bloggs" is the same person as "Joe Bloggs (co-director)"
 cleaned as (
     select 
         movie_id,
@@ -76,6 +82,21 @@ cleaned as (
         person_name != 'N/A'
 ),
 
+-- Some people names appear in the movie dataset in a format that does not match names in wikidata.
+-- Update these names to wikidata format to help with matching later on
+names_fixed as (
+    select 
+        movie_id,
+        IFNULL(names.to_name, person_name) as person_name,
+        person_role,
+        person_role_details
+    from 
+        cleaned
+    left join {{ref('person_name_fixes')}} as names 
+        on names.from_name = cleaned.person_name
+
+),
+
 identified as (
     select 
         movie_id,
@@ -87,10 +108,13 @@ identified as (
         person_role,
         person_role_details
     from 
-        cleaned
+        names_fixed
 )
-
 select 
-    *
+    movie_id,
+    person_id,
+    person_name,
+    person_role,
+    person_role_details
 from 
     identified
