@@ -28,8 +28,8 @@ My analysis leverages two key movies datasets provided by Paradime:
 Additional datasets:
 - [IMDB Movies]{https://www.imdb.com/interfaces/}: to provide people who worked in the movies and their role, and ratings.
 - [Academy Awards]{https://github.com/DLu/oscar_data}: to provide detailed information about academy awards.
-- [Consumer Price Index for All Urban Consumers]{https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years}: to calculate the present-day value of financial metrics adjusted by inflation.
-
+- [U.S. Bureau of Labor's Consumer Price Index for All Urban Consumers (CPI-U)]{https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years}: 
+to calculate the present-day value of financial metrics adjusted by inflation.
 
 ### Data Lineage
 - **CHANGE:** Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
@@ -41,19 +41,6 @@ Additional datasets:
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
 - **Other tool(s) used** and why.
 
-### Data Sources
-My analysis leverages two key movies datasets provided by Paradime:
-- OMDB_MOVIES.
-- TMDB_MOVIES.
-
-Additional datasets:
-- [IMDB Movies]{https://www.imdb.com/interfaces/}: to provide people who worked in the movies and their role, and ratings.
-- [Academy Awards]{https://github.com/DLu/oscar_data}: to provide detailed information about academy awards.
-- [Consumer Price Index for All Urban Consumers]{https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years}: to calculate the present-day value of financial metrics adjusted by inflation.
-
-
-### Data Lineage
-**CHANGE:** [Image]
 
 ## Visualizations
 

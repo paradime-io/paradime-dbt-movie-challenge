@@ -15,7 +15,7 @@ tmdb as (
         budget_usd,
         t_release_date,
         t_release_year
-    from {{ ref('stg_tmdb_movies') }}
+    from {{ ref('stg_tmdb__movies') }}
 ), 
 
 omdb as (
@@ -35,7 +35,7 @@ omdb as (
         box_office,
         o_release_year,
         o_release_date
-    from {{ ref('stg_omdb_movies') }}
+    from {{ ref('stg_omdb__movies') }}
 ), 
 
 joined as (

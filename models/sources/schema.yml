@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_tmdb_movies
+  - name: stg_tmdb__movies
     description: >-
       The Movie Database (TMDb) is a community built movie and TV database.
       Data is available at https://www.themoviedb.org
@@ -130,7 +130,7 @@ models:
           dimension:
             type: string
 
-  - name: stg_omdb_movies
+  - name: stg_omdb__movies
     description: Crowdsourced movie information available at https://www.omdbapi.com/
     columns:
       - name: imdb_id
@@ -259,101 +259,8 @@ models:
           dimension:
             type: number
             
-  - name: stg_tmdb_tv_series
-    columns:
-      - name: id
-        description: Unique identifier for each TV show.
-        meta:
-          dimension:
-            type: number
-      - name: name
-        description: Title of the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: overview
-        description: Brief description or summary of the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: tagline
-        description: Catchphrase or memorable line associated with the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: genre_names
-        description: Genres associated with the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: created_by_names
-        description: Names of individuals or entities credited for creating the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: original_language
-        description: Original language in which the TV show was produced.
-        meta:
-          dimension:
-            type: string
-      - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
-        meta:
-          dimension:
-            type: string
-      - name: in_production
-        description: Indicates if the TV show is currently in production.
-        meta:
-          dimension:
-            type: boolean
-      - name: first_air_date
-        description: Date when the TV show was first aired.
-        meta:
-          dimension:
-            type: date
-      - name: last_air_date
-        description: Date when the TV show was last aired.
-        meta:
-          dimension:
-            type: date
-      - name: number_of_seasons
-        description: Number of seasons in the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: number_of_episodes
-        description: Number of episodes in the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: vote_average
-        description: Average vote or rating given by viewers.
-        meta:
-          dimension:
-            type: number
-      - name: vote_count
-        description: Total number of votes received by the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: popularity
-        description: Popularity score of the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: poster_path
-        description: URL path of the poster image for the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: production_company_names
-        description: Names of production companies associated with the TV show.
-        meta:
-          dimension:
-            type: string
 
-
-  - name: stg_academy_awards
+  - name: stg_davidlu__academy_awards
     description: >-
       Academy awards for each movie provided by IMDB. Available at https://github.com/DLu/oscar_data
     columns:
@@ -409,7 +316,7 @@ models:
             type: string        
 
 
-  - name: stg_consumer_price_index
+  - name: stg_bls__cpi_values
     description: >-
       Consumer Price Index for All Urban Consumers to find out how inflation affected the value of a dollar
       over time. Available at https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years
@@ -429,75 +336,3 @@ models:
         meta:
           dimension:
             type: number
-
-
-  - name: stg_imdb_crew
-    description: Directors and writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-    columns:
-      - name: imdb_id
-        description: IMDb ID of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: director
-        description: Director of the movie. Each movie can have more than one.
-        meta:
-          dimension:
-            type: string
-      - name: writer
-        description: Writer of the movie. Each movie can have more than one.
-        meta:
-          dimension:
-            type: string
-
-
-  - name: stg_imdb_movies_people
-    description: Join movies and people info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-
-
-  - name: stg_imdb_movies
-    description: Basic info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-    columns:
-      - name: imdb_id
-        description: IMDb ID of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: titletype
-        description: Type (short, movie, game, video, etc).
-        meta:
-          dimension:
-            type: string
-      - name: primarytitle
-        description: Title of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: originaltitle
-        description: Original title of the movie.
-        meta:
-          dimension:
-            type: string
-      - name: startyear
-        description: Release year (or start year for TV series).
-        meta:
-          dimension:
-            type: number
-      - name: runtimeminutes
-        description: Runtime in minutes.
-        meta:
-          dimension:
-            type: number
-      - name: genres
-        description: Genres assigned to the movie.
-        meta:
-          dimension:
-            type: string
-
-
-  - name: stg_imdb_people
-    description: People who worked in each movie provided by IMDB and available at https://www.imdb.com/interfaces/
-
-
-  - name: stg_imdb_ratings
-    description: Ratings for each movie provided by IMDB and available at https://www.imdb.com/interfaces/

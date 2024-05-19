@@ -4,7 +4,7 @@ source as (
     select 
         imdb_id, 
         directors
-    from {{ ref('stg_imdb_crew') }}
+    from {{ ref('stg_imdb__movies_crew') }}
 ),
 
 split_directors as (

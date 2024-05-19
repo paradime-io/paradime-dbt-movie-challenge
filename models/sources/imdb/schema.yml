@@ -1,0 +1,72 @@
+version: 2
+models:
+  - name: stg_imdb__movies_crew
+    description: Directors and writers for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: Director of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: Writer of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+
+  - name: stg_imdb__movies_people
+    description: Join movies and people info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+
+
+  - name: stg_imdb__movies
+    description: Basic info for each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    columns:
+      - name: imdb_id
+        description: IMDb ID of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: titletype
+        description: Type (short, movie, game, video, etc).
+        meta:
+          dimension:
+            type: string
+      - name: primarytitle
+        description: Title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: originaltitle
+        description: Original title of the movie.
+        meta:
+          dimension:
+            type: string
+      - name: startyear
+        description: Release year (or start year for TV series).
+        meta:
+          dimension:
+            type: number
+      - name: runtimeminutes
+        description: Runtime in minutes.
+        meta:
+          dimension:
+            type: number
+      - name: genres
+        description: Genres assigned to the movie.
+        meta:
+          dimension:
+            type: string
+
+
+  - name: stg_imdb__people
+    description: People who worked in each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+
+
+  - name: stg_imdb__movies_ratings
+    description: Ratings for each movie provided by IMDB and available at https://www.imdb.com/interfaces/

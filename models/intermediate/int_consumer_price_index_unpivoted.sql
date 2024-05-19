@@ -1,7 +1,7 @@
 with 
 
 source as (
-    {{ dbt_utils.unpivot(ref('stg_consumer_price_index'), cast_to='varchar', exclude=['cpi_year']) }}
+    {{ dbt_utils.unpivot(ref('stg_bls__cpi_values'), cast_to='varchar', exclude=['cpi_year']) }}
 ),
 
 formatted as (

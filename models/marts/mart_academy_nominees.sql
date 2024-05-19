@@ -4,7 +4,7 @@ source as (
     select 
         imdb_id,  
         nominee_ids
-    from {{ ref('stg_academy_awards') }}
+    from {{ ref('stg_davidlu__academy_awards') }}
 ),
 
 split_nominees as (

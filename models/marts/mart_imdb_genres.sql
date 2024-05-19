@@ -4,7 +4,7 @@ source as (
     select 
         imdb_id, 
         genres
-    from {{ ref('stg_imdb_movies') }}
+    from {{ ref('stg_imdb__movies') }}
 ),
 
 split_genres as (

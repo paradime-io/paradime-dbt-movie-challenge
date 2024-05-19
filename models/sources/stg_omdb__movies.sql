@@ -34,7 +34,7 @@ basic_cleanup as (
         released_date as o_release_date,
         release_year as o_release_year
     FROM source
-    -- bad data when imdb_id != imdbid. All of them have title = '#DUPE#'
+    -- bad data when imdb_id != imdbid. All of them have movie title = '#DUPE#'
     where imdb_id = imdbid
 )
 
