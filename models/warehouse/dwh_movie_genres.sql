@@ -17,12 +17,15 @@ all_movies_and_genres  as (
 consolidated as (
     SELECT
         movie_id,
-        replace(genre, 'Sci-Fi', 'Science Fiction') as genre
+        IFNULL(genre_lookup.to_name, gen.genre) as genre
     FROM 
-        all_movies_and_genres
+        all_movies_and_genres as gen
+    LEFT JOIN {{ref('movie_genre_consolidation')}} as genre_lookup
+        ON genre_lookup.from_name = gen.genre
 )
 
 select 
-    *
+    movie_id,
+    genre
 from 
     consolidated
