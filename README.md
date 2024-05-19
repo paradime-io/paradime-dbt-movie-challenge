@@ -55,7 +55,7 @@ based on the other success ratings and their given weights
 - **dbt Tests** for maintaining data accuracy.
 - **dbt MD** for removing redundant yml descriptions.
 
-### Data preparation and cleaning
+### Data Preparation and Cleaning
 After investigating the given data sources, it is quickly relaized that data accuracy and 
 quality is not great. Some of the columns have great percentage of null values and some have wrong data 
 (eg. *Adolf Hitler* seems to be a main actor in a movie :)
@@ -64,6 +64,11 @@ Below steps are followed to mitigate these:
 - Tests for uniqueness on the imdb_id (this is the join key for all sources) to make sure that each movie appears only once.
 - Removing all rows that doesn't have imdb_id.
 - Coalescing values from different sources to ensure completness. (eg. imdb_rating)
+
+### Calculating Movie Success
+Movie success is the centre metric for all insights in this project. That is why creating a robust ultimate success indicator
+is one of the key aspects of modelling as well. Below is explains how this is achieved.
+
 
 ## Visualizations
 
