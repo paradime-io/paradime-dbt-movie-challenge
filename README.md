@@ -35,16 +35,35 @@ My analysis leverage below data sets:
 - *movie_success* (model for individual movie success ratings)
 - *actor_director_success* (model for actor-director success ratings)
 
+### Other models
+- *revenue_inflation_adjustment.py*: This python script takes the raw revenue data from omdb_movies and normalizes 
+the revenue numbers by using the US inflation rates over the years.
+- *calculate_combined_success.sql*: This macro calculates the ultmate combined movie success rating
+based on the other success ratings and their given weights
+- *generate_unique_key*: This macro creates a unique key for given fields.
+- *.sqlfluff*: This file makes sure that all the models are up to good formatting standards accroding to extensive set of rules defined.
+
 ### Data Lineage
 - Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
 ## Methodology
-#### Tools Used
+### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
+- **Python scripts** for calculations and read/write to database.
+- **dbt Tests** for maintaining data accuracy.
+- **dbt MD** for removing redundant yml descriptions.
 
+### Data preparation and cleaning
+After investigating the given data sources, it is quickly relaized that data accuracy and 
+quality is not great. Some of the columns have great percentage of null values and some have wrong data 
+(eg. *Adolf Hitler* seems to be a main actor in a movie :)
+Below steps are followed to mitigate these:
+- Select distinct to ensure that there are not duplicate rows in stg models.
+- Tests for uniqueness on the imdb_id (this is the join key for all sources) to make sure that each movie appears only once.
+- Removing all rows that doesn't have imdb_id.
+- Coalescing values from different sources to ensure completness. (eg. imdb_rating)
 
 ## Visualizations
 
