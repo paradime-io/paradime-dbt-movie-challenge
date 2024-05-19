@@ -1,3 +1,4 @@
+-- First deduplicate stg_tmdb_movies as it has some rows completely duplicated
 WITH tmdb_deduplicated AS (
     SELECT 
         *,
@@ -59,6 +60,8 @@ tmdb AS (
         tmdb_deduplicated
 ), 
 
+-- Deduplicate stg_omdb_movies by removing all rows flagged as DUPE in the title
+-- and then deduplicating any remaining rows
 omdb_deduplicated as (
     SELECT 
         *,
@@ -124,6 +127,10 @@ omdb AS (
         omdb_deduplicated
 ), 
 
+-- Join tmdb onto omdb, identifying the "match_type" found between the joined rows
+-- This will be used later to filter out any duplicate joins, choosing the best match.
+-- This approach was chosen after observing situations where imdb and tmdb combinations 
+-- did not match between omdb and tmdb source tables; title used instead
 joined_tmdb_and_omdb_id AS (
     SELECT
         *,
