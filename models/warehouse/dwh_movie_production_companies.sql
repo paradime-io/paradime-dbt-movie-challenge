@@ -1,4 +1,4 @@
--- Might delete this as it's not correct to split by comma - some production companies have commas in their name
+-- Note that it's not always correct to split by comma - some production companies have commas in their name
 
 with movies_src as (
     select 
@@ -14,18 +14,26 @@ all_movies_and_production_companies  as (
         trim(prod.value) AS production_company
     FROM movies_src,
         LATERAL SPLIT_TO_TABLE(production_companies, ',') AS prod
-)
+),
 
---  consolidated as (
---      SELECT
---          movie_id,
---          replace(genre, 'Sci-Fi', 'Science Fiction') as genre
---      FROM 
---          all_movies_and_genres
---  )
+top_production_companies_flagged as (
+    SELECT
+        src.movie_id,
+        src.production_company,
+        CASE 
+            WHEN tpc.production_company IS NOT NULL 
+                THEN TRUE
+            ELSE FALSE
+        END AS is_top_production_company
+    FROM 
+        all_movies_and_production_companies as src
+    LEFT JOIN {{ref('top_production_companies')}} as tpc
+        ON tpc.production_company = src.production_company
+)
 
 select 
     movie_id,
-    production_company
+    production_company,
+    is_top_production_company
 from 
-    all_movies_and_production_companies
+    top_production_companies_flagged

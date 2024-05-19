@@ -1,3 +1,5 @@
+-- Could just move the logic from "people" model into here but unsure 
+-- if extra logic will be needed in this step
 with src as (
     select 
         person_id,
@@ -7,3 +9,7 @@ with src as (
     from 
         {{ref('people')}}
 )
+select 
+    *
+from 
+    src
