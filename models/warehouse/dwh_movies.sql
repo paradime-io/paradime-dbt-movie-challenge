@@ -1,3 +1,6 @@
+-- all movie columns combined from joined set omdb_movies + tmdb_movies
+-- plus split out movie ratings
+-- plus bechdel test ratings
 with all_movies_combined_columns as (
     select 
         identifier_unique_key,
@@ -9,9 +12,6 @@ with all_movies_combined_columns as (
         original_title,
         tagline,
         keywords,
-        director,
-        writer,
-        actors,
         languages,
         original_language,
         genres,
@@ -32,7 +32,7 @@ with all_movies_combined_columns as (
 
 ),
 
-movies_with_ratings_columns as (
+movie_ratings as (
     select 
         *
     from 
@@ -40,19 +40,31 @@ movies_with_ratings_columns as (
 
 ),
 
-joined as (
+movie_bechdel_ratings as (
+    SELECT 
+        IMDB_ID,
+        bechdel_rating,
+        title,
+        release_year
+    FROM 
+        {{ref('stg_movies_bechdel_rating')}}
+),
+
+movies_all_columns as (
     select 
         cc.*,
-        rc.imdb_rating,
-        rc.rotten_tomatoes_rating,
-        rc.metacritic_rating
+        10*(left(rc.imdb_rating, LENGTH(rc.imdb_rating) -3)) as imdb_rating,
+        left(rc.rotten_tomatoes_rating, LENGTH(rc.rotten_tomatoes_rating)-4) as rotten_tomatoes_rating,
+        left(rc.metacritic_rating, LENGTH(rc.metacritic_rating)-1) as metacritic_rating,
+        br.bechdel_rating
     from 
         all_movies_combined_columns as cc
-    left join movies_with_ratings_columns as rc
+    left join movie_ratings as rc
         ON rc.identifier_unique_key = cc.identifier_unique_key
+    left join movie_bechdel_ratings as br 
+        on br.IMDB_ID = cc.omdb_imdb_id
 )
-
 select 
     *
 from 
-    joined
+    movies_all_columns
