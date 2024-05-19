@@ -35,10 +35,10 @@ with collaborations as (
         and d.index = 0 -- we only want the main director 
         and trim(d.value) != trim(a.value) -- actor and director should be different than each other
     group by all
-)
+),
 
 
- most_successfull_movie as (
+most_successfull_movie as (
     select
         director_actor_key,
         title
@@ -56,28 +56,9 @@ with collaborations as (
 
 final as (
     select
-        director_actor_key,
-        director,
-        actor,
-        sm.title as best_movie_of_director_actor,
-        c.imdb_id,
-        c.title,
-        c.original_title,
-        c.genre,
-        c.runtime,
-
-        -- Features
-        c.imdb_rating,
-        c.imdb_votes,
-        c.combined_rotten_tomato_rating,
-        c.number_of_awards_won,
-        c.viewer_vote_average,
-        c.viewer_vote_count,
-        c.revenue,
-        c.normalized_revenue,
-        c.combined_success_rating
-
-    from collaborations as c.
+        c.*,
+        sm.title as best_movie_of_director_actor
+    from collaborations as c
         left join most_successfull_movie as sm
             on c.director_actor_key = sm.director_actor_key
 
