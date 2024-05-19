@@ -2,7 +2,7 @@ with
 
 movies as (
     select *
-    from {{ ref('join_omdb_and_tmdb_by_imdb_id') }}
+    from {{ ref('int_omdb_and_tmdb_joined') }}
 ),
 
 released as (

@@ -1,0 +1,6 @@
+sources:
+  - name: MOVIES_ADDITIONAL
+    database: LETICIABUENO8DKEQ_ANALYTICS
+    schema: RAW
+    tables:
+      - name: CONSUMER_PRICE_INDEX

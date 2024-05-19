@@ -10,7 +10,7 @@ fact as (
 
 cpi as (
     select *
-    from {{ ref('int_consumer_price_index_unpivoted') }}
+    from {{ ref('int_bls_cpi_values_unpivoted') }}
 ),
 
 -- get most up-to-date cpi available in the data

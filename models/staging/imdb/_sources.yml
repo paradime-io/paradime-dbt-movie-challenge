@@ -1,0 +1,10 @@
+sources:
+  - name: MOVIES_ADDITIONAL
+    database: LETICIABUENO8DKEQ_ANALYTICS
+    schema: RAW
+    tables:
+      - name: IMDB_CREW
+      - name: IMDB_MOVIES
+      - name: IMDB_PEOPLE
+      - name: IMDB_MOVIES_PEOPLE
+      - name: IMDB_RATINGS
