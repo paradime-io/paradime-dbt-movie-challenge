@@ -38,6 +38,8 @@ The relations are visualised in the below Data Lineage.
 
 ![Data Lineage](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-raso-lunar-app/images/MovieChallengeDataLineage.png)
 
+Most of the models were joined together in the `marts.yml` file, so all of the data didn't have to be pre-aggregated in dbt models.
+
 *Please note that* `int_movies_enriched` *should have been named* `movies_enriched`, *but changing the model name would break all my existing Saved Charts in Lightdash, as explained in this* [Issue](https://github.com/lightdash/lightdash/issues/5264).
 
 ## Methodology 🛠️
@@ -52,12 +54,13 @@ The relations are visualised in the below Data Lineage.
 
 I decided to incorporate additional datasets from the [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started) to enrich the existing data and increase the complexity of my findings.
 I used [Mage.ai](https://www.mage.ai/) to extract the data from the API and load it into Snowflake.
-Most of the models were joined together in the `marts.yml` file, so all of the data didn't have to be pre-aggregated in dbt models.
+
+![Mage.ai Lineage](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
 
 ## Visualizations 📊
 
 ### What's Popular
-![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
+![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/MagePipeline.png)
 
 ### Temporal Insights
 ![Temporal Insights](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Temporal_.png)
