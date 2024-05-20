@@ -14,13 +14,16 @@ with success_metrics as (
 
         -- Success metrics
         imdb_rating,
-        imdb_votes,
+        round((cast(imdb_votes as decimal) - min(imdb_votes) over ()) /
+            (max(imdb_votes) over () - min(imdb_votes) over ()) * 100, 1) as imdb_votes,
         round((coalesce(omdb_rt_rating, 0) + coalesce(audience_score, 0) + coalesce(tomato_meter, 0)) / 3, 0) as combined_rotten_tomato_rating,
         number_of_awards_won,
         viewer_vote_average,
-        viewer_vote_count,
+        round((cast(viewer_vote_count as decimal) - min(viewer_vote_count) over ()) /
+            (max(viewer_vote_count) over () - min(viewer_vote_count) over ()) * 100, 1) as viewer_vote_count,
         revenue,
-        normalized_revenue,
+        round((cast(normalized_revenue as decimal) - min(normalized_revenue) over ()) /
+            (max(normalized_revenue) over () - min(normalized_revenue) over ()) * 100, 1) as normalized_revenue,
         {{ calculate_combined_success_rating(
             imdb_rating_weight=2,
             imdb_votes_weight=2,
@@ -32,7 +35,7 @@ with success_metrics as (
         ) }},
         -- Normalize the combined success rating to be between 0 and 100
         round((cast(combined_success as decimal) - min(combined_success) over ()) /
-        (max(combined_success) over () - min(combined_success) over ()) * 100, 1) as combined_success_rating
+            (max(combined_success) over () - min(combined_success) over ()) * 100, 1) as combined_success_rating
     from {{ ref('int_movies_mapping') }}
 
 )
