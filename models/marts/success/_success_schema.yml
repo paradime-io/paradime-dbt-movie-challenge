@@ -90,6 +90,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_imdb_votes:
+              type: sum
+              label: "Total IMDB votes"
+              round: 1
+            avg_imdb_votes:
+              type: average
+              label: "Avg IMDB votes"
+              round: 1
 
       - name: omdb_rt_rating
         description: |
@@ -104,6 +113,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_number_of_awards_won:
+              type: sum
+              label: "Total number of awards won"
+              round: 1
+            avg_number_of_awards_won:
+              type: average
+              label: "Avg number of awards won"
+              round: 1
 
       - name: combined_rotten_tomato_rating
         description: |
@@ -111,6 +129,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_combined_rotten_tomato_rating:
+              type: sum
+              label: "Total combined rotten tomato rating"
+              round: 1
+            avg_combined_rotten_tomato_rating:
+              type: average
+              label: "Avg combined rotten tomato rating"
+              round: 1
 
       - name: viewer_vote_average
         description: |
@@ -118,13 +145,31 @@ models:
         meta:
           dimension:
             type: number
-
+          metrics:
+            total_viewer_vote:
+              type: sum
+              label: "Total viewer votes"
+              round: 1
+            avg_viewer_votee:
+              type: average
+              label: "Avg viewer votes"
+              round: 1
+             
       - name: viewer_vote_count
         description: |
           {{ doc("stg_tmdb_movies__vote_count") }}
         meta:
           dimension:
             type: number
+          metrics:
+            total_viewer_vote_count:
+              type: sum
+              label: "Total viewer vote count"
+              round: 1
+            avg_viewer_vote_count:
+              type: average
+              label: "Avg viewer vote count"
+              round: 1
 
       - name: revenue
         description: |
@@ -132,6 +177,15 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_revenue:
+              type: sum
+              label: "Total revenue"
+              round: 1
+            avg_revenue:
+              type: average
+              label: "Avg revenue"
+              round: 1
 
       - name: inflation_corrected_revenue
         description: |
@@ -139,6 +193,15 @@ models:
         meta:
           dimension:
             type: number
+        metrics:
+            total_inflation_corrected_revenue:
+              type: sum
+              label: "Total inflation corrected revenue"
+              round: 1
+            avg_inflation_corrected_revenue:
+              type: average
+              label: "Avg inflation corrected revenue"
+              round: 1
 
       - name: release_date
         description: |
@@ -308,6 +371,10 @@ models:
           dimension:
             type: number
           metrics:
+            total_imdb_rating:
+              type: sum
+              label: "Total IMDB rating"
+              round: 1
             avg_imdb_rating:
               type: average
               label: "Avg IMDB rating"
@@ -320,6 +387,10 @@ models:
           dimension:
             type: number
           metrics:
+            total_imdb_votes:
+              type: sum
+              label: "Total IMDB votes"
+              round: 1
             avg_imdb_votes:
               type: average
               label: "Avg IMDB votes"
@@ -332,6 +403,10 @@ models:
           dimension:
             type: number
           metrics:
+            total_number_of_awards_won:
+              type: sum
+              label: "Total number of awards won"
+              round: 1
             avg_number_of_awards_won:
               type: average
               label: "Avg number of awards won"
@@ -344,6 +419,10 @@ models:
           dimension:
             type: number
           metrics:
+            total_combined_rotten_tomato_rating:
+              type: sum
+              label: "Total combined rotten tomato rating"
+              round: 1
             avg_combined_rotten_tomato_rating:
               type: average
               label: "Avg combined rotten tomato rating"
@@ -356,11 +435,15 @@ models:
           dimension:
             type: number
           metrics:
-            avg_viewer_vote:
-              type: average
-              label: "Avg viewer vote"
+            total_viewer_vote:
+              type: sum
+              label: "Total viewer votes"
               round: 1
-
+            avg_viewer_votee:
+              type: average
+              label: "Avg viewer votes"
+              round: 1
+             
       - name: viewer_vote_count
         description: |
           {{ doc("stg_tmdb_movies__vote_count") }}
@@ -368,6 +451,10 @@ models:
           dimension:
             type: number
           metrics:
+            total_viewer_vote_count:
+              type: sum
+              label: "Total viewer vote count"
+              round: 1
             avg_viewer_vote_count:
               type: average
               label: "Avg viewer vote count"
@@ -380,9 +467,13 @@ models:
           dimension:
             type: number
           metrics:
+            total_revenue:
+              type: sum
+              label: "Total revenue"
+              round: 1
             avg_revenue:
               type: average
-              label: "Avg Irevenue"
+              label: "Avg revenue"
               round: 1
 
       - name: inflation_corrected_revenue
@@ -391,12 +482,15 @@ models:
         meta:
           dimension:
             type: number
-          metrics:
+        metrics:
+            total_inflation_corrected_revenue:
+              type: sum
+              label: "Total inflation corrected revenue"
+              round: 1
             avg_inflation_corrected_revenue:
               type: average
-              label: "Avg inflation_corrected_revenue revenue"
+              label: "Avg inflation corrected revenue"
               round: 1
-
       - name: combined_success_rating
         description: |
           {{ doc("int_combined_movie_success__combined_success_rating") }}

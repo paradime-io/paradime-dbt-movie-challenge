@@ -12,7 +12,7 @@ with collaborations as (
         m.genre,
         m.runtime,
 
-        -- Metrics raw
+        -- Success Metrics
         m.imdb_rating,
         m.imdb_votes,
         m.imdb_votes_normalized,
