@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: dwh_movie_production_companies
+    columns:
+      - name: movie_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: is_top_production_company
+        description: ""
+        meta:
+          dimension:
+            type: boolean

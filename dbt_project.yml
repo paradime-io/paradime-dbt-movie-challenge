@@ -37,3 +37,10 @@ models:
     warehouse:
       +schema: warehouse
       +materialized: table
+      +tags:
+      - "dataviz"
+    analytics:
+      +schema: analytics
+      +materialized: view
+      +tags:
+      - "dataviz"

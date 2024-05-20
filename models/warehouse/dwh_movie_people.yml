@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: dwh_movie_people
+    columns:
+      - name: movie_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_role
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_role_details
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_age_on_release_date
+        description: ""
+        meta:
+          dimension:
+            type: number

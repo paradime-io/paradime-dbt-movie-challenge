@@ -1,0 +1,54 @@
+version: 2
+models:
+  - name: dwh_academy_awards
+    columns:
+      - name: movie_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movie_title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: award_title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: award_edition
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: award_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: nominated
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: won
+        description: ""
+        meta:
+          dimension:
+            type: boolean

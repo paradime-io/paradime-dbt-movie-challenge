@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: dwh_people
+    columns:
+      - name: person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: gender
+        description: ""
+        meta:
+          dimension:
+            type: string
