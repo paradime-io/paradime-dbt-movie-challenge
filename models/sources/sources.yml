@@ -8,6 +8,11 @@ sources:
       - name: TMDB_TV_SERIES
   - name: PARADIME_MOVIE_CHALLENGE_EXTRA
     database: PHILIPSONGCHRFJ_ANALYTICS
+    schema: STAGING
+    tables:
+      - name: INFLATION_2023
+  - name: PARADIME_MOVIE_CHALLENGE_FINAL
+    database: PHILIPSONGCHRFJ_ANALYTICS
     schema: INTERMEDIATE
     tables:
       - name: OMDB_INFLATION_ADJUSTED
