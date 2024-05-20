@@ -12,7 +12,7 @@ with collaborations as (
         m.genre,
         m.runtime,
 
-        -- Features
+        -- Metrics raw
         m.imdb_rating,
         m.imdb_votes,
         m.combined_rotten_tomato_rating,
@@ -20,8 +20,16 @@ with collaborations as (
         m.viewer_vote_average,
         m.viewer_vote_count,
         m.revenue,
-        m.normalized_revenue,
-        m.combined_success_rating
+        m.inflation_corrected_revenue,
+        m.combined_success_rating,
+        
+        -- Metrics normalized
+        m.imdb_votes_normalized,
+        m.number_of_awards_won_normalized,
+        m.viewer_vote_count_normalized,
+        m.revenue_normalized,
+        m.combined_rotten_tomato_rating_normalized
+        
     from
         {{ ref('int_combined_movie_success') }} as m,
         lateral flatten(input => split(director, ',')) as d, -- Splitting and flattening the director list

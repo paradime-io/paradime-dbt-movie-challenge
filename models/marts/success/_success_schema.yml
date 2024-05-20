@@ -133,9 +133,9 @@ models:
           dimension:
             type: number
 
-      - name: normalized_revenue
+      - name: inflation_corrected_revenue
         description: |
-          {{ doc("int_movies_mapping__normalized_revenue") }}
+          {{ doc("int_movies_mapping__inflation_corrected_revenue") }}
         meta:
           dimension:
             type: number
@@ -162,7 +162,87 @@ models:
               type: average
               label: "Avg combined success rating"
               round: 1
-  
+
+      - name: imdb_votes_normalized
+        description: |
+          {{ doc("int_combined_movie_success__imdb_votes_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_imdb_votes_normalized:
+              type: sum
+              label: "Total normalized imdb votes"
+              round: 1
+            avg_imdb_votes_normalized:
+              type: average
+              label: "Avg normalized imdb votes"
+              round: 1
+
+      - name: number_of_awards_won_normalized
+        description: |
+          {{ doc("int_combined_movie_success__number_of_awards_won_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_number_of_awards_won_normalized:
+              type: sum
+              label: "Total number of awards normalized"
+              round: 1
+            avg_number_of_awards_won_normalized:
+              type: average
+              label: "Avg number of awards normalized"
+              round: 1
+
+      - name: viewer_vote_count_normalized
+        description: |
+          {{ doc("int_combined_movie_success__viewer_vote_count_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_viewer_vote_count_normalized:
+              type: sum
+              label: "Total viewer vote count"
+              round: 1
+            avg_viewer_vote_count_normalized:
+              type: average
+              label: "Avg  viewer vote count"
+              round: 1
+
+      - name: revenue_normalized
+        description: |
+          {{ doc("int_combined_movie_success__revenue_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_revenue_normalized:
+              type: sum
+              label: "Total revenue normalized"
+              round: 1
+            avg_revenue_normalized:
+              type: average
+              label: "Avg revenue normalized"
+              round: 1
+
+      - name: combined_rotten_tomato_rating_normalized
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_combined_rotten_tomato_rating_normalized:
+              type: sum
+              label: "Total combined rotten tomato rating normalized"
+              round: 1
+            avg_combined_rotten_tomato_rating_normalized:
+              type: average
+              label: "Avg combined rotten tomato rating normalizedg"
+              round: 1
+
 
   - name: actor_director_success
     description: |
@@ -322,16 +402,16 @@ models:
               label: "Avg Irevenue"
               round: 1
 
-      - name: normalized_revenue
+      - name: inflation_corrected_revenue
         description: |
-          {{ doc("int_movies_mapping__normalized_revenue") }}
+          {{ doc("int_movies_mapping__inflation_corrected_revenue") }}
         meta:
           dimension:
             type: number
           metrics:
-            avg_normalized_revenue:
+            avg_inflation_corrected_revenue:
               type: average
-              label: "Avg normalized revenue"
+              label: "Avg inflation_corrected_revenue revenue"
               round: 1
 
       - name: combined_success_rating
@@ -344,4 +424,84 @@ models:
             avg_combined_success_rating:
               type: average
               label: "Avg combined success rating"
+              round: 1
+      
+      - name: imdb_votes_normalized
+        description: |
+          {{ doc("int_combined_movie_success__imdb_votes_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_imdb_votes_normalized:
+              type: sum
+              label: "Total normalized imdb votes"
+              round: 1
+            avg_imdb_votes_normalized:
+              type: average
+              label: "Avg normalized imdb votes"
+              round: 1
+
+      - name: number_of_awards_won_normalized
+        description: |
+          {{ doc("int_combined_movie_success__number_of_awards_won_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_number_of_awards_won_normalized:
+              type: sum
+              label: "Total number of awards normalized"
+              round: 1
+            avg_number_of_awards_won_normalized:
+              type: average
+              label: "Avg number of awards normalized"
+              round: 1
+
+      - name: viewer_vote_count_normalized
+        description: |
+          {{ doc("int_combined_movie_success__viewer_vote_count_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_viewer_vote_count_normalized:
+              type: sum
+              label: "Total viewer vote count"
+              round: 1
+            avg_viewer_vote_count_normalized:
+              type: average
+              label: "Avg  viewer vote count"
+              round: 1
+
+      - name: revenue_normalized
+        description: |
+          {{ doc("int_combined_movie_success__revenue_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_revenue_normalized:
+              type: sum
+              label: "Total revenue normalized"
+              round: 1
+            avg_revenue_normalized:
+              type: average
+              label: "Avg revenue normalized"
+              round: 1
+
+      - name: combined_rotten_tomato_rating_normalized
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_combined_rotten_tomato_rating_normalized:
+              type: sum
+              label: "Total combined rotten tomato rating normalized"
+              round: 1
+            avg_combined_rotten_tomato_rating_normalized:
+              type: average
+              label: "Avg combined rotten tomato rating normalizedg"
               round: 1

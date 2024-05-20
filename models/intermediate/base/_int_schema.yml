@@ -96,9 +96,9 @@ models:
         description: |
           {{ doc("stg_tmdb_movies__revenue") }}
 
-      - name: normalized_revenue
+      - name: inflation_corrected_revenue
         description: |
-          {{ doc("int_movies_mapping__normalized_revenue") }}
+          {{ doc("int_movies_mapping__inflation_corrected_revenue") }}
 
       - name: release_date
         description: |
@@ -177,9 +177,9 @@ models:
         description: |
           {{ doc("stg_tmdb_movies__revenue") }}
 
-      - name: normalized_revenue
+      - name: inflation_corrected_revenue
         description: |
-          {{ doc("int_movies_mapping__normalized_revenue") }}
+          {{ doc("int_movies_mapping__inflation_corrected_revenue") }}
 
       - name: release_date
         description: |
@@ -188,3 +188,23 @@ models:
       - name: combined_success_rating
         description: |
           {{ doc("int_combined_movie_success__combined_success_rating") }}
+
+      - name: imdb_votes_normalized
+        description: |
+          {{ doc("int_combined_movie_success__imdb_votes_normalized") }}
+
+      - name: number_of_awards_won_normalized
+        description: |
+          {{ doc("int_combined_movie_success__number_of_awards_won_normalized") }}
+
+      - name: viewer_vote_count_normalized
+        description: |
+          {{ doc("int_combined_movie_success__viewer_vote_count_normalized") }}
+
+      - name: revenue_normalized
+        description: |
+          {{ doc("int_combined_movie_success__revenue_normalized") }}
+
+      - name: combined_rotten_tomato_rating_normalized
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}

@@ -47,7 +47,7 @@ final as (
         tmdb.viewer_vote_average,
         tmdb.viewer_vote_count,
         tmdb.revenue,
-        mr.normalized_revenue,
+        mr.normalized_revenue as inflation_corrected_revenue,
 
         -- Dates/Timestamps
         coalesce(omdb.released_date, tmdb.release_date) as release_date
