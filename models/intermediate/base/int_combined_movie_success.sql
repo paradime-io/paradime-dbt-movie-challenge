@@ -41,13 +41,13 @@ success_metrics as (
  
         -- Combined success metric
         {{ calculate_combined_success_rating(
-            imdb_rating_weight=2,
-            imdb_votes_normalized_weight=2,
-            combined_rotten_tomato_rating_weight=1,
-            number_of_awards_won_normalized_won_weight=1,
-            viewer_vote_average_weight=0.3,
-            viewer_vote_count_normalized_weight=0.3,
-            revenue_normalized_weight=0.1
+            imdb_rating_weight=1,
+            imdb_votes_normalized_weight=0.8,
+            combined_rotten_tomato_rating_weight=0.5,
+            number_of_awards_won_normalized_won_weight=0.3,
+            viewer_vote_average_weight=0.8,
+            viewer_vote_count_normalized_weight=0.5,
+            revenue_normalized_weight=0.4
         ) }},
         -- Normalize the combined success rating to be between 0 and 100
         round((cast(combined_success as decimal) - min(combined_success) over ()) / (max(combined_success) over () - min(combined_success) over ()) * 100, 1) as combined_success_rating
