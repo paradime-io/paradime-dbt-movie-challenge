@@ -515,10 +515,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_revenue_normalized:
-              type: sum
-              label: "Total revenue normalized"
-              round: 1
             avg_revenue_normalized:
               type: average
               label: "Avg revenue normalized"
