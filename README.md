@@ -55,12 +55,12 @@ Most of the models were joined together in the `marts.yml` file, so all of the d
 I decided to incorporate additional datasets from the [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started) to enrich the existing data and increase the complexity of my findings.
 I used [Mage.ai](https://www.mage.ai/) to extract the data from the API and load it into Snowflake.
 
-![Mage.ai Lineage](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
+![Mage.ai Lineage](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/MagePipeline.png)
 
 ## Visualizations 📊
 
 ### What's Popular
-![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/MagePipeline.png)
+![What's Popular](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Popular_.png)
 
 ### Temporal Insights
 ![Temporal Insights](https://raw.githubusercontent.com/paradime-io/paradime-dbt-movie-challenge/movie-raso-lunar-app/images/Temporal_.png)
