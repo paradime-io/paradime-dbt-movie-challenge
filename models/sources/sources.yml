@@ -6,3 +6,8 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: PARADIME_MOVIE_CHALLENGE_EXTRA
+    database: PHILIPSONGCHRFJ_ANALYTICS
+    schema: STAGING
+    tables:
+      - name: INFLATION_2023
