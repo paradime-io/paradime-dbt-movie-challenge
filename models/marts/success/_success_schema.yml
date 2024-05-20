@@ -289,6 +289,22 @@ models:
               type: average
               label: "Avg revenue normalized"
               round: 1
+      
+      - name: inflation_corrected_revenue
+        description: |
+          {{ doc("int_combined_movie_success__inflation_corrected_revenue") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_inflation_corrected_revenue:
+              type: sum
+              label: "Total inflation correct revenue"
+              round: 1
+            avg_inflation_corrected_revenue:
+              type: average
+              label: "Avg inflation correct revenue"
+              round: 1
 
   - name: actor_director_success
     description: |
@@ -454,7 +470,7 @@ models:
         meta:
           dimension:
             type: number
-        metrics:
+          metrics:
             avg_inflation_corrected_revenue:
               type: average
               label: "Avg inflation corrected revenue"
@@ -518,4 +534,16 @@ models:
             avg_revenue_normalized:
               type: average
               label: "Avg revenue normalized"
+              round: 1
+
+      - name: inflation_corrected_revenue
+        description: |
+          {{ doc("int_combined_movie_success__inflation_corrected_revenue") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_inflation_corrected_revenue:
+              type: average
+              label: "Avg inflation correct revenue"
               round: 1
