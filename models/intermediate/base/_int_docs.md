@@ -59,3 +59,6 @@ Normalized viewer_vote_count (0-10)
 Normalized revenue_normalized(0-10)
 {% enddocs %}
 
+{% docs int_combined_movie_success__inflation_corrected_revenue %}
+Revenue corrected based on the historical US inflation data
+{% enddocs %}
