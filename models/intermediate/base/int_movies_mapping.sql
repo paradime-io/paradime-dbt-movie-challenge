@@ -48,6 +48,7 @@ final as (
         tmdb.viewer_vote_count,
         tmdb.revenue,
         mr.normalized_revenue as inflation_corrected_revenue,
+        round((coalesce(omdb.omdb_rt_rating, 0) + coalesce(rt.audience_score, 0) + coalesce(rt.tomato_meter, 0)) / 3, 0) as combined_rotten_tomato_rating,
 
         -- Dates/Timestamps
         coalesce(omdb.released_date, tmdb.release_date) as release_date
