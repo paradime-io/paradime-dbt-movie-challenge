@@ -1,11 +1,11 @@
 {% macro calculate_combined_success_rating(
-    imdb_rating_weight = 1,
-    imdb_votes_normalized_weight = 1,
-    combined_rotten_tomato_rating_normalized_weight = 1,
-    number_of_awards_won_normalized_won_weight = 1,
-    viewer_vote_average_weight = 1,
-    viewer_vote_count_normalized_weight = 1,
-    revenue_normalized_weight = 1
+    imdb_rating_weight,
+    imdb_votes_normalized_weight,
+    combined_rotten_tomato_rating_normalized_weight,
+    number_of_awards_won_normalized_won_weight,
+    viewer_vote_average_weight,
+    viewer_vote_count_normalized_weight,
+    revenue_normalized_weight
 ) %}
 
     round(
