@@ -267,11 +267,11 @@ models:
           metrics:
             total_viewer_vote_count_normalized:
               type: sum
-              label: "Total viewer vote count"
+              label: "Total viewer vote count normalized"
               round: 1
             avg_viewer_vote_count_normalized:
               type: average
-              label: "Avg  viewer vote count"
+              label: "Avg  viewer vote count normalized"
               round: 1
 
       - name: revenue_normalized
@@ -371,10 +371,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_imdb_rating:
-              type: sum
-              label: "Total IMDB rating"
-              round: 1
             avg_imdb_rating:
               type: average
               label: "Avg IMDB rating"
@@ -387,10 +383,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_imdb_votes:
-              type: sum
-              label: "Total IMDB votes"
-              round: 1
             avg_imdb_votes:
               type: average
               label: "Avg IMDB votes"
@@ -403,10 +395,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_number_of_awards_won:
-              type: sum
-              label: "Total number of awards won"
-              round: 1
             avg_number_of_awards_won:
               type: average
               label: "Avg number of awards won"
@@ -419,10 +407,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_combined_rotten_tomato_rating:
-              type: sum
-              label: "Total combined rotten tomato rating"
-              round: 1
             avg_combined_rotten_tomato_rating:
               type: average
               label: "Avg combined rotten tomato rating"
@@ -435,10 +419,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_viewer_vote:
-              type: sum
-              label: "Total viewer votes"
-              round: 1
             avg_viewer_votee:
               type: average
               label: "Avg viewer votes"
@@ -451,10 +431,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_viewer_vote_count:
-              type: sum
-              label: "Total viewer vote count"
-              round: 1
             avg_viewer_vote_count:
               type: average
               label: "Avg viewer vote count"
@@ -467,10 +443,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_revenue:
-              type: sum
-              label: "Total revenue"
-              round: 1
             avg_revenue:
               type: average
               label: "Avg revenue"
@@ -483,14 +455,11 @@ models:
           dimension:
             type: number
         metrics:
-            total_inflation_corrected_revenue:
-              type: sum
-              label: "Total inflation corrected revenue"
-              round: 1
             avg_inflation_corrected_revenue:
               type: average
               label: "Avg inflation corrected revenue"
               round: 1
+
       - name: combined_success_rating
         description: |
           {{ doc("int_combined_movie_success__combined_success_rating") }}
@@ -510,13 +479,9 @@ models:
           dimension:
             type: number
           metrics:
-            total_imdb_votes_normalized:
-              type: sum
-              label: "Total normalized imdb votes"
-              round: 1
             avg_imdb_votes_normalized:
               type: average
-              label: "Avg normalized imdb votes"
+              label: "Avg normalized imdb votes normalized"
               round: 1
 
       - name: number_of_awards_won_normalized
@@ -526,10 +491,6 @@ models:
           dimension:
             type: number
           metrics:
-            total_number_of_awards_won_normalized:
-              type: sum
-              label: "Total number of awards normalized"
-              round: 1
             avg_number_of_awards_won_normalized:
               type: average
               label: "Avg number of awards normalized"
@@ -542,13 +503,9 @@ models:
           dimension:
             type: number
           metrics:
-            total_viewer_vote_count_normalized:
-              type: sum
-              label: "Total viewer vote count"
-              round: 1
             avg_viewer_vote_count_normalized:
               type: average
-              label: "Avg  viewer vote count"
+              label: "Avg  viewer vote count normalized"
               round: 1
 
       - name: revenue_normalized
