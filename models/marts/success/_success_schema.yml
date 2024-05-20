@@ -227,23 +227,6 @@ models:
               label: "Avg revenue normalized"
               round: 1
 
-      - name: combined_rotten_tomato_rating_normalized
-        description: |
-          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}
-        meta:
-          dimension:
-            type: number
-          metrics:
-            total_combined_rotten_tomato_rating_normalized:
-              type: sum
-              label: "Total combined rotten tomato rating normalized"
-              round: 1
-            avg_combined_rotten_tomato_rating_normalized:
-              type: average
-              label: "Avg combined rotten tomato rating normalizedg"
-              round: 1
-
-
   - name: actor_director_success
     description: |
       Final model showing success metrics for actor director pair.
@@ -488,20 +471,4 @@ models:
             avg_revenue_normalized:
               type: average
               label: "Avg revenue normalized"
-              round: 1
-
-      - name: combined_rotten_tomato_rating_normalized
-        description: |
-          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}
-        meta:
-          dimension:
-            type: number
-          metrics:
-            total_combined_rotten_tomato_rating_normalized:
-              type: sum
-              label: "Total combined rotten tomato rating normalized"
-              round: 1
-            avg_combined_rotten_tomato_rating_normalized:
-              type: average
-              label: "Avg combined rotten tomato rating normalizedg"
               round: 1

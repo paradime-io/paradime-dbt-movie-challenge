@@ -15,20 +15,18 @@ with collaborations as (
         -- Metrics raw
         m.imdb_rating,
         m.imdb_votes,
+        m.imdb_votes_normalized,
         m.combined_rotten_tomato_rating,
         m.number_of_awards_won,
+        m.number_of_awards_won_normalized,
         m.viewer_vote_average,
         m.viewer_vote_count,
+        m.viewer_vote_count_normalized,
         m.revenue,
         m.inflation_corrected_revenue,
-        m.combined_success_rating,
-        
-        -- Metrics normalized
-        m.imdb_votes_normalized,
-        m.number_of_awards_won_normalized,
-        m.viewer_vote_count_normalized,
         m.revenue_normalized,
-        m.combined_rotten_tomato_rating_normalized
+        m.combined_success_rating,
+
         
     from
         {{ ref('int_combined_movie_success') }} as m,

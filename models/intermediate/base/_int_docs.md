@@ -59,8 +59,3 @@ Normalized viewer_vote_count (0-10)
 Normalized revenue_normalized(0-10)
 {% enddocs %}
 
-{% docs int_combined_movie_success__combined_rotten_tomato_rating_normalized %}
-Normalized combined_rotten_tomato_rating_normalized (0-10)
-{% enddocs %}
-
-

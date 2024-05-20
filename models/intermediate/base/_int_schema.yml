@@ -204,7 +204,3 @@ models:
       - name: revenue_normalized
         description: |
           {{ doc("int_combined_movie_success__revenue_normalized") }}
-
-      - name: combined_rotten_tomato_rating_normalized
-        description: |
-          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating_normalized") }}
