@@ -85,3 +85,6 @@
 {"level":"INFO","message":"[10:45:40.001 PM]: Trying to initialize Easy Logging"}
 {"level":"INFO","message":"[10:45:40.011 PM]: No client config file found in default directories"}
 {"level":"INFO","message":"[10:45:40.012 PM]: Easy Logging is disabled as no config has been found"}
+{"level":"INFO","message":"[10:51:55.465 PM]: Trying to initialize Easy Logging"}
+{"level":"INFO","message":"[10:51:55.476 PM]: No client config file found in default directories"}
+{"level":"INFO","message":"[10:51:55.477 PM]: Easy Logging is disabled as no config has been found"}
