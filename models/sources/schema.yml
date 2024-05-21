@@ -291,7 +291,9 @@ models:
           dimension:
             type: string
       - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
+        description: >-
+          Current status of the TV show (e.g., returning series, ended,
+          cancelled, etc.).
         meta:
           dimension:
             type: string
