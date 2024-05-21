@@ -69,9 +69,39 @@ Below steps are followed to mitigate these:
 
 ### Calculating Movie Success
 Movie success is the centre metric for all insights in this project. That is why creating a robust ultimate success indicator
-is one of the key aspects of modelling as well. Below explains how this is achieved.
+is one of the key aspects of modelling as well.
 
+There are various metrics that could indicate the success of a movie. Below is the list of
+metrics that we have in the source data (inc. new datasets):
+- Revenue
+- Imdb rating, together with number of votes.
+- Viewer vote average, together with number of votes.
+- Number of awards won
+- Tomato meter
+- Rotten tomatoe audience score
 
+Since these metrics are all showing different aspects of success, we will create an ultimate
+success metric that will combine all of them according to their subjective importance.
+
+1. we combine available rotten tomato metrics together to just have a single average
+rotten tomatoe rating for each movie.
+
+2. we use the US inflation data so that revenues are not biased by yearly inflations and can 
+be comparable to each other in fair way.
+
+3. we normalize each of the feature to be a value between 0-10 so that 
+they are comparable between each other.
+
+4. we assign weights to each feature to create the ultimate success metric.
+
+Weights assigned are:
+- imdb_rating = 1
+- imdb_votes = 0.8
+- combined_rotten_tomato_rating = 0.5
+- number_of_awards_won = 0.3
+- viewer_vote_average = 0.8
+- viewer_vote_count = 0.5
+- revenue = 0.4
 
 
 ## Visualizations
