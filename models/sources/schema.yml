@@ -358,7 +358,7 @@ models:
         description: Year movie was released
         meta:
           dimension:
-            type: year
+            type: date
       - name: avg_runtime
         description: Average runtime
         meta:
