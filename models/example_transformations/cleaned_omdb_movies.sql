@@ -1,5 +1,5 @@
-WITH source AS (
-    SELECT
+with numed as (
+    select 
         IMDB_ID,
         TITLE,
         DIRECTOR,
@@ -9,7 +9,6 @@ WITH source AS (
         LANGUAGE,
         COUNTRY,
         TYPE,
-        PLOT,
         RATED,
         RATINGS,
         METASCORE,
@@ -20,18 +19,18 @@ WITH source AS (
         RUNTIME,
         DVD,
         BOX_OFFICE,
-        POSTER,
         PRODUCTION,
-        WEBSITE,
         AWARDS,
-        TMDB_ID
-    FROM
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+        TMDB_ID,
+        row_number() over(partition by IMDB_ID order by IMDB_ID) as row_num 
+    from 
+        {{ ref('stg_omdb_movies') }} 
 )
 
-
-SELECT
-    *
-FROM
-    source
-
+select
+    * 
+from 
+    numed
+where
+    TITLE <> '#DUPE#' and
+    row_num = 1 
