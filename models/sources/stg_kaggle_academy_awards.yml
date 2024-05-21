@@ -1,24 +1,24 @@
 version: 2
 models:
-  - name: dwh_people
+  - name: stg_kaggle_academy_awards
     columns:
-      - name: person_id
+      - name: film_title
         description: ""
         meta:
           dimension:
             type: string
-      - name: person_name
+      - name: awards_year
         description: ""
         meta:
           dimension:
-            type: string
-      - name: date_of_birth
+            type: number
+      - name: count_awards_won
         description: ""
         meta:
           dimension:
-            type: date
-      - name: gender
+            type: number
+      - name: count_nominations
         description: ""
         meta:
           dimension:
-            type: string
+            type: number

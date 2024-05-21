@@ -2,11 +2,6 @@ version: 2
 models:
   - name: dwh_academy_awards
     columns:
-      - name: movie_id
-        description: ""
-        meta:
-          dimension:
-            type: string
       - name: movie_title
         description: ""
         meta:
@@ -17,12 +12,52 @@ models:
         meta:
           dimension:
             type: string
+      - name: director_person_identifier
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director_date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: director_age
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: director_gender
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_identifier
+        description: ""
+        meta:
+          dimension:
+            type: string
       - name: person_name
         description: ""
         meta:
           dimension:
             type: string
-      - name: person_id
+      - name: person_date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: person_age
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: person_gender
         description: ""
         meta:
           dimension:

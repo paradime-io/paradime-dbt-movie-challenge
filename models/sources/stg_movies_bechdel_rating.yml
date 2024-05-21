@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: stg_movies_bechdel_rating
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: bechdel_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number

@@ -1,6 +1,6 @@
 WITH extracted as (
     select 
-        JSON_EXTRACT_PATH_TEXT(HUMAN, 'value') AS person_identifier,
+        SPLIT_PART(JSON_EXTRACT_PATH_TEXT(HUMAN, 'value'), '/', -1)AS person_identifier,
         JSON_EXTRACT_PATH_TEXT(HUMANLABEL, 'value') AS person_name,
         TO_DATE(LEFT(JSON_EXTRACT_PATH_TEXT(DOB, 'value'), 10), 'yyyy-mm-dd') AS date_of_birth,
         UPPER(JSON_EXTRACT_PATH_TEXT(GENDERLABEL, 'value')) AS gender
@@ -12,6 +12,7 @@ WITH extracted as (
 -- person, the one we need to discard is '2000-01-01'
 deduplicated AS (
     SELECT 
+        person_identifier,
         person_name,
         date_of_birth,
         gender,
@@ -27,6 +28,7 @@ deduplicated AS (
 
 -- It appears that a DOB of 2000-01-01 is used as a default when not known so remove all 
 SELECT 
+    person_identifier,
     person_name,
     case 
         when date_of_birth = '2000-01-01' 
