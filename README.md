@@ -23,6 +23,8 @@ My analysis leverage below data sets:
 ### Sources and Seeds
 - *tmdb_movies* (already provided)
 - *omdb_movies* (already provided)
+
+New Datasets:
 - *imdb_ratings* (newly imported from imdb website)
 - *rotten_tomatoes_ratings* (newly imported by using Kaggle dataset)
 - *normalized_revenues_movies* (prepared by using Kaggle US inflation dataset and revenue_inflation_adjustment.py)
@@ -63,11 +65,13 @@ Below steps are followed to mitigate these:
 - Select distinct to ensure that there are not duplicate rows in stg models.
 - Tests for uniqueness on the imdb_id (this is the join key for all sources) to make sure that each movie appears only once.
 - Removing all rows that doesn't have imdb_id.
-- Coalescing values from different sources to ensure completness. (eg. imdb_rating)
+- Coalescing values from different sources to ensure completness. (eg. imdb_rating from imdb and omdb)
 
 ### Calculating Movie Success
 Movie success is the centre metric for all insights in this project. That is why creating a robust ultimate success indicator
-is one of the key aspects of modelling as well. Below is explains how this is achieved.
+is one of the key aspects of modelling as well. Below explains how this is achieved.
+
+
 
 
 ## Visualizations

@@ -193,7 +193,7 @@ models:
         meta:
           dimension:
             type: number
-        metrics:
+          metrics:
             total_inflation_corrected_revenue:
               type: sum
               label: "Total inflation corrected revenue"
