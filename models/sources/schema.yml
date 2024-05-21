@@ -345,31 +345,3 @@ models:
         meta:
           dimension:
             type: string
-  - name: stg_tmbd2
-    columns:
-      - name: genre
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: release_year
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_runtime
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_rating
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_box_office
-        description: ""
-        meta:
-          dimension:
-            type: number
-
