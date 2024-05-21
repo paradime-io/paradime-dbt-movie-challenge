@@ -350,27 +350,27 @@ models:
   - name: stg_tmbd2
     columns:
       - name: genre
-        description: ""
+        description: "moveie genre"
         meta:
           dimension:
             type: string
       - name: release_year
-        description: ""
+        description: "Year movie was released"
         meta:
           dimension:
             type: year
       - name: avg_runtime
-        description: ""
+        description: "Average runtime"
         meta:
           dimension:
             type: number
       - name: avg_rating
-        description: ""
+        description: "average rating"
         meta:
           dimension:
             type: number
       - name: avg_box_office
-        description: ""
+        description: "avg box office adjusted for inflation"
         meta:
           dimension:
             type: number
