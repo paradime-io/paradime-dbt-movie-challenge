@@ -50,7 +50,7 @@ success_metrics as (
             revenue_normalized_weight=0.4
         ) }},
         -- Normalize the combined success rating to be between 0 and 100
-        round((cast(combined_success as decimal) - min(combined_success) over ()) / (max(combined_success) over () - min(combined_success) over ()) * 100, 1) as combined_success_rating
+        round((cast(combined_success as decimal) - min(combined_success) over ()) / (max(combined_success) over () - min(combined_success) over ()) * 10, 1) as combined_success_rating
     from {{ ref('int_movies_mapping') }}, min_max
 )
 
