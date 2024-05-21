@@ -14,11 +14,13 @@ select genre,
 release_year,
 avg(RUNTIME) as avg_runtime,
 ROUND(avg(IMDB_RATING),1) AS AVG_RATING,
-ROUND(AVG(BOX_OFFICE),0) AS AVG_BOX_OFFICE
+ROUND(AVG(BOX_OFFICE),0) AS AVG_BOX_OFFICE,
+count(genre) as total_ct
 FROM genre_unnest
 where release_year between 1990 and 2023
 AND BOX_OFFICE IS NOT NULL
 group by genre,
 release_year
+having count(genre)>1000
 order by genre,
 release_year
