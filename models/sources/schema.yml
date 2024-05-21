@@ -356,7 +356,7 @@ models:
         description: ""
         meta:
           dimension:
-            type: number
+            type: year
       - name: avg_runtime
         description: ""
         meta:
