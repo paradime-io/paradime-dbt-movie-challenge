@@ -109,7 +109,7 @@ Weights assigned are:
 ### Getting to know the dataset
 Here we present the overview of the values we have in the analysed dataset.
 
-![plot](./images/overview.png)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/overview.png?raw=true)
 
 As mentioned before, we have various success indicators. We will start by identifying the top performers 
 in these individual success catgeories.
@@ -120,13 +120,56 @@ We can see that although these movies have great IMDB ratings, they have very lo
 number of votes which indicates that their imdb rating is not as indicative.
 
 #### 2. Top 10 movies by number of awards won
-![plot](./images/top_10_imdb_rating.png)
+![plot](./images/.png)
 
 #### 3. Top 10 movies by Inflation Corrected Revenue
 Here we use inflation corrected revenue instead of raw revenue numbers to
 get a fair comparison for movies released over the years.
 
+![plot](./images/.png)
 
+As it can be seen from the above data different movies are winning in different success categories.
+We can't easily drive a conclusion of the best movies by looking at these success metrics seperatly.
+
+### Ultimate Combined Movie Success
+We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
+best movies ever created. Refer to this section to see how the weights are adjusted.
+
+![plot](./images/.png)
+
+The Dark Knight is the best movie of all times according to our combined success metric!
+
+We can dive deep into individual contributor success metrics for the top 10 list above to understand
+why The Dark Knight wins. Below values are presented in their normalized form (0-10) for ease of visualization and 
+comparison.
+
+![plot](./images/.png)
+
+Looking at above, The Dark Knight wins because it has a very high IMDB rating of 9 but at the same time
+it maintains very big numbers of IMDB Voters. These are 2 metrics that has the most effect in our combined success metric.
+
+We can further look at the raw numbers for each movie in the top 10 list.
+![plot](./images/.png)
+
+### Change in Movie Success
+So far, we have identifed the most successfull movies. In this section we will look at the change in overall movie success
+over the years to identify trends.
+
+Below graph shows how combined movie success changes in the last 50 years together with the number of movies released
+each year.
+
+![plot](./images/.png)
+
+The number of movies grew after the end of 90s and reached a peak at 2019. The drop after this year is very likely related to COVID-19
+as lots of operations throughout the world came to a halt.
+If we look at movie success, we see a sharp drop at the end of 80s. We will dive deeper to investigate why this is happening.
+
+![plot](./images/.png)
+
+As mentioned before IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
+that IMDB rating stays much or less the same over the years but IMDB Votes significantly increases after 90s which in turn increases the significance imdb rating
+inside the combined success metric. That is why the overall combined success metric drops. (Lower imdb ratings become more important)
+The reason that IMDB Votes suddenly increase at the end of 80s is because 1990 is the year where IMDB began as a fan-operated movie database!
 
 
 
