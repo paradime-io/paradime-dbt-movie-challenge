@@ -22,11 +22,11 @@ query-comment:
 models:
   paradime_movie_challenge: 
     sources:
-      +schema: staging
+      # +schema: staging
       +materialized: view
     intermediate:
-      +schema: intermediate
+      # +schema: intermediate
       +materialized: view 
     marts:
-      +schema: marts 
+      # +schema: marts 
       +materialized: table

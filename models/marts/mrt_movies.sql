@@ -1,11 +1,11 @@
 with
 
-source as (
+movies as (
     select * from {{ ref('int_movies') }}
 ),
 
 final as (
-    select * from source
+    select * from movies
 )
 
 select * from final

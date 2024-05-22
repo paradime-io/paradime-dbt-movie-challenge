@@ -1,0 +1,19 @@
+sources:
+  - name: PARADIME_MOVIE_CHALLENGE
+    database: ROBERTEHRQ3_ANALYTICS
+    schema: DBT_ROBERT
+    description: This database contains all the data created by Robert Buttery for the Paradime Movie Challenge, including all data marts and additional data sources.
+    tables:
+      - name: CDC_COVID_TIMELINE_OF_EVENTS
+        description: This dataset was scraped into a table format using this page from the CDC https://www.cdc.gov/museum/timeline/covid19.html.
+        columns:
+        - name: EVENT_DATE
+          description: The reported date of the event by the CDC.
+          meta:
+            dimension:
+              type: string
+        - name: EVENT
+          description: A description in English of the Covid-19 related event.
+          meta:
+            dimension:
+              type: string
