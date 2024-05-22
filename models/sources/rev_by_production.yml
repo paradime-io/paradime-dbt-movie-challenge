@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: rev_by_production
+    columns:
+      - name: production
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: total_box_office
+        description: ""
+        meta:
+          dimension:
+            type: number

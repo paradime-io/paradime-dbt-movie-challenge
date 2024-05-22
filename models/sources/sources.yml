@@ -11,6 +11,7 @@ sources:
     schema: STAGING
     tables:
       - name: INFLATION_2023
+      - name: TMDB_EX
   - name: PARADIME_MOVIE_CHALLENGE_FINAL
     database: PHILIPSONGCHRFJ_ANALYTICS
     schema: INTERMEDIATE

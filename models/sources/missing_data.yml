@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: missing_data
+    columns:
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
