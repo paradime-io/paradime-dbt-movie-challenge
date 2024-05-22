@@ -106,23 +106,29 @@ Weights assigned are:
 
 ## Visualizations
 
-### vizualization 1
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+### Getting to know the dataset
+Here we present the overview of the values we have in the analysed dataset.
 
-### vizualization 2
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+![plot](./images/overview.png)
 
-### vizualization 3
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+As mentioned before, we have various success indicators. We will start by identifying the top performers 
+in these individual success catgeories.
+
+#### 1. Top 10 movies by IMDB rating
+![plot](./images/top_10_imdb_rating.png)
+We can see that although these movies have great IMDB ratings, they have very low
+number of votes which indicates that their imdb rating is not as indicative.
+
+#### 2. Top 10 movies by number of awards won
+![plot](./images/top_10_imdb_rating.png)
+
+#### 3. Top 10 movies by Inflation Corrected Revenue
+Here we use inflation corrected revenue instead of raw revenue numbers to
+get a fair comparison for movies released over the years.
+
+
+
+
 
 ## Conclusions
 Share a clear and concise conclusion of your findings!
