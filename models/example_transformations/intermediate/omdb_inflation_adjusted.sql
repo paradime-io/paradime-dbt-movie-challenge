@@ -41,7 +41,10 @@ ON {{ source('PARADIME_MOVIE_CHALLENGE_EXTRA', 'INFLATION_2023') }}.YEAR = RELEA
 SELECT omdb_source.*,
 CASE WHEN COALESCE(omdb_source.BOX_OFFICE, tmdb_source.revenue) IS NULL THEN NULL
 ELSE COALESCE(omdb_source.BOX_OFFICE, tmdb_source.revenue) * INFLATION_INDEX_LOOKUP.INFLATION_INDEX
-END AS ADJ_BOX_OFFICE
+END AS ADJ_BOX_OFFICE,
+case when omdb_source.PRODUCTION = 'N/A' then tmdb_source.production_companies 
+else omdb_source.PRODUCTION
+end as production_companies
 FROM 
 {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }} AS omdb_source
 LEFT JOIN {{ source('PARADIME_MOVIE_CHALLENGE_EXTRA', 'TMDB_EX') }} tmdb_source

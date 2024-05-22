@@ -1,23 +1,23 @@
 version: 2
 models:
-  - name: rev_by_production
+  - name: Overall
     columns:
-      - name: production
-        description: ""
-        meta:
-          dimension:
-            type: string
       - name: release_year
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_box_office
+      - name: avg_box_office
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_films_by_production
+      - name: total_films
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: avg_runtime
         description: ""
         meta:
           dimension:

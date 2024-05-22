@@ -137,3 +137,8 @@ models:
         meta:
           dimension:
             type: number
+      - name: production_companies
+        description: ""
+        meta:
+          dimension:
+            type: string
