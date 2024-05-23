@@ -3,16 +3,19 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Data Sources](#data-sources-and-data-lineage)
+2. [Data Sources and Data Lineage](#data-sources-and-data-lineage)
+   - [Sources and Seeds](#sources-and-seeds)
+   - [Intermediate Layer](#intermediate-layer)
+   - [Mart Layer](#mart-layer)
+   - [Other Layers](#other-layers)
+   - [Data Lineage](#data-lineage)
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
-   - [Applied Techniques](#applied-techniques)
-   - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
+   - [Data Preparation and Cleaning](#data-preparation-and-cleaning)
+   - [Calculating Movie Success](#calculating-movie-success)
+
 4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
-   - etc
+
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -62,10 +65,10 @@ After investigating the given data sources, it is quickly relaized that data acc
 quality is not great. Some of the columns have great percentage of null values and some have wrong data 
 (eg. *Adolf Hitler* seems to be a main actor in a movie :)
 Below steps are followed to mitigate these:
-- Select distinct to ensure that there are not duplicate rows in stg models.
-- Tests for uniqueness on the imdb_id (this is the join key for all sources) to make sure that each movie appears only once.
-- Removing all rows that doesn't have imdb_id.
-- Coalescing values from different sources to ensure completness. (eg. imdb_rating from imdb and omdb)
+- Select distinct to ensure that there are not duplicate rows in stg models. (there are many entries of the same movie)
+- Tests for uniqueness on the `imdb_id` (this is the join key for all sources) to make sure that each movie appears only once.
+- Removing all rows that doesn't have `imdb_id`.
+- Coalescing values from different sources to ensure completness. (eg. `imdb_rating` from `imdb` and `omdb`)
 
 ### Calculating Movie Success
 Movie success is the centre metric for all insights in this project. That is why creating a robust ultimate success indicator
@@ -95,13 +98,19 @@ they are comparable between each other.
 4. we assign weights to each feature to create the ultimate success metric.
 
 Weights assigned are:
-- imdb_rating = 1
-- imdb_votes = 0.8
-- combined_rotten_tomato_rating = 0.5
-- number_of_awards_won = 0.3
-- viewer_vote_average = 0.8
-- viewer_vote_count = 0.5
-- revenue = 0.4
+- `imdb_rating = 1`
+- `imdb_votes = 0.8`
+- `combined_rotten_tomato_rating = 0.5`
+- `number_of_awards_won = 0.3`
+- `viewer_vote_average = 0.8`
+- `viewer_vote_count = 0.5`
+- `revenue = 0.4`
+
+Above weights are assigned according to the subjective importance of each metric. IMDB and Viewer votes are
+populated for most of the data and a very well accepted and popular success indicator, that is why they have higher weights.
+Combined rotten tomato rating is a good indicator as well and in fact most of the time could be more stricter than IMDB but we
+don't have good data coverage for this one. Hence, the lower weight.
+There are a lot of nulls for revenue in the dataset so the weight of this one is kept low.
 
 
 ## Visualizations
@@ -119,7 +128,7 @@ in these individual success catgeories.
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=true)
 
 We can see that although these movies have great IMDB ratings, they have very low
-number of votes which indicates that their imdb rating is not as indicative.
+number of votes which indicates that their imdb rating is not as indicative to determine success.
 
 #### 2. Top 10 movies by number of awards won
 
@@ -133,24 +142,26 @@ get a fair comparison for movies released over the years.
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_revenue.png?raw=true)
 
 As it can be seen from the above data different movies are winning in different success categories.
-We can't easily drive a conclusion of the best movies by looking at these success metrics seperatly.
+We can't easily drive a conclusion for the best movies by just looking at these success metrics separately.
 
 ### Ultimate Combined Movie Success
 We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
-best movies ever created. Refer to this section to see how the weights are adjusted.
+best movies ever created. Refer to [this](#calculating-movie-success) section to see how weights are adjusted.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_ultimate_combined.png?raw=true)
 
-The Dark Knight is the best movie of all times according to our combined success metric!
+`The Dark Knight` is the best movie of all times according to our combined success metric!
 
 We can dive deep into individual contributor success metrics for the top 10 list above to understand
-why The Dark Knight wins. Below values are presented in their normalized form (0-10) for ease of visualization and 
-comparison.
+why `The Dark Knight` wins. 
+
+*Below values are presented in their normalized form (0-10) for ease of visualization and 
+comparison.*
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_indv_normalized.png?raw=true)
 
-Looking at above, The Dark Knight wins because it has a very high IMDB rating of 9 but at the same time
-it maintains very big numbers of IMDB Voters. These are 2 metrics that has the most effect in our combined success metric.
+Looking at above, `The Dark Knight` wins because it has a very high IMDB rating of 9 but at the same time
+it maintains very big numbers of IMDB Voters. These are 2 metrics that has the most weight in our combined success metric.
 
 We can further look at the raw numbers for each movie in the top 10 list.
 
@@ -165,16 +176,41 @@ each year.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/change_in_movie_success.png?raw=true)
 
-The number of movies grew after the end of 90s and reached a peak at 2019. The drop after this year is very likely related to COVID-19
+The number of movies grew after the end of the 90s and reached a peak at 2019. The drop after this year is very likely related to COVID-19
 as lots of operations throughout the world came to a halt.
-If we look at movie success, we see a sharp drop at the end of 80s. We will dive deeper to investigate why this is happening.
+If we look at movie success, we see a sharp drop at the end of the 80s. We will dive deeper to investigate why this is happening.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
 
 As mentioned before IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
-that IMDB rating stays much or less the same over the years but IMDB Votes significantly increases after 90s which in turn increases the significance imdb rating
+that IMDB rating stays much or less the same over the years but IMDB Votes significantly increases after the 90s which in turn increases the significance imdb rating
 inside the combined success metric. That is why the overall combined success metric drops. (Lower imdb ratings become more important)
-The reason that IMDB Votes suddenly increase at the end of 80s is because 1990 is the year where IMDB began as a fan-operated movie database!
+The reason that IMDB Votes suddenly increase at the end of the 80s is because, 1990 is the year that IMDB began as a fan-operated movie database!
+
+### Most Popular Months for Movie Releases
+
+Since we were looking at the yearly changes, we can further look into months to see if we have any trendy months for movie releases.
+The data since last 9 year shows us that number of movie release peaks in November for every single year.
+On the contrary, movie succes drops on January each year.
+
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
+
+
+### Actor and Director Success
+So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
+pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
+
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
+
+We have `Christian Bale - Christopher Nolan` as the most succesfull Actor - Director of all times! Plus, they have 4 movies together that
+they managed to maintain this success.
+
+Below, we can see the deep dive into the individual success metrics of the Top 10 Actor - Director pair.
+
+
+Lastly, we show the Actor - Director Pair with the most movies below.
+
+
 
 
 ## Conclusions
