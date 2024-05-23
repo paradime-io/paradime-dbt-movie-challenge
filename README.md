@@ -15,22 +15,23 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
    - [Calculating Movie Success](#calculating-movie-success)
 
 4. [Visualizations](#visualizations)
+   - TODO
 
 5. [Conclusions](#conclusions)
 
-## Introduction
+## **Introduction**
 This project explores insights related to movies and specifically focuses on movie success and visualises them in Lightdash.
 
-## Data Sources and Data Lineage
-My analysis leverage below data sets:
+## **Data Sources and Data Lineage**
+My analysis leverages the below data sets:
 ### Sources and Seeds
 - *tmdb_movies* (already provided)
 - *omdb_movies* (already provided)
 
 New Datasets:
-- *imdb_ratings* (newly imported from imdb website)
-- *rotten_tomatoes_ratings* (newly imported by using Kaggle dataset)
-- *normalized_revenues_movies* (prepared by using Kaggle US inflation dataset and revenue_inflation_adjustment.py)
+- *imdb_ratings* (newly imported from the imdb website)
+- *rotten_tomatoes_ratings* (newly imported Kaggle dataset)
+- *normalized_revenues_movies* (based on a newly imported Kaggle dataset `us_inflation_rates.csv` for US inflation and prepared by `revenue_inflation_adjustment.py`)
 
 ### Intermediate layer
 - *int_movies_mapping* (int model bringing all movie sources together)
@@ -43,59 +44,60 @@ New Datasets:
 ### Other models
 - *revenue_inflation_adjustment.py*: This python script takes the raw revenue data from omdb_movies and normalizes 
 the revenue numbers by using the US inflation rates over the years.
-- *calculate_combined_success.sql*: This macro calculates the ultmate combined movie success rating
-based on the other success ratings and their given weights
+- *calculate_combined_success.sql*: This macro calculates the ultimate combined movie success rating
+based on the other success ratings and their given weights.
 - *generate_unique_key*: This macro creates a unique key for given fields.
 - *.sqlfluff*: This file makes sure that all the models are up to good formatting standards accroding to extensive set of rules defined.
 
 ### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/lineage.png?raw=true)
 
-## Methodology
+## **Methodology**
 ### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Python scripts** for calculations and read/write to database.
+- **Python scripts** for calculations and reads/writes to database.
 - **dbt Tests** for maintaining data accuracy.
 - **dbt MD** for removing redundant yml descriptions.
 
 ### Data Preparation and Cleaning
-After investigating the given data sources, it is quickly relaized that data accuracy and 
+After investigating the given data sources, I quickly relaized that the data accuracy and 
 quality is not great. Some of the columns have great percentage of null values and some have wrong data 
-(eg. *Adolf Hitler* seems to be a main actor in a movie :)
-Below steps are followed to mitigate these:
-- Select distinct to ensure that there are not duplicate rows in stg models. (there are many entries of the same movie)
+(eg. *Adolf Hitler* seems to be a main actor in a movie 😄).
+
+The below steps are followed to mitigate these:
+- `select distinct` to ensure that there are not duplicate rows in `stg` models (there are many entries of the same movie).
 - Tests for uniqueness on the `imdb_id` (this is the join key for all sources) to make sure that each movie appears only once.
 - Removing all rows that doesn't have `imdb_id`.
-- Coalescing values from different sources to ensure completness. (eg. `imdb_rating` from `imdb` and `omdb`)
+- Coalescing values from different sources to ensure completness (eg. `imdb_rating` from `imdb` and `omdb`)
 
 ### Calculating Movie Success
-Movie success is the centre metric for all insights in this project. That is why creating a robust ultimate success indicator
-is one of the key aspects of modelling as well.
+Movie success is the central metric for all insights in this project. That is why creating a robust ultimate success indicator
+is one of the key aspects of the modelling as well.
 
 There are various metrics that could indicate the success of a movie. Below is the list of
 metrics that we have in the source data (inc. new datasets):
 - Revenue
-- Imdb rating, together with number of votes.
-- Viewer vote average, together with number of votes.
+- Imdb rating, together with number of votes
+- Viewer vote average, together with number of votes
 - Number of awards won
 - Tomato meter
-- Rotten tomatoe audience score
+- Rotten tomato audience score
 
 Since these metrics are all showing different aspects of success, we will create an ultimate
 success metric that will combine all of them according to their subjective importance.
 
-1. we combine available rotten tomato metrics together to just have a single average
-rotten tomatoe rating for each movie.
+1. We combine available rotten tomato metrics together to just have a single average
+rotten tomato rating for each movie.
 
-2. we use the US inflation data so that revenues are not biased by yearly inflations and can 
+2. We use the US inflation data so that revenues are not biased by yearly inflations and can 
 be comparable to each other in fair way.
 
-3. we normalize each of the feature to be a value between 0-10 so that 
-they are comparable between each other.
+3. We normalize each of the feature to be a value between 0-10 so that 
+they are comparable to each other.
 
-4. we assign weights to each feature to create the ultimate success metric.
+4. We assign weights to each feature to create the ultimate success metric.
 
 Weights assigned are:
 - `imdb_rating = 1`
@@ -106,14 +108,14 @@ Weights assigned are:
 - `viewer_vote_count = 0.5`
 - `revenue = 0.4`
 
-Above weights are assigned according to the subjective importance of each metric. IMDB and Viewer votes are
+Above weights are assigned according to the subjective importance of each metric. IMDB and viewer votes are
 populated for most of the data and a very well accepted and popular success indicator, that is why they have higher weights.
-Combined rotten tomato rating is a good indicator as well and in fact most of the time could be more stricter than IMDB but we
+The combined rotten tomato rating is a good indicator as well and in fact most of the time could be more stricter than IMDB but we
 don't have good data coverage for this one. Hence, the lower weight.
 There are a lot of nulls for revenue in the dataset so the weight of this one is kept low.
 
 
-## Visualizations
+## **Visualizations**
 
 ### Getting to know the dataset
 Here we present the overview of the values we have in the analysed dataset.
@@ -123,19 +125,19 @@ Here we present the overview of the values we have in the analysed dataset.
 As mentioned before, we have various success indicators. We will start by identifying the top performers 
 in these individual success catgeories.
 
-#### 1. Top 10 movies by IMDB rating
+1. Top 10 movies by IMDB rating
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=true)
 
 We can see that although these movies have great IMDB ratings, they have very low
 number of votes which indicates that their imdb rating is not as indicative to determine success.
 
-#### 2. Top 10 movies by number of awards won
+2. Top 10 movies by number of awards won
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_awards.png?raw=true)
 
 
-#### 3. Top 10 movies by Inflation Corrected Revenue
+3. Top 10 movies by Inflation Corrected Revenue
 Here we use inflation corrected revenue instead of raw revenue numbers to
 get a fair comparison for movies released over the years.
 
@@ -150,7 +152,7 @@ best movies ever created. Refer to [this](#calculating-movie-success) section to
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_ultimate_combined.png?raw=true)
 
-`The Dark Knight` is the best movie of all times according to our combined success metric!
+🏆 `The Dark Knight` 🦇⚔️ is the best movie of all times according to our combined success metric!
 
 We can dive deep into individual contributor success metrics for the top 10 list above to understand
 why `The Dark Knight` wins. 
@@ -182,36 +184,38 @@ If we look at movie success, we see a sharp drop at the end of the 80s. We will 
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
 
-As mentioned before IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
-that IMDB rating stays much or less the same over the years but IMDB Votes significantly increases after the 90s which in turn increases the significance imdb rating
+As mentioned before, IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
+that IMDB rating stays much or less the same over the years but IMDB Votes significantly increase after the 90s which in turn increases the significance of imdb ratings
 inside the combined success metric. That is why the overall combined success metric drops. (Lower imdb ratings become more important)
-The reason that IMDB Votes suddenly increase at the end of the 80s is because, 1990 is the year that IMDB began as a fan-operated movie database!
+The reason that IMDB Votes suddenly increase at the end of the 80s is because, 1990 is the year that IMDB began as a fan-operated movie database! 🍿
 
 ### Most Popular Months for Movie Releases
 
 Since we were looking at the yearly changes, we can further look into months to see if we have any trendy months for movie releases.
-The data since last 9 year shows us that number of movie release peaks in November for every single year.
-On the contrary, movie succes drops on January each year.
+The data of the last 9 years shows us that number of movie releases peak in November for every single year.
+Contrary to that, the movie success drops on January each year.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/popular_months_of_release.png?raw=true)
 
 
 ### Actor and Director Success
 So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
 pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director.png?raw=true)
 
-We have `Christian Bale - Christopher Nolan` as the most succesfull Actor - Director of all times! Plus, they have 4 movies together that
+🏆 We have `Christian Bale - Christopher Nolan` as the most succesfull Actor - Director of all times! Plus, they have 4 movies together that
 they managed to maintain this success.
 
 Below, we can see the deep dive into the individual success metrics of the Top 10 Actor - Director pair.
 
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_deep_dive.png?raw=true)
 
 Lastly, we show the Actor - Director Pair with the most movies below.
 
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_movie_occ.png?raw=true)
 
 
 
-## Conclusions
-Share a clear and concise conclusion of your findings!
+## **Conclusions**
+- TODO
