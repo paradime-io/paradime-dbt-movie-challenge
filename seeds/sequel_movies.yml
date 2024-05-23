@@ -9,8 +9,7 @@ seeds:
       delimiter: ","
     columns:
       - name: Title
-      - name: Release
-      - name: Date
+      - name: Release Date
       - name: Year
       - name: Description
       - name: URL
