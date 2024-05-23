@@ -45,7 +45,7 @@ omdb AS (
         released_date
     FROM
         {{ ref('stg_omdb_movies') }}
-), 
+),
 
 joined AS (
     SELECT
@@ -89,9 +89,10 @@ joined AS (
         tmdb
     LEFT JOIN
         omdb ON tmdb.imdb_id = omdb.imdb_id
-)
+),
 
 SELECT
     *
 FROM
-    joined
+    joined2
+    where sequel_id is not null

@@ -1,22 +1,28 @@
 version: 2
 
 seeds:
-  - name: sequel_movies
-    description: Movies that are apart of a series
-    docs:
-      show: true
-    config:
-      delimiter: ","
-    columns:
-      - name: Title
-      - name: Release Date
-      - name: Year
-      - name: Description
-      - name: URL
-      - name: IMDb Rating
-      - name: Runtime (mins)
-      - name: Genres
-      - name: Num Votes
-      - name: Directors
-      - name: Movie Series
-      - name: Order
+  # - name: sequel_movies
+  #   description: Movies that are apart of a series
+  #   docs:
+  #     show: true
+  #   config:
+  #     delimiter: ","
+    # columns:
+    #   - name: Title
+    #   - name: Release_Date
+    #   - name: Year
+    #   - name: Description
+    #   - name: URL
+    #   - name: IMDb_Rating
+    #   - name: Runtime
+    #   - name: Genres
+    #   - name: Num_Votes
+    #   - name: Directors
+    #   - name: Movie_Series
+    #   - name: Order
+ - name: movie_seqels
+   description: Movies that are apart of a series2
+   docs:
+     show: true
+   config:
+     delimiter: ","
