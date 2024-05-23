@@ -4,9 +4,10 @@ WITH split_values AS (
         COUNTRY,
         {{split_on_comma('COUNTRY')}}
     FROM 
-        {{ref('cleaned_omdb_movies')}}
+        {{ref('omdb_join_tmdb')}}
 )
 
 SELECT *
 FROM split_values
+where COUNTRY is not null and COUNTRY <> 'N/A'
 ORDER BY IMDB_ID

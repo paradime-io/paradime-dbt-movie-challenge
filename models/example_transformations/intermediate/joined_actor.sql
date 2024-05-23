@@ -4,9 +4,10 @@ WITH split_values AS (
         ACTORS,
         {{split_on_comma('ACTORS')}}
     FROM 
-        {{ref('cleaned_omdb_movies')}}
+        {{ref('omdb_join_tmdb')}}
 )
 
 SELECT *
 FROM split_values
+where ACTORS is not null and ACTORS <> 'N/A'
 ORDER BY IMDB_ID

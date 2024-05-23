@@ -4,9 +4,10 @@ WITH split_values AS (
         LANGUAGE,
         {{split_on_comma('LANGUAGE')}}
     FROM 
-        {{ref('cleaned_omdb_movies')}}
+        {{ref('omdb_join_tmdb')}}
 )
 
 SELECT *
 FROM split_values
+where LANGUAGE is not null and LANGUAGE <> 'N/A'
 ORDER BY IMDB_ID

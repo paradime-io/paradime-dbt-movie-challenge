@@ -4,9 +4,10 @@ WITH split_values AS (
         GENRE,
         {{split_on_comma('GENRE')}}
     FROM 
-        {{ref('cleaned_omdb_movies')}}
+        {{ref('omdb_join_tmdb')}}
 )
 
 SELECT *
 FROM split_values
+where GENRE is not null and GENRE <> 'N/A'
 ORDER BY IMDB_ID
