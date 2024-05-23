@@ -115,18 +115,18 @@ As mentioned before, we have various success indicators. We will start by identi
 in these individual success catgeories.
 
 #### 1. Top 10 movies by IMDB rating
-![plot](./images/top_10_imdb_rating.png)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_awards.png?raw=true)
 We can see that although these movies have great IMDB ratings, they have very low
 number of votes which indicates that their imdb rating is not as indicative.
 
 #### 2. Top 10 movies by number of awards won
-![plot](./images/.png)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=true)
 
 #### 3. Top 10 movies by Inflation Corrected Revenue
 Here we use inflation corrected revenue instead of raw revenue numbers to
 get a fair comparison for movies released over the years.
 
-![plot](./images/.png)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_revenue.png?raw=true)
 
 As it can be seen from the above data different movies are winning in different success categories.
 We can't easily drive a conclusion of the best movies by looking at these success metrics seperatly.
