@@ -169,7 +169,7 @@ The number of movies grew after the end of 90s and reached a peak at 2019. The d
 as lots of operations throughout the world came to a halt.
 If we look at movie success, we see a sharp drop at the end of 80s. We will dive deeper to investigate why this is happening.
 
-![plot](./images/.png)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
 
 As mentioned before IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
 that IMDB rating stays much or less the same over the years but IMDB Votes significantly increases after 90s which in turn increases the significance imdb rating
