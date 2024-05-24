@@ -11,7 +11,7 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https:/
 2. [Competition Details](#competition-details)
 3. [Building Your Project](#building-your-project)
 4. [Example Submission](#Example-submission-template)
-
+s
 ---
 
 ## Getting Started
