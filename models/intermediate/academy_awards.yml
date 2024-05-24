@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: dwh_academy_awards
+  - name: academy_awards
     columns:
       - name: movie_title
         description: ""
@@ -10,19 +10,13 @@ models:
       - name: imdb_id
         description: ""
         meta:
-          metrics:
-            total_movie_count:
-              type: count_distinct
           dimension:
             type: string
       - name: director_person_identifier
-        description: wikidata identifier for director
+        description: ""
         meta:
           dimension:
             type: string
-          metrics:
-            total_director_count:
-              type: count_distinct
       - name: director_name
         description: ""
         meta:
@@ -33,14 +27,6 @@ models:
         meta:
           dimension:
             type: date
-      - name: director_age
-        description: ""
-        meta:
-          metrics:
-            avg_director_age:
-              type: average
-          dimension:
-            type: number
       - name: director_gender
         description: ""
         meta:
@@ -61,11 +47,6 @@ models:
         meta:
           dimension:
             type: date
-      - name: person_age
-        description: ""
-        meta:
-          dimension:
-            type: number
       - name: person_gender
         description: ""
         meta:
@@ -89,16 +70,10 @@ models:
       - name: nominated
         description: ""
         meta:
-          metrics:
-            count_wins:
-              type: sum
           dimension:
             type: boolean
       - name: won
         description: ""
         meta:
-          metrics:
-            count_wins:
-              type: sum
           dimension:
             type: boolean

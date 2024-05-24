@@ -8,6 +8,7 @@ with src as (
         person_name,
         person_role,
         person_role_details,
+        person_identifier,
         date_of_birth,
         gender,
         case 

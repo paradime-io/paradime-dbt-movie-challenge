@@ -36,6 +36,7 @@ joined_unique_name as (
         mp.person_name,
         mp.person_role,
         mp.person_role_details,
+        wp.person_identifier,
         wp.date_of_birth,
         wp.gender
     from 
@@ -64,6 +65,7 @@ joined_unique_name_and_role as (
         mp.person_name,
         mp.person_role,
         mp.person_role_details,
+        nvl(mp.person_identifier, wp.person_identifier) as person_identifier,
         nvl(mp.date_of_birth, wp.date_of_birth) as date_of_birth,
         nvl(mp.gender, wp.gender) as gender
     from 
@@ -83,6 +85,7 @@ select
     person_name,
     person_role,
     person_role_details,
+    person_identifier,
     date_of_birth,
     gender
 from 

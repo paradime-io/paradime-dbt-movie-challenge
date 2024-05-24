@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: people_from_wikidata
+    columns:
+      - name: person_identifier
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: person_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: gender
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: job_role
+        description: ""
+        meta:
+          dimension:
+            type: string

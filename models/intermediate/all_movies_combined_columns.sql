@@ -64,7 +64,7 @@
         identifier_unique_key
 
     FROM
-        {{ ref('join_omdb_and_tmdb') }}
+        {{ ref('join_omdb_and_tmdb_test') }}
  )
 
  select 

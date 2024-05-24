@@ -1,6 +1,10 @@
--- all movie columns combined from joined set omdb_movies + tmdb_movies
--- plus split out movie ratings
--- plus bechdel test ratings
+-- The data in this table should contain all fields about the movie entity only, 
+-- and not fields relating to other entities, eg. people. This will be added as required
+-- in the analytics schema.
+
+-- All movie columns combined from joined set omdb_movies + tmdb_movies
+-- Plus split out movie ratings
+-- Plus bechdel test ratings
 with all_movies_combined_columns as (
     select 
         identifier_unique_key,

@@ -1,8 +1,8 @@
 version: 2
 models:
-  - name: dwh_movie_people
+  - name: stg_wikidata_academy_award_winners
     columns:
-      - name: movie_id
+      - name: person_identifier
         description: ""
         meta:
           dimension:
@@ -12,37 +12,37 @@ models:
         meta:
           dimension:
             type: string
-      - name: person_role
+      - name: award_edition
         description: ""
         meta:
           dimension:
             type: string
-      - name: person_role_details
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: person_age_on_release_date
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: release_year
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: date_of_birth
+      - name: award_date
         description: ""
         meta:
           dimension:
             type: date
-      - name: gender
+      - name: award_title
         description: ""
         meta:
           dimension:
             type: string
-      - name: person_identifier
+      - name: film_title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director_person_identifier
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director_name
         description: ""
         meta:
           dimension:

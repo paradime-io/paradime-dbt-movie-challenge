@@ -126,6 +126,16 @@ models:
         meta:
           dimension:
             type: string
+      - name: imdb_tmdb_id_row_no
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title_release_date_row_no
+        description: ""
+        meta:
+          dimension:
+            type: number
   - name: stg_omdb_movies
     columns:
       - name: imdb_id
@@ -250,6 +260,16 @@ models:
             type: string
       - name: tmdb_id
         description: TMDB ID of the movie.
+        meta:
+          dimension:
+            type: number
+      - name: imdb_tmdb_id_row_no
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title_release_date_row_no
+        description: ""
         meta:
           dimension:
             type: number

@@ -1,0 +1,77 @@
+version: 2
+models:
+  - name: country_summary
+    columns:
+      - name: movie_id
+        description: ""
+        meta:
+          metrics:
+            total_movie_count:
+              type: count_distinct
+          dimension:
+            type: string
+      - name: production_country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: original_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: awards
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: rotten_tomatoes_rating
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metacritic_rating
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: bechdel_rating
+        description: ""
+        meta:
+          dimension:
+            type: number

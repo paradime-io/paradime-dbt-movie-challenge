@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: dwh_movie_countries
+    columns:
+      - name: movie_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production_country
+        description: ""
+        meta:
+          dimension:
+            type: string
