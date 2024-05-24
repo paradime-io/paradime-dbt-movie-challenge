@@ -1,18 +1,8 @@
 version: 2
 models:
-  - name: Overall
+  - name: ct_length_year
     columns:
       - name: release_year
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_box_office
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: total_films
         description: ""
         meta:
           dimension:
@@ -22,7 +12,7 @@ models:
         meta:
           dimension:
             type: number
-      - name: avg_rating
+      - name: total_films
         description: ""
         meta:
           dimension:

@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: Overall
+  - name: ct_boxoffice_year
     columns:
       - name: release_year
         description: ""
@@ -13,16 +13,6 @@ models:
           dimension:
             type: number
       - name: total_films
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_runtime
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: avg_rating
         description: ""
         meta:
           dimension:
