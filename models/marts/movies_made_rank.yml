@@ -6,7 +6,7 @@ models:
         description: ""
         meta:
           dimension:
-            type: number
+            type: date
       - name: genre
         description: ""
         meta:
@@ -16,4 +16,6 @@ models:
         description: ""
         meta:
           dimension:
+            type: number
+          metrics:
             type: number
