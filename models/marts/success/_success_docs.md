@@ -15,3 +15,10 @@ Flattened director
 {% docs actor_director_success__actor %}
 Main actor
 {% enddocs %}
+
+
+
+# genre_success
+{% docs genre_success__main_genre %}
+Main actor
+{% enddocs %}

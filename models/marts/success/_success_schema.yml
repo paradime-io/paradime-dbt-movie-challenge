@@ -547,3 +547,222 @@ models:
               type: average
               label: "Avg inflation correct revenue"
               round: 1
+
+
+  - name: genre_success
+    description: |
+      Final model showing success metrics for main genre.
+
+    columns:
+      - name: main_genre
+        description: |
+          {{ doc("genre_success__main_genre") }}
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+          metrics:
+            distinct_genres:
+              type: count_distinct
+              label: "Distinct number of genres"
+      
+      - name: imdb_id
+        description: |
+          {{ doc("stg_tmdb_movies__imdb_id") }}
+        meta:
+          dimension:
+            type: string
+          metrics:
+            distinct_movie_occurences:
+              type: count_distinct
+              label: "Distinct number of movie occurences"
+
+      - name: title
+        description: |
+          {{ doc("int_movies_mapping__title") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: original_title
+        description: |
+          {{ doc("stg_tmdb_movies__original_title") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: runtime
+        description: |
+          {{ doc("int_movies_mapping__runtime") }}
+        meta:
+          dimension:
+            type: string
+
+      - name: imdb_rating
+        description: |
+          {{ doc("int_movies_mapping__imdb_rating") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_imdb_rating:
+              type: average
+              label: "Avg IMDB rating"
+              round: 1
+
+      - name: imdb_votes
+        description: |
+          {{ doc("int_movies_mapping__imdb_votes") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_imdb_votes:
+              type: average
+              label: "Avg IMDB votes"
+              round: 1
+
+      - name: number_of_awards_won
+        description: |
+          {{ doc("stg_omdb_movies__number_of_awards_won") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_number_of_awards_won:
+              type: average
+              label: "Avg number of awards won"
+              round: 1
+
+      - name: combined_rotten_tomato_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_rotten_tomato_rating") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_combined_rotten_tomato_rating:
+              type: average
+              label: "Avg combined rotten tomato rating"
+              round: 1
+
+      - name: viewer_vote_average
+        description: |
+          {{ doc("stg_tmdb_movies__vote_average") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_viewer_votee:
+              type: average
+              label: "Avg viewer votes"
+              round: 1
+             
+      - name: viewer_vote_count
+        description: |
+          {{ doc("stg_tmdb_movies__vote_count") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_viewer_vote_count:
+              type: average
+              label: "Avg viewer vote count"
+              round: 1
+
+      - name: revenue
+        description: |
+          {{ doc("stg_tmdb_movies__revenue") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_revenue:
+              type: average
+              label: "Avg revenue"
+              round: 1
+
+      - name: inflation_corrected_revenue
+        description: |
+          {{ doc("int_movies_mapping__inflation_corrected_revenue") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_inflation_corrected_revenue:
+              type: average
+              label: "Avg inflation corrected revenue"
+              round: 1
+
+      - name: combined_success_rating
+        description: |
+          {{ doc("int_combined_movie_success__combined_success_rating") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_combined_success_rating:
+              type: average
+              label: "Avg combined success rating"
+              round: 1
+      
+      - name: imdb_votes_normalized
+        description: |
+          {{ doc("int_combined_movie_success__imdb_votes_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_imdb_votes_normalized:
+              type: average
+              label: "Avg normalized imdb votes normalized"
+              round: 1
+
+      - name: number_of_awards_won_normalized
+        description: |
+          {{ doc("int_combined_movie_success__number_of_awards_won_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_number_of_awards_won_normalized:
+              type: average
+              label: "Avg number of awards normalized"
+              round: 1
+
+      - name: viewer_vote_count_normalized
+        description: |
+          {{ doc("int_combined_movie_success__viewer_vote_count_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_viewer_vote_count_normalized:
+              type: average
+              label: "Avg  viewer vote count normalized"
+              round: 1
+
+      - name: revenue_normalized
+        description: |
+          {{ doc("int_combined_movie_success__revenue_normalized") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_revenue_normalized:
+              type: average
+              label: "Avg revenue normalized"
+              round: 1
+
+      - name: inflation_corrected_revenue
+        description: |
+          {{ doc("int_combined_movie_success__inflation_corrected_revenue") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_inflation_corrected_revenue:
+              type: average
+              label: "Avg inflation correct revenue"
+              round: 1
