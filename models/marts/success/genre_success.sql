@@ -8,6 +8,7 @@ with genres as (
         m.title,
         m.original_title,
         m.runtime,
+        m.release_date,
 
         -- Success Metrics
         m.imdb_rating,

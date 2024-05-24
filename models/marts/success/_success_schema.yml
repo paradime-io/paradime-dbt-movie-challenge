@@ -578,6 +578,14 @@ models:
               type: count_distinct
               label: "Distinct number of movie occurences"
 
+      
+      - name: release_date
+        description: |
+          {{ doc("int_movies_mapping__release_date") }}
+        meta:
+          dimension:
+            type: date
+
       - name: title
         description: |
           {{ doc("int_movies_mapping__title") }}
