@@ -45,7 +45,7 @@ New Datasets:
 
 ### **Other Models**
 - *revenue_inflation_adjustment.py*: This python script takes the raw revenue data from omdb_movies and normalizes 
-the revenue numbers by using the US inflation rates over the years.
+the revenue numbers by using the US inflation rates over the years and creates a table in snowflake to `write` the results.
 - *calculate_combined_success.sql*: This macro calculates the ultimate combined movie success rating
 based on the other success ratings and their given weights.
 - *generate_unique_key*: This macro creates a unique key for given fields.
