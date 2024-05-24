@@ -127,10 +127,9 @@ in these individual success catgeories.
 
 1. Top 10 movies by IMDB rating
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=True)
 
-We can see that although these movies have great IMDB ratings, they have very low
-number of votes which indicates that their imdb rating is not as indicative to determine success.
+
 
 2. Top 10 movies by number of awards won
 
