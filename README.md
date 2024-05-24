@@ -31,9 +31,8 @@ My analysis leverages four key data sets:
 - Inflation data from the [Federal Reserve Bank of Minneapolis ](https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator/consumer-price-index-1913-)
 
 ### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
-[Image]
-<!-- TODO: add -->
+
+![chart](/assets/lineage.png)
 
 ## Methodology
 #### Tools Used
