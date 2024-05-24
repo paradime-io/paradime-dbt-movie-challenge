@@ -186,7 +186,7 @@ Below, we can see the deep dive into the individual success metrics of the Top 1
 
 Lastly, we show the Actor - Director Pair with the most movies below.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_movie_occ.png?raw=True)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_movie_occ.png?raw=true)
 
 
 
