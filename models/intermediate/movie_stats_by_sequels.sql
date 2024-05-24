@@ -16,6 +16,7 @@ finalized_table as (
         sum(profit) as total_profit_for_series,
         avg(vote_average) as avg_rating_for_series
     from cleaned_movies
+    where budget != 0 or revenue != 0
     group by movie_series
     having num_of_movies_in_series > 1
     order by total_profit_for_series desc
