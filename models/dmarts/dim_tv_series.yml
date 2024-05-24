@@ -1,109 +1,89 @@
 version: 2
 models:
-  - name: inter_movies_genre_per_year
+  - name: dim_tv_series
     columns:
-      - name: release_year
+      - name: tv_series_id
         description: ""
         meta:
           dimension:
             type: number
-      - name: comedy
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: overview
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tagline
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: genres
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: created_by_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: original_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: status
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: in_production
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: first_air_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: last_air_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: number_of_seasons
         description: ""
         meta:
           dimension:
             type: number
-      - name: war
+      - name: number_of_episodes
         description: ""
         meta:
           dimension:
             type: number
-      - name: science_fiction
+      - name: vote_average
         description: ""
         meta:
           dimension:
             type: number
-      - name: horror
+      - name: vote_count
         description: ""
         meta:
           dimension:
             type: number
-      - name: action
+      - name: popularity
         description: ""
         meta:
           dimension:
             type: number
-      - name: crime
+      - name: poster_path
         description: ""
         meta:
           dimension:
-            type: number
-      - name: drama
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: animation
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: history
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: western
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: family
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: romance
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: music
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: thriller
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: mystery
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: tv_movie
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: documentary
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: fantasy
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: adventure
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: total_movies
-        description: ""
-        meta:
-          dimension:
-            type: number
+            type: string

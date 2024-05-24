@@ -26,3 +26,9 @@ seeds:
      show: true
    config:
      delimiter: ","
+ - name: movies_trilogies
+   description: Movies that are apart of a series3
+   docs:
+     show: true
+   config:
+     delimiter: ","

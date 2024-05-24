@@ -1,0 +1,64 @@
+version: 2
+models:
+  - name: movie_cumulative_sums
+    columns:
+      - name: movie_series
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_voting_average
+        description: ""
+        meta:
+          dimension:
+            type: number
