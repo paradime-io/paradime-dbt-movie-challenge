@@ -14,7 +14,8 @@ models:
             type: string
           metrics:
             movie_genre:
-            type: string
+              type: string
+              sql: '${TABLE}.genre'
       - name: rnk
         description: ""
         meta:
