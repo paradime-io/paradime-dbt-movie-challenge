@@ -1,8 +1,18 @@
 sources:
-  - name: PARADIME_MOVIE_CHALLENGE
+  - name: MOVIE_BASE
     database: MOVIE_CHALLENGE
     schema: PUBLIC
     tables:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: MOVIE_EXPANDED
+    database: SANTIAGOOROZCOLN4IE_ANALYTICS
+    schema: THIRD_PARTY_DATA
+    tables:
+      - name: BOMOJO_BRANDS
+      - name: BOMOJO_COUNTRIES
+      - name: BOMOJO_FRANCHISES
+      - name: BOMOJO_RELEASES
+      - name: CPI
+      - name: MOVIE_AWARDS
