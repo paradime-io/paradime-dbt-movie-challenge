@@ -30,7 +30,7 @@ FROM CT_PRODUCED
 
 
 --  select * from CT_PRODUCED
-select DISTINCT release_year,
+select DISTINCT cast(CONCAT(release_year, '-01-01') as date) AS release_year,
 genre,
 RNK
 FROM ranked_by_year

@@ -6,11 +6,14 @@ models:
         description: ""
         meta:
           dimension:
-            type: number
+            type: date
       - name: genre
         description: ""
         meta:
           dimension:
+            type: string
+          metrics:
+            movie_genre:
             type: string
       - name: rnk
         description: ""
