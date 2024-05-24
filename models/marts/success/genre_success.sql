@@ -23,9 +23,9 @@ with genres as (
         m.revenue,
         m.inflation_corrected_revenue,
         m.revenue_normalized,
-        m.combined_success_rating,
+        m.combined_success_rating
 
-        
+
     from
         {{ ref('int_combined_movie_success') }} as m,
         lateral flatten(input => split(genre, ',')) as g  -- Splitting and flattening the genre list

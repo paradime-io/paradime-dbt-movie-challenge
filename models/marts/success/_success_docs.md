@@ -20,5 +20,5 @@ Main actor
 
 # genre_success
 {% docs genre_success__main_genre %}
-Main actor
+Main genre
 {% enddocs %}
