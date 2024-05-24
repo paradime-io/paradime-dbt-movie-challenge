@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: boxoffice_rank
+    columns:
+      - name: release_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: rnk
+        description: ""
+        meta:
+          dimension:
+            type: number
