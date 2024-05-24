@@ -29,10 +29,10 @@ FROM CT_PRODUCED
 )
 
 
-select * from CT_PRODUCED
---  select DISTINCT release_year,
---  genre,
---  RNK
---  FROM ranked_by_year
---  where RNK<=5
---  order by release_year,RNK asc
+--  select * from CT_PRODUCED
+select DISTINCT release_year,
+genre,
+RNK
+FROM ranked_by_year
+where RNK<=5
+order by release_year,RNK asc

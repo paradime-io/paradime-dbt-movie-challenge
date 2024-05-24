@@ -12,8 +12,8 @@ models:
         meta:
           dimension:
             type: string
-          metrics:
-            genre_count:
-              type: count
-
-
+      - name: rnk
+        description: ""
+        meta:
+          dimension:
+            type: number
