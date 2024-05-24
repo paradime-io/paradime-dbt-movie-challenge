@@ -129,18 +129,13 @@ in these individual success catgeories.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_imdbrating.png?raw=True)
 
-
-
 2. Top 10 movies by number of awards won
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_awards.png?raw=true)
-
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_awards.png?raw=True)
 
 3. Top 10 movies by Inflation Corrected Revenue
-Here we use inflation corrected revenue instead of raw revenue numbers to
-get a fair comparison for movies released over the years.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_revenue.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_revenue.png?raw=True)
 
 As it can be seen from the above data different movies are winning in different success categories.
 We can't easily drive a conclusion for the best movies by just looking at these success metrics separately.
@@ -149,62 +144,41 @@ We can't easily drive a conclusion for the best movies by just looking at these 
 We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
 best movies ever created. Refer to [this](#calculating-movie-success) section to see how weights are adjusted.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_ultimate_combined.png?raw=true)
-
-🏆 `The Dark Knight` 🦇⚔️ is the best movie of all times according to our combined success metric!
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_ultimate_combined.png?raw=True)
 
 We can dive deep into individual contributor success metrics for the top 10 list above to understand
 why `The Dark Knight` wins. 
 
-*Below values are presented in their normalized form (0-10) for ease of visualization and 
-comparison.*
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_indv_normalized.png?raw=True)
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_indv_normalized.png?raw=true)
-
-Looking at above, `The Dark Knight` wins because it has a very high IMDB rating of 9 but at the same time
-it maintains very big numbers of IMDB Voters. These are 2 metrics that has the most weight in our combined success metric.
 
 We can further look at the raw numbers for each movie in the top 10 list.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_deepdive.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_deepdive.png?raw=True)
 
 ### Change in Movie Success
 So far, we have identifed the most successfull movies. In this section we will look at the change in overall movie success
 over the years to identify trends.
 
-Below graph shows how combined movie success changes in the last 50 years together with the number of movies released
-each year.
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/change_in_movie_success.png?raw=True)
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/change_in_movie_success.png?raw=true)
 
-The number of movies grew after the end of the 90s and reached a peak at 2019. The drop after this year is very likely related to COVID-19
-as lots of operations throughout the world came to a halt.
-If we look at movie success, we see a sharp drop at the end of the 80s. We will dive deeper to investigate why this is happening.
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=True)
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=true)
-
-As mentioned before, IMDB Rating and IMDB Votes are very effective metrics for the combined succes. If we look at the above graph, we see
-that IMDB rating stays much or less the same over the years but IMDB Votes significantly increase after the 90s which in turn increases the significance of imdb ratings
-inside the combined success metric. That is why the overall combined success metric drops. (Lower imdb ratings become more important)
-The reason that IMDB Votes suddenly increase at the end of the 80s is because, 1990 is the year that IMDB began as a fan-operated movie database! 🍿
 
 ### Most Popular Months for Movie Releases
 
 Since we were looking at the yearly changes, we can further look into months to see if we have any trendy months for movie releases.
-The data of the last 9 years shows us that number of movie releases peak in November for every single year.
-Contrary to that, the movie success drops on January each year.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/popular_months_of_release.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/popular_months_of_release.png?raw=True)
 
 
 ### Actor and Director Success
 So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
 pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director.png?raw=True)
 
-🏆 We have `Christian Bale - Christopher Nolan` as the most succesfull Actor - Director of all times! Plus, they have 4 movies together that
-they managed to maintain this success.
 
 Below, we can see the deep dive into the individual success metrics of the Top 10 Actor - Director pair.
 
