@@ -33,3 +33,4 @@ SELECT
     * 
 FROM 
     source
+where imdb_id is not null and imdb_id <> ''

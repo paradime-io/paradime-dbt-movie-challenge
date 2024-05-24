@@ -15,7 +15,7 @@ WITH tmdb AS (
     FROM
         {{ ref('stg_tmdb_movies') }}
 ), 
-
+7
 omdb AS (
     SELECT 
         imdb_id,
