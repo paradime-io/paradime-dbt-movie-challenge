@@ -177,7 +177,7 @@ Since we were looking at the yearly changes, we can further look into months to 
 So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
 pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director.png?raw=True)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_dir.png?raw=True)
 
 
 Below, we can see the deep dive into the individual success metrics of the Top 10 Actor - Director pair.
@@ -186,7 +186,7 @@ Below, we can see the deep dive into the individual success metrics of the Top 1
 
 Lastly, we show the Actor - Director Pair with the most movies below.
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_movie_occ.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_dir_movie_occ.png?raw=true)
 
 
 
