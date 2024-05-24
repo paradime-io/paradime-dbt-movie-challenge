@@ -1,7 +1,9 @@
-# dbt™ Data Modeling Challenge - Movie Edition
+# **dbt™ Data Modeling Challenge - Movie Edition**
 Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradime!
 
-## Table of Contents
+*Prepared by Işın Pesch ✋*
+
+## **Table of Contents**
 1. [Introduction](#introduction)
 2. [Data Sources and Data Lineage](#data-sources-and-data-lineage)
    - [Sources and Seeds](#sources-and-seeds)
@@ -22,9 +24,9 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
 ## **Introduction**
 This project explores insights related to movies and specifically focuses on movie success and visualises them in Lightdash.
 
-## **Data Sources and Data Lineage**
+# **Data Sources and Data Lineage**
 My analysis leverages the below data sets:
-### Sources and Seeds
+### **Sources and Seeds**
 - *tmdb_movies* (already provided)
 - *omdb_movies* (already provided)
 
@@ -33,15 +35,15 @@ New Datasets:
 - *rotten_tomatoes_ratings* (newly imported Kaggle dataset)
 - *normalized_revenues_movies* (based on a newly imported Kaggle dataset `us_inflation_rates.csv` for US inflation and prepared by `revenue_inflation_adjustment.py`)
 
-### Intermediate layer
+### **Intermediate Layer**
 - *int_movies_mapping* (int model bringing all movie sources together)
 - *int_combined_movie_success* (int model to calculate combined success ratings)
 
-### Mart layer
+### **Mart Layer**
 - *movie_success* (model for individual movie success ratings)
 - *actor_director_success* (model for actor-director success ratings)
 
-### Other models
+### **Other Models**
 - *revenue_inflation_adjustment.py*: This python script takes the raw revenue data from omdb_movies and normalizes 
 the revenue numbers by using the US inflation rates over the years.
 - *calculate_combined_success.sql*: This macro calculates the ultimate combined movie success rating
@@ -49,11 +51,11 @@ based on the other success ratings and their given weights.
 - *generate_unique_key*: This macro creates a unique key for given fields.
 - *.sqlfluff*: This file makes sure that all the models are up to good formatting standards accroding to extensive set of rules defined.
 
-### Data Lineage
+### **Data Lineage**
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/lineage.png?raw=true)
 
-## **Methodology**
-### Tools Used
+# **Methodology**
+### **Tools Used**
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
@@ -61,7 +63,7 @@ based on the other success ratings and their given weights.
 - **dbt Tests** for maintaining data accuracy.
 - **dbt MD** for removing redundant yml descriptions.
 
-### Data Preparation and Cleaning
+### **Data Preparation and Cleaning**
 After investigating the given data sources, I quickly relaized that the data accuracy and 
 quality is not great. Some of the columns have great percentage of null values and some have wrong data 
 (eg. *Adolf Hitler* seems to be a main actor in a movie 😄).
@@ -72,7 +74,7 @@ The below steps are followed to mitigate these:
 - Removing all rows that doesn't have `imdb_id`.
 - Coalescing values from different sources to ensure completness (eg. `imdb_rating` from `imdb` and `omdb`)
 
-### Calculating Movie Success
+### **Calculating Movie Success**
 Movie success is the central metric for all insights in this project. That is why creating a robust ultimate success indicator
 is one of the key aspects of the modelling as well.
 
@@ -115,9 +117,9 @@ don't have good data coverage for this one. Hence, the lower weight.
 There are a lot of nulls for revenue in the dataset so the weight of this one is kept low.
 
 
-## **Visualizations**
+# **Visualizations**
 
-### Getting to know the dataset
+### **Getting to know the dataset**
 Here we present the overview of the values we have in the analysed dataset.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/overview.png?raw=true)
@@ -140,7 +142,7 @@ in these individual success catgeories.
 As it can be seen from the above data different movies are winning in different success categories.
 We can't easily drive a conclusion for the best movies by just looking at these success metrics separately.
 
-### Ultimate Combined Movie Success
+### **Ultimate Combined Movie Success**
 We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
 best movies ever created. Refer to [this](#calculating-movie-success) section to see how weights are adjusted.
 
@@ -156,7 +158,7 @@ We can further look at the raw numbers for each movie in the top 10 list.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_deepdive.png?raw=True)
 
-### Change in Movie Success
+### **Change in Movie Success**
 So far, we have identifed the most successfull movies. In this section we will look at the change in overall movie success
 over the years to identify trends.
 
@@ -166,14 +168,14 @@ over the years to identify trends.
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/drop_in_success.png?raw=True)
 
 
-### Most Popular Months for Movie Releases
+### **Most Popular Months for Movie Releases**
 
 Since we were looking at the yearly changes, we can further look into months to see if we have any trendy months for movie releases.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/popular_months_of_release.png?raw=True)
 
 
-### Actor and Director Success
+### **Actor and Director Success**
 So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
 pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
 
@@ -190,5 +192,5 @@ Lastly, we show the Actor - Director Pair with the most movies below.
 
 
 
-## **Conclusions**
+# **Conclusions**
 - TODO
