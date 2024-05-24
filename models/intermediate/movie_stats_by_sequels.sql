@@ -18,6 +18,6 @@ finalized_table as (
     from cleaned_movies
     group by movie_series
     having num_of_movies_in_series > 1
-    order by sum(revenue) desc
+    order by total_profit_for_series desc
 )
 select * from finalized_table
