@@ -6,16 +6,14 @@ models:
         description: ""
         meta:
           dimension:
-            type: date
+            type: number
       - name: genre
         description: ""
         meta:
           dimension:
             type: string
-      - name: rnk
-        description: ""
-        meta:
-          dimension:
-            type: number
           metrics:
-            type: number
+            genre_count:
+              type: count
+
+

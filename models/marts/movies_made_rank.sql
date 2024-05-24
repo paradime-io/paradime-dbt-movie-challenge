@@ -20,16 +20,17 @@ GENRE
 ),
 
 
-ranked_by_year as (select 
-CT_PRODUCED.release_year,
-CT_PRODUCED.GENRE,
-RANK() OVER (partition by CT_PRODUCED.RELEASE_YEAR ORDER BY CT_PRODUCED.MOVIES_MADE DESC) AS RNK
-FROM CT_PRODUCED
-)
+select * from CT_PRODUCED
+--  ranked_by_year as (select 
+--  CT_PRODUCED.release_year,
+--  CT_PRODUCED.GENRE,
+--  RANK() OVER (partition by CT_PRODUCED.RELEASE_YEAR ORDER BY CT_PRODUCED.MOVIES_MADE DESC) AS RNK
+--  FROM CT_PRODUCED
+--  )
 
-select DISTINCT release_year,
-genre,
-RNK
-FROM ranked_by_year
-where RNK<=5
-order by release_year,RNK asc
+--  select DISTINCT release_year,
+--  genre,
+--  RNK
+--  FROM ranked_by_year
+--  where RNK<=5
+--  order by release_year,RNK asc
