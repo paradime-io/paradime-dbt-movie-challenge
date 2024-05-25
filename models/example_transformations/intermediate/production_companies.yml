@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: production_companies
+    columns:
+      - name: production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movies_made
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: total_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: box_office_per_film
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: film_ct_score
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: film_rev_score
+        description: ""
+        meta:
+          dimension:
+            type: number

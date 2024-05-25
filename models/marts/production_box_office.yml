@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: production_box_office
+    columns:
+      - name: production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movies_made
+        description: ""
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_movies_made:
+              type: sum
+      - name: total_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_revenue_made:
+              type: sum

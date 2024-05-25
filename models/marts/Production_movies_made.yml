@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: Production_movies_made
+    columns:
+      - name: production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movies_made
+        description: ""
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            number_of_movies_made:
+              type: sum
