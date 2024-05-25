@@ -24,7 +24,6 @@ models:
     staging:
       +schema: staging
       +materialized: view
-    example_transformations:
-      intermediate:
+    intermediate:
         +schema: intermediate
         +materialized: view
