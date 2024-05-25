@@ -25,7 +25,7 @@ TMDB_ID,
         PRODUCTION_COMPANY_NAMES,
         PRODUCTION_COUNTRY_NAMES
     FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
+        {{ source('MOVIE_BASE', 'TMDB_MOVIES') }}
 )
 
 SELECT 

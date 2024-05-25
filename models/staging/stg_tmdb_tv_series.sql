@@ -19,7 +19,7 @@ WITH source AS (
         POSTER_PATH,
         PRODUCTION_COMPANY_NAMES
     FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_TV_SERIES') }}
+        {{ source('MOVIE_BASE', 'TMDB_TV_SERIES') }}
 )
 
 SELECT 

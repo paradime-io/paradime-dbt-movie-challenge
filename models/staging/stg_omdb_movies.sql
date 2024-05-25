@@ -26,7 +26,7 @@ WITH source AS (
         AWARDS,
         TMDB_ID
     FROM 
-        {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
+        {{ source('MOVIE_BASE', 'OMDB_MOVIES') }}
 )
 
 SELECT 

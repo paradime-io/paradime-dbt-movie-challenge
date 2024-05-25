@@ -21,10 +21,10 @@ query-comment:
 
 models:
   paradime_movie_challenge: 
-    sources:
+    staging:
       +schema: staging
       +materialized: view
     example_transformations:
       intermediate:
         +schema: intermediate
-        +materialized: view  
+        +materialized: view
