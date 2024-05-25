@@ -1,0 +1,35 @@
+version: 2
+models:
+  - name: top_directors
+    description: ""
+    columns:
+      - name: epoch
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: total_revenue_adj
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: share_of_revenue
+        description: ""
+        meta:
+          dimension:
+            type:
+              number
+          metrics:
+            share_of_total_revenue:
+              type: sum
+              format: percent
+      - name: revenue_rank
+        description: ""
+        meta:
+          dimension:
+            type: number
