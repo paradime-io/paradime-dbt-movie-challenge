@@ -25,3 +25,5 @@ models:
           metrics:
             total_revenue_made:
               type: sum
+              format: usd
+              compact: millions

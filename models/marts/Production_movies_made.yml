@@ -16,3 +16,5 @@ models:
           metrics:
             number_of_movies_made:
               type: sum
+              format: usd
+              compact: millions
