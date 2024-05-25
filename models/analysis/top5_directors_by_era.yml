@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: top5_directors_by_era
+    description: ""
+    columns:
+      - name: epoch
+        description: ""
+        meta:
+          dimensions:
+            type: string
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: revenue_adj
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_revenue_adj:
+              type: sum
+            average_revenue_adj:
+              type: average
+            median_revenue_adj:
+              type: median
