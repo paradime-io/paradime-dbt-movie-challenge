@@ -28,3 +28,6 @@ models:
       intermediate:
         +schema: intermediate
         +materialized: view  
+    final_tables:
+      +schema: final
+      +materialized: view

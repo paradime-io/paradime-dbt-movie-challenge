@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: oscar_winners
+    columns:
+      - name: decade
+        description: >-
+          The decade in which the movie was released
+        meta:
+          dimension:
+            type: string
+      - name: genre
+        description: >-
+          The genre name that is separated into separate rows
+        meta:
+          dimension:
+            type: string
+      - name: count
+        description: >-
+          The number of times a genre appears in an Oscar-winning movie
+        meta:
+          metrics:
+            number_of_movies:
+              type: sum
