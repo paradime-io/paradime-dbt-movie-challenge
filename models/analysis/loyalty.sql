@@ -24,10 +24,11 @@ with
             sum(num_movies) over (partition by production_company, director)
                 / sum(num_movies) over (partition by production_company) as loyalty_company
         from source
-        qualify
-            --filter directors who produced more than 10 movies
-            -- it will help reduce number of low occurancies
-            sum(num_movies) over (partition by director) > 10
+        --  qualify
+        --      --filter directors who produced more than 10 movies
+        --      -- it will help reduce number of low occurancies
+        --      sum(num_movies) over (partition by director) > 10
+        --      and sum(num_movies) over(partition by productino_company)
     )
 
 select * from final
