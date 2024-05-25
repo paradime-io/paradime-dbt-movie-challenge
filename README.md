@@ -40,7 +40,7 @@ Aditional Data Sources:
 
 
 ### Data Lineage
-[Image]
+![data-lineage](screenshots/lineage.png)
 
 ## Visualizations
 
