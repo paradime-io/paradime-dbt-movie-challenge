@@ -9,7 +9,7 @@ models:
         meta:
           dimension:
             type: string
-      - name: release_date
+      - name: released_date
         description: ""
         meta:
           dimension:
