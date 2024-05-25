@@ -75,11 +75,11 @@ models:
           dimension:
             type: number
           metrics:
-            total_imdb_rating:
+            total_budget:
               type: sum
               label: "Total Budget"
               round: 1
-            avg_imdb_rating:
+            avg_budget:
               type: average
               label: "Avg Budget"
               round: 1
