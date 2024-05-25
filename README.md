@@ -35,11 +35,12 @@ More and more films are produced every year and audiences continue to go resulti
 
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/68265115-75b4-4e61-a288-6078ca5792e0)
 
-The average runtime for a film has remained relatively static, although recently it has been trending up. In the era of short-form content and mini-series, movies are not afraid to take their time
+The average runtime for a film has remained relatively static, although recently it has been trending up. In the era of short-form content and mini-series, movies are not afraid to take their time:
 
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/ab65381a-794a-4533-9637-24d23d1a5cdd)
 
 **Who's making our films?**
+
 Movies that end up in theaters are almost never made by a single production company. Thus while this makes success attribution nearly impossible, companies still make their distinguished mark. There is a strong correlation when comparing the number of films produced against total box office revenue. 
 Not entirely surprising, given that a movie studio that can't earn a lot of money for their films won't last.
 
