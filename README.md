@@ -17,7 +17,7 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
    - [Calculating Movie Success](#calculating-movie-success-🏅)
 4. [Visualizations](#visualizations-📊)
    - [Getting to Know the Dataset](#getting-to-know-the-dataset-🔎)
-   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-🥇)
+   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-✅)
    - [Change in Movie Success](#change-in-movie-success-⏳)
    - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases-🗓️)
 5. [Conclusion](#conclusion-🎬)
@@ -136,7 +136,7 @@ in these individual success catgeories.
 As it can be seen from the above data different movies are winning in different success categories.
 We can't easily drive a conclusion for the best movies by just looking at these success metrics separately.
 
-### **Ultimate Combined Movie Success 🥇**
+### **Ultimate Combined Movie Success ✅**
 We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
 best movies ever created. Refer to [this](#calculating-movie-success-🏅) section to see how weights are adjusted.
 
