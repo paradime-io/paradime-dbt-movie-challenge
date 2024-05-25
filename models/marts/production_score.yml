@@ -25,8 +25,8 @@ models:
             hidden: true
           metrics:
             film_count_score:
-              type: sum
-      - name: film_rev_score
+              type: sum            
+      - name: film_raw_rev_score
         description: ""
         meta:
           dimension:
@@ -34,7 +34,7 @@ models:
             hidden: true
           metrics:
             film_revenue_score:
-              type: sum
+              type: sum                 
       - name: combo_score
         description: ""
         meta:
@@ -43,4 +43,4 @@ models:
             hidden: true
           metrics:
             total_score:
-              type: sum
+              type: sum                 

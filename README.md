@@ -1,181 +1,62 @@
 # dbt™ Data Modeling Challenge - Movie Edition
 
-Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition)!
 
 ## Table of Contents
-1. [Getting Started](#getting-started)
-   - [Registration and Verification](#step-1-registration-and-verification)
-   - [Account Set-Up](#step-2-account-set-up)
-   - [Paradime Account Configuration](#step-3-paradime-account-configuration)
-   - [Kickstart Your Project](#step-4-kickstart-your-project)
-2. [Competition Details](#competition-details)
-3. [Building Your Project](#building-your-project)
-4. [Example Submission](#Example-submission-template)
+1. [Introduction](#Introduction)
+2. [Data Sources](#data-sources)
+3. [Methodology](#Methodology)
+4. [Visualizations](#Visualizations)
+5. [Final Thoughts](#Example-submission-template)
 
----
-
-## Getting Started
-
-### Step 1: Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-registration-form).
-- **Verification by Paradime**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
-
-### Step 2: Confirmation
-After verification, you'll receive two emails confirmation eamils from Paradime:
-1. **Snowflake Account Credentials**: Contains your Snowflake account details. Search for an email with subject line "*Start Your Movie Data Modeling Challenge – Your Snowflake Credentials*."
-2. **Paradime Platform Invitation**: An invitation to access the Paradime Platform. Search for an email with the subject line "*[Paradime] Activate your account*."
-
-### Step 3: Account Setup
-Using the the infomations outlinied in the confirmation emails, set up the following accounts:
-- **Paradime**: Join the Paradime workspace using the invite email.
-- **Snowflake**: Within Paradime, Add Snowflake credentials (Username, Password, Role, Database, Warehouse)
-- **Lightdash**: Register for a new [Lightdash account](https://app.lightdash.cloud/register) and follow the instructions in this [step-by-step tutorial](https://app.arcade.software/share/f1MIwv6ROzyPxTKoWRyH)
-
-Note: A step-by-step tutorial for setting up Paradime and Snowflake is available in your Snowflake credentials email, "*Start Your Movie Data Modeling Challenge – Your Snowflake Credentials*".
-
-### Step 4: Kickstart Your Project
-- **Create a New Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "movie-<your_email>". For guidance, see this [step-by-step tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
-- **Start Developing**: Begin crafting SQL queries, developing dbt™ models, and generating insights!
-
-**Need Additional Help?** join the #movie-competition channel on [Slack](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email) and contact the team. 
-
----
-
-## Competition Details
-- **[Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
-- **[Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
-- **[Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
-
----
-
-## Building Your Project
-
-Now that you're set up, you have until May 26th, 2024, to complete and submit your project!
-
-### Step 1: Getting to Know the Tools
-- **Paradime**:
-   - Dive into the Paradime Editor with this step-by-step, [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). It's designed to familiarize you with the core functionalities and of the editor and get you familiar with the Project. You can also watch our YouTube videos:
-   - [All features in our intuitive IDE Apps Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg)
-   - [AI-enabled IDE for dbt™ development | DinoAI | Paradime.io](https://www.youtube.com/watch?v=-WG4JUv3sI8)
-  - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
-- **Snowflake Data Warehouse**: Learn about the data warehouse and the pre-loaded data in this step-by-step, [interactive guide](https://app.arcade.software/share/O1IALc6CLFgaEyvIJE2T).
-- **Lightdash**: Discover how to setup and utilize Lightdash in this [YouTube video](https://www.youtube.com/watch?v=Z4Y0KM0MroQ).
-
-### Step 2: Getting to Know the Movie Data
-Paradime has pre-loaded your Snowflake account with 3 Movie datasets. These data sets contain roughly 1,700,000 rows of detailed Movie and TV Show data.
-Please understand that these data sets are not entirely accurate; They're simply a starting point - you will need to bring in your datasets to truly excel in this challenge.
-- **In Snowflake**: Directly explore the datasets in [Snowflake](https://app.snowflake.com/kbuwhsf/xrb98600) for hands-on analysis.
-- **GitHub Repository Resources**:
-  - [Staging Files](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/main/models/sources): These files provide a preliminary view and structure of the datasets available in this repository.
-  - [schema.yml File](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/schema.yml): This file contains schema definitions, helping you understand the data models and their relationships.
-- **Paradime Catalog UI**: Use the [Paradime Catalog UI](https://app.paradime.io/catalog/search) for an interactive exploration of the datasets, featuring intuitive search and navigation.
-
-### Step 3: Generating Insights
-Your primary goal is to construct dbt™ models that unearth compelling insights, captivating Movie fans. These three datasets are your starting point, and as you bring in additional data, the possibilities for discovery are virtually limitless. This is your playground to innovate and explore the depths of Movie and TV data.
-
-Before diving in, ensure you're familiar with the [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2) so you have a chance to win the [$500-$1500 Amazon gift cards](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)!
-
-[What's in it for you?](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)
-
-### Step 4: Build data vizualizations
-Once you've generated insights, you're required to use Lightdash for data vizualizations. Utilize Lightdash's provided [YouTube video](https://www.youtube.com/watch?v=Z4Y0KM0MroQ) and [documentation](https://docs.lightdash.com/) for best practices. 
-
-### Step 5: Submitting Your Project
-**Submission Deadline:** May 26th, 2024
-Once your project is complete, please submit the following materials to Parker Rogers (parker@paradime.io) with Subject Line "<your_name> - Movie Data Modeling Challenge Submission":
-- **GitHub Branch**: Send the link to your GitHub branch containing your dbt™ models.
-- **README.md**: Include a README file that narrates your project's story, methodology, and insights. Check out this [example README](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#example-submission) from our previous NBA Data Modeling challenge.
-- **Data Visualizations and Insights**: Showcase your findings, ideally within your README.md. For inspiration, refer to these [example visualizations](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#visualizations) from our previous NBA Data Modeling challenge.
-
-#### Need a spark of inspiration?
-- Blog - [Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge)
-
-- Explore top submissions Paradime's recent NBA Data Modeling Challenge
-   - First Place - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md)
-   - Second Place - [Chris Hughes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-cahughes95-gmail-com/README.md)
-   - Third Place - [István Mózes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-istvan-mozes-90-gmail-com/README.md)
-
-- Additionally, Here are some questions you might consider answering:
-   - **Highest grossing films of all time**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql).
-      - You might also consider bringing in third party data to understand highest grossing films by country.
-   - **Highest/lowest ROI films of all time**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql). See columns "budget", "revenue", and "box office".
-   - **Actors who appear in most films**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See column "actors"
-   - **Highest grossing directors and writers**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See columns "director" and "writer"
-
-If you're having issues submitting your project, watch this [interactive tutorial](https://app.arcade.software/share/TqmPGQAdXjopPO9LWdnz).
-
-We look forward to seeing your creative and insightful analyses!
-
-# Example Submission template
-Here's an example project that fulfills all requirements and would be elligble eligible for cash prizes. Feel free to use this template for your submission. We also recommend diving into the the [winner's submissions](#need-a-spark-of-inspiration) from our recent NBA Data Modeling Challenge for inspiration. 
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Sources](#data-sources-and-data-lineage)
-3. [Methodology](#methodology)
-   - [Tools Used](#tools-used)
-   - [Applied Techniques](#applied-techniques)
-   - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
-4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
-   - etc
-5. [Conclusions](#conclusions)
 
 ## Introduction
-A simple intro. Example - "Explore my project for the _dbt™ data modeling challenge - Movie Edition_, Hosted by [Paradime](https://www.paradime.io/)! This project dives into the analysis and visualization of Movie and TV data!"
+Welcome to my project for the dbt™ data modeling challenge - Movie Edition, Hosted by [Paradime](https://www.paradime.io/)!. This project takes a look at some of the trends in movies and how these have changed over the years.
 
-## Data Sources and Data Lineage
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
+### [My GitHub Repo](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-philip-song-veeva-com)
 
-### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
+## Data Sources
+My analysis focused on the movie dataset from Paradime TMDB_movies. To supplement this dataset, I used 2 additional sources to enrich the data:
+1. Inflation data provided by the BLS data.bls.gov. This allows for a better comparison of box office revenues year over year to account for inflation.
+2. Movie data from themoviedb.org. Some of the production company data was missing, and this dataset offers a more complete fill-out.
 
 ## Methodology
-#### Tools Used
-- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
+### Tools Used
+- **[Paradime](https://www.paradime.io/)** for SQL transformations, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
-
-### Data Sources
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
-### Data Lineage
-[Image]
+- **[Lightdash](https://www.lightdash.com/)** & **Excel** for data visualization.
+- **Python** for API access to generate the supplemental datasets.
 
 ## Visualizations
+**Overall Trends**
 
-### vizualization 1
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+Movies have long been a staple of culture. As technology and budgets increase over time, movies today are capable of bringing stories to life that previously would have been impossible. And yet, competition for the most valuable resource of all, time, has been fierce.
 
-### vizualization 2
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+More and more films are produced every year and audiences continue to go, resulting in more total box office over time. However, as the internet and streaming enter the fray the average box office per movie has been trending down:
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/68265115-75b4-4e61-a288-6078ca5792e0)
 
-### vizualization 3
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+The average runtime for a film has remained relatively static, although recently it has been trending up. In the era of short-form content and mini-series, movies are not afraid to take their time
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/ab65381a-794a-4533-9637-24d23d1a5cdd)
 
-## Conclusions
-Share a clear and concise conclusion of your findings!
+**Who's making our films?**
+Movies that end up in theaters are almost never made by a single production company. Thus while this makes success attribution nearly impossible, companies still make their distinguished mark. There is a strong correlation when comparing the number of films produced against total box office revenue. 
+Not entirely surprising, given that a movie studio that can't earn a lot of money for their films won't last.
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/707f3668-b88a-494b-a39c-137dbf47f5ae)
+
+Of interest are studios like Canal+ and Film4 Productions, who have put out hundreds of films against a much, much smaller total revenue share. Closer investigation reveals that both of these are international companies, whose US box office viewings present only a fraction of their true performance.
+![image](https://github.com/philip-song/Personal/assets/62715537/db528cb3-fd2a-4d25-bc4d-0bbd279b2708)
+
+
+
+**What Kinds of Movies are Popular?**
+
+Although almost every movie is in multiple genres, there is a surprising consistency in the types of films that production companies make. Dramas and comedies are absolutely always in supply (although not always in demand!).
+
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/e337b4db-1177-4204-868b-0a3b72e376dc)
+
+When it comes to the average box office that a film brings in the story has more variety but a similar consistency. The top spot is almost always a Sci-Fi or Adventure film.
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/9eeedc94-ce4e-4101-a01a-997d4f8974fe)
+
+
+## Final Thoughts
+Although analytical movie analysis is full of caveats and incomplete information (we didn't even mention international sales, rescreens, dvd/streaming views, etc), the world of movies is rich with data on the balance between producer and consumer.
+There is an entire other world exploring IMDB ratings between the general audience and critics, but at the end of the day, people vote with their time and money on which movies are worth watching. Thanks for reading!

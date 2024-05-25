@@ -16,7 +16,8 @@ COUNT(*) AS MOVIES_MADE,
 sum(BOX_OFFICE) as total_revenue,
 sum(BOX_OFFICE)/COUNT(*) as box_office_per_film,
 rank() OVER (ORDER BY COUNT(*) DESC) AS film_ct_score,
-rank() OVER (ORDER BY sum(BOX_OFFICE)/COUNT(*) DESC) AS film_rev_score
+rank() OVER (ORDER BY sum(BOX_OFFICE)/COUNT(*) DESC) AS film_rev_score,
+rank() OVER (ORDER BY sum(BOX_OFFICE) DESC) AS film_raw_rev_score
 FROM production_unnest
 GROUP BY production_company
 having count(*) > 10
