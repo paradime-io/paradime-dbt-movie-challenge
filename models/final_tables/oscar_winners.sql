@@ -10,7 +10,7 @@ WITH GenreSplit AS (
 )
 
 SELECT 
-    decade,
+    concat(decade,'s') as decade,
     genre,
     COUNT(*) AS count
 FROM GenreSplit
