@@ -13,6 +13,9 @@ models:
         meta:
           dimension:
             type: string
+          metrics:
+            distinct_directors:
+              type: count_distinct
       - name: total_revenue_adj
         description: ""
         meta:
