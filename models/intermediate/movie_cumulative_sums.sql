@@ -19,7 +19,7 @@ movies_with_sequels as(
         profit,
         inf_profit
     from clean_combined_movies
-    where movie_series is not null
+    where movie_series is not null and budget != 0
     order by movie_series, release_year
 )
 select 

@@ -3,11 +3,11 @@ WITH movie_cumulative_sums AS (
 ),
 top_movie_series as(
     select
-        sum(profit),
+        sum(inf_profit),
         movie_series
     from movie_cumulative_sums
     group by movie_series
-    order by sum(profit) desc
+    order by sum(inf_profit) desc
     limit 10
 ),
 
