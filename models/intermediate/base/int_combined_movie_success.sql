@@ -24,6 +24,7 @@ success_metrics as (
         actors,
         runtime,
         release_date,
+        budget,
 
         -- Success metrics
         imdb_rating,

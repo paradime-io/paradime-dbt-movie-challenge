@@ -56,6 +56,10 @@ models:
         description: |
           {{ doc("int_movies_mapping__language") }}
 
+      - name: budget
+        description: |
+          {{ doc("stg_tmdb_movies__budget") }}
+
       - name: runtime
         description: |
           {{ doc("int_movies_mapping__runtime") }}

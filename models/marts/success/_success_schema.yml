@@ -67,6 +67,22 @@ models:
         meta:
           dimension:
             type: number
+      
+      - name: budget
+        description: |
+          {{ doc("stg_tmdb_movies__budget") }}
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_imdb_rating:
+              type: sum
+              label: "Total Budget"
+              round: 1
+            avg_imdb_rating:
+              type: average
+              label: "Avg Budget"
+              round: 1
 
       - name: imdb_rating
         description: |

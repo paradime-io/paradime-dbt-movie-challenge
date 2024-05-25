@@ -37,6 +37,7 @@ final as (
         coalesce(omdb.language, tmdb.original_language) as language,
 
         -- Numbers
+        tmdb.budget,
         coalesce(omdb.runtime, tmdb.runtime) as runtime,
         coalesce(imdb.imdb_rating, omdb.imdb_rating) as imdb_rating,
         coalesce(imdb.number_of_votes, omdb.imdb_votes) as imdb_votes,
