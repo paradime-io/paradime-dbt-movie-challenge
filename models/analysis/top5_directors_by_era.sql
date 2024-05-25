@@ -12,7 +12,7 @@ with
         select
             epoch,
             director,
-            sum(revenue_adj) as total_revenue_adj
+            sum(revenue_adj) as revenue_adj
         from source
         group by 1, 2
     )
@@ -20,7 +20,7 @@ with
 select
     epoch,
     director,
-    total_revenue_adj
+    revenue_adj
 from final
 qualify
-    row_number() over (partition by epoch order by total_revenue_adj desc) <= 5
+    row_number() over (partition by epoch order by revenue_adj desc) <= 5
