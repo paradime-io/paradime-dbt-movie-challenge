@@ -7,9 +7,9 @@
    - [Tools Used](#tools-used)
    - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
-4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
+4. [Visualizations](#Visualizations)
+   - [Vizualization #1](#Navigate-the-Film-Industry-Growth)
+   - [Vizualization #2](#Exploring-Movie-Budget-and-Revenue-Over-Time-Dashboard)
    - [Vizualization #3](Vizualization-3)
    - etc
 5. [Conclusions](#conclusions)
