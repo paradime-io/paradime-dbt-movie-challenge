@@ -31,5 +31,8 @@ models:
         +schema: intermediate
         +materialized: view  
 
+seeds:
+  +schema: seeds
+
 tests:
   +store_failures: true  # all tests
