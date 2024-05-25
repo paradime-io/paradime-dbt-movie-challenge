@@ -44,11 +44,8 @@ Aditional Data Sources:
 
 ## Visualizations
 
-### vizualization 1
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+### Navigate the Film Industry Growth
+- ![industry-growth](screenshots/industry-growth.png)
 
 ### vizualization 2
 - #### Visualizations title
