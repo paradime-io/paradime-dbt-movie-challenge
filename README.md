@@ -18,7 +18,7 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
 
 4. [Visualizations](#visualizations)
    - [Getting to Know the Dataset](#getting-to-know-the-dataset)
-   - [Ultimate Combined Movie Success](#getting-to-know-the-dataset)
+   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success)
    - [Change in Movie Success](#change-in-movie-success)
    - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases)
 
