@@ -46,7 +46,7 @@ Aditional Data Sources:
 
 ### Navigate the Film Industry Growth
 
-![industry-growth](screenshots/industry-growth.png)
+![industry-growth](screenshots/industry-growth-1.png)
 
 The evolution of film production across different eras reveals significant changes in the industry. During the **Silent Era**, Hollywood emerged as the hub of movie production, with studios producing around 400 feature films annually by the 1920s.
 
