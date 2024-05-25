@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: genres
+    description: ""
+    columns:
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            distinct_tmdb_ids:
+              type: count_distinct
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+            time_intervals: ['YEAR']
+      - name: genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            unique_genres:
+              type: count_distinct
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            unique_count_directors:
+              type: count_distinct
