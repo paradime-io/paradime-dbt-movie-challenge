@@ -107,4 +107,6 @@ Conversely, Hollywood's competitive nature leads to lower director loyalty, with
 
 ## Conclusions
 
-In summary, while nominal revenues may show an increase, the movie industry’s inflation-adjusted revenue has faced considerable challenges due to the rise of streaming platforms, the impact of the COVID-19 pandemic, and broader economic factors like the 2008 financial crisis. These elements have collectively contributed to a more complex and less optimistic financial landscape for the industry when considering inflation-adjusted figures.
+The analysis highlights the film industry's rapid evolution, especially since the early 2000s with the rise of streaming platforms and lowered barriers to entry. Contrasts in loyalty between the US and Japan underscore the industry's diverse nature.
+
+However, data issues noted by the author require attention for future analyses to provide more accurate insights.
