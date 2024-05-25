@@ -36,8 +36,7 @@ Aditional Data Sources:
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Python networkx library for network exploratory data analysis (although later basic statistics were computed within snowflake** 
-
+- Python's networkx library was utilized for network exploratory data analysis, although basic statistics were later computed within Snowflake.
 
 
 ### Data Lineage
@@ -99,11 +98,11 @@ The analysis reveals a stark contrast in director loyalty between Hollywood and 
 
 ![revenue-to-budget-ratio](screenshots/loyalty.png)
 
-Director loyalty, measured by the percentage of movies produced within a particular production company, underscores the strength of these partnerships. In Japan, certain directors demonstrate exceptional loyalty, overseeing over 90% of their productions within the same company. This underscores deep-seated partnerships and creative collaborations. 
+Director loyalty, measured by the percentage of movies produced within a particular production company, underscores the strength of these partnerships. In Japan, certain directors demonstrate exceptional loyalty, overseeing over 90% of their productions within the same company. This underscores strong partnerships and collaborations. 
 
-Production company loyalty, representing the percentage of total company movies produced by a particular director.
+Production company loyalty represents the percentage of total movies produced by a particular director within a specific production company.
 
-Conversely, Hollywood's competitive nature leads to lower director loyalty, with studios ranking lower in the top 20. This disparity reflects differing industry dynamics and cultural influences. 
+Hollywood's competitive nature results in lower director loyalty, with studios ranking lower in the top 20. This disparity reflects varied industry dynamics and cultural influences.
 
 ## Conclusions
 
