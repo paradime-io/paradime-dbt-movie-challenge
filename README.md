@@ -100,12 +100,17 @@ The analysis reveals a stark contrast in director loyalty between Hollywood and 
 
 Director loyalty, measured by the percentage of movies produced within a particular production company, underscores the strength of these partnerships. In Japan, certain directors demonstrate exceptional loyalty, overseeing over 90% of their productions within the same company. This underscores strong partnerships and collaborations. 
 
+Hollywood's competitive nature results in lower director loyalty, with studios ranking lower in the top 20. This disparity reflects varied industry dynamics and cultural influences.
+
+
 Production company loyalty represents the percentage of total movies produced by a particular director within a specific production company.
 
-Hollywood's competitive nature results in lower director loyalty, with studios ranking lower in the top 20. This disparity reflects varied industry dynamics and cultural influences.
+Additionally, the relationships between production companies and directors are less visible. Although the top three directors produce about 10% of the related companies' movies, the loyalty measure declines faster. This suggests that production companies engage with a broader array of directors, resulting in a swifter decrease in loyalty measures.
 
 ## Conclusions
 
-The analysis highlights the film industry's rapid evolution, especially since the early 2000s with the rise of streaming platforms and lowered barriers to entry. Contrasts in loyalty between the US and Japan underscore the industry's diverse nature.
+The analysis highlights the film industry's rapid evolution, especially since the early 2000s with the rise of streaming platforms and lowered barriers to entry.
+
+Basic network analysis revealed significant differences in director loyalty between the US and Japan. In Japan, collaborations are stronger and more lasting, while Hollywood's competitive dynamics result in lower loyalty. 
 
 However, data issues noted by the author require attention for future analyses to provide more accurate insights.
