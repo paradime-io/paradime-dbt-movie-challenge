@@ -17,3 +17,8 @@ sources:
     schema: INTERMEDIATE
     tables:
       - name: OMDB_INFLATION_ADJUSTED
+  # - name: PRODUCTION_COMPANIES
+  #   database: PHILIPSONGCHRFJ_ANALYTICS
+  #   schema: INTERMEDIATE
+  #   tables:
+  #     - name: rev_by_production      
