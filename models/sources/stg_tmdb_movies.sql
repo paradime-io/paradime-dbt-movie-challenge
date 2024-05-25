@@ -28,7 +28,7 @@ TMDB_ID,
         {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 )
 
-SELECT 
+SELECT distinct
     * 
 FROM 
     source

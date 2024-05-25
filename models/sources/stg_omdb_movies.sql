@@ -24,13 +24,16 @@ WITH source AS (
         PRODUCTION,
         WEBSITE,
         AWARDS,
-        TMDB_ID
+        TMDB_ID,
+        max(TMDB_ID) over (partition by IMDB_ID) as max_tmdb_id
     FROM 
         {{ source('PARADIME_MOVIE_CHALLENGE', 'OMDB_MOVIES') }}
 )
 
-SELECT 
+SELECT distinct
     * 
 FROM 
     source
 where imdb_id is not null and imdb_id <> ''
+--removing duplicate values
+and tmdb_id =max_tmdb_id

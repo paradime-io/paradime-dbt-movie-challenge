@@ -31,3 +31,6 @@ models:
     final_tables:
       +schema: final
       +materialized: view
+    transform:
+      +schema: transform
+      +materialized: view

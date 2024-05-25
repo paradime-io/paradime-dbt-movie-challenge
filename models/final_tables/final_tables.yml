@@ -10,7 +10,7 @@ models:
             type: string
       - name: genre
         description: >-
-          The genre name that is separated into separate rows
+          The genre name that is split into rows
         meta:
           dimension:
             type: string
