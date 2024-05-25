@@ -20,6 +20,12 @@ models:
     sources:
       +schema: staging
       +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: table
+    analysis:
+      +schema: analysis
+      +materialized: table
     example_transformations:
       intermediate:
         +schema: intermediate
