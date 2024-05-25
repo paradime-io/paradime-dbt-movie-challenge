@@ -5,24 +5,22 @@ Project for the dbt™ data modeling challenge - Movie Edition, Hosted by Paradi
 
 ## **Table of Contents**
 1. [Introduction](#introduction)
-2. [Data Sources and Data Lineage](#data-sources-and-data-lineage)
+2. [Data Sources and Data Lineage](#data-sources-and-data-lineage-🕸️)
    - [Sources and Seeds](#sources-and-seeds)
    - [Intermediate Layer](#intermediate-layer)
    - [Mart Layer](#mart-layer)
-   - [Other Layers](#other-layers)
+   - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
-3. [Methodology](#methodology)
+3. [Methodology](#methodology-🧪)
    - [Tools Used](#tools-used)
-   - [Data Preparation and Cleaning](#data-preparation-and-cleaning)
-   - [Calculating Movie Success](#calculating-movie-success)
-
-4. [Visualizations](#visualizations)
-   - [Getting to Know the Dataset](#getting-to-know-the-dataset)
-   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success)
-   - [Change in Movie Success](#change-in-movie-success)
-   - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases)
-
-5. [Conclusions](#conclusions)
+   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🧼)
+   - [Calculating Movie Success](#calculating-movie-success-🏅)
+4. [Visualizations](#visualizations-📊)
+   - [Getting to Know the Dataset](#getting-to-know-the-dataset-🔎)
+   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-🥇)
+   - [Change in Movie Success](#change-in-movie-success-⏳)
+   - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases-🗓️)
+5. [Conclusion](#conclusion-🎬)
 
 ## **Introduction**
 This project explores insights related to movies and specifically focuses on movie success and visualises them in Lightdash.
@@ -72,7 +70,7 @@ quality is not great. Some of the columns have great percentage of null values a
 (eg. *Adolf Hitler* seems to be a main actor in a movie 😄).
 
 The below steps are followed to mitigate these:
-- `select distinct` to ensure that there are not duplicate rows in `stg` models (there are many entries of the same movie).
+- `select distinct` to ensure that there are not duplicate rows in `stg` models. (there are many entries of the same movie, same movie title appears multiple times wit different `tmdb_id`s)
 - Tests for uniqueness on the `imdb_id` (this is the join key for all sources) to make sure that each movie appears only once.
 - Removing all rows that doesn't have `imdb_id`.
 - Coalescing values from different sources to ensure completness (eg. `imdb_rating` from `imdb` and `omdb`)
@@ -97,9 +95,9 @@ success metric that will combine all of them according to their subjective impor
 rotten tomato rating for each movie.
 
 2. We use the US inflation data so that revenues are not biased by yearly inflations and can 
-be comparable to each other in fair way.
+be comparable to each other in a fair way.
 
-3. We normalize each of the feature to be a value between 0-10 so that 
+3. We normalize each of the features to be a value between 0-10 so that 
 they are comparable to each other.
 
 4. We assign weights to each feature to create the ultimate success metric.
@@ -114,13 +112,12 @@ Weights assigned are:
 - `revenue = 0.4`
 
 Above weights are assigned according to the subjective importance of each metric. IMDB and viewer votes are
-populated for most of the data and a very well accepted and popular success indicator, that is why they have higher weights.
-The combined rotten tomato rating is a good indicator as well and in fact most of the time could be more stricter than IMDB but we
-don't have good data coverage for this one. Hence, the lower weight.
+populated for most of the data and they are a very well accepted and popular success indicators, that is why they have higher weights.
+The combined rotten tomato rating is a good indicator as well and in fact most of the time it could be more stricter than IMDB but wedon't have good data coverage for this one. Hence, the lower weight.
 There are a lot of nulls for revenue in the dataset so the weight of this one is kept low.
 
 
-# **Visualizations 📊**
+# **Visualizations** 📊
 
 ### **Getting to know the dataset 🔎**
 Here we present the overview of the values we have in the analysed dataset.
@@ -141,7 +138,7 @@ We can't easily drive a conclusion for the best movies by just looking at these 
 
 ### **Ultimate Combined Movie Success 🥇**
 We will try to use all the success metrics and adjust them with weights to make a final conculsion on the 
-best movies ever created. Refer to [this](#calculating-movie-success) section to see how weights are adjusted.
+best movies ever created. Refer to [this](#calculating-movie-success-🏅) section to see how weights are adjusted.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_ultimate_combined.png?raw=True)
 
@@ -155,12 +152,14 @@ We can further look at the raw numbers for each movie in the top 10 list.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_deepdive.png?raw=True)
 
+Lastly, we can compare the ROI and Combined Success Ratings.
+
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_cmb_roi.png?raw=True)
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_roi.png?raw=True)
 
 ### **Change in Movie Success ⏳**
-So far, we have identifed the most successfull movies. In this section we will look at the change in overall movie success
+So far, we have identifed the most successfull movies. In this section, we will look at the change in overall movie success
 over the years to identify trends.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/change_in_movie_success.png?raw=True)
@@ -199,7 +198,7 @@ Lastly, we show the Actor - Director Pair with the most movies below.
 
 🥇 By combining all success metrics with adjusted weights, we identified `The Dark Knight` as the top performer!
 
-⏳ Our examination of success trends over the years reveals that success rates drop after the end of the 80s while number of movies increases. This may suggest that movie quality dropped and there are so many movies out there these days but not so many good ones. 😢
+⏳ Our examination of success trends over the years reveals that success rates drop after the end of the 80s while the number of movies increase. This may suggest that the movie quality dropped and there are so many movies out there these days but not so many good ones. 😢
 
-🤝 Beyond individual movies, we delved into the success of actor-director pairs, identifying those with a consistent track record of success across multiple films. `Christian Bale and Christpoher Nolan`, known for their 🦇 Batman Movies, was identifed as the top performer.
+🤝 Beyond individual movies, we delved into the success of actor-director pairs, identifying those with a consistent track record of success across multiple films. The pair `Christian Bale and Christopher Nolan`, known for their 🦇 Batman Movies, was identifed as the top performer.
 
