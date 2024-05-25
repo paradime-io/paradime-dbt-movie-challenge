@@ -10,7 +10,7 @@
 
 
 ## Introduction
-Welcome to my project for the dbt™ data modeling challenge - Movie Edition, Hosted by [Paradime](https://www.paradime.io/)!. This project takes a look at some of the trends in movies and how these have changed over the years.
+Welcome to my project for the dbt™ data modeling challenge - Movie Edition, Hosted by [Paradime](https://www.paradime.io/)! This project takes a look at some of the trends in movies and how these have changed over the years.
 
 ### [My GitHub Repo](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-philip-song-veeva-com)
 
@@ -29,9 +29,9 @@ My analysis focused on the movie dataset from Paradime TMDB_movies. To supplemen
 ## Visualizations
 **Overall Trends**
 
-Movies have long been a staple of culture. As technology and budgets increase over time, movies today are capable of bringing stories to life that previously would have been impossible. And yet, competition for the most valuable resource of all, time, has been fierce.
+Movies have long been a staple of culture. As technology and budgets increase over time movies today are capable of bringing stories to life that previously would have been impossible. And yet, competition for the most valuable resource of all, time, has been fierce.
 
-More and more films are produced every year and audiences continue to go, resulting in more total box office over time. However, as the internet and streaming enter the fray the average box office per movie has been trending down:
+More and more films are produced every year and audiences continue to go resulting in more total box office over time. However, as the internet and streaming enter the fray the average box office per movie has been trending down:
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/68265115-75b4-4e61-a288-6078ca5792e0)
 
 The average runtime for a film has remained relatively static, although recently it has been trending up. In the era of short-form content and mini-series, movies are not afraid to take their time
