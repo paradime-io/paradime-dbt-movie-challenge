@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: loyalty
-    description: ""
+    description: "Model indicates how much tight directors works within same production company and visa versa"
     columns:
       - name: production_company
         description: ""

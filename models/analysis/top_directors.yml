@@ -1,15 +1,15 @@
 version: 2
 models:
   - name: top_directors
-    description: ""
+    description: "Model of top 1% of all directors by epoch measured by revenue"
     columns:
       - name: epoch
-        description: ""
+        description: "Logical split of movies by epochs"
         meta:
           dimension:
             type: string
       - name: director
-        description: ""
+        description: "Directors of movie"
         meta:
           dimension:
             type: string
@@ -17,12 +17,12 @@ models:
             distinct_directors:
               type: count_distinct
       - name: total_revenue_adj
-        description: ""
+        description: "Total Revenue Adjusted for Inflation"
         meta:
           dimension:
             type: number
       - name: share_of_revenue
-        description: ""
+        description: "Share of director's revenue in total"
         meta:
           dimension:
             type:
@@ -32,7 +32,7 @@ models:
               type: sum
               format: percent
       - name: revenue_rank
-        description: ""
+        description: "Rank of director by revenue adjusted for inflation"
         meta:
           dimension:
             type: number

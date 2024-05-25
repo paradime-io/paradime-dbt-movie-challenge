@@ -5,7 +5,7 @@ models:
     description: ""
     columns:
       - name: tmdb_id
-        description: ""
+        description: "unique TMDB identifier"
         meta:
           dimension:
             type: number
@@ -13,13 +13,13 @@ models:
             distinct_tmdb_ids:
               type: count_distinct
       - name: released_date
-        description: ""
+        description: "movie release date"
         meta:
           dimension:
             type: date
             time_intervals: ['YEAR']
       - name: genre
-        description: ""
+        description: "genre of movie"
         meta:
           dimension:
             type: string
@@ -27,7 +27,7 @@ models:
             unique_genres:
               type: count_distinct
       - name: director
-        description: ""
+        description: "directors of movie"
         meta:
           dimension:
             type: string

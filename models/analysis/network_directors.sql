@@ -1,3 +1,9 @@
+{{
+    config(
+        enable=false
+    )
+}}
+
 with
     source as (
         select

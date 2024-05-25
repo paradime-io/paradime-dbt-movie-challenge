@@ -2,20 +2,20 @@ version: 2
 
 models:
   - name: top5_directors_by_era
-    description: ""
+    description: "TOP5 Directors by era measured by revenue"
     columns:
       - name: epoch
-        description: ""
+        description: "Logical split of movies by epochs"
         meta:
           dimensions:
             type: string
       - name: director
-        description: ""
+        description: "Director of movies"
         meta:
           dimension:
             type: string
       - name: revenue_adj
-        description: ""
+        description: "Revenue Adjusted for Inflation"
         meta:
           dimension:
             type: number
