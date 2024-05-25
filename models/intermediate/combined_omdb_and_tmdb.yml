@@ -89,6 +89,8 @@ models:
               type: sum
             average_budget:
               type: average
+              format: usd
+              compact: "M"
       - name: revenue
         description: ""
         meta:
@@ -99,6 +101,8 @@ models:
               type: sum
             average_revenue:
               type: average
+              format: usd
+              compact: "M"
       - name: keywords
         description: ""
         meta:
