@@ -39,4 +39,12 @@ models:
             average_revenue_adj:
               type: average
               format: usd
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_movies:
+              type: count_distinct
 
