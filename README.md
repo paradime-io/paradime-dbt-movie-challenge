@@ -193,5 +193,13 @@ Lastly, we show the Actor - Director Pair with the most movies below.
 
 
 
-# **Conclusions 🏁**
-- TODO
+# **Conclusion 🎬**
+
+📊 Our analysis highlights that movie success cannot be attributed to a single factor. Various metrics such as IMDB Ratings, Revenue, and Awards contribute to a film's overall success which we present as Combined Success Rating.
+
+🥇 By combining all success metrics with adjusted weights, we identified `The Dark Knight` as the top performer!
+
+⏳ Our examination of success trends over the years reveals that success rates drop after the end of the 80s while number of movies increases. This may suggest that movie quality dropped and there are so many movies out there these days but not so many good ones. 😢
+
+🤝 Beyond individual movies, we delved into the success of actor-director pairs, identifying those with a consistent track record of success across multiple films. `Christian Bale and Christpoher Nolan`, known for their 🦇 Batman Movies, was identifed as the top performer.
+
