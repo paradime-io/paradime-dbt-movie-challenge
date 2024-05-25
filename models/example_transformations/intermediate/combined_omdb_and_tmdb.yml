@@ -1,0 +1,160 @@
+version: 2
+models:
+  - name: combined_omdb_and_tmdb
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            distinct_imdb_ids:
+              type: count_distinct
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            distinct_tmdb_ids:
+              type: count_distinct
+      - name : title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+            time_intervals: ['YEAR']
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_runtime:
+              type: sum
+            average_runtime:
+              type: average
+      - name: directors
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: writers
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: actors
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: genres
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: languages
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: production_countries
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: production_companies
+        description: ""
+        meta:
+          dimension:
+            hidden: true
+      - name: awards
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_budget:
+              type: sum
+            average_budget:
+              type: average
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_revenue:
+              type: sum
+            average_revenue:
+              type: average
+      - name: keywords
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            median_vote_average:
+              type: median
+      - name: vote_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_vote_count:
+              type: sum
+            average_vote_count:
+              type: average
+            median_vote_count:
+              type: median
+      - name: epoch
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: budget_adj
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_budget_adj:
+              type: sum
+              compact: M
+            average_budget_adj:
+              type: average
+              compact: M
+      - name: revenue_adj
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_revenue_adj:
+              type: sum
+              compact: M
+            average_revenue_adj:
+              type: average
+              compact: M
+      - name: released_year
+        description: ""
+        meta:
+          dimension:
+            type: number

@@ -1,19 +1,26 @@
+{{
+    config(
+        enabled = false
+    )
+}}
+
 WITH tmdb AS (
     SELECT
         imdb_id,
         tmdb_id,
         title,
-        release_date,
-        overview,
-        tagline,
+        release_year,
         keywords,
         genre_names,
+        spoken_languages,
+        production_companies,
+        production_countries,
         runtime,
         vote_average,
+        vote_count,
         revenue,
         budget
-    FROM
-        {{ ref('stg_tmdb_movies') }}
+    FROM {{ ref('stg_tmdb_movies') }}
 ), 
 
 omdb AS (
@@ -30,8 +37,7 @@ omdb AS (
         imdb_rating,
         imdb_votes,
         box_office
-    FROM
-        {{ ref('stg_omdb_movies') }}
+    FROM {{ ref('stg_omdb_movies') }}
 ), 
 
 joined AS (
@@ -65,5 +71,7 @@ joined AS (
 
 SELECT
     *
-FROM
-    joined
+FROM joined
+where
+    -- filter movies between 45 minutes and 5 hours
+    runtime between 45 and 300

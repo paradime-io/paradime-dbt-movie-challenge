@@ -24,3 +24,6 @@ models:
       intermediate:
         +schema: intermediate
         +materialized: view  
+
+tests:
+  +store_failures: true  # all tests

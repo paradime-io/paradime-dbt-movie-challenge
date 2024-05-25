@@ -6,6 +6,8 @@ models:
         description: >-
           Unique identifier for each movie. This unique identifier comes from
           the tmdb API: https://developer.themoviedb.org/
+        tests:
+          - unique
         meta:
           dimension:
             type: number
@@ -98,6 +100,8 @@ models:
             type: string
       - name: imdb_id
         description: IMDb ID of the movie.
+        tests:
+          - unique
         meta:
           dimension:
             type: string
@@ -130,6 +134,8 @@ models:
     columns:
       - name: imdb_id
         description: IMDb ID of the movie.
+        tests:
+          - unique
         meta:
           dimension:
             type: string
@@ -250,6 +256,8 @@ models:
             type: string
       - name: tmdb_id
         description: TMDB ID of the movie.
+        tests:
+          - unique
         meta:
           dimension:
             type: number
@@ -291,7 +299,9 @@ models:
           dimension:
             type: string
       - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
+        description: >-
+          Current status of the TV show (e.g., returning series, ended,
+          cancelled, etc.).
         meta:
           dimension:
             type: string

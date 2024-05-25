@@ -1,3 +1,9 @@
+{{
+    config(
+        enabled = false
+    )
+}}
+
 WITH tmdb AS (
     SELECT
         tmdb_id,

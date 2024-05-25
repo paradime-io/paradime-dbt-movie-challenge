@@ -7,6 +7,9 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            distinct_tmdb_ids:
+              type: count_distinct
       - name: title
         description: ""
         meta:
@@ -37,6 +40,11 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_runtime:
+              type: sum
+            average_runtime:
+              type: average
       - name: vote_average
         description: ""
         meta:
@@ -47,11 +55,21 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_revenue:
+              type: sum
+            average_revenue:
+              type: average
       - name: budget
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_budget:
+              type: sum
+            average_budget:
+              type: average
       - name: director
         description: ""
         meta:
@@ -87,21 +105,39 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            average_imdb_rating:
+              type: average
       - name: metascore
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            average_metascore:
+              type: average
       - name: imdb_votes
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_imdb_votes:
+              type: sum
+            average_imdb_votes:
+              type: average
+            median_imdb_votes:
+              type: median
       - name: box_office
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_box_office:
+              type: sum
+            average_box_office:
+              type: average
       - name: genre_names
         description: ""
         meta:
@@ -114,6 +150,9 @@ models:
         meta:
           dimension:
             type: string
+          metrics:
+            total_imdb_ids:
+              type: count_distinct
       - name: title
         description: ""
         meta:
@@ -144,6 +183,11 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_runtime:
+              type: sum
+            average_runtime:
+              type: average
       - name: vote_average
         description: ""
         meta:
@@ -154,11 +198,21 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            total_revenue:
+              type: sum
+            average_revenue:
+              type: average
       - name: budget
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_budget:
+              type: sum
+            average_budget:
+              type: average
       - name: director
         description: ""
         meta:
@@ -194,21 +248,39 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            median_imdb_rating:
+              type: median
       - name: metascore
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            median_metascore:
+              type: median
       - name: imdb_votes
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_imdb_votes:
+              type: sum
+            average_imdb_votes:
+              type: average
+            median_imdb_votes:
+              type: median
       - name: box_office
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            total_box_office:
+              type: sum
+            average_box_office:
+              type: average
       - name: genre_names
         description: ""
         meta:
