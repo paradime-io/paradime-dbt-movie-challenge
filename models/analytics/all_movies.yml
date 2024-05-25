@@ -2,14 +2,6 @@ version: 2
 models:
   - name: all_movies
     columns:
-      - name: identifier_unique_key
-        description: ""
-        meta:
-          dimension:
-            type: string
-          metrics:
-            total_movie_count:
-              type: count_distinct
       - name: title
         description: ""
         meta:
@@ -110,3 +102,11 @@ models:
         meta:
           dimension:
             type: number
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            total_movie_count:
+              type: count_distinct

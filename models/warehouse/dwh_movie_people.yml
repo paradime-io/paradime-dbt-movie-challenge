@@ -2,11 +2,6 @@ version: 2
 models:
   - name: dwh_movie_people
     columns:
-      - name: movie_id
-        description: ""
-        meta:
-          dimension:
-            type: string
       - name: person_name
         description: ""
         meta:
@@ -47,3 +42,11 @@ models:
         meta:
           dimension:
             type: string
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            total_movie_count:
+              type: count_distinct

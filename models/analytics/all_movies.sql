@@ -35,7 +35,7 @@ movie_people_summary as (
 )
 
 select
-    imdb_id,
+    m.imdb_id,
     title,
     original_title,
     tagline,

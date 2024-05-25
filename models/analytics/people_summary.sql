@@ -20,7 +20,6 @@ with movie_people as (
 movies as (
     select 
         imdb_id,
-        imdb_id,
         title,
         original_title,
         tagline,

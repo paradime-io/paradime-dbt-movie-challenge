@@ -35,7 +35,7 @@ models:
         meta:
           dimension:
             type: number
-          metrics: 
+          metrics:
             avg_director_age:
               type: average
             med_director_age:
@@ -100,11 +100,6 @@ models:
         meta:
           dimension:
             type: boolean
-      - name: identifier_unique_key
-        description: ""
-        meta:
-          dimension:
-            type: string
       - name: title
         description: ""
         meta:
