@@ -8,10 +8,11 @@
    - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#Visualizations)
-   - [Vizualization #1](#Navigate-the-Film-Industry-Growth)
-   - [Vizualization #2](#Exploring-Movie-Budget-and-Revenue-Over-Time-Dashboard)
-   - [Vizualization #3](Vizualization-3)
-   - etc
+   - [Navigate the Film Industry Growth](#Navigate-the-Film-Industry-Growth)
+   - [Exploring Movie Budget and Revenue Over Time Dashboard](#Exploring-Movie-Budget-and-Revenue-Over-Time-Dashboard)
+   - [Exploring Revenue-to-Budget Ratios](#Exploring-Revenue-to-Budget-Ratios)
+   - [The Rise of Diversity in the Digital Era](#The-Rise-of-Diversity-in-the-Digital-Era)
+   - [Unveiling Director-Production Company Loyalty](#Unveiling-Director-Production-Company-Loyalty)
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -19,7 +20,7 @@ Explore my project for the _dbt™ data modeling challenge - Movie Edition_, Hos
 
 This project dives into the analysis of evolution of Film Industry.
 
-Source code
+[Source code](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-robertas-kudulis-pigu-lt)
 
 
 ## Data Sources and Data Lineage
@@ -69,7 +70,7 @@ Several factors contribute to this trend:
 - COVID-19 Pandemic: The pandemic had a profound impact on the movie industry, with theaters closed or operating at reduced capacity for extended periods. This accelerated the shift towards streaming and away from traditional theaters, further challenging the industry’s revenue growth when adjusted for inflation.
 - Economic Factors - 2008 Financial Crisis: Broader economic conditions, such as the 2008 financial crisis, significantly impacted discretionary spending on entertainment, including movie tickets. Economic downturns reduce consumer spending power, leading to decreased attendance and lower revenue growth for the movie industry.
 
-## What about Revenue-to-Budget Ratio ?
+## Exploring Revenue-to-Budget Ratios
 
 ![revenue-to-budget-ratio](screenshots/revenue-to-budget-ratio.png)
 
