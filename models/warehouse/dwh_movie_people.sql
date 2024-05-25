@@ -3,7 +3,7 @@
 
 with src as (
     select 
-        movie_id,
+        imdb_id,
         release_year,
         person_name,
         person_role,

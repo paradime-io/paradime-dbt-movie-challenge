@@ -1,6 +1,6 @@
 with movies_src as (
     select 
-        identifier_unique_key,
+        imdb_id,
         genres
     from 
         {{ref('all_movies_combined_columns')}}
@@ -8,7 +8,7 @@ with movies_src as (
 
 all_movies_and_genres  as (
     SELECT 
-        identifier_unique_key as movie_id,
+        imdb_id,
         trim(gen.value) AS genre
     FROM movies_src,
         LATERAL SPLIT_TO_TABLE(genres, ',') AS gen
@@ -16,7 +16,7 @@ all_movies_and_genres  as (
 
 consolidated as (
     SELECT
-        movie_id,
+        imdb_id,
         IFNULL(genre_lookup.to_name, gen.genre) as genre
     FROM 
         all_movies_and_genres as gen
@@ -25,7 +25,7 @@ consolidated as (
 )
 
 select 
-    movie_id,
+    imdb_id,
     genre
 from 
     consolidated

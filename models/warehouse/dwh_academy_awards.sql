@@ -1,3 +1,5 @@
+-- This model does nothing but materialize the academy awards data as a table in the WAREHOUSE schema.
+-- Unsure if this is good practice
 with src as (
     select 
         movie_title,

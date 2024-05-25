@@ -2,7 +2,7 @@
 
 with movies_src as (
     select 
-        identifier_unique_key,
+        imdb_id,
         production_companies
     from 
         {{ref('all_movies_combined_columns')}}
@@ -10,7 +10,7 @@ with movies_src as (
 
 all_movies_and_production_companies  as (
     SELECT 
-        identifier_unique_key as movie_id,
+        imdb_id,
         trim(prod.value) AS production_company
     FROM movies_src,
         LATERAL SPLIT_TO_TABLE(production_companies, ',') AS prod
@@ -18,7 +18,7 @@ all_movies_and_production_companies  as (
 
 top_production_companies_flagged as (
     SELECT
-        src.movie_id,
+        src.imdb_id,
         src.production_company,
         CASE 
             WHEN tpc.production_company IS NOT NULL 
@@ -32,7 +32,7 @@ top_production_companies_flagged as (
 )
 
 select 
-    movie_id,
+    imdb_id,
     production_company,
     is_top_production_company
 from 

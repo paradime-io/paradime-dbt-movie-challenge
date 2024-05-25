@@ -7,11 +7,8 @@
 -- Plus bechdel test ratings
 with all_movies_combined_columns as (
     select 
-        identifier_unique_key,
-        omdb_imdb_id,
-        tmdb_imdb_id,
-        omdb_tmdb_id,
-        tmdb_tmdb_id,
+        --  identifier_unique_key,
+        imdb_id,
         title,
         original_title,
         tagline,
@@ -64,9 +61,9 @@ movies_all_columns as (
     from 
         all_movies_combined_columns as cc
     left join movie_ratings as rc
-        ON rc.identifier_unique_key = cc.identifier_unique_key
+        ON rc.imdb_id = cc.imdb_id
     left join movie_bechdel_ratings as br 
-        on br.IMDB_ID = cc.omdb_imdb_id
+        on br.IMDB_ID = cc.imdb_id
 )
 select 
     *

@@ -1,6 +1,7 @@
 with movie_people as (
     select 
-        movie_id,
+        --  movie_id,
+        imdb_id,
         release_year,
         person_name,
         person_role,
@@ -31,7 +32,7 @@ people_with_unique_name as (
 
 joined_unique_name as (
     select 
-        mp.movie_id,
+        mp.imdb_id,
         mp.release_year,
         mp.person_name,
         mp.person_role,
@@ -60,7 +61,7 @@ people_with_unique_name_and_role as (
 -- First match on name and job role where they are unique and match
 joined_unique_name_and_role as (
     select 
-        mp.movie_id,
+        mp.imdb_id,
         mp.release_year,
         mp.person_name,
         mp.person_role,
@@ -80,7 +81,7 @@ joined_unique_name_and_role as (
 )
 
 select 
-    movie_id,
+    imdb_id,
     release_year,
     person_name,
     person_role,

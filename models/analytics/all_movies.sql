@@ -11,7 +11,7 @@ with movies as (
 
 movie_people_summary as (
     select 
-        movie_id,
+        imdb_id,
         --  release_year,
         TO_BOOLEAN(
             max(
@@ -31,11 +31,11 @@ movie_people_summary as (
     from 
         {{ref('dwh_movie_people')}}
     group by 
-        movie_id
+        imdb_id
 )
 
 select
-    identifier_unique_key,
+    imdb_id,
     title,
     original_title,
     tagline,
@@ -59,4 +59,4 @@ select
 from 
     movies as m
 left join movie_people_summary as mp
-    on mp.movie_id = m.identifier_unique_key
+    on mp.imdb_id = m.imdb_id

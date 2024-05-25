@@ -4,7 +4,7 @@
 
 with movie_countries as (
     select 
-        movie_id,
+        imdb_id,
         production_country
     from 
         {{ref('dwh_movie_countries')}}
@@ -12,7 +12,7 @@ with movie_countries as (
 
 movies as (
     select 
-        identifier_unique_key,
+        imdb_id,
         original_language,
         release_date,
         release_year,
@@ -30,7 +30,7 @@ movies as (
 )
 
 select
-    mc.movie_id,
+    mc.imdb_id,
     mc.production_country,
     m.original_language,
     m.release_date,
@@ -47,4 +47,4 @@ select
 from 
     movie_countries as mc
 join movies as m
-    on m.identifier_unique_key = mc.movie_id
+    on m.imdb_id = mc.imdb_id

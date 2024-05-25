@@ -4,7 +4,7 @@
 
 with movie_people as (
     select 
-        movie_id,
+        imdb_id,
         release_year,
         person_name,
         person_role,
@@ -19,11 +19,8 @@ with movie_people as (
 
 movies as (
     select 
-        identifier_unique_key,
-        omdb_imdb_id,
-        tmdb_imdb_id,
-        omdb_tmdb_id,
-        tmdb_tmdb_id,
+        imdb_id,
+        imdb_id,
         title,
         original_title,
         tagline,
@@ -52,7 +49,7 @@ movies as (
 )
 
 select
-    mp.movie_id,
+    mp.imdb_id,
     mp.person_name,
     mp.person_role,
     mp.person_role_details,
@@ -77,6 +74,6 @@ select
 from 
     movie_people as mp
 join movies as m
-    on m.identifier_unique_key = mp.movie_id
+    on m.imdb_id = mp.imdb_id
 left join {{ref('dwh_movie_countries')}} as mc 
-    on mc.movie_id = mp.movie_id
+    on mc.imdb_id = mp.imdb_id

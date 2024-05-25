@@ -4,6 +4,7 @@
         tmdb_imdb_id,
         omdb_tmdb_id,
         tmdb_tmdb_id,
+        coalesce(tmdb_imdb_id, omdb_imdb_id) as imdb_id,
         omdb_title,
         tmdb_title,
         coalesce(omdb_title, tmdb_title) as title,
@@ -64,7 +65,7 @@
         identifier_unique_key
 
     FROM
-        {{ ref('join_omdb_and_tmdb_test') }}
+        {{ ref('join_omdb_and_tmdb') }}
  )
 
  select 

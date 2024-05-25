@@ -1,6 +1,6 @@
 with movies_src as (
     select 
-        identifier_unique_key,
+        imdb_id,
         production_countries
     from 
         {{ref('all_movies_combined_columns')}}
@@ -8,7 +8,7 @@ with movies_src as (
 
 all_movies_and_countries  as (
     SELECT 
-        identifier_unique_key as movie_id,
+        imdb_id,
         trim(country.value) AS production_country
     FROM movies_src,
         LATERAL SPLIT_TO_TABLE(production_countries, ',') AS country
@@ -16,7 +16,7 @@ all_movies_and_countries  as (
 
 consolidated as (
     SELECT
-        movie_id,
+        imdb_id,
         IFNULL(country_lookup.to_name, countries.production_country) as production_country
     FROM 
         all_movies_and_countries as countries
@@ -25,7 +25,7 @@ consolidated as (
 )
 
 select 
-    movie_id,
+    imdb_id,
     production_country
 from 
     consolidated

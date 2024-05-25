@@ -4,7 +4,7 @@
 
 with movie_genres as (
     select 
-        movie_id,
+        imdb_id,
         genre
     from 
         {{ref('dwh_movie_genres')}}
@@ -12,7 +12,7 @@ with movie_genres as (
 
 movies as (
     select 
-        identifier_unique_key,
+        imdb_id,
         original_language,
         release_date,
         release_year,
@@ -30,7 +30,7 @@ movies as (
 )
 
 select
-    mg.movie_id,
+    mg.imdb_id,
     mg.genre,
     m.original_language,
     m.release_date,
@@ -48,4 +48,4 @@ select
 from 
     movie_genres as mg
 join movies as m
-    on m.identifier_unique_key = mg.movie_id
+    on m.imdb_id = mg.imdb_id

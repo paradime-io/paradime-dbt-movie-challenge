@@ -1,6 +1,6 @@
 with movies_src as (
     select 
-        identifier_unique_key as movie_id,
+        imdb_id,
         release_year,
         director,
         writer,
@@ -11,7 +11,7 @@ with movies_src as (
 
 all_movies_and_people  as (
     SELECT 
-        movie_id,
+        imdb_id,
         release_year,
         trim(dir.value) AS person_name,
         'DIRECTOR' AS person_role
@@ -21,7 +21,7 @@ all_movies_and_people  as (
     UNION	
 
     SELECT 
-        movie_id,
+        imdb_id,
         release_year,
         trim(wri.value) AS person_name,
         'WRITER' AS person_role
@@ -31,7 +31,7 @@ all_movies_and_people  as (
     UNION
 
     SELECT 
-        movie_id,
+        imdb_id,
         release_year,
         trim(act.value) AS person_name,
         'ACTOR' AS person_role
@@ -41,15 +41,15 @@ all_movies_and_people  as (
 
 deduped as (
     SELECT
-        movie_id,
+        imdb_id,
         release_year,
         person_name,
         person_role,
     FROM
         all_movies_and_people
     QUALIFY ROW_NUMBER() OVER (
-            PARTITION BY movie_id, person_name, person_role
-            ORDER BY movie_id -- this is arbitrary
+            PARTITION BY imdb_id, release_year, person_name, person_role
+            ORDER BY imdb_id -- this is arbitrary
         ) = 1
 ),
 
@@ -74,7 +74,7 @@ role_details as (
 -- "Joe Bloggs" is the same person as "Joe Bloggs (co-director)"
 cleaned as (
     select 
-        movie_id,
+        imdb_id,
         release_year,
         case 
             when person_role_details is not null 
@@ -94,7 +94,7 @@ cleaned as (
 -- Update these names to wikidata format to help with matching later on
 names_fixed as (
     select 
-        movie_id,
+        imdb_id,
         release_year,
         IFNULL(names.to_name, person_name) as person_name,
         person_role,
@@ -107,7 +107,7 @@ names_fixed as (
 )
 
 select 
-    movie_id,
+    imdb_id,
     release_year,
     person_name,
     person_role,
