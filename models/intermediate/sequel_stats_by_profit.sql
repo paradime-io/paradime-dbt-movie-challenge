@@ -20,7 +20,6 @@ finalized_table as (
     from cleaned_movies
     where budget != 0 or revenue != 0
     group by movie_series
-    having num_of_movies_in_series > 1
     order by total_inf_profit_for_series desc
 )
 select * from finalized_table
