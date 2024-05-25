@@ -32,17 +32,21 @@ My analysis focused on the movie dataset from Paradime TMDB_movies. To supplemen
 Movies have long been a staple of culture. As technology and budgets increase over time movies today are capable of bringing stories to life that previously would have been impossible. And yet, competition for the most valuable resource of all, time, has been fierce.
 
 More and more films are produced every year and audiences continue to go resulting in more total box office over time. However, as the internet and streaming enter the fray the average box office per movie has been trending down:
+
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/68265115-75b4-4e61-a288-6078ca5792e0)
 
 The average runtime for a film has remained relatively static, although recently it has been trending up. In the era of short-form content and mini-series, movies are not afraid to take their time
+
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/ab65381a-794a-4533-9637-24d23d1a5cdd)
 
 **Who's making our films?**
 Movies that end up in theaters are almost never made by a single production company. Thus while this makes success attribution nearly impossible, companies still make their distinguished mark. There is a strong correlation when comparing the number of films produced against total box office revenue. 
 Not entirely surprising, given that a movie studio that can't earn a lot of money for their films won't last.
+
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/707f3668-b88a-494b-a39c-137dbf47f5ae)
 
 Of interest are studios like Canal+ and Film4 Productions, who have put out hundreds of films against a much, much smaller total revenue share. Closer investigation reveals that both of these are international companies, whose US box office viewings present only a fraction of their true performance.
+
 ![image](https://github.com/philip-song/Personal/assets/62715537/db528cb3-fd2a-4d25-bc4d-0bbd279b2708)
 
 
@@ -54,6 +58,7 @@ Although almost every movie is in multiple genres, there is a surprising consist
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/e337b4db-1177-4204-868b-0a3b72e376dc)
 
 When it comes to the average box office that a film brings in the story has more variety but a similar consistency. The top spot is almost always a Sci-Fi or Adventure film.
+
 ![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/assets/62715537/9eeedc94-ce4e-4101-a01a-997d4f8974fe)
 
 
