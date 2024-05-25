@@ -148,12 +148,16 @@ best movies ever created. Refer to [this](#calculating-movie-success) section to
 We can dive deep into individual contributor success metrics for the top 10 list above to understand
 why `The Dark Knight` wins. 
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_indv_normalized.png?raw=True)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_indiv_metrics.png?raw=true)
 
 
 We can further look at the raw numbers for each movie in the top 10 list.
 
 ![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_deepdive.png?raw=True)
+
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_cmb_roi.png?raw=True)
+
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_roi.png?raw=True)
 
 ### **Change in Movie Success ⏳**
 So far, we have identifed the most successfull movies. In this section we will look at the change in overall movie success
@@ -176,7 +180,7 @@ Since we were looking at the yearly changes, we can further look into months to 
 So far, we have looked at the success for each individual movie. It would be interesting to see the most successful actor-director
 pair that have at least 2 different movies and still managed to maintain a good success record over different movies.  
 
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_act_dir.png?raw=true)
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/top10_actor_director_success.png?raw=true)
 
 
 Below, we can see the deep dive into the individual success metrics of the Top 10 Actor - Director pair.
