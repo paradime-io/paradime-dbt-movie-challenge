@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: loyalty
+    description: ""
+    columns:
+      - name: production_company
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: "The director of movies"
+        meta:
+          dimension:
+            type: string
+      - name: director_movies_in_company
+        description: "indicates how many movies a director has produced within a production company"
+        meta:
+          metrics:
+            total_director_movies_in_company:
+              type: number
+      - name: movies_director
+        description: "total number of movies produced by director"
+        meta:
+          metrics:
+            total_movies_director:
+              type: number
+      - name: movies_company
+        description: "total number of movies produced within production company"
+        meta:
+          metrics:
+            total_movies_company:
+              type: number
+      - name: loyalty_director
+        description: "the percentage of all director movies produced within a company"
+        meta:
+          metrics:
+            total_loyalty_director:
+              type: number
+              format: percent
+            average_loyalty_director:
+              type: average
+              format: percent
+      - name: loyalty_company
+        description: "the percentage of all company movies produced by particular director"
+        meta:
+          metrics:
+            total_loyalty_company:
+              type: number
+              format: percent
+            average_loyalty_company:
+              type: average
+              format: percent
