@@ -1,5 +1,5 @@
 WITH movie_stats_by_sequels AS (
-    SELECT * FROM {{ ref('movie_stats_by_sequels') }}
+    SELECT * FROM {{ ref('sequel_stats_by_rating') }}
 )
 ,
 top_movie_series as(

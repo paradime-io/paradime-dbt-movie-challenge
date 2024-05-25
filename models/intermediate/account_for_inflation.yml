@@ -1,43 +1,43 @@
 version: 2
 models:
-  - name: dim_movie_sequels
+  - name: account_for_inflation
     columns:
-      - name: movie_series
+      - name: tmdb_id
         description: ""
         meta:
           dimension:
             type: string
-      - name: num_of_movies_in_series
+      - name: release_year
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_revenue_per_series
+      - name: revenue
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_budget_for_series
+      - name: budget
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_profit_for_series
+      - name: profit
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_inf_revenue_per_series
+      - name: inf_revenue
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_inf_budget_for_series
+      - name: inf_budget
         description: ""
         meta:
           dimension:
             type: number
-      - name: total_inf_profit_for_series
+      - name: inf_profit
         description: ""
         meta:
           dimension:

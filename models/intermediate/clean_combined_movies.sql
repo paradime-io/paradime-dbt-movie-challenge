@@ -8,6 +8,21 @@ OMDB AS (
     SELECT * FROM {{ ref('stg_omdb_movies') }}
 ),
 
+movie_sequels AS (
+    select
+        trim(IMDB_ID) as imdb_id_series,
+        trim(series) as movie_series,
+    from
+        {{ref ('movies_trilogies')}}
+),
+
+inflation_rates AS (
+    SELECT
+        year,
+        inflation_factor_to_2024
+    FROM {{ ref('historical_inflation_factor') }}
+),
+
 omdb_movie_ids as (
 select
     trim(imdb_id) as imdb_id,
@@ -79,14 +94,8 @@ combined_movies AS (
         -- movies are defined as a minimum of 40 minutes in length
 ),
 -- add a boolean column if movie is apart of a sequel
-movie_sequels AS (
-    select
-        trim(IMDB_ID) as imdb_id_series,
-        trim(series) as movie_series,
-    from
-        {{ref ('movies_trilogies')}}
-),
-final as (
+
+movie_sequel_join as (
     select
         cm.*,
         CASE
@@ -97,7 +106,17 @@ final as (
     from combined_movies cm
     left join movie_sequels ms
         on cm.imdb_id = ms.imdb_id_series
+),
+movie_inflation_adjustment_join as(
+    select
+        ms.*,
+        round(ms.revenue*ir.inflation_factor_to_2024,0) as inf_revenue,
+        round(ms.budget*ir.inflation_factor_to_2024,0) as inf_budget,
+        round(ms.profit*ir.inflation_factor_to_2024,0) as inf_profit,
+    from movie_sequel_join ms
+    left join inflation_rates ir
+        on ms.release_year = ir.year
 )
 
-SELECT * FROM final
+SELECT * FROM movie_inflation_adjustment_join
 

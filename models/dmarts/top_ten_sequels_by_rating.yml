@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: top_ten_sequels_by_rating
+    columns:
+      - name: movie_series
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: num_of_movies_in_series
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: avg_rating_for_series
+        description: ""
+        meta:
+          dimension:
+            type: number

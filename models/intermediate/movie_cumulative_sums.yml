@@ -62,3 +62,33 @@ models:
         meta:
           dimension:
             type: number
+      - name: inf_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: inf_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: inf_profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_profit
+        description: ""
+        meta:
+          dimension:
+            type: number

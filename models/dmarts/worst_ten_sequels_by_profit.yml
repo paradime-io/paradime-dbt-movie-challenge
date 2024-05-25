@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: dim_movie_sequels
+  - name: worst_ten_sequels_by_profit
     columns:
       - name: movie_series
         description: ""
