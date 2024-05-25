@@ -58,11 +58,16 @@ In the **Digital Age**, the advent of digital filmmaking and streaming platforms
 
 Moving forward, the analysis will delve deeper into the post-war and subsequent eras, exploring trends in film runtime ranging from 40 minutes to 5 hours.
 
-### vizualization 2
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+### Exploring Movie Budget and Revenue Over Time Dashboard
+
+![industry-growth](screenshots/budget-revenue-over-time.png)
+
+While the nominal revenue of the movie industry has generally increased over the years, adjusting for inflation (using the Consumer Price Index or CPI) reveals a different trend. From around 2005 onwards, the revenue of the movie industry, when adjusted for CPI, has faced significant challenges.
+
+Several factors contribute to this trend:
+- Streaming Platforms: The rise of streaming services like Netflix, Amazon Prime, and Disney+ has fundamentally changed how audiences consume movies. These platforms offer greater convenience and lower costs compared to traditional movie theaters, diverting viewers away from theaters and impacting box office revenue.
+- COVID-19 Pandemic: The pandemic had a profound impact on the movie industry, with theaters closed or operating at reduced capacity for extended periods. This accelerated the shift towards streaming and away from traditional theaters, further challenging the industry’s revenue growth when adjusted for inflation.
+- Economic Factors - 2008 Financial Crisis: Broader economic conditions, such as the 2008 financial crisis, significantly impacted discretionary spending on entertainment, including movie tickets. Economic downturns reduce consumer spending power, leading to decreased attendance and lower revenue growth for the movie industry.
 
 ### vizualization 3
 - #### Visualizations title
@@ -72,3 +77,5 @@ Moving forward, the analysis will delve deeper into the post-war and subsequent 
 
 ## Conclusions
 Share a clear and concise conclusion of your findings!
+
+In summary, while nominal revenues may show an increase, the movie industry’s inflation-adjusted revenue has faced considerable challenges due to the rise of streaming platforms, the impact of the COVID-19 pandemic, and broader economic factors like the 2008 financial crisis. These elements have collectively contributed to a more complex and less optimistic financial landscape for the industry when considering inflation-adjusted figures.
