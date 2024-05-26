@@ -28,8 +28,23 @@ WITH source AS (
         {{ source('MOVIE_BASE', 'TMDB_MOVIES') }}
 )
 
+, filtered AS (
+    SELECT
+        *
+    FROM
+        source
+    WHERE
+        status = 'Released'
+        -- To avoid films with incorrect financial information
+        AND budget IS NOT NULL 
+        AND budget > 0 
+        AND revenue > 0 
+        AND budget <> revenue
+)
+
 SELECT 
     * 
+    , year(release_date) AS release_year
 FROM 
-    source
+    filtered
 
