@@ -102,8 +102,8 @@ Analytics models are business-centric entities, where every model is a business 
 |[TMDB_MOVIES](models/staging/tmdb/source.yml)|[TMDb API](https://developer.themoviedb.org/docs/getting-started)|Provided by team Paradime
 |[TMDB_TV_SERIES](models/staging/tmdb/source.yml)|[TMDb API](https://developer.themoviedb.org/docs/getting-started)|Provided by team Paradime
 |[OMDB_MOVIES](models/staging/omdb/source.yml)|[OMDb API](https://www.omdbapi.com/)|Provided by team Paradime
-|[PRINCIPALS](models/staging/imdb/source.yml)|[IMDb Developer](https://developer.imdb.com/non-commercial-datasets/)|Python + [Snowflake Stage](https://docs.snowflake.com/en/sql-reference/commands-data-loading)
-|[NAMES](models/staging/imdb/source.yml)|[IMDb Developer](https://developer.imdb.com/non-commercial-datasets/)|Python + [Snowflake Stage](https://docs.snowflake.com/en/sql-reference/commands-data-loading)
+|[PRINCIPALS](models/staging/imdb/source.yml)|[IMDb Developer](https://developer.imdb.com/non-commercial-datasets/)|[Snowflake Stage](https://docs.snowflake.com/en/sql-reference/commands-data-loading)
+|[NAMES](models/staging/imdb/source.yml)|[IMDb Developer](https://developer.imdb.com/non-commercial-datasets/)|[Snowflake Stage](https://docs.snowflake.com/en/sql-reference/commands-data-loading)
 |[Consumer Price Index](seeds/seed_enrichments__consumer_price_index.csv)|[U.S. Bureau of Labor Statistics](https://www.bls.gov/cpi/data.htm)|[dbt seed](https://docs.getdbt.com/docs/build/seeds)|For inflation adjustments
 [Standard Country Names](seeds/seed_standards__country_names.csv)|[ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)|[dbt seed](https://docs.getdbt.com/docs/build/seeds)|To unify Countries
 [Standard Languages](seeds/seed_standards__languages.csv)|[ISO 639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)|[dbt seed](https://docs.getdbt.com/docs/build/seeds)|To unify Languages
@@ -153,7 +153,7 @@ Since Lightdash doesn't manage Snowflake's semi-structured data types (objects a
 ### Top 10 Most Appearing Actors of All Time
 [Mel Blanc (1908-1989)](https://www.imdb.com/name/nm0000305/), famously known as ["The Man of a Thousand Voices"](https://en.wikipedia.org/wiki/Mel_Blanc), is considered one of Hollywood's most prolific actors with over a thousand screen credits. He created and performed nearly 400 distinct character voices, becoming renowned worldwide for his work in radio, television, cartoons, and movies.
 
-![image](/mages/most_appearing_actors_bar.png)
+![image](mages/most_appearing_actors_bar.png)
 
 </br>
 
