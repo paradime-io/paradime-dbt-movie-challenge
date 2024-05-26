@@ -117,3 +117,28 @@ models:
             revenue_total:
               type: sum
               format: usd
+  - name: actor_appearances
+    columns:
+      - name: imdb_id
+        description: IMDB ID
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: Movie title
+        meta:
+          dimension:
+            type: string
+          metrics:
+            movie_count:
+              type: sum
+      - name: actor
+        description: Actor separated into rows
+        meta:
+          dimension:
+            type: string
+      - name: actor
+        description: Actor separated into rows
+        meta:
+          dimension:
+            type: string

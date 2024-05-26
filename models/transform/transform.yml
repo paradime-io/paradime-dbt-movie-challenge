@@ -14,24 +14,7 @@ models:
           - unique
       - name: imdb_id
         description: "the movie ID on IMDB"
-  - name: oscar_winners_decade_genre
+  - name: actors_split
     columns:
-      - name: decade
-        description: >-
-          The decade in which the movie was released
-        meta:
-          dimension:
-            type: string
-      - name: genre
-        description: >-
-          The genre name that is split into rows
-        meta:
-          dimension:
-            type: string
-      - name: count
-        description: >-
-          The number of times a genre appears in an Oscar-winning movie
-        meta:
-          metrics:
-            number_of_movies:
-              type: sum
+      - name: imdb_id
+        description: "the movie ID on IMDB"
