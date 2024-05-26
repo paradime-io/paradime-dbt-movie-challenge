@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: media_production_countries
+    description: >
+      Each record in this analytics model represents a media item (either a Movie
+      or TV Series) and its production country.
+    tests:
+      - unique:
+          column_name: "(record_key || production_country)"
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'tmdb_id', and 'media_type' values.
+        meta:
+          dimension:
+            type: string
+            hidden: true
+          metrics:
+            total_country_count:
+              type: count
+              label: Total Countries
+              description: The total number of countries.
+
+      - name: production_country
+        data_type: varchar
+        description: Production Country of a media.
+        meta:
+          dimension:
+            type: string
+            label: Production Country

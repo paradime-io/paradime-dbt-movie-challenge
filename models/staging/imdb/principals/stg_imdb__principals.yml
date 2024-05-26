@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: stg_imdb__principals
+    description: >
+      Staged version of the 'imdb_non_commercial_data.principals'table. Every record in this model
+      represents an individual associated with the movie including their roles, jobs, and character
+      portrayals.
+
+      Acknowledgement: Information courtesy of IMDb (https://www.imdb.com). Used with permission.
+
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of 'imdb_id',
+          'name_id', 'role', and 'played_characters' values.
+        tests:
+          - not_null
+          - unique
+
+      - name: imdb_id
+        data_type: varchar
+        description: Unique ID for the movie in IMDb.
+        tests:
+          - not_null
+
+      - name: name_id
+        data_type: varchar
+        description: ID of the individual on IMDb.
+        tests:
+          - relationships:
+              to: ref('stg_imdb__names')
+              field: name_id
+              severity: warn
+
+      - name: role
+        data_type: varchar
+        description: >
+          The role of the individual in the media item (e.g., 'Director', 'Writer', 'Composer', etc.).
+          Note: The same individual can represent multiple roles in the same movie.
+
+      - name: job
+        data_type: varchar
+        description: >
+          Specific job or title held by the individual (e.g., 'director of photography', 'producer').
+
+      - name: order_in_title
+        data_type: number
+        description: >
+          Numeric order indicating the individual's sequence in the credits or listing for the media item.
+
+      - name: played_characters
+        data_type: variant
+        description: >
+          Details of characters played by the individual in the media item. Can include character names or descriptions.
+          Note: The same individual can paly multiple characters in the same movie.
+
+      - name: ingested_at
+        data_type: varchar
+        description: >
+          The UTC Timestamp indicating when the data was ingested into the system.

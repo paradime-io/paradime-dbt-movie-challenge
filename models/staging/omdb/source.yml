@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: omdb
+    database: movie_challenge
+    schema: public
+    description: >
+      The following source represents dataset ingested from the OMDb API.
+      The OMDb API is a web service to obtain movie information. All content
+      and images on the site are contributed and maintained by users.
+
+    meta:
+      data owner: https://www.omdbapi.com/
+      ingestion owner: Team Paradime
+      code owner: Anton Goncharuk
+
+    tables:
+      - name: movies
+        identifier: omdb_movies

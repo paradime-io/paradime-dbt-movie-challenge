@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: media_production_companies
+    description: >
+      Every record in this analytics model represents a media item (Movie or
+      TV Series) and the Production Company behind the media.
+    tests:
+      - unique:
+          column_name: "(record_key || production_company)"
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'tmdb_id', and 'media_type' values.
+        meta:
+          dimension:
+            type: string
+            hidden: true
+          metrics:
+            total_company_count:
+              type: count
+              label: Total Companies
+              description: The total number of Production Companies.
+
+      - name: production_company
+        data_type: varchar
+        description: Production company of a media.
+        meta:
+          dimension:
+            type: string
+            label: Production Company
+            urls:
+              - label: Go To Wiki Page
+                url: 'https://en.wikipedia.org/wiki/${ row.media_production_companies.production_company.raw }'       
+                

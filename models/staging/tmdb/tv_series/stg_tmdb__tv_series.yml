@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: stg_tmdb__tv_series
+    description: Staging version of the 'tmdb_tv_series' table, sourced from TMDB API.
+
+    columns:
+      - name: tmdb_id
+        data_type: varchar
+        description: Unique ID for the TV series in TMDb.
+        tests:
+          - not_null
+          - unique
+
+      - name: title
+        data_type: varchar
+        description: Title of the TV series.
+
+      - name: description
+        data_type: varchar
+        description: Brief summary of the TV series' plot.
+
+      - name: media_type
+        data_type: varchar
+        description: Category of the media (e.g., 'Video', 'Movie').
+
+      - name: tagline
+        data_type: varchar
+        description: Tagline or slogan associated with the TV series.
+
+      - name: status
+        data_type: varchar
+        description: Current status of the TV series (e.g., 'Ended', 'Returning Series').
+
+      - name: genres
+        data_type: array
+        description: Array of genres associated with the TV series.
+
+      - name: number_of_seasons
+        data_type: number
+        description: Total number of seasons in the TV series.
+
+      - name: number_of_episodes
+        data_type: number
+        description: Total number of episodes in the TV series.
+
+      - name: release_date
+        data_type: date
+        description: Official release (air) date of the TV series.
+
+      - name: release_year
+        data_type: date
+        description: Year the TV series was first released.
+
+      - name: last_air_date
+        data_type: date
+        description: Date the last episode aired.
+
+      - name: has_ended
+        data_type: boolean
+        description: True if the TV series has ended.
+
+      - name: is_in_production
+        data_type: boolean
+        description: True if the TV series is currently in production.
+
+      - name: original_language_code
+        data_type: varchar
+        description: ISO 639-1 code representing the original language of the TV series.
+
+      - name: tmdb_popularity
+        data_type: number
+        description: Popularity score of the TV series on TMDb.
+
+      - name: tmdb_score
+        data_type: number
+        description: Average TMDb score (ratings) for the TV series.
+
+      - name: tmdb_vote_count
+        data_type: number
+        description: Total number of votes received by the TV series on TMDb.
+
+      - name: tmdb_url
+        data_type: varchar
+        description: URL to the TV series' page on TMDb.
+
+      - name: poster_url
+        data_type: varchar
+        description: URL to the TV series' poster image.
+
+      - name: creators
+        data_type: array
+        description: Array of creators of the TV series.
+
+      - name: production_companies
+        data_type: array
+        description: Array of companies involved in the production of the TV series.

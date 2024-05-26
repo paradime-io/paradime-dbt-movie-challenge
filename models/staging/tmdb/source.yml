@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: tmdb
+    database: movie_challenge
+    schema: public
+    description: >
+      The following source represents datasets ingested from the The Movie Database
+      (TMDB) API. The TMDB API is a community-driven service that allows users to
+      access and use TMDB's data and images in their applications. TMDB is a popular,
+      user-editable database for movies and TV shows that has been updated by users
+      since 2008.
+    meta:
+      data owner: https://www.themoviedb.org/
+      api documentation: https://developer.themoviedb.org/docs/getting-started
+      ingestion owner: Team Paradime
+      code owner: Anton Goncharuk
+
+    tables:
+      - name: movies
+        identifier: tmdb_movies
+
+      - name: tv_series
+        identifier: tmdb_tv_series

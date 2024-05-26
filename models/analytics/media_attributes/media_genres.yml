@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: media_genres
+    description: >
+      Every record in this analytics model represents a media item (Movie or
+      TV Series) and its genre.
+    tests:
+      - unique:
+          column_name: "(record_key || genre)"
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'tmdb_id', and 'media_type' values.
+          
+        meta:
+          dimension:
+            type: string
+            hidden: true
+          metrics:
+            total_genre_count:
+              type: count
+              label: Total Genres
+              description: The total number of genres.
+
+      - name: genre
+        data_type: varchar
+        description: Genre of a media.
+        meta:
+          dimension:
+            type: string
+            label: Genre
+            

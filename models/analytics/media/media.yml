@@ -1,0 +1,576 @@
+version: 2
+
+models:
+  - name: media
+    description: >
+      Consolidated analytics model that combines Movie and TV Series data from
+      various sources, detailing and unifying attributes relevant to both media
+      types.
+    meta:
+      joins:
+        - join: crew
+          sql_on: ${media.imdb_id} = ${crew.imdb_id}
+          #Note: cardinality 1:many (may fan out)
+
+        - join: media_genres
+          sql_on: ${media.record_key} = ${media_genres.record_key}
+          #Note: cardinality 1:many (may fan out)
+
+        - join: media_languages
+          sql_on: ${media.record_key} = ${media_languages.record_key}
+          #Note: cardinality 1:many (may fan out)
+
+        - join: media_production_companies
+          sql_on: ${media.record_key} = ${media_production_companies.record_key}
+          #Note: cardinality 1:many (may fan out)
+
+        - join: media_production_countries
+          sql_on: ${media.record_key} = ${media_production_countries.record_key}
+          #Note: cardinality 1:many (may fan out)
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'tmdb_id', and 'media_type' values.
+        tests:
+          - not_null
+          - unique
+        meta:
+          dimension:
+            type: string
+            hidden: true
+          metrics:
+            total_media_count:
+              type: count_distinct
+              label: Total Media
+              description: The total amount of media.
+
+      - name: tmdb_id
+        data_type: varchar
+        description: >
+          TMDb ID of a media object - Movie or TV series. Note: TMDb ID isn't
+          unique and can be shared across both 'Movies' and 'TV Series' in the
+          TMDb database.
+        meta:
+          dimension:
+            type: string
+            label: TMDb ID
+            group_label: IDs
+
+      - name: imdb_id
+        data_type: varchar
+        description: IMDb ID of a Movie.
+        meta:
+          dimension:
+            type: string
+            label: IMDb ID
+            group_label: IDs
+
+      - name: media_type
+        data_type: varchar
+        description: >
+          Category of the media (e.g., 'Movie', 'TV Series', 'Video').
+        meta:
+          dimension:
+            type: string
+            label: Media Type
+            group_label: Media Details
+            
+      - name: title
+        data_type: varchar
+        description: Title of the media item.
+        meta:
+          dimension:
+            type: string
+            group_label: Media Details
+            sql: "${TABLE}.title || ' (' || year(${release_year}) || ')'"
+            urls:
+              - label: Go To IMDb Page
+                url: 'https://www.imdb.com/title/${ row.media.imdb_id.raw }'           
+
+      - name: description
+        data_type: varchar
+        description: Brief summary of the media's plot or storyline.
+        meta:
+          dimension:
+            type: string
+            group_label: Media Details
+
+      - name: tagline
+        data_type: varchar
+        description: Tagline or slogan associated with the media.
+        meta:
+          dimension:
+            type: string
+            group_label: Media Details
+
+      - name: genres
+        data_type: array
+        description: Array of genres categorizing the media.
+        meta:
+          dimension:
+            hidden: true
+            type: string
+
+      - name: release_date
+        data_type: date
+        description: Official release date of the media.
+        meta:
+          dimension:
+            type: date
+            label: Release Date
+            group_label: Dates
+
+      - name: release_year
+        data_type: date
+        description: Year the media item was released.
+        meta:
+          dimension:
+            type: date
+            label: Release Year
+            group_label: Dates
+            time_intervals:
+              - YEAR
+
+      - name: dvd_release_date
+        data_type: date
+        description: DVD release date of the media item, if available.
+        meta:
+          dimension:
+            type: date
+            label: DVD Release Date
+            group_label: Dates
+
+      - name: runtime_minutes
+        data_type: number
+        description: Duration of the media item in minutes.
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_runtime_minutes:
+              type: average
+              label: Avg. Runtime Minutes
+              description: The average media runtime in minutes.
+
+      - name: languages
+        data_type: array
+        description: Array of languages spoken in the media.
+        meta:
+          dimension:
+            hidden: true
+            type: string
+
+      - name: tags
+        data_type: array
+        description: Array of tags or keywords describing the media.
+        meta:
+          dimension:
+            type: string
+            group_label: Media Details
+
+      - name: film_rating
+        data_type: varchar
+        description: Official film rating (e.g., 'PG-13', 'R') of the media item.
+        meta:
+          dimension:
+            type: string
+            label: Media Rating
+            group_label: Media Details
+
+      - name: production_companies
+        data_type: array
+        description: Array of companies involved in the production of the media.
+        meta:
+          dimension:
+            hidden: true
+            type: string
+
+      - name: production_countries
+        data_type: array
+        description: Array of countries where the media was produced.
+        meta:
+          dimension:
+            hidden: true
+            type: string
+            
+      - name: status
+        data_type: varchar
+        description: >
+          Current status of the media (e.g., 'Released' for movies, 'Ended' for
+          TV series).
+        meta:
+          dimension:
+            type: string
+            group_label: Media Details
+
+      - name: budget_amount_usd
+        data_type: number
+        description: Total production budget of the media item in USD.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_budget:
+              type: sum
+              group_label: Media Finances
+              label: Total Budget USD
+              description: Total production budget in USD.
+              format: usd
+            avg_budget:
+              type: average
+              label: Avg. Budget USD
+              group_label: Media Finances
+              description: Average production budget in USD.
+              format: usd
+
+      - name: gross_revenue_amount_usd
+        data_type: number
+        description: Total gross revenue generated by the media item in USD.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_revenue:
+              type: sum
+              label: Total Revenue USD
+              group_label: Media Finances
+              description: Total gross revenue in USD.
+              format: usd
+            avg_revenue:
+              type: average
+              label: Avg. Adjusted Revenue USD
+              group_label: Media Finances
+              description: Average gross revenue in USD.
+              format: usd
+            return_on_investment:
+              label: Return On Investment (ROI)
+              group_label: Media Finances
+              description: Return on investment (ROI).
+              type: number
+              format: percent
+              roind: 2
+              sql: ( ${total_revenue} / NULLIF(${total_budget}, 0) )
+
+      - name: budget_usd_2024_adjusted
+        data_type: number
+        description: >
+          Inflation-adjusted production budget of the media item in USD as of
+          2024.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_adjusted_budget:
+              type: sum
+              label: Total Adjusted Budget USD
+              group_label: Media Finances
+              description: Total production budget in USD, inflation-adjusted as of 2024.
+              format: usd
+            avg_adjusted_budget:
+              type: average
+              label: Avg. Adjusted Budget USD
+              group_label: Media Finances
+              description: Average production budget in USD, inflation-adjusted as of 2024.
+              format: usd
+
+      - name: gross_revenue_usd_2024_adjusted
+        data_type: number
+        description: >
+          Total gross revenue of the media in USD, inflation-adjusted as of
+          2024.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_adjusted_revenue:
+              type: sum
+              label: Total Adjusted Revenue USD
+              group_label: Media Finances
+              description: |
+                Total gross revenue in USD, inflation-adjusted as of 2024.
+              format: usd
+            avg_adjusted_revenue:
+              type: average
+              label: Avg. Adjusted Revenue USD
+              group_label: Media Finances
+              description: |
+                Average gross revenue in USD, inflation-adjusted as of 2024.
+              format: usd
+
+      - name: number_of_seasons
+        data_type: number
+        description: Total number of seasons in the TV series (applicable to TV series).
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_seasons:
+              type: sum
+              label: Total Seasons
+              description: Total number of seasons in the TV series.
+            
+      - name: number_of_episodes
+        data_type: number
+        description: Total number of episodes in the TV series (applicable to TV series).
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_episodes:
+              type: sum
+              label: Total Episodes
+              description: Total number of episodes in the TV series.
+
+      - name: last_air_date
+        data_type: date
+        description: >
+          Date the last episode of the TV series aired (applicable to TV
+          series).
+        meta:
+          dimension:
+            type: date
+            label: Last Air Date
+            group_label: Dates
+
+      - name: creators
+        data_type: array
+        description: Array of creators of the media item (applicable to TV series).
+        meta:
+          dimension:
+            type: string
+
+      - name: homepage_url
+        data_type: varchar
+        description: Official homepage URL for the media item.
+        meta:
+          dimension:
+            type: string
+            label: Homepage URL
+            group_label: URLs
+            urls:
+              - label: Go To Homepage
+                url: ${ value.raw }
+
+      - name: imdb_url
+        data_type: varchar
+        description: URL to the media item's page on IMDb.
+        meta:
+          dimension:
+            type: string
+            label: IMDb URL
+            group_label: URLs
+            urls:
+              - label: Go To IMDb Page
+                url: ${ value.raw }
+
+      - name: tmdb_url
+        data_type: varchar
+        description: URL to the media item's page on TMDb.
+        meta:
+          dimension:
+            type: string
+            label: TMDb URL
+            group_label: URLs
+            urls:
+              - label: Go To TMDb Page
+                url: ${ value.raw }
+
+      - name: poster_url
+        data_type: varchar
+        description: URL to the media item's poster image.
+        meta:
+          dimension:
+            type: string
+            label: Poster URL
+            group_label: URLs
+            urls:
+              - label: Go To Poster Page
+                url: ${ value.raw }
+
+      - name: backdrop_url
+        data_type: varchar
+        description: URL to the media item's backdrop image.
+        meta:
+          dimension:
+            type: string
+            label: Backdrop URL
+            group_label: URLs
+            urls:
+              - label: Go To Backdrop Page
+                url: ${ value.raw }
+
+      - name: collection_poster_url
+        data_type: varchar
+        description: >
+          URL to the poster image of the collection the media item belongs to,
+          if any.
+        meta:
+          dimension:
+            type: string
+            label: Collection Poster URL
+            group_label: URLs
+            urls:
+              - label: Go To Collection Page
+                url: ${ value.raw }
+
+      - name: oscar_win_count
+        data_type: number
+        description: Total number of Oscar awards won by the movie.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            oscar_count:
+              type: sum
+              label: Total Oscars
+              group_label: Awards & Scores
+              description: Total number of Oscars.
+
+      - name: award_nomination_count
+        data_type: number
+        description: Total number of award nominations received by the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_nominations:
+              type: sum
+              label: Total Nominations
+              group_label: Awards & Scores
+              description: Total number of award nominations.
+
+      - name: award_win_count
+        data_type: number
+        description: Total number of awards won by the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            total_wins:
+              type: sum
+              label: Total Awards
+              group_label: Awards & Scores
+              description: Total number of awards.
+
+      - name: tmdb_score
+        data_type: float
+        description: Average TMDb score (ratings) for the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            avg_tmdb_score:
+              type: average
+              label: Avg. TBDb Score
+              group_label: Awards & Scores
+              description: Average TMDb Score.
+
+      - name: tmdb_vote_count
+        data_type: number
+        description: Total number of votes received by the media item on TMDb.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            avg_tmdb_votes:
+              type: average
+              label: Avg. TMDb Votes
+              group_label: Awards & Scores
+              description: Average number of votes received.
+            total_tmdb_votes:
+              type: sum
+              label: Total TMDb Votes
+              group_label: Awards & Scores
+              description: Total number of votes received .
+
+      - name: imdb_score
+        data_type: float
+        description: Average IMDb score (ratings) for the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            avg_imdb_score:
+              type: average
+              label: Avg. IMDb Score
+              group_label: Awards & Scores
+              description: Average IMDb Score.
+
+      - name: imdb_vote_count
+        data_type: number
+        description: Total number of votes received by the media item on IMDb.
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_imdb_votes:
+              type: average
+              label: Avg. IMDb Votes
+              group_label: Awards & Scores
+              description: Average number of votes received.
+            total_imdb_votes:
+              type: sum
+              label: Total IMDb Votes
+              group_label: Awards & Scores
+              description: Total number of votes received .
+
+      - name: metacritic_percent
+        data_type: number
+        description: Metacritic score as a percentage for the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            avg_metacritic_score:
+              type: average
+              label: Avg. Metacritic Score
+              group_label: Awards & Scores
+              description: Average Metacritic Score.
+
+      - name: rotten_tomatoes_percent
+        data_type: varchar
+        description: Rotten Tomatoes score as a percentage for the media item.
+        meta:
+          dimension:
+            type: number
+            hidden: true
+          metrics:
+            avg_rotten_tomatoes_score:
+              type: average
+              label: Avg. Rotten Tomatoes Score
+              group_label: Awards & Scores
+              description: Average Rotten Tomatoes Score.
+
+      - name: does_belong_to_collection
+        data_type: boolean
+        description: True if the media item belongs to any TMDb collection.
+        meta:
+          dimension:
+            type: boolean
+            label: Does Belog To TMDb Collection
+            group_label: Media Details
+
+      - name: collection_name
+        data_type: varchar
+        description: Name of the collection to which the media item belongs.
+        meta:
+          dimension:
+            type: string
+            label: TMDb Collevtion Name
+            group_label: Media Details

@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: media_languages
+    description: >
+      Every record in this analytics model represents a media item (Movie or
+      TV Series) and the language.
+    tests:
+      - unique:
+          column_name: "(record_key || language)"
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'tmdb_id', and 'media_type' values.
+        meta:
+          dimension:
+            type: string
+            hidden: true
+          metrics:
+            total_language_count:
+              type: count
+              label: Total Languages
+              description: The total number of languages.
+
+      - name: language
+        data_type: varchar
+        description: Language spoken in the of a media ('Movie', 'TV Series').
+        meta:
+          dimension:
+            type: string
+            label: Language
+            

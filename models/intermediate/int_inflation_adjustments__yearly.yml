@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: int_inflation_adjustments
+    description: >
+      Intermediate model used to adjust financial figures for inflation based on the
+      Consumer Price Index (CPI) ratios for different years. This model facilitates
+      the conversion of monetary values to an equivalent value as of a target year to
+      account for inflation.
+
+      Source: The Consumer Price Index (CPI-U) is provided by the U.S. Department of
+      Labor Bureau of Labor Statistic and is used to measure inflation.
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of 'price_year'
+          and 'target_year' values.
+        tests:
+          - not_null
+          - unique
+
+      - name: price_year
+        data_type: number
+        description: >
+          The original year for which the price was recorded. Indicates the year of the
+          monetary figure that needs adjustment.
+
+      - name: target_year
+        data_type: number
+        description: >
+          The year to which the original price will be adjusted. This is the target year
+          representing the equivalent monetary value after adjusting for inflation.
+
+      - name: cpi_ratio
+        data_type: float
+        description: >
+          The Consumer Price Index (CPI) ratio used for adjusting the original price to the
+          target year price. This ratio is derived from the CPI values of the price_year and
+          target_year.

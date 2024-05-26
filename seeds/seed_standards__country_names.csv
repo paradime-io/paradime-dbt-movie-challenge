@@ -1,0 +1,833 @@
+country_name_input,country_name,country_iso_2_char,country_iso_3_char,country_top_level_domain
+afg,Afghanistan,AF,AFG,.af
+afghanistan,Afghanistan,AF,AFG,.af
+af,Afghanistan,AF,AFG,.af
+aland,Åland Islands,AX,ALA,
+aland islands,Åland Islands,AX,ALA,
+åland islands,Åland Islands,AX,ALA,
+ax,Åland Islands,AX,ALA,
+al,Albania,AL,ALB,.al
+alb,Albania,AL,ALB,.al
+albania,Albania,AL,ALB,.al
+dza,Algeria,DZ,DZA,.dz
+dz,Algeria,DZ,DZA,.dz
+algeria,Algeria,DZ,DZA,.dz
+american samoa,American Samoa,AS,ASM,
+as,American Samoa,AS,ASM,
+and,Andorra,AD,AND,.ad
+ad,Andorra,AD,AND,.ad
+andorra,Andorra,AD,AND,.ad
+ago,Angola,AO,AGO,.ao
+ao,Angola,AO,AGO,.ao
+angola,Angola,AO,AGO,.ao
+ai,Anguilla,AI,AIA,
+anguilla,Anguilla,AI,AIA,
+antarctica,Antarctica,AQ,ATA,
+ag,Antigua & Barbuda,AG,ATG,.ag
+antigua and barbuda,Antigua & Barbuda,AG,ATG,.ag
+atg,Antigua & Barbuda,AG,ATG,.ag
+antigua & barbuda,Antigua & Barbuda,AG,ATG,.ag
+arg,Argentina,AR,ARG,.ar
+ar,Argentina,AR,ARG,.ar
+argentina,Argentina,AR,ARG,.ar
+armenia,Armenia,AM,ARM,.am
+am,Armenia,AM,ARM,.am
+arm,Armenia,AM,ARM,.am
+aruba,Aruba,AW,ABW,
+aw,Aruba,AW,ABW,
+aus,Australia,AU,AUS,.au
+australia,Australia,AU,AUS,.au
+au,Australia,AU,AUS,.au
+aut,Austria,AT,AUT,.at
+at,Austria,AT,AUT,.at
+austria,Austria,AT,AUT,.at
+austria-hungary,Austria-Hungary,,,
+aze,Azerbaijan,AZ,AZE,.az
+azerbaijan,Azerbaijan,AZ,AZE,.az
+az,Azerbaijan,AZ,AZE,.az
+baden,Baden,,,
+bhs,Bahamas,BS,BHS,.bs
+bs,Bahamas,BS,BHS,.bs
+bahamas,Bahamas,BS,BHS,.bs
+the bahamas,Bahamas,BS,BHS,.bs
+bh,Bahrain,BH,BHR,.bh
+bhr,Bahrain,BH,BHR,.bh
+bahrain,Bahrain,BH,BHR,.bh
+bangladesh,Bangladesh,BD,BGD,.bd
+bgd,Bangladesh,BD,BGD,.bd
+bd,Bangladesh,BD,BGD,.bd
+barbados,Barbados,BB,BRB,.bb
+brb,Barbados,BB,BRB,.bb
+bb,Barbados,BB,BRB,.bb
+bavaria,Bavaria,,,
+blr,Belarus,BY,BLR,.by
+by,Belarus,BY,BLR,.by
+belarus,Belarus,BY,BLR,.by
+be,Belgium,BE,BEL,.be
+bel,Belgium,BE,BEL,.be
+belgium,Belgium,BE,BEL,.be
+blz,Belize,BZ,BLZ,.bz
+belize,Belize,BZ,BLZ,.bz
+bz,Belize,BZ,BLZ,.bz
+ben,Benin,BJ,BEN,.bj
+benin,Benin,BJ,BEN,.bj
+bj,Benin,BJ,BEN,.bj
+bermuda,Bermuda,BM,BMU,
+bm,Bermuda,BM,BMU,
+bhutan,Bhutan,BT,BTN,.bt
+bt,Bhutan,BT,BTN,.bt
+btn,Bhutan,BT,BTN,.bt
+bol,Bolivia,BO,BOL,.bo
+"bolivia, plurinational state of",Bolivia,BO,BOL,.bo
+bolivia,Bolivia,BO,BOL,.bo
+bo,Bolivia,BO,BOL,.bo
+bih,Bosnia & Herzegovina,BA,BIH,.ba
+bosnia herzegovina,Bosnia & Herzegovina,BA,BIH,.ba
+bosnia and herzegovina,Bosnia & Herzegovina,BA,BIH,.ba
+ba,Bosnia & Herzegovina,BA,BIH,.ba
+bosnia & herzegovina,Bosnia & Herzegovina,BA,BIH,.ba
+bw,Botswana,BW,BWA,.bw
+botswana,Botswana,BW,BWA,.bw
+bwa,Botswana,BW,BWA,.bw
+brazil,Brazil,BR,BRA,.br
+br,Brazil,BR,BRA,.br
+bra,Brazil,BR,BRA,.br
+british indian ocean territory,British Indian Ocean Territory,IO,IOT,
+british virgin islands,British Virgin Islands,VG,VGB,
+"virgin islands, british",British Virgin Islands,VG,VGB,
+vg,British Virgin Islands,VG,VGB,
+bn,Brunei,BN,BRN,.bn
+brunei,Brunei,BN,BRN,.bn
+brunei darussalam,Brunei,BN,BRN,.bn
+brn,Brunei,BN,BRN,.bn
+brunswick,Brunswick,,,
+bg,Bulgaria,BG,BGR,.bg
+bulgaria,Bulgaria,BG,BGR,.bg
+bgr,Bulgaria,BG,BGR,.bg
+bfa,Burkina Faso,BF,BFA,.bf
+bf,Burkina Faso,BF,BFA,.bf
+burkina faso,Burkina Faso,BF,BFA,.bf
+bi,Burundi,BI,BDI,.bi
+bdi,Burundi,BI,BDI,.bi
+burundi,Burundi,BI,BDI,.bi
+khm,Cambodia,KH,KHM,.kh
+kh,Cambodia,KH,KHM,.kh
+cambodia,Cambodia,KH,KHM,.kh
+cmr,Cameroon,CM,CMR,.cm
+cameroon,Cameroon,CM,CMR,.cm
+cm,Cameroon,CM,CMR,.cm
+can,Canada,CA,CAN,.ca
+ca,Canada,CA,CAN,.ca
+canada,Canada,CA,CAN,.ca
+cape verde,Cape Verde,CV,CPV,.cv
+cv,Cape Verde,CV,CPV,.cv
+cpv,Cape Verde,CV,CPV,.cv
+"bonaire, sint eustatius and saba",Caribbean Netherlands,BQ,BES,
+bq,Caribbean Netherlands,BQ,BES,
+caribbean netherlands,Caribbean Netherlands,BQ,BES,
+netherlands antilles,Caribbean Netherlands,BQ,BES,
+cayman islands,Cayman Islands,KY,CYM,
+ky,Cayman Islands,KY,CYM,
+cf,Central African Republic,CF,CAF,.cf
+caf,Central African Republic,CF,CAF,.cf
+central african republic,Central African Republic,CF,CAF,.cf
+td,Chad,TD,TCD,.td
+tcd,Chad,TD,TCD,.td
+chad,Chad,TD,TCD,.td
+chl,Chile,CL,CHL,.cl
+chile,Chile,CL,CHL,.cl
+cl,Chile,CL,CHL,.cl
+china,China,CN,CHN,.cn
+people's republic of china,China,CN,CHN,.cn
+cn,China,CN,CHN,.cn
+chn,China,CN,CHN,.cn
+cx,Christmas Island,CX,CXR,
+christmas island,Christmas Island,CX,CXR,
+cocos (keeling) islands,Cocos (Keeling) Islands,CC,CCK,
+cocos  islands,Cocos (Keeling) Islands,CC,CCK,
+cocos islands,Cocos (Keeling) Islands,CC,CCK,
+cc,Cocos (Keeling) Islands,CC,CCK,
+colombia,Colombia,CO,COL,.co
+co,Colombia,CO,COL,.co
+col,Colombia,CO,COL,.co
+comoros,Comoros,KM,COM,.km
+km,Comoros,KM,COM,.km
+com,Comoros,KM,COM,.km
+congo,Congo - Brazzaville,CG,COG,.cg
+republic of the congo,Congo - Brazzaville,CG,COG,.cg
+cg,Congo - Brazzaville,CG,COG,.cg
+congo - brazzaville,Congo - Brazzaville,CG,COG,.cg
+cog,Congo - Brazzaville,CG,COG,.cg
+republic of congo,Congo - Brazzaville,CG,COG,.cg
+"congo, the democratic republic of the",Congo - Kinshasa,CD,COD,.cd
+democratic republic of the congo,Congo - Kinshasa,CD,COD,.cd
+congo - kinshasa,Congo - Kinshasa,CD,COD,.cd
+democratic republic of congo,Congo - Kinshasa,CD,COD,.cd
+zaire,Congo - Kinshasa,CD,COD,.cd
+cd,Congo - Kinshasa,CD,COD,.cd
+cod,Congo - Kinshasa,CD,COD,.cd
+ck,Cook Islands,CK,COK,
+cook islands,Cook Islands,CK,COK,
+cr,Costa Rica,CR,CRI,.cr
+cri,Costa Rica,CR,CRI,.cr
+costa rica,Costa Rica,CR,CRI,.cr
+côte d'ivoire,Côte d’Ivoire,CI,CIV,.ci
+côte-d''ivoire,Côte d’Ivoire,CI,CIV,.ci
+ci,Côte d’Ivoire,CI,CIV,.ci
+civ,Côte d’Ivoire,CI,CIV,.ci
+côte d’ivoire,Côte d’Ivoire,CI,CIV,.ci
+cote d'ivoire,Côte d’Ivoire,CI,CIV,.ci
+ivory coast,Côte d’Ivoire,CI,CIV,.ci
+hr,Croatia,HR,HRV,.hr
+croatia,Croatia,HR,HRV,.hr
+hrv,Croatia,HR,HRV,.hr
+cub,Cuba,CU,CUB,.cu
+cuba,Cuba,CU,CUB,.cu
+cu,Cuba,CU,CUB,.cu
+curaçao,Curaçao,CW,CUW,
+cw,Curaçao,CW,CUW,
+cyprus no mans area,Cyprus,CY,CYP,.cy
+cy,Cyprus,CY,CYP,.cy
+cyp,Cyprus,CY,CYP,.cy
+northern cyprus,Cyprus,CY,CYP,.cy
+cyprus,Cyprus,CY,CYP,.cy
+cz,Czechia,CZ,CZE,.cz
+cze,Czechia,CZ,CZE,.cz
+czech republic,Czechia,CZ,CZE,.cz
+czechia,Czechia,CZ,CZE,.cz
+czechoslovakia,Czechoslovakia,,,
+dnk,Denmark,DK,DNK,.dk
+denmark,Denmark,DK,DNK,.dk
+dk,Denmark,DK,DNK,.dk
+dji,Djibouti,DJ,DJI,.dj
+djibouti,Djibouti,DJ,DJI,.dj
+dj,Djibouti,DJ,DJI,.dj
+dominica,Dominica,DM,DMA,.dm
+dma,Dominica,DM,DMA,.dm
+dm,Dominica,DM,DMA,.dm
+dominican republic,Dominican Republic,DO,DOM,.do
+dom,Dominican Republic,DO,DOM,.do
+do,Dominican Republic,DO,DOM,.do
+ecu,Ecuador,EC,ECU,.ec
+ecuador,Ecuador,EC,ECU,.ec
+ec,Ecuador,EC,ECU,.ec
+egy,Egypt,EG,EGY,.eg
+eg,Egypt,EG,EGY,.eg
+egypt,Egypt,EG,EGY,.eg
+el salvador,El Salvador,SV,SLV,.sv
+sv,El Salvador,SV,SLV,.sv
+slv,El Salvador,SV,SLV,.sv
+gq,Equatorial Guinea,GQ,GNQ,.gq
+equatorial guinea,Equatorial Guinea,GQ,GNQ,.gq
+gnq,Equatorial Guinea,GQ,GNQ,.gq
+eritrea,Eritrea,ER,ERI,.er
+er,Eritrea,ER,ERI,.er
+eri,Eritrea,ER,ERI,.er
+ee,Estonia,EE,EST,.ee
+est,Estonia,EE,EST,.ee
+estonia,Estonia,EE,EST,.ee
+swaziland,Eswatini,SZ,SWZ,.sz
+swz,Eswatini,SZ,SWZ,.sz
+eswatini,Eswatini,SZ,SWZ,.sz
+sz,Eswatini,SZ,SWZ,.sz
+ethiopia,Ethiopia,ET,ETH,.et
+et,Ethiopia,ET,ETH,.et
+eth,Ethiopia,ET,ETH,.et
+falkland islands  (malvinas),Falkland Islands,FK,FLK,
+falkland islands,Falkland Islands,FK,FLK,
+fk,Falkland Islands,FK,FLK,
+faroe,Faroe Islands,FO,FRO,
+faroe islands,Faroe Islands,FO,FRO,
+faeroe islands,Faroe Islands,FO,FRO,
+fo,Faroe Islands,FO,FRO,
+fj,Fiji,FJ,FJI,.fj
+fiji,Fiji,FJ,FJI,.fj
+fji,Fiji,FJ,FJI,.fj
+fi,Finland,FI,FIN,.fi
+finland,Finland,FI,FIN,.fi
+fin,Finland,FI,FIN,.fi
+fr,France,FR,FRA,.fr
+fra,France,FR,FRA,.fr
+france,France,FR,FRA,.fr
+reunion,France,FR,FRA,.fr
+french guiana,French Guiana,GF,GUF,
+gf,French Guiana,GF,GUF,
+pf,French Polynesia,PF,PYF,
+french polynesia,French Polynesia,PF,PYF,
+french southern territories,French Southern Territories,TF,ATF,
+tf,French Southern Territories,TF,ATF,
+french southern and antarctic lands,French Southern Territories,TF,ATF,
+gabon,Gabon,GA,GAB,.ga
+ga,Gabon,GA,GAB,.ga
+gab,Gabon,GA,GAB,.ga
+gm,Gambia,GM,GMB,.gm
+the gambia,Gambia,GM,GMB,.gm
+gmb,Gambia,GM,GMB,.gm
+gambia,Gambia,GM,GMB,.gm
+geo,Georgia,GE,GEO,.ge
+ge,Georgia,GE,GEO,.ge
+georgia,Georgia,GE,GEO,.ge
+german democratic republic,German Democratic Republic,,,
+germany,Germany,DE,DEU,.de
+de,Germany,DE,DEU,.de
+deu,Germany,DE,DEU,.de
+east germany,Germany,DE,DEU,.de
+gha,Ghana,GH,GHA,.gh
+gh,Ghana,GH,GHA,.gh
+ghana,Ghana,GH,GHA,.gh
+gi,Gibraltar,GI,GIB,
+gibraltar,Gibraltar,GI,GIB,
+greece,Greece,GR,GRC,.gr
+grc,Greece,GR,GRC,.gr
+gr,Greece,GR,GRC,.gr
+gl,Greenland,GL,GRL,
+greenland,Greenland,GL,GRL,
+grd,Grenada,GD,GRD,.gd
+grenada,Grenada,GD,GRD,.gd
+gd,Grenada,GD,GRD,.gd
+guadeloupe,Guadeloupe,GP,GLP,
+gp,Guadeloupe,GP,GLP,
+guadaloupe,Guadeloupe,GP,GLP,
+gu,Guam,GU,GUM,
+guam,Guam,GU,GUM,
+gt,Guatemala,GT,GTM,.gt
+guatemala,Guatemala,GT,GTM,.gt
+gtm,Guatemala,GT,GTM,.gt
+gg,Guernsey,GG,GGY,
+guernsey,Guernsey,GG,GGY,
+gin,Guinea,GN,GIN,.gn
+guinea,Guinea,GN,GIN,.gn
+gn,Guinea,GN,GIN,.gn
+guinea bissau,Guinea-Bissau,GW,GNB,.gw
+gnb,Guinea-Bissau,GW,GNB,.gw
+guinea-bissau,Guinea-Bissau,GW,GNB,.gw
+gw,Guinea-Bissau,GW,GNB,.gw
+guyana,Guyana,GY,GUY,.gy
+gy,Guyana,GY,GUY,.gy
+guy,Guyana,GY,GUY,.gy
+haiti,Haiti,HT,HTI,.ht
+ht,Haiti,HT,HTI,.ht
+hti,Haiti,HT,HTI,.ht
+hamburg,Hamburg,,,
+hanover,Hanover,,,
+hm,Heard & McDonald Islands,HM,HMD,
+heard island and mcdonald islands,Heard & McDonald Islands,HM,HMD,
+heard and mcdonald islands,Heard & McDonald Islands,HM,HMD,
+hesse electoral,Hesse Electoral,,,
+hesse grand ducal,Hesse Grand Ducal,,,
+hesse-darmstadt,Hesse-Darmstadt,,,
+hesse-kassel,Hesse-Kassel,,,
+honduras,Honduras,HN,HND,.hn
+hn,Honduras,HN,HND,.hn
+hnd,Honduras,HN,HND,.hn
+hong kong,Hong Kong SAR China,HK,HKG,.hk
+hk,Hong Kong SAR China,HK,HKG,.hk
+hong kong sar china,Hong Kong SAR China,HK,HKG,.hk
+hong kong s.a.r.,Hong Kong SAR China,HK,HKG,.hk
+hkg,Hong Kong SAR China,HK,HKG,.hk
+hu,Hungary,HU,HUN,.hu
+hun,Hungary,HU,HUN,.hu
+hungary,Hungary,HU,HUN,.hu
+is,Iceland,IS,ISL,.is
+isl,Iceland,IS,ISL,.is
+iceland,Iceland,IS,ISL,.is
+in,India,IN,IND,.in
+ind,India,IN,IND,.in
+india,India,IN,IND,.in
+idn,Indonesia,ID,IDN,.id
+id,Indonesia,ID,IDN,.id
+indonesia,Indonesia,ID,IDN,.id
+"iran, islamic republic of",Iran,IR,IRN,.ir
+ir,Iran,IR,IRN,.ir
+iran,Iran,IR,IRN,.ir
+irn,Iran,IR,IRN,.ir
+irq,Iraq,IQ,IRQ,.iq
+iraq,Iraq,IQ,IRQ,.iq
+iq,Iraq,IQ,IRQ,.iq
+irl,Ireland,IE,IRL,.ie
+ireland,Ireland,IE,IRL,.ie
+ie,Ireland,IE,IRL,.ie
+im,Isle of Man,IM,IMN,
+isle of man,Isle of Man,IM,IMN,
+israel,Israel,IL,ISR,.il
+il,Israel,IL,ISR,.il
+isr,Israel,IL,ISR,.il
+italy,Italy,IT,ITA,.it
+ita,Italy,IT,ITA,.it
+it,Italy,IT,ITA,.it
+jam,Jamaica,JM,JAM,.jm
+jm,Jamaica,JM,JAM,.jm
+jamaica,Jamaica,JM,JAM,.jm
+jp,Japan,JP,JPN,.jp
+japan,Japan,JP,JPN,.jp
+jpn,Japan,JP,JPN,.jp
+je,Jersey,JE,JEY,
+jersey,Jersey,JE,JEY,
+jor,Jordan,JO,JOR,.jo
+jo,Jordan,JO,JOR,.jo
+jordan,Jordan,JO,JOR,.jo
+kaz,Kazakhstan,KZ,KAZ,.kz
+kz,Kazakhstan,KZ,KAZ,.kz
+kazakhstan,Kazakhstan,KZ,KAZ,.kz
+baykonur cosmodrome,Kazakhstan,KZ,KAZ,.kz
+kenya,Kenya,KE,KEN,.ke
+ke,Kenya,KE,KEN,.ke
+ken,Kenya,KE,KEN,.ke
+kir,Kiribati,KI,KIR,.ki
+kiribati,Kiribati,KI,KIR,.ki
+ki,Kiribati,KI,KIR,.ki
+xk,Kosovo,XK,,
+kosovo,Kosovo,XK,,
+kuwait,Kuwait,KW,KWT,.kw
+kw,Kuwait,KW,KWT,.kw
+kwt,Kuwait,KW,KWT,.kw
+kgz,Kyrgyzstan,KG,KGZ,.kg
+kyrgyzstan,Kyrgyzstan,KG,KGZ,.kg
+kg,Kyrgyzstan,KG,KGZ,.kg
+kyrgyz republic,Kyrgyzstan,KG,KGZ,.kg
+lao people's democratic republic,Laos,LA,LAO,.la
+la,Laos,LA,LAO,.la
+lao,Laos,LA,LAO,.la
+laos,Laos,LA,LAO,.la
+latvia,Latvia,LV,LVA,.lv
+lva,Latvia,LV,LVA,.lv
+lv,Latvia,LV,LVA,.lv
+lbn,Lebanon,LB,LBN,.lb
+lb,Lebanon,LB,LBN,.lb
+lebanon,Lebanon,LB,LBN,.lb
+lso,Lesotho,LS,LSO,.ls
+ls,Lesotho,LS,LSO,.ls
+lesotho,Lesotho,LS,LSO,.ls
+liberia,Liberia,LR,LBR,.lr
+lr,Liberia,LR,LBR,.lr
+lbr,Liberia,LR,LBR,.lr
+ly,Libya,LY,LBY,.ly
+lby,Libya,LY,LBY,.ly
+libya,Libya,LY,LBY,.ly
+libyan arab jamahiriya,Libya,LY,LBY,.ly
+li,Liechtenstein,LI,LIE,.li
+lie,Liechtenstein,LI,LIE,.li
+liechtenstein,Liechtenstein,LI,LIE,.li
+ltu,Lithuania,LT,LTU,.lt
+lt,Lithuania,LT,LTU,.lt
+lithuania,Lithuania,LT,LTU,.lt
+luxembourg,Luxembourg,LU,LUX,.lu
+lu,Luxembourg,LU,LUX,.lu
+lux,Luxembourg,LU,LUX,.lu
+macao s.a.r,Macao SAR China,MO,MAC,
+mo,Macao SAR China,MO,MAC,
+macao,Macao SAR China,MO,MAC,
+mdg,Madagascar,MG,MDG,.mg
+mg,Madagascar,MG,MDG,.mg
+madagascar,Madagascar,MG,MDG,.mg
+mw,Malawi,MW,MWI,.mw
+mwi,Malawi,MW,MWI,.mw
+malawi,Malawi,MW,MWI,.mw
+my,Malaysia,MY,MYS,.my
+mys,Malaysia,MY,MYS,.my
+malaysia,Malaysia,MY,MYS,.my
+mdv,Maldives,MV,MDV,.mv
+maldives,Maldives,MV,MDV,.mv
+mv,Maldives,MV,MDV,.mv
+mli,Mali,ML,MLI,.ml
+ml,Mali,ML,MLI,.ml
+mali,Mali,ML,MLI,.ml
+mt,Malta,MT,MLT,.mt
+malta,Malta,MT,MLT,.mt
+mlt,Malta,MT,MLT,.mt
+marshall islands,Marshall Islands,MH,MHL,.mh
+mhl,Marshall Islands,MH,MHL,.mh
+mh,Marshall Islands,MH,MHL,.mh
+mq,Martinique,MQ,MTQ,
+martinique,Martinique,MQ,MTQ,
+mauritania,Mauritania,MR,MRT,.mr
+mrt,Mauritania,MR,MRT,.mr
+mr,Mauritania,MR,MRT,.mr
+mauritius,Mauritius,MU,MUS,.mu
+mus,Mauritius,MU,MUS,.mu
+mu,Mauritius,MU,MUS,.mu
+mayotte,Mayotte,YT,MYT,
+yt,Mayotte,YT,MYT,
+mecklenburg schwerin,Mecklenburg Schwerin,,,
+mex,Mexico,MX,MEX,.mx
+mx,Mexico,MX,MEX,.mx
+mexico,Mexico,MX,MEX,.mx
+federated states of micronesia,Micronesia (Federated States of),FM,FSM,.fm
+"micronesia, federated states of",Micronesia (Federated States of),FM,FSM,.fm
+"micronesia",Micronesia (Federated States of),FM,FSM,.fm
+fsm,Micronesia (Federated States of),FM,FSM,.fm
+fm,Micronesia (Federated States of),FM,FSM,.fm
+micronesia (federated states of),Micronesia (Federated States of),FM,FSM,.fm
+modena,Modena,,,
+md,Moldova,MD,MDA,.md
+"moldova, republic of",Moldova,MD,MDA,.md
+mda,Moldova,MD,MDA,.md
+moldova,Moldova,MD,MDA,.md
+mco,Monaco,MC,MCO,.mc
+mc,Monaco,MC,MCO,.mc
+monaco,Monaco,MC,MCO,.mc
+mn,Mongolia,MN,MNG,.mn
+mongolia,Mongolia,MN,MNG,.mn
+mng,Mongolia,MN,MNG,.mn
+montenegro,Montenegro,ME,MNE,.me
+mne,Montenegro,ME,MNE,.me
+me,Montenegro,ME,MNE,.me
+ms,Montserrat,MS,MSR,
+montserrat,Montserrat,MS,MSR,
+mar,Morocco,MA,MAR,.ma
+ma,Morocco,MA,MAR,.ma
+morocco,Morocco,MA,MAR,.ma
+mozambique,Mozambique,MZ,MOZ,.mz
+moz,Mozambique,MZ,MOZ,.mz
+mz,Mozambique,MZ,MOZ,.mz
+mm,Myanmar (Burma),MM,MMR,.mm
+myanmar (burma),Myanmar (Burma),MM,MMR,.mm
+myanmar,Myanmar (Burma),MM,MMR,.mm
+mmr,Myanmar (Burma),MM,MMR,.mm
+na,Namibia,NA,NAM,.na
+nam,Namibia,NA,NAM,.na
+nassau,Nassau,,,
+nr,Nauru,NR,NRU,.nr
+nauru,Nauru,NR,NRU,.nr
+nru,Nauru,NR,NRU,.nr
+nepal,Nepal,NP,NPL,.np
+npl,Nepal,NP,NPL,.np
+np,Nepal,NP,NPL,.np
+nld,Netherlands,NL,NLD,.nl
+nl,Netherlands,NL,NLD,.nl
+netherlands,Netherlands,NL,NLD,.nl
+the netherlands,Netherlands,NL,NLD,.nl
+nc,New Caledonia,NC,NCL,
+new caledonia,New Caledonia,NC,NCL,
+nzl,New Zealand,NZ,NZL,.nz
+new zealand,New Zealand,NZ,NZL,.nz
+nz,New Zealand,NZ,NZL,.nz
+ni,Nicaragua,NI,NIC,.ni
+nicaragua,Nicaragua,NI,NIC,.ni
+nic,Nicaragua,NI,NIC,.ni
+ne,Niger,NE,NER,.ne
+niger,Niger,NE,NER,.ne
+ner,Niger,NE,NER,.ne
+nigeria,Nigeria,NG,NGA,.ng
+ng,Nigeria,NG,NGA,.ng
+nga,Nigeria,NG,NGA,.ng
+niue,Niue,NU,NIU,
+nu,Niue,NU,NIU,
+nf,Norfolk Island,NF,NFK,
+norfolk island,Norfolk Island,NF,NFK,
+kp,North Korea,KP,PRK,.kp
+prk,North Korea,KP,PRK,.kp
+north korea,North Korea,KP,PRK,.kp
+"korea, democratic people's republic of",North Korea,KP,PRK,.kp
+mk,North Macedonia,MK,MKD,.mk
+mkd,North Macedonia,MK,MKD,.mk
+macedonia,North Macedonia,MK,MKD,.mk
+north macedonia,North Macedonia,MK,MKD,.mk
+"macedonia, the former yugoslav republic of",North Macedonia,MK,MKD,.mk
+northern mariana islands,Northern Mariana Islands,MP,MNP,
+mp,Northern Mariana Islands,MP,MNP,
+nor,Norway,NO,NOR,.no
+norway,Norway,NO,NOR,.no
+no,Norway,NO,NOR,.no
+svalbard & jan mayen islands,Norway,NO,NOR,.no
+bouvet island,Norway,NO,NOR,.no
+oldenburg,Oldenburg,,,
+om,Oman,OM,OMN,.om
+omn,Oman,OM,OMN,.om
+oman,Oman,OM,OMN,.om
+orange free state,Orange Free State,,,
+pak,Pakistan,PK,PAK,.pk
+pk,Pakistan,PK,PAK,.pk
+pakistan,Pakistan,PK,PAK,.pk
+plw,Palau,PW,PLW,.pw
+pw,Palau,PW,PLW,.pw
+palau,Palau,PW,PLW,.pw
+"palestinian territory, occupied",Palestinian Territories,PS,PSE,.ps
+pse,Palestinian Territories,PS,PSE,.ps
+palestine,Palestinian Territories,PS,PSE,.ps
+ps,Palestinian Territories,PS,PSE,.ps
+palestinian territories,Palestinian Territories,PS,PSE,.ps
+palestinian territory,Palestinian Territories,PS,PSE,.ps
+panama,Panama,PA,PAN,.pa
+pa,Panama,PA,PAN,.pa
+pan,Panama,PA,PAN,.pa
+png,Papua New Guinea,PG,PNG,.pg
+papua new guinea,Papua New Guinea,PG,PNG,.pg
+pg,Papua New Guinea,PG,PNG,.pg
+pry,Paraguay,PY,PRY,.py
+paraguay,Paraguay,PY,PRY,.py
+py,Paraguay,PY,PRY,.py
+parma,Parma,,,
+peru,Peru,PE,PER,.pe
+pe,Peru,PE,PER,.pe
+per,Peru,PE,PER,.pe
+philippines,Philippines,PH,PHL,.ph
+ph,Philippines,PH,PHL,.ph
+phl,Philippines,PH,PHL,.ph
+piedmont-sardinia,Piedmont-Sardinia,,,
+pitcairn islands,Pitcairn Islands,PN,PCN,
+pitcairn island,Pitcairn Islands,PN,PCN,
+pn,Pitcairn Islands,PN,PCN,
+pol,Poland,PL,POL,.pl
+pl,Poland,PL,POL,.pl
+poland,Poland,PL,POL,.pl
+pt,Portugal,PT,PRT,.pt
+prt,Portugal,PT,PRT,.pt
+portugal,Portugal,PT,PRT,.pt
+prussia,Prussia,,,
+pr,Puerto Rico,PR,PRI,
+puerto rico,Puerto Rico,PR,PRI,
+qa,Qatar,QA,QAT,.qa
+qat,Qatar,QA,QAT,.qa
+qatar,Qatar,QA,QAT,.qa
+republic of vietnam,Republic of Vietnam,,,
+re,Réunion,RE,REU,
+réunion,Réunion,RE,REU,
+ro,Romania,RO,ROU,.ro
+rou,Romania,RO,ROU,.ro
+romania,Romania,RO,ROU,.ro
+russian federation,Russia,RU,RUS,.ru
+russia,Russia,RU,RUS,.ru
+rus,Russia,RU,RUS,.ru
+ru,Russia,RU,RUS,.ru
+rwa,Rwanda,RW,RWA,.rw
+rw,Rwanda,RW,RWA,.rw
+rwanda,Rwanda,RW,RWA,.rw
+mf,Saint Martin (French part),MF,MAF,
+saint martin (french part),Saint Martin (French part),MF,MAF,
+wsm,Samoa,WS,WSM,.ws
+ws,Samoa,WS,WSM,.ws
+samoa,Samoa,WS,WSM,.ws
+sm,San Marino,SM,SMR,.sm
+san marino,San Marino,SM,SMR,.sm
+smr,San Marino,SM,SMR,.sm
+st,São Tomé & Príncipe,ST,STP,.st
+sao tome and principe,São Tomé & Príncipe,ST,STP,.st
+stp,São Tomé & Príncipe,ST,STP,.st
+são tomé & príncipe,São Tomé & Príncipe,ST,STP,.st
+são tomé and príncipe,São Tomé & Príncipe,ST,STP,.st
+sardinia,Sardinia,,,
+sau,Saudi Arabia,SA,SAU,.sa
+saudi arabia,Saudi Arabia,SA,SAU,.sa
+sa,Saudi Arabia,SA,SAU,.sa
+saxe-weimar-eisenach,Saxe-Weimar-Eisenach,,,
+saxony,Saxony,,,
+sn,Senegal,SN,SEN,.sn
+sen,Senegal,SN,SEN,.sn
+senegal,Senegal,SN,SEN,.sn
+rs,Serbia,RS,SRB,.rs
+serbia,Serbia,RS,SRB,.rs
+srb,Serbia,RS,SRB,.rs
+serbia and montenegro,Serbia and Montenegro,,,
+sc,Seychelles,SC,SYC,.sc
+syc,Seychelles,SC,SYC,.sc
+seychelles,Seychelles,SC,SYC,.sc
+sl,Sierra Leone,SL,SLE,.sl
+sierra leone,Sierra Leone,SL,SLE,.sl
+sle,Sierra Leone,SL,SLE,.sl
+sg,Singapore,SG,SGP,.sg
+sgp,Singapore,SG,SGP,.sg
+singapore,Singapore,SG,SGP,.sg
+sx,Sint Maarten,SX,SXM,
+sint maarten,Sint Maarten,SX,SXM,
+sint maarten (dutch part),Sint Maarten,SX,SXM,
+sk,Slovakia,SK,SVK,.sk
+slovakia,Slovakia,SK,SVK,.sk
+svk,Slovakia,SK,SVK,.sk
+si,Slovenia,SI,SVN,.si
+slovenia,Slovenia,SI,SVN,.si
+svn,Slovenia,SI,SVN,.si
+sb,Solomon Islands,SB,SLB,.sb
+solomon islands,Solomon Islands,SB,SLB,.sb
+slb,Solomon Islands,SB,SLB,.sb
+so,Somalia,SO,SOM,.so
+somalia,Somalia,SO,SOM,.so
+som,Somalia,SO,SOM,.so
+somaliland,Somaliland,,,
+south africa,South Africa,ZA,ZAF,.za
+za,South Africa,ZA,ZAF,.za
+zaf,South Africa,ZA,ZAF,.za
+south georgia and south sandwich islands,South Georgia & South Sandwich Islands,GS,SGS,
+south georgia and the south sandwich islands,South Georgia & South Sandwich Islands,GS,SGS,
+kr,South Korea,KR,KOR,.kr
+south korea,South Korea,KR,KOR,.kr
+"korea, republic of",South Korea,KR,KOR,.kr
+kor,South Korea,KR,KOR,.kr
+ss,South Sudan,SS,SSD,.ss
+south sudan,South Sudan,SS,SSD,.ss
+ssd,South Sudan,SS,SSD,.ss
+esp,Spain,ES,ESP,.es
+spain,Spain,ES,ESP,.es
+es,Spain,ES,ESP,.es
+lk,Sri Lanka,LK,LKA,.lk
+lka,Sri Lanka,LK,LKA,.lk
+sri lanka,Sri Lanka,LK,LKA,.lk
+bl,St. Barthélemy,BL,BLM,
+saint-barthélemy,St. Barthélemy,BL,BLM,
+saint barthélemy,St. Barthélemy,BL,BLM,
+sh,St. Helena,SH,SHN,
+saint helena,St. Helena,SH,SHN,
+"saint helena, ascension and tristan da cunha",St. Helena,SH,SHN,
+st. kitts & nevis,St. Kitts & Nevis,KN,KNA,.kn
+saint kitts and nevis,St. Kitts & Nevis,KN,KNA,.kn
+st. kitts and nevis,St. Kitts & Nevis,KN,KNA,.kn
+kn,St. Kitts & Nevis,KN,KNA,.kn
+kna,St. Kitts & Nevis,KN,KNA,.kn
+lc,St. Lucia,LC,LCA,.lc
+st. lucia,St. Lucia,LC,LCA,.lc
+saint lucia,St. Lucia,LC,LCA,.lc
+lca,St. Lucia,LC,LCA,.lc
+pm,St. Pierre & Miquelon,PM,SPM,
+saint pierre and miquelon,St. Pierre & Miquelon,PM,SPM,
+st. vincent & grenadines,St. Vincent & Grenadines,VC,VCT,.vc
+saint vincent and the grenadines,St. Vincent & Grenadines,VC,VCT,.vc
+st. vincent and the grenadines,St. Vincent & Grenadines,VC,VCT,.vc
+vct,St. Vincent & Grenadines,VC,VCT,.vc
+vc,St. Vincent & Grenadines,VC,VCT,.vc
+sdn,Sudan,SD,SDN,.sd
+sd,Sudan,SD,SDN,.sd
+sudan,Sudan,SD,SDN,.sd
+sr,Suriname,SR,SUR,.sr
+suriname,Suriname,SR,SUR,.sr
+sur,Suriname,SR,SUR,.sr
+svalbard and jan mayen,Svalbard & Jan Mayen,SJ,SJM,
+sj,Svalbard & Jan Mayen,SJ,SJM,
+swe,Sweden,SE,SWE,.se
+sweden,Sweden,SE,SWE,.se
+se,Sweden,SE,SWE,.se
+che,Switzerland,CH,CHE,.ch
+ch,Switzerland,CH,CHE,.ch
+switzerland,Switzerland,CH,CHE,.ch
+syria,Syria,SY,SYR,.sy
+sy,Syria,SY,SYR,.sy
+syr,Syria,SY,SYR,.sy
+syrian arab republic,Syria,SY,SYR,.sy
+taiwan,Taiwan,TW,TWN,.tw
+tw,Taiwan,TW,TWN,.tw
+"taiwan, province of china",Taiwan,TW,TWN,.tw
+twn,Taiwan,TW,TWN,.tw
+tjk,Tajikistan,TJ,TJK,.tj
+tj,Tajikistan,TJ,TJK,.tj
+tajikistan,Tajikistan,TJ,TJK,.tj
+"tanzania, united republic of",Tanzania,TZ,TZA,.tz
+tanzania,Tanzania,TZ,TZA,.tz
+tza,Tanzania,TZ,TZA,.tz
+tz,Tanzania,TZ,TZA,.tz
+thailand,Thailand,TH,THA,.th
+tha,Thailand,TH,THA,.th
+th,Thailand,TH,THA,.th
+tl,Timor-Leste,TL,TLS,.tl
+timor leste,Timor-Leste,TL,TLS,.tl
+tls,Timor-Leste,TL,TLS,.tl
+timor-leste,Timor-Leste,TL,TLS,.tl
+east timor,Timor-Leste,TL,TLS,.tl
+tgo,Togo,TG,TGO,.tg
+tg,Togo,TG,TGO,.tg
+togo,Togo,TG,TGO,.tg
+tk,Tokelau,TK,TKL,
+ton,Tonga,TO,TON,.to
+tonga,Tonga,TO,TON,.to
+to,Tonga,TO,TON,.to
+tt,Trinidad & Tobago,TT,TTO,.tt
+trinidad & tobago,Trinidad & Tobago,TT,TTO,.tt
+trinidad and tobago,Trinidad & Tobago,TT,TTO,.tt
+tto,Trinidad & Tobago,TT,TTO,.tt
+tn,Tunisia,TN,TUN,.tn
+tun,Tunisia,TN,TUN,.tn
+tunisia,Tunisia,TN,TUN,.tn
+tr,Turkey,TR,TUR,.tr
+turkey,Turkey,TR,TUR,.tr
+tur,Turkey,TR,TUR,.tr
+tkm,Turkmenistan,TM,TKM,.tm
+tm,Turkmenistan,TM,TKM,.tm
+turkmenistan,Turkmenistan,TM,TKM,.tm
+tc,Turks & Caicos Islands,TC,TCA,
+turks and caicos islands,Turks & Caicos Islands,TC,TCA,
+turks and caicos,Turks & Caicos Islands,TC,TCA,
+tv,Tuvalu,TV,TUV,.tv
+tuv,Tuvalu,TV,TUV,.tv
+tuvalu,Tuvalu,TV,TUV,.tv
+two sicilies,Two Sicilies,,,
+us virgin islands,U.S. Virgin Islands,VI,VIR,
+"virgin islands, u.s.",U.S. Virgin Islands,VI,VIR,
+united states virgin islands,U.S. Virgin Islands,VI,VIR,
+vi,U.S. Virgin Islands,VI,VIR,
+ug,Uganda,UG,UGA,.ug
+uga,Uganda,UG,UGA,.ug
+uganda,Uganda,UG,UGA,.ug
+ua,Ukraine,UA,UKR,.ua
+ukraine,Ukraine,UA,UKR,.ua
+ukr,Ukraine,UA,UKR,.ua
+are,United Arab Emirates,AE,ARE,.ae
+united arab emirates,United Arab Emirates,AE,ARE,.ae
+ae,United Arab Emirates,AE,ARE,.ae
+united kingdom,United Kingdom,GB,GBR,.uk
+gbr,United Kingdom,GB,GBR,.uk
+gb,United Kingdom,GB,GBR,.uk
+northern ireland,United Kingdom,GB,GBR,.uk
+united province ca,United Province CA,,,
+usa,United States,US,USA,.us
+united states of america,United States,US,USA,.us
+us,United States,US,USA,.us
+us naval base guantanamo bay,United States,US,USA,.us
+united states,United States,US,USA,.us
+united states minor outlying islands,United States Minor Outlying Islands (the),UM,UMI,
+um,United States Minor Outlying Islands (the),UM,UMI,
+ury,Uruguay,UY,URY,.uy
+uy,Uruguay,UY,URY,.uy
+uruguay,Uruguay,UY,URY,.uy
+uz,Uzbekistan,UZ,UZB,.uz
+uzbekistan,Uzbekistan,UZ,UZB,.uz
+uzb,Uzbekistan,UZ,UZB,.uz
+vanuatu,Vanuatu,VU,VUT,.vu
+vu,Vanuatu,VU,VUT,.vu
+vut,Vanuatu,VU,VUT,.vu
+vatican,Vatican City,VA,VAT,.va
+vat,Vatican City,VA,VAT,.va
+holy see (vatican city state),Vatican City,VA,VAT,.va
+holy see,Vatican City,VA,VAT,.va
+va,Vatican City,VA,VAT,.va
+vatican city,Vatican City,VA,VAT,.va
+venezuela,Venezuela,VE,VEN,.ve
+"venezuela, bolivarian republic of",Venezuela,VE,VEN,.ve
+ven,Venezuela,VE,VEN,.ve
+ve,Venezuela,VE,VEN,.ve
+viet nam,Vietnam,VN,VNM,.vn
+vietnam,Vietnam,VN,VNM,.vn
+vnm,Vietnam,VN,VNM,.vn
+vn,Vietnam,VN,VNM,.vn
+wallis and futuna,Wallis & Futuna,WF,WLF,
+wallis and futuna islands,Wallis & Futuna,WF,WLF,
+wf,Wallis & Futuna,WF,WLF,
+eh,Western Sahara,EH,ESH,
+western sahara,Western Sahara,EH,ESH,
+wuerttemburg,Wuerttemburg,,,
+würtemberg,Würtemberg,,,
+yem,Yemen,YE,YEM,.ye
+ye,Yemen,YE,YEM,.ye
+yemen,Yemen,YE,YEM,.ye
+yemen arab republic,Yemen Arab Republic,,,
+yemen people's republic,Yemen People's Republic,,,
+yugoslavia,Yugoslavia,,,
+zm,Zambia,ZM,ZMB,.zm
+zmb,Zambia,ZM,ZMB,.zm
+zambia,Zambia,ZM,ZMB,.zm
+zanzibar,Zanzibar,,,
+zw,Zimbabwe,ZW,ZWE,.zw
+zimbabwe,Zimbabwe,ZW,ZWE,.zw
+zwe,Zimbabwe,ZW,ZWE,.zw
+heard & mcdonald islands,Heard & McDonald Islands,HM,HMD,
+macao sar china,Macao SAR China,MO,MAC,
+namibia,Namibia,NA,NAM,.na
+south georgia & south sandwich islands,South Georgia & South Sandwich Islands,GS,SGS,
+st. barthélemy,St. Barthélemy,BL,BLM,
+st. helena,St. Helena,SH,SHN,
+st. pierre & miquelon,St. Pierre & Miquelon,PM,SPM,
+st. pierre and miquelon,St. Pierre & Miquelon,PM,SPM,
+svalbard & jan mayen,Svalbard & Jan Mayen,SJ,SJM,
+tokelau,Tokelau,TK,TKL,
+turks & caicos islands,Turks & Caicos Islands,TC,TCA,
+u.s. virgin islands,U.S. Virgin Islands,VI,VIR,
+united states minor outlying islands (the),United States Minor Outlying Islands (the),UM,UMI,
+wallis & futuna,Wallis & Futuna,WF,WLF,
+soviet union,Soviet Union,,,

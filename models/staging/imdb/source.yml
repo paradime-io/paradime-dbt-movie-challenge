@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: imdb
+    database: antonddqlondq_analytics
+    schema: imdb_non_commercial_data
+    description: >
+      The following source includes datasets from the "IMDb Non-Commercial Datasets" resource.
+      Customers can access subsets of IMDb data for personal and non-commercial use.
+      Acknowledgement: Information courtesy of IMDb (https://www.imdb.com). Used with permission.
+
+    meta:
+      data owner: https://developer.imdb.com/non-commercial-datasets/
+      ingestion owner: Anton Goncharuk
+      code owner: Anton Goncharuk
+
+    tables:
+      - name: crew
+      - name: names
+      - name: principals

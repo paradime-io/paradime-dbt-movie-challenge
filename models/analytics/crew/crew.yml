@@ -1,0 +1,74 @@
+version: 2
+models:
+  - name: crew
+    description: >
+      Detailed model that provides information on individuals who contributed to
+      the creation of the movie including actors who played characters.
+
+    columns:
+      - name: record_key
+        data_type: varchar
+        description: >
+          The primary key. Internally generated surrogate key composed of
+          'imdb_id', 'name_id', and 'role' values.
+        tests:
+          - not_null
+          - unique
+        meta:
+          dimension:
+            type: string
+            hidden: true
+
+      - name: imdb_id
+        data_type: varchar
+        description: IMDb ID of a Movie that the crew member is associated with.
+        meta:
+          dimension:
+            type: string
+            label: IMDb ID
+            group_label: IDs
+            urls:
+              - label: Go To IMDb Page
+                url: "https://www.imdb.com/title/${ value.raw }"
+          metrics:
+            total_movies:
+              type: count_distinct
+              label: Total Movie Count
+              description: The total number of movies.
+
+      - name: name_id
+        data_type: varchar
+        description: Unique identifier of the crew member in the IMDb database.
+        meta:
+          dimension:
+            type: string
+            label: Name ID
+            group_label: IDs
+          metrics:
+            total_individuals:
+              type: count_distinct
+              label: Total Individual Count
+              description: The total number of individuals.
+
+      - name: full_name
+        data_type: varchar
+        description: Full name of the crew member or actor.
+        meta:
+          dimension:
+            type: string
+            group_label: Member Details
+            urls:
+              - label: Go To IMDb Page
+                url: "https://www.imdb.com/name/${ row.crew.name_id.raw }"
+              - label: Go To Wiki Page
+                url: "https://en.wikipedia.org/wiki/${ value.raw }"
+
+      - name: role
+        data_type: varchar
+        description: >
+          Role or job title of the crew member in the production (e.g.,
+          Director, Writer, Actor).
+        meta:
+          dimension:
+            type: string
+            group_label: Member Details

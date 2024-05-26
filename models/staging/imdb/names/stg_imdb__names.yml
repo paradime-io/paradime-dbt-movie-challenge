@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: stg_imdb__names
+    description: >
+      Staged version of the 'imdb_non_commercial_data.names' table. Each record in this model
+      represents an individual from IMDb including their basic personal information and notable works.
+
+      Acknowledgement: Information courtesy of IMDb (https://www.imdb.com). Used with permission.
+
+    columns:
+      - name: name_id
+        data_type: varchar
+        description: >
+          Unique identifier for the individual on IMDb.
+        tests:
+          - not_null
+          - unique
+
+      - name: full_name
+        data_type: varchar
+        description: >
+          The full name of the individual.
+
+      - name: birth_year
+        data_type: varchar
+        description: >
+          The birth year of the individual.
+
+      - name: death_year
+        data_type: varchar
+        description: >
+          The death year of the individual, if applicable. This field may be null for living individuals.
+
+      - name: roles
+        data_type: array
+        description: >
+          Array of roles or professions associated with the individual (e.g., 'Actor', 'Director').
+
+      - name: known_for_imdb_ids
+        data_type: array
+        description: >
+          Array of IMDb IDs representing the titles the individual is best known for.
+
+      - name: ingested_at
+        data_type: varchar
+        description: >
+          The UTC timestamp indicating when the data was ingested into the system.
