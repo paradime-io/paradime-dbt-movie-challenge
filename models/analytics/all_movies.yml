@@ -82,11 +82,21 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            avg_movie_budget:
+              type: average
+            med_movie_budget:
+              type: median
       - name: revenue
         description: ""
         meta:
           dimension:
             type: number
+          metrics:
+            avg_movie_revenue:
+              type: average
+            med_movie_revenue:
+              type: median
       - name: collection_name
         description: ""
         meta:
@@ -110,3 +120,28 @@ models:
           metrics:
             total_movie_count:
               type: count_distinct
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: rotten_tomatoes_rating
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metacritic_rating
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: bechdel_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: passes_bechdel_test
+        description: ""
+        meta:
+          dimension:
+            type: boolean

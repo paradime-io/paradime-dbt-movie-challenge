@@ -55,6 +55,18 @@ select
     revenue,
     collection_name,
     imdb_votes,
+    imdb_rating,
+    rotten_tomatoes_rating,
+    metacritic_rating,
+    bechdel_rating,
+    case 
+        when bechdel_rating < 3
+            then FALSE
+        when bechdel_rating = 3 
+            then TRUE
+        else 
+            NULL
+    end as passes_bechdel_test,
     mp.has_female_director
 from 
     movies as m

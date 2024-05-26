@@ -1,6 +1,11 @@
 WITH src AS (
     SELECT 
-        IMDB_ID,
+        case 
+            when IMDB_ID = '' 
+                then NULL
+            else 
+                IMDB_ID
+        end as IMDB_ID,
         TITLE,
         DIRECTOR,
         WRITER,

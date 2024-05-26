@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: country_count_cumulative
+    columns:
+      - name: production_country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: running_total
+        description: ""
+        meta:
+          dimension:
+            type: number

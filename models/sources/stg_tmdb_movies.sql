@@ -19,7 +19,12 @@ WITH src AS (
         POSTER_PATH,
         BACKDROP_PATH,
         BELONGS_TO_COLLECTION,
-        IMDB_ID,
+        case 
+            when IMDB_ID = '' 
+                then NULL
+            else 
+                IMDB_ID
+        end as IMDB_ID,
         GENRE_NAMES,
         SPOKEN_LANGUAGES,
         PRODUCTION_COMPANY_NAMES,
