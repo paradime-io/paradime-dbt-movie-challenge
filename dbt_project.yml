@@ -28,5 +28,5 @@ models:
       +schema: intermediate
       +materialized: view
     marts:
-      +schema: intermediate
+      +schema: marts
       +materialized: view
