@@ -89,3 +89,6 @@ models:
           metrics:
             avg_runtime:
               type: average
+      - name: release_year
+        description:
+          Release year of the movie
