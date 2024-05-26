@@ -61,7 +61,7 @@ Integrating data about movie entities from additonal data sources was done using
 
 Integrating data relating to the **people** involved in creating movies was more complicated due to the lack of unique identifiers for the people in the original dataset: `omdb_movies` contains a comma-separated list of people names in the **DIRECTOR**, **WRITER**, and **ACTORS** fields. People names are also often suffixed with further detail about the person's role, eg. "(co-director)"
 
-Joining people data together involved a few steps including splitting comma-separated lists of names in `omdb_movies`, extracting extra information in parentheses to another column, and then joining onto data from wikidata using person name. A **seed file** was also used to perform name corrections where the same person was referred to by different names in different datasets.
+Joining people data together involved a few steps including splitting comma-separated lists of names in `omdb_movies`, extracting extra information in parentheses to another column, and then joining onto data from wikidata using person name. A [seed file](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-imogenssford/seeds/person_name_fixes.csv) was also used to perform name corrections where the same person was referred to by different names in different datasets.
 
 ## Data Lineage and Schemas
 
