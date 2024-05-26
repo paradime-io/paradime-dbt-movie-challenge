@@ -1,5 +1,53 @@
 version: 2
 models:
+  - name: agg_revenue_budget_by_year
+    description: "Movie revenue and budget information by year"
+    columns:
+      - name: release_decade
+        description: "Decade of movie release"
+        meta:
+          dimension:
+            type: string
+      - name: release_year
+        description: "Year of movie release"
+        meta:
+          dimension:
+            type: date
+      - name: movie_count
+        description: "Number of movies produced"
+        meta:
+          dimension:
+            type: number
+      - name: positive_roi_movies
+        description: "Number of movies with revenue > budget"
+        meta:
+          dimension:
+            type: number
+      - name: negative_roi_movies
+        description: "Number of movies with revenue < budget"
+        meta:
+          dimension:
+            type: number
+      - name: total_revenue
+        description: "Total revenue"
+        meta:
+          dimension:
+            type: number
+      - name: total_budget
+        description: "Total budget"
+        meta:
+          dimension:
+            type: number
+      - name: total_roi
+        description: "Return on investment (total revenue / total budget)"
+        meta:
+          dimension:
+            type: number
+      - name: positive_neg_roi_ratio
+        description: "Ratio of movies that made money:movies that lost money"
+        meta:
+          dimension:
+            type: number
   - name: split_genre_names_to_rows
     columns:
       - name: genre

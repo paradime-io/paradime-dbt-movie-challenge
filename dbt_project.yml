@@ -27,4 +27,7 @@ models:
     example_transformations:
       intermediate:
         +schema: intermediate
-        +materialized: view  
+        +materialized: view
+    marts:
+      +schema: marts
+      +materialized: view
