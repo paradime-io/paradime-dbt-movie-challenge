@@ -1,0 +1,24 @@
+version: 2
+
+exposures:
+
+  - name: media
+    label: Media - Lightdash Explore
+    type: dashboard
+    maturity: high
+    url: https://app.lightdash.cloud/projects/cdc308b7-53ba-4877-9950-87a9eb8c89db/tables/media
+    description: >
+      Consolidated, a "One-Stop-Shop" Lightdash Explore that combines Movie and TV Series data 
+      from various sources, enriching, detailing and unifying attributes relevant to both media 
+      types.
+
+    depends_on:
+      - ref('media')
+      - ref('media_genres')
+      - ref('media_languages')
+      - ref('media_production_companies')
+      - ref('media_media_production_countries')
+
+    owner:
+      name: Anton Goncharuk
+      email: anton.ddq@gmail.com
