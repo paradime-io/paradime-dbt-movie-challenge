@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: joined_movies
+    description: "A model that joins movies data."
+    columns:
+      - name: omdb_id
+        description: "The movie ID on OMDB"
+        tests:
+          - unique
+      - name: tmdb_id
+        description: "The movie ID on TMDB"
+        tests:
+          - unique
+      - name: imdb_id
+        description: "the movie ID on IMDB"
+ 

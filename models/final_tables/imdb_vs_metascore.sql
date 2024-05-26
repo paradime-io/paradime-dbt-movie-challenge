@@ -4,7 +4,7 @@ select
     metascore / 10 as metascore_divided,
     imdb_rating,
     imdb_votes,
-    imdb_rating - (metascore / 10) as imdb_metascore_difference
+    imdb_rating - (metascore / 10) as imdb_metascore_difference,
     case 
         when imdb_rating - (metascore / 10) > 0 then 'User favored'
         when imdb_rating - (metascore / 10) < 0 then 'Critic favored'
