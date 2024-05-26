@@ -65,3 +65,27 @@ models:
         meta:
           dimension:
             type: number
+  - name: movie_runtime
+    columns:
+      - name: imdb_id
+        description:
+          The movie's ID on imdb.com
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description:
+          The title of the movie
+        meta:
+          dimension:
+            type: string
+      - name: release_date
+        description:
+          Release date of the movie
+      - name: runtime
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_runtime:
+              type: average
