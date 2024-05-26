@@ -6,3 +6,8 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: ADDITIONAL_TABLES
+    database: VIKTORLIKARMFHXO_ANALYTICS
+    schema: STAGING
+    tables:
+      - name: GENRE_VIBES

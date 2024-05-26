@@ -1,26 +1,5 @@
 version: 2
 models:
-  - name: oscar_winners
-    columns:
-      - name: decade
-        description: >-
-          The decade in which the movie was released
-        meta:
-          dimension:
-            type: string
-      - name: genre
-        description: >-
-          The genre name that is split into rows
-        meta:
-          dimension:
-            type: string
-      - name: count
-        description: >-
-          The number of times a genre appears in an Oscar-winning movie
-        meta:
-          metrics:
-            number_of_movies:
-              type: sum
   - name: imdb_vs_metascore
     columns:
       - name: imdb_id
@@ -92,3 +71,24 @@ models:
       - name: release_year
         description:
           Release year of the movie
+  - name: oscar_winners_vibe
+    columns:
+      - name: decade
+        description: >-
+          The decade in which the movie was released
+        meta:
+          dimension:
+            type: string
+      - name: genre
+        description: >-
+          The genre name that is split into rows
+        meta:
+          dimension:
+            type: string
+      - name: count
+        description: >-
+          The number of times a genre appears in an Oscar-winning movie
+        meta:
+          metrics:
+            number_of_movies:
+              type: sum

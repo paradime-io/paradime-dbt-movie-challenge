@@ -18,6 +18,8 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https:/
 ## Introduction
 Explore my project for the _dbt™ data modeling challenge - Movie Edition_, Hosted by [Paradime](https://www.paradime.io/)! 
 This project dives into the analysis and visualization of Movie and TV data!
+My project focuses on mainstream / popular movies by filtering the datasets to exclude a vast number of lesser-known ones. 
+The insights are drawn from performance metrics such as film revenue or rating and I'm also presenting interesting facts for movie enthusiasts.
 
 ## Data Sources and Data Lineage
 My analysis leverages four key data sets:

@@ -10,9 +10,11 @@ WITH GenreSplit AS (
 )
 
 SELECT 
-    concat(decade,'s') as decade,
-    genre,
+    concat(gs.decade,'s') as decade,
+    gs.genre,
+    ref.vibe,
     COUNT(*) AS count
-FROM GenreSplit
-GROUP BY decade, genre
-ORDER BY decade
+FROM GenreSplit gs
+left join {{ ref('stg_genre_vibes') }} ref on gs.genre = ref.genre
+GROUP BY gs.decade, gs.genre, ref.vibe
+ORDER BY gs.decade
