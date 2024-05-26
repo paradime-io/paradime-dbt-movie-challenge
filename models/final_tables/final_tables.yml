@@ -116,3 +116,4 @@ models:
           metrics:
             revenue_total:
               type: sum
+              format: "$,.0f"
