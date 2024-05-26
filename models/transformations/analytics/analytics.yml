@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: fct_genres
+    columns:
+      - name: genre
+      - name: nr_of_movies
+  - name: fct_scifi_vs_all
+    columns: 
+      - name: is_scifi
+      - name: nr_of_movies
+      - name: avg_revenue
+      - name: avg_budget
+      - name: avg_imdb_rating
+      - name: avg_imdb_votes
+      - name: sum_imdb_votes
+      - name: avg_runtime
+      - name: sum_runtime
+  - name: fct_compound
+    columns:
+      - name: is_scifi
+      - name: avg_compound_plot
+      - name: avg_compound_overview

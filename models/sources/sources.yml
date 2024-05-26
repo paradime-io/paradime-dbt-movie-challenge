@@ -6,3 +6,11 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: NLTK_RESULT  
+    database: ISTVANMOZES9041BNG_ANALYTICS
+    schema: staging
+    tables:
+      - name: STG_SCIENCE_FICTIONS_NLP
+      - name: STG_WORD_FREQUENCY
+      - name: STG_ALL_MOVIES_NLP
+      - name: STG_ALL_MOVIES_WORD_FREQUENCY
