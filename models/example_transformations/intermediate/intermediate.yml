@@ -12,7 +12,7 @@ models:
         description: "Year of movie release"
         meta:
           dimension:
-            type: date
+            type: number
       - name: movie_count
         description: "Number of movies produced"
         meta:
