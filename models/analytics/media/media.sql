@@ -17,10 +17,6 @@ standard_country_names as (
     select * from {{ ref('seed_standards__country_names') }}
 ),
 
-crew as (
-    select * from {{ ref('crew') }}
-),
-
 
 -- MODEL VARIABLES
 {% set inflation_adjustment_year = 2024 %}

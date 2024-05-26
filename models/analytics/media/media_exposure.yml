@@ -14,6 +14,7 @@ exposures:
 
     depends_on:
       - ref('media')
+      - ref('crew')
       - ref('media_genres')
       - ref('media_languages')
       - ref('media_production_companies')
