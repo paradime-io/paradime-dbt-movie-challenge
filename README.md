@@ -153,7 +153,7 @@ Since Lightdash doesn't manage Snowflake's semi-structured data types (objects a
 ### Top 10 Most Appearing Actors of All Time
 [Mel Blanc (1908-1989)](https://www.imdb.com/name/nm0000305/), famously known as ["The Man of a Thousand Voices"](https://en.wikipedia.org/wiki/Mel_Blanc), is considered one of Hollywood's most prolific actors with over a thousand screen credits. He created and performed nearly 400 distinct character voices, becoming renowned worldwide for his work in radio, television, cartoons, and movies.
 
-![image](mages/most_appearing_actors_bar.png)
+![image](images/most_appearing_actors_bar.png)
 
 </br>
 
