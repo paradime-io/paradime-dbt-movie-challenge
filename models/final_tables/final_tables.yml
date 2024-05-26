@@ -85,6 +85,9 @@ models:
         meta:
           dimension:
             type: string
+      - name: vibe
+        description:
+          The genre categorized into Positive, Negative or Undecided
       - name: count
         description: >-
           The number of times a genre appears in an Oscar-winning movie
