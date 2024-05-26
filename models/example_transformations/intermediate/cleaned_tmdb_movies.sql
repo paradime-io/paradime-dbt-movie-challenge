@@ -1,6 +1,6 @@
 with numed as (
     select 
-        TMDB_ID,
+        distinct TMDB_ID,
         TITLE,
         ORIGINAL_LANGUAGE,
         STATUS,

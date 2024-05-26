@@ -1,6 +1,6 @@
 with numed as (
     select 
-        IMDB_ID,
+        distinct IMDB_ID,
         TITLE,
         DIRECTOR,
         WRITER,

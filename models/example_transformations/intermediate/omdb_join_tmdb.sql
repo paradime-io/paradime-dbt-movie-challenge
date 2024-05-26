@@ -52,7 +52,7 @@ select
     tmdb.REVENUE
 from
     omdb join tmdb   
-    on omdb.imdb_id = tmdb.imdb_id or
+    on omdb.imdb_id = tmdb.imdb_id and
     omdb.tmdb_id = tmdb.tmdb_id
 )
 

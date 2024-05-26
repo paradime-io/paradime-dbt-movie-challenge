@@ -11,9 +11,8 @@ with movies as(
     PRODUCTION,
     TMDB_ID
     BUDGET,
-    REVENUE,
-    REVENUE - BUDGET as Profit
-from 
+    REVENUE
+    from 
     {{ref('omdb_join_tmdb')}}
 )
 
