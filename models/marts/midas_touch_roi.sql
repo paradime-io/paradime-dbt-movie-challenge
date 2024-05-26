@@ -11,8 +11,6 @@ WITH writers_directors_roi AS (
     GROUP BY
         dw.name
         , dw.role
-    HAVING 
-        COUNT(*) >= 5
 )
 
 /*
