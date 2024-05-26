@@ -3,9 +3,9 @@ version: 2
 models:
   - name: media
     description: >
-      Consolidated analytics model that combines Movie and TV Series data from
-      various sources, detailing and unifying attributes relevant to both media
-      types.
+      Consolidated analytics model that combines Movie and TV Series data from various 
+      sources, detailing, standardizing, enriching and unifying attributes relevant to 
+      both media types.
     meta:
       joins:
         - join: crew

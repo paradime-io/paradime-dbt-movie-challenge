@@ -6,11 +6,13 @@
         {{ flatten_media_array('production_countries', 'production_country') }}
 
     Example output:
-        IMDB_ID	    TMDB_ID	  PRODUCTION_COUNTRY
-        tt0411234	51345	  Malta
-        tt0198668	277302	  United Kingdom
-        tt5805056	433460	  United States
-        tt5805056	433460	  United Kingdom
+        RECORD KEY                          PRODUCTION_COUNTRY
+        46136120f93eef27e8894fabf404ef8b	United States
+        d9f4b2d6e27fbf1518dd7903a5fe7a50	Belgium
+        e8c6796c4597f8a5e3b8a2571110b3de	Brazil
+        0000d80506b976cb31849258536316bc	Germany
+        0000d80506b976cb31849258536316bc	United Kingdom
+        0000d80506b976cb31849258536316bc	United States
 */
 
 
