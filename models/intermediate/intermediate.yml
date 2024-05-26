@@ -1,216 +1,208 @@
 version: 2
 models:
-  - name: join_omdb_and_tmdb_by_tmdb_id
-    columns:
-      - name: tmdb_id
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: title
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: release_date
-        description: ""
-        meta:
-          dimension:
-            type: date
-      - name: overview
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: tagline
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: keywords
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: runtime
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: vote_average
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: revenue
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: budget
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: director
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: writer
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: actors
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: awards
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: production
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: dvd
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: imdb_rating
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: metascore
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: imdb_votes
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: box_office
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: genre_names
-        description: ""
-        meta:
-          dimension:
-            type: string
-  - name: join_omdb_and_tmdb_by_imdb_id
+  - name: int_aggregated_inflation_adjusted_gross
+    description: "This intermediate model aggregates inflation-adjusted gross data by IMDb ID."
     columns:
       - name: imdb_id
-        description: ""
+        description: "IMDb ID of the movie."
         meta:
           dimension:
             type: string
+      - name: summarized_domestic_gross_inflation_adjusted
+        description: "Summarized inflation-adjusted domestic gross of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: summarized_international_gross_inflation_adjusted
+        description: "Summarized inflation-adjusted international gross of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: summarized_worldwide_gross_inflation_adjusted
+        description: "Summarized inflation-adjusted worldwide gross of the movie."
+        meta:
+          dimension:
+            type: number
+  - name: int_avg_cpi_by_year
+    description: "This intermediate model calculates the average Consumer Price Index (CPI) by year."
+    columns:
+      - name: calendar_year
+        description: "Year for which the average CPI is calculated."
+        meta:
+          dimension:
+            type: number
+      - name: avg_cpi
+        description: "Average CPI for the calendar year."
+        meta:
+          dimension:
+            type: number
+  - name: int_awards_categories_normalize
+    description: "This intermediate model normalizes award categories."
+    columns:
+      - name: year_film
+        description: "Year of the film for which the award was given."
+        meta:
+          dimension:
+            type: number
+      - name: year_ceremony
+        description: "Year of the award ceremony."
+        meta:
+          dimension:
+            type: number
+      - name: category
+        description: "Normalized category of the award."
+        meta:
+          dimension:
+            type: string
+      - name: nominee
+        description: "Nominee for the award."
+        meta:
+          dimension:
+            type: string
+      - name: movie
+        description: "Title of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: movie_name_year
+        description: "Concatenation of movie title and year."
+        meta:
+          dimension:
+            type: string
+      - name: winner
+        description: "Indicates whether the nominee was the winner of the award."
+        meta:
+          dimension:
+            type: string
+      - name: award
+        description: "Name of the award."
+        meta:
+          dimension:
+            type: string
+  - name: int_bomojo_releases
+    description: "This intermediate model processes Box Office Mojo releases data."
+    columns:
+      - name: imdb_id
+        description: "IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: release_group
+        description: "Release group of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: rollout
+        description: "Rollout strategy for the movie release."
+        meta:
+          dimension:
+            type: string
+      - name: markets
+        description: "Number of markets in which the movie was released."
+        meta:
+          dimension:
+            type: number
+      - name: domestic_gross
+        description: "Domestic gross revenue generated by the movie."
+        meta:
+          dimension:
+            type: number
+      - name: international_gross
+        description: "International gross revenue generated by the movie."
+        meta:
+          dimension:
+            type: number
+      - name: worldwide_gross
+        description: "Worldwide gross revenue generated by the movie."
+        meta:
+          dimension:
+            type: number
+      - name: release_year
+        description: "Year when the movie was released."
+        meta:
+          dimension:
+            type: number
+  - name: int_budget_inflation_normalize
+    description: "This intermediate model adjusts movie budgets for inflation."
+    columns:
       - name: title
-        description: ""
+        description: "Title of the movie."
         meta:
           dimension:
             type: string
-      - name: release_date
-        description: ""
-        meta:
-          dimension:
-            type: date
-      - name: overview
-        description: ""
+      - name: imdb_id
+        description: "The IMDb ID of the movie."
         meta:
           dimension:
             type: string
-      - name: tagline
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: keywords
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: runtime
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: vote_average
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: revenue
-        description: ""
-        meta:
-          dimension:
-            type: number
       - name: budget
-        description: ""
+        description: "Original budget of the movie."
         meta:
           dimension:
             type: number
-      - name: director
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: writer
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: actors
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: awards
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: production
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: dvd
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: imdb_rating
-        description: ""
+      - name: adjusted_budget
+        description: "Adjusted budget of the movie, accounting for inflation."
         meta:
           dimension:
             type: number
-      - name: metascore
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: imdb_votes
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: box_office
-        description: ""
-        meta:
-          dimension:
-            type: number
-      - name: genre_names
-        description: ""
+  - name: int_flattened_directors_writers
+    description: "This intermediate model flattens director and writer data from OMDB movies."
+    columns:
+      - name: imdb_id
+        description: "The IMDb ID of the movie."
         meta:
           dimension:
             type: string
+      - name: name
+        description: "Name of the director or writer."
+        meta:
+          dimension:
+            type: string
+      - name: role
+        description: "Role of the individual (either Director or Writer)."
+        meta:
+          dimension:
+            type: string
+  - name: int_releases_inflation_normalize
+    description: "This intermediate model normalizes movie releases data by adjusting gross revenue for inflation."
+    columns:
+      - name: imdb_id
+        description: "The IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: release_group
+        description: "The release group of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: rollout
+        description: "The rollout strategy for the movie release."
+        meta:
+          dimension:
+            type: string
+      - name: release_year
+        description: "The year the movie was released."
+        meta:
+          dimension:
+            type: number
+      - name: markets
+        description: "The number of markets in which the movie was released."
+        meta:
+          dimension:
+            type: number
+      - name: adjusted_domestic_gross
+        description: "Adjusted domestic gross revenue of the movie, accounting for inflation."
+        meta:
+          dimension:
+            type: number
+      - name: adjusted_international_gross
+        description: "Adjusted international gross revenue of the movie, accounting for inflation."
+        meta:
+          dimension:
+            type: number
+      - name: adjusted_worldwide_gross
+        description: "Adjusted worldwide gross revenue of the movie, accounting for inflation."
+        meta:
+          dimension:
+            type: number

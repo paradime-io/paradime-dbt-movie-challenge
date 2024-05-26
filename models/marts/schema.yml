@@ -1,0 +1,198 @@
+version: 2
+models:
+  - name: highest_grossing_films
+    description: "Model to track the highest grossing films."
+    columns:
+      - name: imdb_id
+        description: "IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: "Title of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: summarized_domestic_gross_inflation_adjusted
+        description: "Summarized domestic gross earnings for the movie (inflation adjusted)."
+        meta:
+          dimension:
+            type: number
+      - name: summarized_international_gross_inflation_adjusted
+        description: "Summarized international gross earnings for the movie (inflation adjusted)."
+        meta:
+          dimension:
+            type: number
+      - name: summarized_worldwide_gross_inflation_adjusted
+        description: "Summarized worldwide gross earnings for the movie (inflation adjusted)."
+        meta:
+          dimension:
+            type: number
+  - name: midas_touch_gross
+    description: "Model to track the gross earnings of writers and directors."
+    columns:
+      - name: name
+        description: "Name of the writer or director."
+        meta:
+          dimension:
+            type: string
+      - name: role
+        description: "Role of the individual (writer or director)."
+        meta:
+          dimension:
+            type: string
+      - name: median_worldwide_gross
+        description: "Median worldwide gross earnings for the writer or director (inflation adjusted)."
+        meta:
+          dimension:
+            type: number
+      - name: movie_count
+        description: "Total count of movies associated with the writer or director."
+        meta:
+          dimension:
+            type: number
+  - name: midas_touch_roi
+    description: "Model to track the ROI (Return on Investment) of writers and directors."
+    columns:
+      - name: name
+        description: "Name of the writer or director."
+        meta:
+          dimension:
+            type: string
+      - name: role
+        description: "Role of the individual (writer or director)."
+        meta:
+          dimension:
+            type: string
+      - name: median_roi_
+        description: "Median ROI (Return on Investment) percentage for the writer or director."
+        meta:
+          dimension:
+            type: number
+      - name: movie_count
+        description: "Total count of movies associated with the writer or director."
+        meta:
+          dimension:
+            type: number
+  - name: most_awarded_movies
+    description: "Model to track the most awarded movies and their nominations and wins."
+    columns:
+      - name: movie_name_year
+        description: "Name of the movie along with the release year."
+        meta:
+          dimension:
+            type: string
+      - name: award
+        description: "Award received or nominated for."
+        meta:
+          dimension:
+            type: string
+      - name: total_nominations
+        description: "Total number of nominations received by the movie for the award."
+        meta:
+          dimension:
+            type: number
+      - name: total_wins
+        description: "Total number of wins for the movie in the award category."
+        meta:
+          dimension:
+            type: number
+      - name: win_rate
+        description: "Rate of wins compared to total nominations for the movie, expressed as a percentage."
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: "Budget of the movie."
+        meta:
+          dimension:
+            type: number
+  - name: most_awarded
+    description: "Model to track the awards and nominations received by nominees."
+    columns:
+      - name: nominee
+        description: "Nominee for the award."
+        meta:
+          dimension:
+            type: string
+      - name: award
+        description: "Award received or nominated for."
+        meta:
+          dimension:
+            type: string
+      - name: category
+        description: "Category of the award."
+        meta:
+          dimension:
+            type: string
+      - name: total_nominations
+        description: "Total number of nominations received by the nominee for the award."
+        meta:
+          dimension:
+            type: number
+      - name: total_wins
+        description: "Total number of wins for the nominee in the category."
+        meta:
+          dimension:
+            type: number
+      - name: win_rate
+        description: "Rate of wins compared to total nominations, expressed as a percentage."
+        meta:
+          dimension:
+            type: number
+  - name: roi
+    description: "This model calculates the return on investment (ROI) for movies."
+    columns:
+      - name: title
+        description: "Title of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: imdb_id
+        description: "IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: budget
+        description: "Original budget of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: adjusted_budget
+        description: "Adjusted budget of the movie, accounting for inflation."
+        meta:
+          dimension:
+            type: number
+      - name: worldwide
+        description: "Total worldwide gross revenue of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: roi_percentage
+        description: "Return on investment percentage of the movie."
+        meta:
+          dimension:
+            type: number
+  - name: total_gross_by_region_and_year
+    description: "This model calculates the total gross by region and year."
+    columns:
+      - name: region
+        description: "Region where the movie was released."
+        meta:
+          dimension:
+            type: string
+      - name: release_year
+        description: "Year when the movie was released."
+        meta:
+          dimension:
+            type: number
+      - name: lifetime_gross
+        description: "Total lifetime gross of movies released in the region and year."
+        meta:
+          dimension:
+            type: number
+      - name: percent_total_gross
+        description: "Percentage of the total gross represented by the lifetime gross in the region and year."
+        meta:
+          dimension:
+            type: number
