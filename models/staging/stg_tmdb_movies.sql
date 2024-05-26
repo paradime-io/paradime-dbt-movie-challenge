@@ -1,29 +1,29 @@
 WITH source AS (
     SELECT 
-TMDB_ID,
-        TITLE,
-        ORIGINAL_TITLE,
-        OVERVIEW,
-        TAGLINE,
-        KEYWORDS,
-        ORIGINAL_LANGUAGE,
-        STATUS,
-        VIDEO,
-        RELEASE_DATE,
-        RUNTIME,
-        BUDGET,
-        REVENUE,
-        VOTE_AVERAGE,
-        VOTE_COUNT,
-        HOMEPAGE,
-        POSTER_PATH,
-        BACKDROP_PATH,
-        BELONGS_TO_COLLECTION,
-        IMDB_ID,
-        GENRE_NAMES,
-        SPOKEN_LANGUAGES,
-        PRODUCTION_COMPANY_NAMES,
-        PRODUCTION_COUNTRY_NAMES
+        tmdb_id
+        , title
+        , original_title
+        , overview
+        , tagline
+        , keywords
+        , original_language
+        , status
+        , video
+        , release_date
+        , runtime
+        , budget
+        , revenue
+        , vote_average
+        , vote_count
+        , homepage
+        , poster_path
+        , backdrop_path
+        , belongs_to_collection
+        , imdb_id
+        , genre_names
+        , spoken_languages
+        , production_company_names
+        , production_country_names
     FROM 
         {{ source('MOVIE_BASE', 'TMDB_MOVIES') }}
 )
