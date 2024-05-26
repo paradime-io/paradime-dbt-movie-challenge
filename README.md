@@ -79,7 +79,7 @@ In conclusion, my analysis across three main topics shed light on several key in
 ### Temporal Insights 🕰️
 - **Impact of COVID-19:** The film industry experienced a sharp decline in Box Office revenue and Profit during the COVID-19 outbreak years (2020-2022) due to widespread theater closures and audience reluctance.
 - **Recovery and Resurgence:** However, there has been a noticeable recovery in 2023 and 2024, signaling a resurgence in movie theater attendance and box office success, potentially indicating a return to normalcy for the industry.
-- **The analysis revealed significant trends in film production following major global events. After the COVID-19 outbreak, there was a sharp increase in pandemic-themed movies. Similarly, the release of ChatGPT and widespread AI adoption have led to a surge in AI-themed movies. These trends illustrate how global events shape the themes in movies.
+- **Inspired by Events:** The analysis revealed significant trends in film production following major global events. After the COVID-19 outbreak, there was a sharp increase in pandemic-themed movies. Similarly, the release of ChatGPT and widespread AI adoption have led to a surge in AI-themed movies. These trends illustrate how global events shape the themes in movies.
 
 
 ### TMDb 🆚 IMDb
