@@ -114,18 +114,12 @@ Analytics models are business-centric entities, where every model is a business 
 - All financial stats, such as estimated budget and gross revenue (aka box office), were adjusted for inflation as of 2024. Adjusting movie financial statistics for inflation ensures comparability and provides a fair benchmark across different production years, allowing for accurate and meaningful data analysis.
 Example: The movie "Titanic (1997)" earned approximately 2.26 billion USD worldwide in 1997. Adjusted for inflation, this would be 4.35 billion USD in 2024.
 
-</br>
-
 - After examining provided data sources, I found that neither TMDb or OMDb datasets can be considered entirely reliable or serve as sources of truth. These datasets occasionally present contradictory information. However, after some digging, I found TMDb to be more reliable overall. Therefore, in this project, in cases of conflict, I prioritize TMDb data over OMDb data.
-
-</br>
 
 - In the provided TMDb dataset, the same `tmdb_id` can be shared across both 'Movies' and 'TV Series', which makes it unreliable for data quality and governance purposes.
 Example:
     - https://www.themoviedb.org/movie/220387 Blogumentary (2004)
     - https://www.themoviedb.org/tv/220387 Camp Radio (2022)
-
-</br>
 
 - Given the volume and nature of this data, I chose not to apply any optimization techniques, such as incremental materialization, selecting the appropriate incremental strategy, explicit clustering of Snowflake tables, etc. The entire DAG, which includes 13 models, 3 seeds, and 22 tests, runs (`dbt build`) in under 2 minutes on an XS-size warehouse.
 
