@@ -17,7 +17,7 @@ exposures:
       - ref('media_genres')
       - ref('media_languages')
       - ref('media_production_companies')
-      - ref('media_media_production_countries')
+      - ref('media_production_countries')
 
     owner:
       name: Anton Goncharuk
