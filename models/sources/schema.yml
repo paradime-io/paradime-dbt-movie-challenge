@@ -345,3 +345,17 @@ models:
         meta:
           dimension:
             type: string
+  - name: stg_genre_vibes
+    columns:
+      - name: genre
+        description:
+          Name of the genre separated from the comma separated list
+        meta:
+          dimension:
+            type: string
+      - name: vibe
+        description:
+          The genre categorized into Positive or Negative vibe
+        meta:
+          dimension:
+            type: string  
