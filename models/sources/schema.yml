@@ -253,95 +253,175 @@ models:
         meta:
           dimension:
             type: number
-  - name: stg_tmdb_tv_series
+  - name: stg_movie_awards
+    description: "This staging model processes and filters movie awards data to ensure no null movie entries."
     columns:
-      - name: id
-        description: Unique identifier for each TV show.
+      - name: year_film
+        description: "The year the film was released."
         meta:
           dimension:
             type: number
-      - name: name
-        description: Title of the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: overview
-        description: Brief description or summary of the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: tagline
-        description: Catchphrase or memorable line associated with the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: genre_names
-        description: Genres associated with the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: created_by_names
-        description: Names of individuals or entities credited for creating the TV show.
-        meta:
-          dimension:
-            type: string
-      - name: original_language
-        description: Original language in which the TV show was produced.
-        meta:
-          dimension:
-            type: string
-      - name: status
-        description: Current status of the TV show (e.g., returning series, ended, cancelled, etc.).
-        meta:
-          dimension:
-            type: string
-      - name: in_production
-        description: Indicates if the TV show is currently in production.
-        meta:
-          dimension:
-            type: boolean
-      - name: first_air_date
-        description: Date when the TV show was first aired.
-        meta:
-          dimension:
-            type: date
-      - name: last_air_date
-        description: Date when the TV show was last aired.
-        meta:
-          dimension:
-            type: date
-      - name: number_of_seasons
-        description: Number of seasons in the TV show.
+      - name: year_ceremony
+        description: "The year the award ceremony took place."
         meta:
           dimension:
             type: number
-      - name: number_of_episodes
-        description: Number of episodes in the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: vote_average
-        description: Average vote or rating given by viewers.
-        meta:
-          dimension:
-            type: number
-      - name: vote_count
-        description: Total number of votes received by the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: popularity
-        description: Popularity score of the TV show.
-        meta:
-          dimension:
-            type: number
-      - name: poster_path
-        description: URL path of the poster image for the TV show.
+      - name: category
+        description: "The category of the award."
         meta:
           dimension:
             type: string
-      - name: production_company_names
-        description: Names of production companies associated with the TV show.
+      - name: nominee
+        description: "The name of the nominee."
         meta:
           dimension:
             type: string
+      - name: movie
+        description: "The title of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: winner
+        description: "Indicates if the nominee won the award (TRUE/FALSE)."
+        meta:
+          dimension:
+            type: string
+      - name: award
+        description: "The name of the award."
+        meta:
+          dimension:
+            type: string
+  - name: stg_cpi
+    description: "This staging model processes and renames columns for CPI data."
+    columns:
+      - name: calendar_year
+        description: "The calendar year."
+        meta:
+          dimension:
+            type: number
+      - name: jan
+        description: "Consumer Price Index (CPI) value for January."
+        meta:
+          dimension:
+            type: number
+      - name: feb
+        description: "Consumer Price Index (CPI) value for February."
+        meta:
+          dimension:
+            type: number
+      - name: mar
+        description: "Consumer Price Index (CPI) value for March."
+        meta:
+          dimension:
+            type: number
+      - name: apr
+        description: "Consumer Price Index (CPI) value for April."
+        meta:
+          dimension:
+            type: number
+      - name: may
+        description: "Consumer Price Index (CPI) value for May."
+        meta:
+          dimension:
+            type: number
+      - name: jun
+        description: "Consumer Price Index (CPI) value for June."
+        meta:
+          dimension:
+            type: number
+      - name: jul
+        description: "Consumer Price Index (CPI) value for July."
+        meta:
+          dimension:
+            type: number
+      - name: aug
+        description: "Consumer Price Index (CPI) value for August."
+        meta:
+          dimension:
+            type: number
+      - name: sep
+        description: "Consumer Price Index (CPI) value for September."
+        meta:
+          dimension:
+            type: number
+      - name: oct
+        description: "Consumer Price Index (CPI) value for October."
+        meta:
+          dimension:
+            type: number
+      - name: nov
+        description: "Consumer Price Index (CPI) value for November."
+        meta:
+          dimension:
+            type: number
+      - name: dec
+        description: "Consumer Price Index (CPI) value for December."
+        meta:
+          dimension:
+            type: number
+  - name: stg_bomojo_releases
+    description: "This staging model processes and filters Box Office Mojo release data to ensure valid gross values."
+    columns:
+      - name: imdb_id
+        description: "The IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: release_group
+        description: "The release group of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: rollout
+        description: "The rollout strategy for the movie release."
+        meta:
+          dimension:
+            type: string
+      - name: markets
+        description: "The number of markets in which the movie was released."
+        meta:
+          dimension:
+            type: number
+      - name: domestic_gross
+        description: "Domestic gross revenue of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: international_gross
+        description: "International gross revenue of the movie."
+        meta:
+          dimension:
+            type: number
+      - name: worldwide_gross
+        description: "Worldwide gross revenue of the movie."
+        meta:
+          dimension:
+            type: number
+  - name: stg_bomojo_countries
+    description: "This staging model processes Box Office Mojo country data."
+    columns:
+      - name: imdb_id
+        description: "The IMDb ID of the movie."
+        meta:
+          dimension:
+            type: string
+      - name: area
+        description: "Area where the movie was released."
+        meta:
+          dimension:
+            type: string
+      - name: region
+        description: "Region where the movie was released."
+        meta:
+          dimension:
+            type: string
+      - name: releases
+        description: "Number of releases for the movie in the region."
+        meta:
+          dimension:
+            type: number
+      - name: lifetime_gross
+        description: "Lifetime gross revenue generated by the movie in the region."
+        meta:
+          dimension:
+            type: number
