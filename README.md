@@ -42,9 +42,9 @@ I wanted to explore the **demographic information** of people involved in making
 
 ### Wikidata source data
 For queries with a smaller result set, the [Wikidata Query Service](https://query.wikidata.org/) can be used. 
-I modified an example SPARQL query to return data on Academy Award winners and Academy Award nominees - see **[sparql_queries](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/sparql_queries)** folder.
+I modified an example SPARQL query to return data on Academy Award winners and Academy Award nominees - see [sparql_queries](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/sparql_queries) folder.
 
-For the larger Movie Director and Actor datasets I used python to query wikidata and return results in smaller chunks - see **[python_scripts](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/python_scripts)** folder.
+For the larger Movie Director and Actor datasets I used python to query wikidata and return results in smaller chunks - see [python_scripts](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/python_scripts) folder.
 
 
 
@@ -55,7 +55,7 @@ To join `omdb_movies` and `tmdb_movies` I used the `imdb_id` field. I analysed t
 
 ![join omdb and tmdb](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-imogenssford/screenshots/join_omdb_and_tmdb.png)
 
-To combine data in the two tables I defined some **(javascript UDFs)[https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/macros/udfs]** and learnt how to use **[macros](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-imogenssford/macros/create_udfs.sql)** to manage the creation of the UDFs when `dbt run` is called.
+To combine data in the two tables I defined some [javascript UDFs](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/movie-imogenssford/macros/udfs) and learnt how to use [macros](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-imogenssford/macros/create_udfs.sql) to manage the creation of the UDFs when `dbt run` is called.
 
 Integrating data about movie entities from additonal data sources was done using `imdb_id`.
 
