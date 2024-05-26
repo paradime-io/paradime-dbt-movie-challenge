@@ -14,7 +14,7 @@ with roi as (
     from {{ ref('split_genre_names_to_rows') }}
     where budget > 0
     and revenue > 0
-    and year(release_date) between 1960 and 2024
+    and year(release_date) between 1940 and 2024
     and imdb_id != ''
     group by 1,2
 )
