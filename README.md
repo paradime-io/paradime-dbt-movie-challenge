@@ -25,6 +25,7 @@ My analysis leverages four key data sets:
 - *TMDB Movies*
 - *TMDB Popular Movies [Extracted through TMDb API]*
 - *TMDB Popular People  [Extracted through TMDb API]*
+- *Top 100 Actors [Loaded as CSV] (Not used in final analysis)*
 
 In addition the following tables were created based on the TMDb and IMDb Movies datasets, by using the `SPLIT_TO_TABLE` function:
 - *Movie Actors*
