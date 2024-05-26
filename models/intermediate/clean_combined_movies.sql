@@ -119,6 +119,3 @@ movie_inflation_adjustment_join as(
 )
 
 SELECT * FROM movie_inflation_adjustment_join
-where
-    imdb_id = 'tt0034492' or 
-    imdb_id = 'tt0447854'
