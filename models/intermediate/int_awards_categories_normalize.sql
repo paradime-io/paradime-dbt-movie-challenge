@@ -11,6 +11,7 @@ WITH categories_normalize AS (
             END AS category
         , nominee
         , movie
+        , CONCAT(movie, ' (', year_film, ')')  AS movie_name_year
         , winner
         , award
     FROM 
