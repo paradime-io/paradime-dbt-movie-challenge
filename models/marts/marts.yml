@@ -146,6 +146,11 @@ models:
         meta:
           dimension:
             type: string
+      - name: leading_actor
+        description: ""
+        meta:
+          dimension:
+            type: string
       - name: awards
         description: ""
         meta:
@@ -257,6 +262,58 @@ models:
         meta:
           dimension:
             type: string
+  - name: top_actors
+    columns:
+      - name: name
+        description: Name of the person.
+        meta:
+          dimension:
+            type: string
+      - name: date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: place_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: oscars
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: oscar_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: bafta
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: bafta_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: golden_globes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: golden_globe_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: greatest_performances
+        description: ""
+        meta:
+          dimension:
+            type: string
 exposures:
   - name: movie_dashboard_tables
     description: Tables used in the Movie Dashboard
@@ -268,8 +325,9 @@ exposures:
       - ref('int_movie_genres')
       - ref('int_movie_directors')
       - ref('int_movie_actors')
+      - ref('top_actors')
     owner:
       name: Rasmus
       email: raso@lunar.app
     type: dashboard
-    label: "Movie Challenge Lightdash Dashboards!"
+    label: Movie Challenge Lightdash Dashboards!

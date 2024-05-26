@@ -79,6 +79,7 @@ joined AS (
         imdb.director,
         imdb.writer,
         imdb.actors,
+        SPLIT_PART(imdb.actors, ',', 1) AS leading_actor,
         imdb.awards,
         imdb.production,
         imdb.dvd,

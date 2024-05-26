@@ -391,73 +391,73 @@ models:
             type: string
   - name: stg_tmdb_popular_movies
     columns:
-      - name: ADULT
-        description: Indicates if the movie is suitable for adults or not.
+      - name: adult
+        description: ""
         meta:
           dimension:
             type: boolean
-      - name: BACKDROP_PATH
-        description: Path to the backdrop image of the movie.
+      - name: backdrop_path
+        description: ""
         meta:
           dimension:
             type: string
-      - name: GENRE_IDS
-        description: List of genre IDs associated with the movie.
+      - name: genre_ids
+        description: ""
         meta:
           dimension:
             type: string
-      - name: ID
-        description: Unique identifier for each movie.
+      - name: id
+        description: ""
         meta:
           dimension:
             type: number
-      - name: ORIGINAL_LANGUAGE
-        description: Original language of the movie.
+      - name: original_language
+        description: ""
         meta:
           dimension:
             type: string
-      - name: ORIGINAL_TITLE
-        description: Original title of the movie.
+      - name: original_title
+        description: ""
         meta:
           dimension:
             type: string
-      - name: OVERVIEW
-        description: Brief overview or summary of the movie.
+      - name: overview
+        description: ""
         meta:
           dimension:
             type: string
-      - name: POPULARITY
-        description: Popularity score of the movie.
+      - name: popularity
+        description: ""
         meta:
           dimension:
             type: number
-      - name: POSTER_PATH
-        description: Path to the poster image of the movie.
+      - name: poster_path
+        description: ""
         meta:
           dimension:
             type: string
-      - name: RELEASE_DATE
-        description: Release date of the movie.
+      - name: release_date
+        description: ""
         meta:
           dimension:
             type: string
-      - name: TITLE
-        description: Title of the movie.
+      - name: title
+        description: ""
         meta:
           dimension:
             type: string
-      - name: VIDEO
-        description: Indicates if the movie has a video available.
+      - name: video
+        description: ""
         meta:
           dimension:
             type: boolean
-      - name: VOTE_AVERAGE
-        description: Average rating of the movie.
+      - name: vote_average
+        description: ""
         meta:
           dimension:
             type: number
-      - name: VOTE_COUNT
-        description: Number of votes for the movie.
+      - name: vote_count
+        description: ""
         meta:
           dimension:
             type: number

@@ -1,0 +1,54 @@
+version: 2
+models:
+  - name: stg_top_100_actors
+    columns:
+      - name: name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: date_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: place_of_birth
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: oscars
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: oscar_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: bafta
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: bafta_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: golden_globes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: golden_globe_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: greatest_performances
+        description: ""
+        meta:
+          dimension:
+            type: string
