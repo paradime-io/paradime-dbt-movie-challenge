@@ -4,7 +4,8 @@ WITH movie_cumulative_sums AS (
 top_movie_series as(
     select
         sum(inf_profit),
-        movie_series
+        round(avg(vote_average),2) as average_movie_series_rating,
+        movie_series,
     from movie_cumulative_sums
     group by movie_series
     order by sum(inf_profit) desc
@@ -13,7 +14,8 @@ top_movie_series as(
 
 top_movie_series_movie_ids as(
     select 
-        mcs.*
+        mcs.*,
+        tms.average_movie_series_rating
     from top_movie_series tms
     left join movie_cumulative_sums mcs
         on tms.movie_series = mcs.movie_series

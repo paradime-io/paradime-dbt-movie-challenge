@@ -1,68 +1,83 @@
 version: 2
 models:
-  - name: dim_tv_series
+  - name: dim_movie_sequel_stats
     columns:
-      - name: tv_series_id
+      - name: movie_series
         description: ""
         meta:
           dimension:
-            type: number
+            type: string
       - name: title
         description: ""
         meta:
           dimension:
             type: string
-      - name: overview
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: tagline
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: genres
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: created_by_names
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: original_language
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: status
-        description: ""
-        meta:
-          dimension:
-            type: string
-      - name: in_production
-        description: ""
-        meta:
-          dimension:
-            type: boolean
-      - name: first_air_date
+      - name: release_date
         description: ""
         meta:
           dimension:
             type: date
-      - name: last_air_date
-        description: ""
-        meta:
-          dimension:
-            type: date
-      - name: number_of_seasons
+      - name: release_year
         description: ""
         meta:
           dimension:
             type: number
-      - name: number_of_episodes
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: inf_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: inf_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: inf_profit
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: cumulative_inf_profit
         description: ""
         meta:
           dimension:
@@ -72,18 +87,13 @@ models:
         meta:
           dimension:
             type: number
-      - name: vote_count
+      - name: cumulative_voting_average
         description: ""
         meta:
           dimension:
             type: number
-      - name: popularity
+      - name: average_movie_series_rating
         description: ""
         meta:
           dimension:
             type: number
-      - name: poster_path
-        description: ""
-        meta:
-          dimension:
-            type: string
