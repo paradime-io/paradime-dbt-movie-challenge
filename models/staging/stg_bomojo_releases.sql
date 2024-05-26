@@ -7,18 +7,17 @@ WITH source AS (
 
 , filtered AS (
     SELECT 
-        IMDB_ID
-        , RELEASE_GROUP
-        , ROLLOUT
-        , MARKETS
-        , DOMESTIC AS DOMESTIC_GROSS
-        , INTERNATIONAL AS INTERNATIONAL_GROSS
-        , WORLDWIDE AS WORLDWIDE_GROSS
+        imdb_id
+        , release_group
+        , rollout
+        , markets
+        , domestic AS domestic_gross
+        , international AS international_gross
+        , worldwide AS worldwide_gross
     FROM 
         source
     WHERE 
-        NOT(DOMESTIC = 0 AND INTERNATIONAL = 0 AND WORLDWIDE = 0)
-
+        NOT(domestic = 0 AND international = 0 AND worldwide = 0)
 )
 
 SELECT
