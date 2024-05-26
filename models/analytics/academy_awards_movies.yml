@@ -80,6 +80,9 @@ models:
         meta:
           dimension:
             type: string
+          metrics: 
+            total_award_titles:
+              type: count
       - name: award_edition
         description: ""
         meta:
