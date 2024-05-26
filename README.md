@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Methodology](#methodology)
-3. [Data Sources](#data-sources)
+3. [Data Sources and Modelling](#data-sources-and-modelling)
    - [Movie Data](#movie-data)
    - [Additional Data](#additional-data)
    - [Data Integration](#data-integration)
@@ -26,7 +26,7 @@ I'm well known amongst friends for missing pop culture references relating to fi
 - **[Wikidata Query Service](https://query.wikidata.org/)** for sourcing additional datasets
 - **SPARQL** and **Python** for retrieving larger datasets from [Wikidata](#wikidata)
 
-## Data Sources
+## Data Sources and Modelling
 
 ### Movie Data
 I decided to focus on movies rather than TV series and use 2 of the 3 tables provided:
