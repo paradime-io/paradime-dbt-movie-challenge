@@ -21,3 +21,47 @@ models:
           metrics:
             number_of_movies:
               type: sum
+  - name: imdb_vs_metascore
+    columns:
+      - name: imdb_id
+        description:
+          The movie's ID on imdb.com
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description:
+          The title of the movie
+        meta:
+          dimension:
+            type: string
+      - name: metascore_divided
+        description:
+          Metascore divided by 10 (originally on a scale of 100) so it compares to IMDB's rating that is on a scale of 10
+        meta:
+          dimension:
+            type: number
+      - name: imdb_rating
+        description:
+          The rating on a scale of 10 on IMDB provided by user votes
+        meta:
+          dimension:
+            type: number
+      - name: imdb_votes
+        description:
+          The number of user votes on IMDB
+        meta:
+          dimension:
+            type: number
+      - name: imdb_metascore_difference
+        description:
+          The difference between the movie's IMDB user score and Metacritic's critic metascore (divided by 10)
+        meta:
+          dimension:
+            type: number
+      - name: favored_by
+        description:
+          Whether the IMDB or the Metascore is higher, it determines if users or critics liked the movie better, and by how many points
+        meta:
+          dimension:
+            type: number
