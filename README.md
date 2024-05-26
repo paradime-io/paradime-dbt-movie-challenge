@@ -8,7 +8,7 @@
    - [Additional Data](#additional-data)
    - [Data Integration](#data-integration)
    - [Data Lineage and Schemas](#data-lineage-and-schemas)
-4. [Data Visualizations](#data-visualization)
+4. [Data Visualizations](#data-visualizations)
    - [Getting to know the data](#getting-to-know-the-data)
    - [Demographic analysis](#demographic-analysis)
    - [Academy Awards deep-dive](#academy-awards-deep-dive)
