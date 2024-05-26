@@ -195,4 +195,4 @@ Although this doesn't directly related to Profit or Return On Investment (RIO), 
 
 
 # Conclusion
-In conclusion, the Data Modeling Challenge - Movie Edition presented an intriguing opportunity to design a robust and scalable data transformation architecture. Throughout this project I tried to demonstrate the importance of creating high-quality, reliable and scalable data models that empower downstream users and ultimately drive valuable insights in whatever industry you are in.
+In conclusion, the Data Modeling Challenge - Movie Edition presented an intriguing opportunity to design a robust and scalable data transformation architecture. Throughout this project, I tried to demonstrate the importance of creating high-quality, reliable, and scalable data models and BI explore that empower downstream users and ultimately drive valuable insights, regardless of the industry. In my example, the final holistic `media` analytics model and pre-built Lighdash Explore should answer any business question a user might have about this industry.
