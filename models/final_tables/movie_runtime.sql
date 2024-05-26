@@ -5,3 +5,4 @@ select
     runtime
 from {{ ref('joined_movies') }}
 where genre not like '%Short%'
+and imdb_votes >= 10000
