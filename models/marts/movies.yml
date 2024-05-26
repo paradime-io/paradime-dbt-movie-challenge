@@ -1,72 +1,262 @@
 version: 2
-models:            
+models:
   - name: movies
-    description: Data about movies.
+    description: Stats on movies.
+    meta:
+      label: Movies
+      joins:
+        - join: movie_people
+          sql_on: ${movies.imdb_id} = ${movie_people.imdb_id}
+          type: left      
+        - join: academy_awards
+          sql_on: ${movies.imdb_id} = ${academy_awards.imdb_id}
+          type: left
+        - join: genres
+          sql_on: ${movies.imdb_id} = ${genres.imdb_id}
+          type: left
+      
     columns:
       - name: imdb_id
-        description: IMDb ID of the movie.
+        description: IMDb unique identifier for a movie.
+        tests:
+          - not_null
+          - unique
         meta:
           dimension:
             type: string
-      - name: movie_year
-        description: Year of the release of the movie.
+            label: IMDB Id
+          metrics:
+            total_movies_count:
+              label: Number of Movies
+              type: count_distinct
+
+            yearly_avg_movies:
+              label: Yearly Average of Released Movies
+              type: number
+              sql: ${total_movies_count} / nullif(${nb_years},0)
+              round: 0
+
+      - name: o_release_year
+        description: Year of the release.
+        meta:
+          dimension:
+            type: string
+          metrics:
+            nb_years:
+              label: Total years
+              type: count_distinct
+
+      - name: t_movie_title
+        description: Title of the movie.
+        meta:
+          dimension:
+            type: string
+            label: Movie Title
+
+      - name: movie_title_year
+        description: Title of the movie with year.
+        meta:
+          dimension:
+            type: string
+            label: Movie title with year
+
+      - name: movie_title_unique
+        description: Title of the movie combined with release year and IMDB Id.
+        meta:
+          dimension:
+            type: string
+            label: Movie Title Detailed
+            
+      - name: o_country
+        description: Country or countries where the movie was produced.
+        meta:
+          dimension: 
+            type: string
+            label: Country
+
+      - name: i_rating_avg
+        description: IMDB Rating Average
         meta:
           dimension:
             type: number
+            label: Rating Avg
+
+      - name: i_nb_votes
+        description: IMDB Rating Number of Votes
+        meta:
+          dimension:
+            type: number
+            label: "Rating # Votes"
+
+      - name: academy_nominations
+        description: "# Academy Nominations the movie received."
+        meta:
+          dimension:
+            type: number
+            label: "Academy Nominations"
+          metrics:
+            total_academy_nominations:
+              type: sum
+              label: "# Academy Nominations"
+        
+      - name: academy_awards
+        description: "# Academy Awards the movie received."
+        meta:
+          dimension:
+            type: number
+            label: "Academy Awards"        
+          metrics:
+            total_academy_awards:
+              type: sum
+              label: "# Academy Awards"        
+
+      - name: adjusted_budget_usd
+        description: Budget of the movie adjusted for current time.
+        meta:
+          dimension:  
+            format: usd
+          metrics:
+            total_budget:
+              label: Total movie budget (USD)            
+              type: sum
+              format: usd
+              round: 0
+              compact: 'billions'
+
+            total_budget_not_compacted:
+              label: Total movie budget (USD)            
+              type: sum
+              format: usd
+              round: 0
+
+      - name: adjusted_revenue_usd
+        description: Revenue of the movie adjusted for current time.
+        meta:
+          dimension:  
+            format: usd
+          metrics:
+            total_revenue:
+              label: Total movie revenue (USD)           
+              type: sum
+              format: usd
+              round: 0
+              compact: 'billions'
+
+            total_revenue_not_compacted:
+              label: Total movie revenue (USD)           
+              type: sum
+              format: usd
+              round: 0
+
+            adjusted_roi_usd:
+              label: Total movie ROI (USD) in billions
+              sql: ${adjusted_revenue_usd} - ${adjusted_budget_usd} 
+              type: sum
+              format: usd
+              round: 0
+              compact: 'billions'
+
+            adjusted_roi_usd_not_compacted:
+              label: Total movie ROI (USD)
+              sql: ${adjusted_revenue_usd} - ${adjusted_budget_usd} 
+              type: sum
+              format: usd
+              round: 0
+        
+              
+      - name: revenue_rank
+        description: Revenue rank of movies in descending order.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            revenue_rank_metric:
+              type: max
+            is_revenue_top20:
+              label: Top 20 grossing movies
+              type: boolean
+              sql: iff(${revenue_rank_metric} <= 20, true, false)
+            is_revenue_top450:
+              label: Top 450 most grossing movies
+              type: boolean
+              sql: iff(${revenue_rank_metric} <= 450, true, false)
+
+
+      - name: budget_rank
+        description: Budget rank of movies in descending order.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            budget_rank_metric:
+              type: max
+            is_budget_top20:
+              label: Top 20 expensive movies
+              type: boolean
+              sql: iff(${budget_rank_metric} <= 20, true, false)
+
+      - name: profit_rank
+        description: Profit rank of movies in descending order.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            profit_rank_metric:
+              type: max
+            is_profit_top20:
+              label: Top 20 most profitable movies
+              type: boolean
+              sql: iff(${profit_rank_metric} <= 20, true, false)
+
+      - name: academy_nominations_rank
+        description: Academy nominations rank of movies in descending order.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            academy_nom_rank_metric:
+              type: max
+            is_nominations_top20:
+              label: Top 20 movies with more academy nominations
+              type: boolean
+              sql: iff(${academy_nom_rank_metric} <= 20, true, false)
+
+      - name: academy_awards_rank
+        description: Academy awards rank of movies in descending order.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            academy_award_rank_metric:
+              type: max
+            is_awards_top20:
+              label: Top 20 movies with more academy awards
+              type: boolean
+              sql: iff(${academy_award_rank_metric} <= 20, true, false)
+
+      - name: o_release_date
+        description: Date in which the movie was released.
+        meta:
+          dimension:
+            label: Release Date
+            type: date
+            additional_dimensions:
+              month_name:
+                type: string
+                sql: monthname(o_release_date)
+
+              month_num:
+                type: number
+                sql: month(o_release_date)
+
+              year:
+                type: number
+                sql: year(o_release_date)
+
       - name: movie_month
         description: Month of the release of the movie.
         meta:
           dimension:
+            label: Month of Release
+            description: Month of the year in which the movie was released.
             type: number
-
-# semantic_models:
-#   - name: movies
-#     description: |
-#       Model containing movies data. The grain of the table is the imdb_id.
-#     model: ref('int_financial_metrics')
-#     entities:
-#       - name: imdb_id
-#         type: primary
-#     dimensions:
-#       - name: movies_year
-#         type: categorical
-#       - name: movies_month
-#         type: categorical
-#     measures:
-#       - name: adjusted_budget_usd
-#         description: The adjusted budget in USD for each movie.
-#         agg: sum
-#       - name: adjusted_revenue_usd
-#         description: The adjusted revenue in USD for each movie.
-#         agg: sum
-#       - name: adjusted_roi_usd
-#         description: The adjusted ROI in USD for each movie.
-#         agg: sum
-
-# metrics:
-#   # Simple metrics
-#   - name: adjusted_budget_usd
-#     description: Sum of the adjusted budget in USD for each movie.
-#     type: simple
-#     label: Budget (USD)
-#     type_params:
-#       measure: adjusted_budget_usd
-#   - name: adjusted_revenue_usd
-#     description: Sum of the adjusted revenue in USD for each movie.
-#     type: simple
-#     label: Revenue (USD)
-#     type_params:
-#       measure: adjusted_revenue_usd
-
-  #Derived Metrics
-  # - name: roi_usd
-  #   description: ROI in USD for each movie.
-  #   type: derived
-  #   label: ROI (USD)
-  #   type_params:
-  #     expr: revenue - budget
-  #     metrics:
-  #       - name: adjusted_revenue_usd
-  #         alias: revenue
-  #       - name: adjusted_budget_usd
-  #         alias: budget

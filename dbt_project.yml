@@ -4,6 +4,11 @@ config-version: 2
 
 profile: "paradime-movie-challenge"
 
+vars:
+  # Analyze movies released for the period below:
+  start_year: 1984
+  end_year: 2023
+
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -21,12 +26,14 @@ query-comment:
 
 models:
   paradime_movie_challenge: 
-    sources:
+    staging:
       +schema: staging
       +materialized: view
     intermediate:
       +schema: intermediate
       +materialized: view 
     marts: 
+      +tags:
+      - "lightdash"
       +schema: marts
       +materialized: table 

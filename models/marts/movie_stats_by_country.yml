@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: movie_stats_by_country
+    description: Stats on movies by country where the movie was produced.    
+    columns:
+      - name: country
+        description: Country or countries where the movie was produced.
+        tests:
+          - not_null
+        meta:
+          dimension: 
+            type: string
+            label: Country
+
+      - name: release_year
+        description: Year of release.
+        tests:
+          - not_null
+        meta:
+          dimension: 
+            type: string
+            label: Year of release   
+
+
+      - name: nb_movies_per_country
+        description: Number of Released Movies per Country and Year.
+        meta:
+          dimension: 
+            type: number
+            label: Number of movies released
+          metrics:
+            total_nb_movies:
+              label: "# Released Movies" 
+              type: sum
+
+      - name: total_adjusted_budget_usd
+        description: Total Budget per Country and Year.
+        meta:
+          dimension: 
+            type: number
+            label: Budget Spent
+          metrics:
+            total_budget:
+              label: "Total Budget (USD)" 
+              type: sum
+
+      - name: total_adjusted_revenue_usd
+        description: Total Revenue per Country and Year.
+        meta:
+          dimension: 
+            type: number
+            label: Revenue
+          metrics:
+            total_revenue:
+              label: "Total Revenue (USD)" 
+              type: sum
+
+      - name: total_adjusted_profit_usd
+        description: Total Profit per Country and Year.
+        meta:
+          dimension: 
+            type: number
+            label: Profit
+          metrics:
+            total_profit:
+              label: "Total Profit (USD)" 
+              type: sum                            

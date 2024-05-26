@@ -1,0 +1,46 @@
+version: 2
+models:            
+  - name: academy_awards
+    description: People nominated for the Academy Award.
+    meta:
+      label: Academy Awards
+      joins:
+        - join: people
+          sql_on: ${academy_awards.person_id} = ${people.person_id}
+          type: left
+      
+    columns:
+      - name: imdb_id
+        description: IMDb unique idenfitier for each movie.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+
+      - name: person_id
+        description: Unique identifier for each person.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+
+      - name: is_winner
+        description: If the nominated person ended winning the award.
+        meta:
+          dimension:
+            type: boolean
+
+      - name: class
+        description: Class.
+        meta:
+          dimension:
+            type: string      
+
+      - name: ceremony_year
+        description: Year of the academy award ceremony. 
+        meta:
+          dimension:
+            type: number                                   
+            

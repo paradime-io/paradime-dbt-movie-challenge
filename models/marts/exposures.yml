@@ -1,0 +1,22 @@
+version: 2
+
+exposures:
+
+  - name: movies
+    label: Movies Analysis
+    type: dashboard
+    maturity: high
+    description: >
+      Movie analysis dashboard.
+
+    depends_on:
+      - ref('movies')
+      - ref('movie_stats_by_genre')
+      - ref('movie_stats_by_country')
+      - ref('academy_awards')
+      - ref('movie_people')
+      - ref('people')
+
+    owner:
+      name: Leticia
+      email: letyrobueno@gmail.com

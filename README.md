@@ -39,7 +39,6 @@ to calculate the present-day value of financial metrics adjusted by inflation.
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
 
 
 ## Visualizations

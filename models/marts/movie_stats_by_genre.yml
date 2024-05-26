@@ -1,0 +1,30 @@
+version: 2
+models:            
+  - name: movie_stats_by_genre
+    description: Genres assigned to each movie provided by IMDB and available at https://www.imdb.com/interfaces/
+    meta:
+      label: Movie Genres
+
+    columns:         
+      - name: genre
+        description: Genre of the movie. Each movie can have more than one.
+        meta:
+          dimension:
+            type: string
+
+      - name: release_year
+        description: Release year
+        meta:
+          dimension:
+            type: string
+
+      - name: nb_movies_per_genre
+        description: Number of Released Movies per Genre and Year.
+        meta:
+          dimension: 
+            type: number
+            label: Number of movies released
+          metrics:
+            total_nb_movies:
+              label: "# Released Movies" 
+              type: sum            

@@ -1,0 +1,217 @@
+version: 2
+models: 
+  - name: int_bls_cpi_values_unpivoted
+    columns:
+      - name: cpi_year
+        description: Year.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: number
+
+      - name: cpi_month
+        description: Month.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: number
+
+      - name: cpi_value
+        description: CPI value.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: number
+     
+
+  - name: int_omdb_tmdb_imdb_joined
+    columns:
+      - name: imdb_id
+        description: IMDB unique identifier.
+        tests:
+          - unique
+          - not_null
+        meta:
+          dimension:
+            type: number
+
+      - name: tmdb_id
+        description: TMDB identifier.
+        tests:
+          - unique
+          - not_null
+        meta:
+          dimension:
+            type: number
+            
+      - name: title
+        description: Movie title from TMDB data.
+        meta:
+          dimension:
+            type: string
+
+      - name: genre_names
+        description: Genres assigned to the movie (from TMDB data).
+        meta:
+          dimension:
+            type: string
+
+      - name: tagline
+        description: Tagline related to the movie.
+        meta:
+          dimension:
+            type: string
+
+      - name: keywords
+        description: Keywords related to the movie.
+        meta:
+          dimension:
+            type: string
+
+      - name: status
+        description: Status of the movie (released, canceled, etc). From TMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: runtime
+        description: Runtime of the movie. From TMDB.
+        meta:
+          dimension:
+            type: number
+
+      - name: vote_average
+        description: Average of the votes the movies received. From TMDB.
+        meta:
+          dimension:
+            type: number
+
+      - name: revenue
+        description: Revenue in USD the movie has had so far.
+        meta:
+          dimension:
+            type: number
+
+      - name: budget
+        description: Budget in USD the movie had.
+        meta:
+          dimension:
+            type: number
+
+      - name: t_release_date
+        description: Release date of the movie from TMDB.
+        meta:
+          dimension:
+            type: date
+
+      - name: t_release_year
+        description: Release year of the movie from TMDB.
+        meta:
+          dimension:
+            type: number
+
+      - name: director
+        description: Director(s) of the movie from OMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: writer
+        description: Writer(s) of the movie from OMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: actors
+        description: Main actors starring in the movie from OMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: awards
+        description: Summary of main awards the movie was granted from OMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: production
+        description: Production company from OMDB.
+        meta:
+          dimension:
+            type: string
+
+      - name: dvd
+        description: If the movie was released in DVD.
+        meta:
+          dimension:
+            type: string
+
+      - name: imdb_rating
+        description: Rating for the movie in IMDB website.
+        meta:
+          dimension:
+            type: number
+
+      - name: metascore
+        description: Metascore
+        meta:
+          dimension:
+            type: number
+
+      - name: imdb_votes
+        description: Number of votes in the IMDB website.
+        meta:
+          dimension:
+            type: number
+
+      - name: box_office
+        description: Box office the movies made.
+        meta:
+          dimension:
+            type: number
+
+
+  - name: int_omdb_tmdb_imdb_filtered
+    columns:
+      - name: imdb_id
+        description: IMDB unique identifier.
+        tests:
+          - unique
+          - not_null
+        meta:
+          dimension:
+            type: number
+
+
+  - name: int_academy_awards_transformed
+    columns:
+      - name: imdb_id
+        description: IMDB unique identifier.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: number 
+      - name: is_winner
+        description: If the nominated was the winner or not.
+        meta:
+          dimension:
+            type: boolean 
+      - name: class
+        description: Class.
+        meta:
+          dimension:
+            type: string      
+      - name: ceremony_year
+        description: Year of the academy award ceremony. 
+        meta:
+          dimension:
+            type: 
+      - name: person_id
+        description: Person id of the nominated people.
+        meta:
+          dimension:
+            type: string                                      

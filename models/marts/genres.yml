@@ -1,0 +1,32 @@
+version: 2
+models:            
+  - name: genres
+    description: Genres assigned to the movies.
+    meta:
+      label: Genres
+      
+    columns:
+      - name: imdb_id
+        description: IMDB unique identifier for each movie.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+            
+      - name: genre
+        description: Genre. Each movie may have many genres.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+
+      - name: original_genres
+        description: All genres assigned to the movie.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+                        

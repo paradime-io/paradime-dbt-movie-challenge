@@ -1,0 +1,46 @@
+version: 2
+models:            
+  - name: people
+    description: People who worked in the movies.
+    meta:
+      label: People
+      
+    columns:
+      - name: person_id
+        description: Unique identifier for each person.
+        tests:
+          - not_null
+          - unique
+        meta:
+          dimension:
+            type: string
+            
+      - name: person_name
+        description: Person's full name.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string        
+
+      - name: nb_movies_worked
+        description: Number of movies the person worked.
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_movies_worked:
+              type: sum
+              label: "# Movies Worked on"    
+
+
+      - name: movies_worked_rank
+        description: Rank of people who worked the most in movies.
+        meta:
+          dimension:  
+            type: number
+          metrics:
+            movies_worked_rank_metric:
+              type: max
+              label: "Rank # Movies Worked"
+              

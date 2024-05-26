@@ -3,7 +3,7 @@ with
 source as (
     select
         tconst as imdb_id, 
-        averagerating as avg_rating, 
+        averagerating as rating_avg, 
         numvotes as nb_votes
     from {{ source('MOVIES_ADDITIONAL', 'IMDB_RATINGS') }}
 )

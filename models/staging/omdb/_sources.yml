@@ -1,6 +1,0 @@
-sources:
-  - name: PARADIME_MOVIE_CHALLENGE
-    database: MOVIE_CHALLENGE
-    schema: PUBLIC
-    tables:
-      - name: OMDB_MOVIES

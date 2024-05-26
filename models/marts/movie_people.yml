@@ -1,0 +1,36 @@
+version: 2
+models:            
+  - name: movie_people
+    description: Connection betwee movies and people who worked on them.
+    meta:
+      label: Main people who worked in the movies
+      joins:
+        - join: people
+          sql_on: ${movie_people.person_id} = ${people.person_id}
+          type: left
+
+    columns:
+      - name: imdb_id
+        description: IMDb unique identifier for each movie.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+            
+      - name: person_id
+        description: Unique identifier for each person.
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
+
+      - name: category
+        description: Category of work (Acting, Director, Writer, etc).
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string          
+            

@@ -5,13 +5,13 @@ source as (
     from {{ source('PARADIME_MOVIE_CHALLENGE', 'TMDB_MOVIES') }}
 ),
 
-basic_cleanup as (
+basic_changes as (
     select 
         -- ids
         tmdb_id,
         imdb_id,
         -- dimensions
-        title,
+        title as movie_title,
         tagline,
         keywords,
         original_language,
@@ -35,4 +35,4 @@ basic_cleanup as (
 )
 
 select * 
-from basic_cleanup
+from basic_changes
