@@ -131,14 +131,10 @@ models:
             type: string
           metrics:
             movie_count:
-              type: sum
+              type: count
       - name: actor
         description: Actor separated into rows
         meta:
           dimension:
             type: string
-      - name: actor
-        description: Actor separated into rows
-        meta:
-          dimension:
-            type: string
+
