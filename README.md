@@ -93,9 +93,36 @@ Additional Data Sources
 
 ---
 
+## Awards Showdowns
+
+![oscars](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/why_oscars.png?raw=true)
+
+![best_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/best_films.png?raw=true)
+![correlation](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/correlation.png?raw=true)
+
+![best_actors](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/best_actors.png?raw=true)
+![best_actress](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/best_actress.png?raw=true)
+
+![best_directors](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/best_director.png?raw=true)
+
+#### Welcome to the dark side
+
+![razzies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/why_razzies.png?raw=true)
+
+![worst_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/worst_films.png?raw=true)
+
+![worst_actors](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/worst_actors.png?raw=true)
+![worst_actress](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/worst_actress.png?raw=true)
+
+![worst_directors](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-santiago-orozco-prediktia-com/snapshots/awards_showdowns/worst_director.png?raw=true)
+
+---
+
 # Conclusions
-🎬 In summary, our exploration of the film industry's data reveals a dynamic landscape characterized by the interplay of various factors. From timeless classics to modern blockbusters, directors and writers play pivotal roles in shaping the financial success of films, with their talent and creativity driving box office performance.
+In the vast expanse of the film industry, myriad stories unfold, each revealing layers of creativity, craftsmanship, and cultural impact. From timeless classics like "Gone with the Wind" to modern blockbusters such as "Titanic" and "Avatar," the cinematic landscape reflects the ever-evolving tastes and preferences of audiences worldwide. These films, spanning decades and genres, serve as windows into the human experience, capturing moments of joy, sorrow, triumph, and tragedy.
 
-📊 Analysis of ROI highlights the profitability of low-budget productions, particularly in niche genres like horror, while the median worldwide gross showcases the monumental success of visionary creators like Peter Jackson and Stan Lee.
+Behind the scenes, filmmakers harness the power of technology and global marketing strategies to bring their visions to life, leveraging advancements in CGI, sound design, and distribution to create immersive cinematic experiences. Directors like Steven Spielberg and Peter Jackson craft cinematic masterpieces that transcend time, while emerging talents like James Wan push the boundaries of genre filmmaking, redefining horror and action for a new generation.
 
-🌍 Moreover, the global distribution of box office revenue underscores the significance of diverse markets, with regions like the United States, Europe, and Asia-Pacific each contributing uniquely to the industry's economic ecosystem.
+Yet, amidst the glitz and glamour of the red carpet, there are also moments of misstep and failure. Films like "Jack and Jill" and "Battlefield Earth" stumble in their execution, facing criticism for their poor storytelling, performances, and production quality. Despite their Razzie wins, these films serve as cautionary tales, reminding us of the inherent risks and challenges inherent in the creative process.
+
+Ultimately, the world of cinema is a kaleidoscope of storytelling, where success and failure intermingle to create a rich tapestry of human expression. Whether celebrated with Oscars or lamented with Razzies, each film contributes to the ongoing dialogue of cinematic exploration, inviting audiences to laugh, cry, and ponder the complexities of the human condition.
