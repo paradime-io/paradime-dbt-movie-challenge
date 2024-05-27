@@ -16,8 +16,20 @@
 ## Introduction
 For my submission I decided to t take a t
 
-## Data Sources and Data Lineage
-My analysis leverages four key data sets:
+## Data
+My analysis primarly leverages a combination of publically available data from platforms like IMDB,
+Netflix, and GitHub. User behavior data from on my streaming behavior is mine and was also given permission to use data from a family member
+
+
+## Methodology
+#### Tools Used
+- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
+- **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
+- **[Lightdash](https://www.lightdash.com/)** for data visualization.
+- **Python** for data scraping and processing
+
+### Data Sources
+My analysis primarly leverages the following data sets:
 - [Neflix Viewing History](http://www.netflix.com/settings/viewing-history) (~5 years)
 - [Netflix Weekly](https://www.netflix.com/tudum/top10)
 - [Oscars Nominee Data](https://github.com/DLu/oscar_data?tab=readme-ov-file)
@@ -26,9 +38,8 @@ My analysis leverages four key data sets:
 - [IMDB Basics (People) Dataset](https://developer.imdb.com/non-commercial-datasets/)
 
 ### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
-Films
+**Films**
 ![films](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/films.png?raw=true)
 
 **Moods**
@@ -50,24 +61,14 @@ Films
 ![weekly](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/weekly.png?raw=true)
 
 
-## Methodology
-#### Tools Used
-- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
-- **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Python** for data scraping and processing
-
-### Data Sources
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
-### Data Lineage
-[Image]
 
 ## Visualizations
+
+### Representation and Recognition in Film
+
+
+
+
 
 ### vizualization 1
 - #### Visualizations title
