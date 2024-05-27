@@ -28,6 +28,8 @@ My analysis leverages four key data sets:
 ### Data Lineage
 - Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
+Films
+![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/films.png)
 
 ## Methodology
 #### Tools Used
