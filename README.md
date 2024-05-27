@@ -30,7 +30,7 @@ My analysis leverages two key data sets:
 
 #### Applied techniques
 - Used SQL and dbt to create base data models.
-- Applied Python's NLTK package for NLP to determine word frequency distribution and text sentiment in movie plots. Created new tables in Snowflake to store these metrics.
+- Applied Python's NLTK package for NLP to determine word frequency distribution and text sentiment in movie plots. Running it locally on my computer then created new tables in Snowflake to store these metrics.
 - Utilized SQL and dbt to create final data models for visualization.
 - Employed Python for visualizations, including word clouds and various charts.
 
