@@ -46,7 +46,8 @@ models:
         description: ""
         meta:
           metrics:
-            type: number
+            Total_Rev:
+              type: sum
       - name: budget
         description: ""
         meta:
