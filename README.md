@@ -64,29 +64,29 @@ My analysis primarly leverages the following data sets:
 
 ## Visualizations
 
-### Representation and Recognition in Film
+### A Stream at High Tide 🌊
+[netflix_top_weekly](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/netflix_bg/Screen%20Shot%202024-05-26%20at%2011.42.53%20PM.png?raw=true)
 
+[hours_viewed](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/netflix_bg/hours_watched.png?raw=true)
 
+[binge](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/netflix_bg/binge_1.png?raw=true)
 
+[binge_2](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/netflix_bg/binge_2.png?raw=true)
 
+### That's a Wrap: 2023 Edition! 🎬
+[movie_count](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/count_mov.png?raw=true)
+[dow](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/dow.png?raw=true)
+[mood](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/mood.png?raw=true)
+[awards](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/awards.png)
+[famous_trend](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/famous_trending.png)
+[crowd_scores](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/crowd_scores.png)
 
-### vizualization 1
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
+### Oscars Still So White 👎🏾
+[oscar_wins](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/oscar_wins.png?raw=true)
+[vioal](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/viola.png?raw=true)
+[ruby](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/ruby_dee.png?raw=true)
 
-### vizualization 2
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
-
-### vizualization 3
-- #### Visualizations title
-- #### Intro sentence to vizualization
-- #### Image of vizualization
-- #### Insights
 
 ## Conclusions
+
 Share a clear and concise conclusion of your findings!
