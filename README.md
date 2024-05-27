@@ -1,6 +1,6 @@
 # dbt™ Data Modeling Challenge - Movie Edition
 
-Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition)!
+Welcome to my project for the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition)!
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -82,4 +82,8 @@ My analysis leverages these key data sets:
     I'll be curious to see how this trend will continue in the current decade as new titles and franchises are released.
 
 ## Conclusions
-
+In this project, we explored various facets of the movie industry through data modeling and visualization. Key insights include:
+- A slight distinction between user and critic ratings for popular movies, with users often favoring different titles compared to critics.
+- The most highly-regarded directors excel at consistently releasing movies that perform very well financially.
+- Actor names expected to be mainstream and recognized by most people on the street have the most movie appearances in the industry.
+- The evolving trends in Fantasy and Sci-Fi genres, reflecting changes in audience preferences and industry focus over the decades.
