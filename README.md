@@ -128,7 +128,7 @@ As a final test, I wanted to see what the critics online thought about the films
 
 ![crowd_scores](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/thats_a_wrap/crowd_scores.png?raw=true)
 
-There is no accounting for good taste, but this analysis has alleviated some of my initial concerns.
+There is no accounting for good taste, but this analysis has at least alleviated some of my initial concerns.
 
 ## Conclusions
 
