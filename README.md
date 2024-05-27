@@ -34,6 +34,8 @@ to calculate the present-day value of financial metrics adjusted by inflation.
 ### Data Lineage
 - **CHANGE:** Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
+
+
 ## Methodology
 #### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
