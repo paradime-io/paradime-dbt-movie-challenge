@@ -45,7 +45,7 @@ My analysis leverages four key data sets:
 
 ## Visualizations
 
-### 1 Franchise Movies Versus Non-Franchise Profit
+### 1. Franchise Movies Versus Non-Franchise Profit
 - #### Visualizations title
 - #### Top 20 movies of all time by inflation adjusted profit (revenue - budget)
 - #### ![Image of vizualization](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movies-blosher13-gmail-com/images/Sequel_vs_NonSequel.png)
@@ -53,22 +53,20 @@ My analysis leverages four key data sets:
 Although non-franchise movies can be successful, franchise movies have a significantly higher change of profitability. This can be expected because movie fans are already familiar
 with existing characters so they are more likely to see a new film if they have seem the pre-sequel.
 
-### 2 Franchise movie profitability & ratings
+### 2. Franchise movie profitability & ratings
 
 - #### Top 10 Highest Franchises by Profit (inflation adjusted)
 - #### Intro sentence to vizualization
 - #### ![Image of vizualization](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movies-blosher13-gmail-com/images/all_movies_profit.png)
 - #### ![Image of vizualization](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movies-blosher13-gmail-com/images/all_movies_ratings.png)
-- #### The 3 greatest franchises are Star Wars -> Harry Potter -> Spiderman. These franchises are further broken down into its various films. The second visualization
-illustrates the ratings for these films, with Lord Of The Ring taking the highest average rating.
+- #### The 3 greatest franchises are Star Wars -> Harry Potter -> Spiderman. These franchises are further broken down into its various films.
+- #### The second visualization illustrates the ratings for these films, with Lord Of The Ring taking the highest average rating.
 
-### 3 Star Wars & Harry Potter
-- #### Star Wars & Harry Potter franchises
+### 3. Star Wars & Harry Potter
 - #### Star Wars is composed of 9 movies, with the highest profitable movie being the first Star Wars movie released back in 1977.
-In contrast, the latest Harry Potter film, Harry Potter and the Deadly Hallows:Part 2 was the most profitable.
+- #### In contrast, the latest Harry Potter film, Harry Potter and the Deadly Hallows:Part 2 was the most profitable.
 - #### ![Image of vizualization](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movies-blosher13-gmail-com/images/starwars.png)
 - #### ![Image of vizualization](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movies-blosher13-gmail-com/images/Harry_Potter_2.png)
-- #### Insights
 
 ## Conclusions
 Hollywood is not so original as it may seem, and for good reason. The most profitable films are new takes on previously created
