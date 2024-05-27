@@ -45,7 +45,7 @@ models:
       - name: revenue
         description: ""
         meta:
-          dimension:
+          metrics:
             type: number
       - name: budget
         description: ""
