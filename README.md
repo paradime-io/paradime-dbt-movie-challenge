@@ -7,10 +7,9 @@
    - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
-   - etc
+   - Oscars Still So White
+   - A Stream at High Tide
+   - That’s a Wrap: 2023 Edition
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -65,12 +64,25 @@ My analysis primarly leverages the following data sets:
 ## Visualizations
 
 ### Oscars (Still) So White 👎🏾
+A brief look at race, gender, and age at the Academy Awards. 
+
+Despite widespread backlash a few years back, the Oscars still fail to highlight the work of talented black womxn actors. Below is the very short list of Black women who have won for acting categories.
 
 ![oscar_wins](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/oscar_wins.png?raw=true)
+
+Viola Davis tops the list, having received both nominations and wins for films like Ma Rainey’s Black Bottom (a Netflix released), Fences, and The Help. In addition to performing well commercially, her films have received positive response from critics.
+
 ![viola](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/viola.png?raw=true)
+
+Zooming out a bit, we can see that Black women actors with Academy Award nominations typically skew younger, and generally have fewer nominations over their lifetimes. Both of those things feel problematic to me. The two exceptions to these are Viola Davis whose Oscar success is described above, and Ruby Dee who was nominated for her first Oscar in 2008 for “Best Performance by an Actress in a Supporting Role” in American Gangster, about 6 years before she passed away.
+
 ![awards](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/awards.png?raw=true)
+
+In addition to acting in American Gangster, Ruby Dee starred in films that are largely considered to be some of the most important films ever. Both A Raisin in the Sun (1961) and Do the Right Thing (1989) are hugely popular and culturally significant films that have been added to the National Film Registry.
+
 ![ruby](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/viz/oscars_still_so_white/ruby_dee.png?raw=true)
 
+Clearly, there is a gap in recognizing the talent of Black women.
 
 ### A Stream at High Tide 🌊
 A high-level overview of Netflix and a zoomed look at my streaming habits over five years.
@@ -118,8 +130,9 @@ As a final test, I wanted to see what the critics online thought about the films
 
 There is no accounting for good taste, but this analysis has alleviated some of my initial concerns.
 
-
-
 ## Conclusions
 
-Share a clear and concise conclusion of your findings!
+- Hollywood still has work to do to acknowledge the accomplishments of diverse talent
+- Despite global uncertainty, streaming services like Netflix have many levers in their arsenal to influence the content we consume and how much.
+- I did a halfway decent job of staying culturally relevant last year, at least as far as films go.
+
