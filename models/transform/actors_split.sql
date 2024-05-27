@@ -5,7 +5,7 @@ WITH ActorSplit AS (
         title,
         TRIM(actor_value.VALUE::STRING) AS actor
     FROM {{ ref('stg_omdb_movies') }},
-    LATERAL FLATTEN(INPUT => SPLIT(genre, ',')) AS actor_value
+    LATERAL FLATTEN(INPUT => SPLIT(actors, ',')) AS actor_value
     WHERE released_date IS NOT NULL
         AND imdb_votes >= 10000
 )
