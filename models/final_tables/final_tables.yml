@@ -148,7 +148,7 @@ models:
       - name: release_year
         meta:
           dimension:
-            type: string
+            type: number
       - name: genre2
         description: Whether the movie is categorized as Sci-Fi or Fantasy. If the movie is tagged with both, it's categorized as Fantasy
         meta:

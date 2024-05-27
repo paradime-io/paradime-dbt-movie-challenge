@@ -10,9 +10,10 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https:/
    - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
-   - [Vizualization #1](#visualization-1)
-   - [Vizualization #2](#visualization-2)
-   - [Vizualization #3](#visualization-3)
+   - [Visualization #1](#visualization-1)
+   - [Visualization #2](#visualization-2)
+   - [Visualization #3](#visualization-3)
+   - [Visualization #4](#visualization-4)
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -22,10 +23,9 @@ My project focuses on mainstream / popular movies by filtering the datasets to e
 The insights are drawn from performance metrics such as film revenue or rating and I'm also presenting interesting facts for movie enthusiasts.
 
 ## Data Sources and Data Lineage
-My analysis leverages four key data sets:
+My analysis leverages these key data sets:
 - *OMDB_MOVIES*
 - *TMDB_MOVIES*
-- *data set name #3*
 
 ### Data Lineage
 - ![OMDB Data Lineage](images/source_omdb_lineage.png)
@@ -45,8 +45,8 @@ My analysis leverages four key data sets:
 ### Visualization 1
 - #### Directors' Total Revenue and Revenue per Movie
 - This chart presents the most commercially successful directors, highlighting their box office total and per movie.
-- ![Directors' Total Revenue](images/directors_total_revenue.png)
-- ![Directors' Revenue per Movie](images/directors_rev_per_movie.png)
+- [Directors' Total Revenue](images/directors_total_revenue.png)
+- [Directors' Revenue per Movie](images/directors_rev_per_movie.png)
 - **Insights**:
   - Steven Spielberg has generated the highest revenue across his many movies.
     However, if we look at the average revenue per movie for these same directors, the Russo brothers, J.J. Abrams and James Cameron perform the best, showcasing a bit more consinstency with their high-hitting movies.
