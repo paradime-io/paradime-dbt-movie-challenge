@@ -1,5 +1,6 @@
 select 
     imdb_id,
     title,
-    actor
+    actor,
+    imdb_rating
 FROM {{ ref('actors_split') }}

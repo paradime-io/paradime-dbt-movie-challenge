@@ -137,4 +137,10 @@ models:
         meta:
           dimension:
             type: string
+      - name: imdb_rating
+        description: The rating on a scale of 10 on IMDB provided by user votes
+        meta:
+          metrics:
+            avg_imdb_rating:
+              type: average
 
