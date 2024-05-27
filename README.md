@@ -10,9 +10,9 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https:/
    - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
+   - [Vizualization #1](#visualization-1)
+   - [Vizualization #2](#visualization-2)
+   - [Vizualization #3](#visualization-3)
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -36,7 +36,7 @@ My analysis leverages four key data sets:
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
 - **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
+- **ChatGPT** for debugging software errors.
 
 
 

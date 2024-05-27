@@ -143,4 +143,21 @@ models:
           metrics:
             avg_imdb_rating:
               type: average
+  - name: fantasy_scifi_evolution
+    columns:
+      - name: release_year
+        meta:
+          dimension:
+            type: string
+      - name: genre2
+        description: Whether the movie is categorized as Sci-Fi or Fantasy. If the movie is tagged with both, it's categorized as Fantasy
+        meta:
+          diimension:
+            type: string
+      - name: revenue
+        meta:
+          metrics:
+            revenue_total:
+              type: sum
+
 

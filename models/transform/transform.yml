@@ -18,3 +18,8 @@ models:
     columns:
       - name: imdb_id
         description: "the movie ID on IMDB"
+  - name: fantasy_scifi_movies
+    columns:
+      - name: genre2
+        description:
+          New genre column for Sci-Fi and Fantasy
