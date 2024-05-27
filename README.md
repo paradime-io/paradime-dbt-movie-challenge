@@ -122,7 +122,7 @@ Although sentiment in both categories are close to neutral we can see that Sci-F
 Nothing super surprising here, family movies have the most positive sentiment, and horrors the most negative. However, non others than family are in the positive range.
 
 #### Word Frequency
-For determining word frequencies I analyzed all five of the text fields.
+For determining word frequencies and collocations I analyzed all five of the text fields.
 
 - #### Plot:
 - Non Sci-Fi:
@@ -143,6 +143,19 @@ For determining word frequencies I analyzed all five of the text fields.
 
 - Sci-Fi:
 - ![concatenated_title_wordcloud](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/9b5407c6-145e-440f-b26a-db6465fcc6c7)
+
+- #### Keywords:
+- Non Sci-Fi:
+- ![all_movies_concatenated_keywords_wordcloud](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/a5d1d3b1-c799-4570-b519-52aa08e27948)
+- Sci-Fi:
+- ![concatenated_keywords_wordcloud](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/40c0b150-ca72-4f8c-8cfb-1ff65e5b2bc8)
+
+
+- - #### Tagline:
+- Non Sci-Fi:
+- ![all_movies_concatenated_tagline_wordcloud](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/2528a410-9ba5-49ae-bdb5-0b6797d470b2)
+- Sci-Fi:
+- ![concatenated_tagline_wordcloud](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/d794594c-28de-400b-9f04-cd4d844ba971)
 
 #### Insights
 We can see in both Non Sci-Fi and Sci-Fi plots, `life` is a very popular word. We can also see `family`, `mother`, `father` etc. for Non Sci-Fi. For Sci-Fi `world` is one of the highest ranked word and also `alien, future, earth, planet` appears.
