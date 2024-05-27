@@ -1,0 +1,83 @@
+version: 2
+models:
+  - name: watch_history
+    meta:
+      joins:
+        - join: films
+          sql_on: ${films.netflix_title_id} = ${watch_history.title_id}
+        - join: tv
+          sql_on: ${tv.title_id} = ${watch_history.title_id}
+        - join: moods
+          sql_on: ${moods.title_id} = ${watch_history.title_id}
+    columns:
+      - name: date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: user_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            num_distinct_viewers:
+              type: count_distinct
+      - name: day_of_week
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: viewer_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: episode_number_watched
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            max_episodes_watched:
+              type: max
+      - name: series_started_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: series_last_watched_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: num_days_between_first_and_last_watched
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: had_top_ten_status_at_view_time
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: week_of_top_ten_status
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: netflix_rank
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_weeks_in_top_ten
+        description: ""
+        meta:
+          dimension:
+            type: number

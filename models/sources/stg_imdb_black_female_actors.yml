@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: stg_imdb_black_female_actors
+    columns:
+      - name: imdb_person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: created
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: modified
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: description
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: known_for
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: birthdate
+        description: ""
+        meta:
+          dimension:
+            type: string

@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: moods
+    columns:
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: mood
+        description: ""
+        meta:
+          dimension:
+            type: string

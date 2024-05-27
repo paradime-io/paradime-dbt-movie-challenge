@@ -1,0 +1,187 @@
+version: 2
+models:
+  - name: tv
+    columns:
+      - name: id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: overview
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tagline
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: created_by_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: original_language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: status
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: in_production
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: first_air_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: last_air_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: number_of_seasons
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: number_of_episodes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: popularity
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: poster_path
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production_company_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: cast
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: synopsis
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: primary_genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: duration
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: episodes_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: episodes_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: maturity
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre_list
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: moods
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movie_hours
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movie_minutes
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: total_movie_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: avg_tv_episode_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_minutes_watched:
+              type: sum
+      - name: content_type
+        description: ""
+        meta:
+          dimension:
+            type: string

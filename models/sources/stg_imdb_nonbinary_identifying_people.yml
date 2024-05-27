@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: stg_imdb_nonbinary_identifying_people
+    columns:
+      - name: imdb_person_id
+        description: ""
+        meta:
+          dimension:
+            type: string

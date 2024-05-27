@@ -1,0 +1,207 @@
+version: 2
+models:
+  - name: films
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            num_unique_imdb_titles:
+              type: count_distinct
+      - name: netflix_title_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            num_titles:
+              type: count
+            num_unique_titles:
+              type: count_distinct
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: cast
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: primary_genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: language
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: country
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: type
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: synopsis
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: maturity_rating
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_metascore:
+              type: average
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_imdb_score:
+              type: average
+      - name: imdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: rotten_tomatoes_score
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_rt_score:
+              type: average
+      - name: released_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: released_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_minutes_watched:
+              type: sum
+      - name: dvd
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: box_office
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            total_box_office_revenue_adjusted:
+              type: sum
+      - name: poster
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: website
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: num_award_wins
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_nominations
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_oscars
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_primetime_emmys
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_golden_globes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_baftas
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: netflix_genre_list
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: netflix_mood_list
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: is_award_winning
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_in_national_film_registry
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: highest_netflix_rank
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: highest_num_weeks_in_top_ten
+        description: ""
+        meta:
+          dimension:
+            type: number

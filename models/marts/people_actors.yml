@@ -1,0 +1,77 @@
+version: 2
+models:
+  - name: people_actors
+    columns:
+      - name: imdb_person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: primary_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: birth_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: death_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: primary_profession
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: known_for_titles
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: is_actor
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_director
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_producer
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_writer
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_black_female_actor
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_multi_hyphenate
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: num_professions
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            avg_num_professions:
+              type: average
+      - name: is_nonbinary
+        description: ""
+        meta:
+          dimension:
+            type: boolean

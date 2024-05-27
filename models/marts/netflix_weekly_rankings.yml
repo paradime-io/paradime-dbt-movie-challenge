@@ -1,0 +1,64 @@
+version: 2
+models:
+  - name: netflix_weekly_rankings
+    columns:
+      - name: reporting_week_end_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: reporting_week_start_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: episode_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: reporting_category
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: netflix_weekly
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: num_weeks_in_top_ten
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: ranking_metric_used
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: num_weekly_hours_watched
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: hours_over_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: reported_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: is_staggered_launch
+        description: ""
+        meta:
+          dimension:
+            type: boolean

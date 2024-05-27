@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: costar_roles
+    meta:
+      joins:
+      - join: films
+        sql_on: ${films.imdb_id} = ${costar_roles.imdb_id}
+    columns:
+      - name: imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: actor
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: costar_actor
+        description: ""
+        meta:
+          dimension:
+            type: string

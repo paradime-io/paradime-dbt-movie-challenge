@@ -1,0 +1,84 @@
+version: 2
+models:
+  - name: stg_oscars_results
+    columns:
+      - name: year
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: class
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: category
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: film
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: nominees
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: detail
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: note
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: citation
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: award_nomination_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: ceremony_number
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: canonical_category
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_film_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: nominee_names
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: nominees_ids
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: is_winner
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_multi_film_nomination
+        description: ""
+        meta:
+          dimension:
+            type: boolean

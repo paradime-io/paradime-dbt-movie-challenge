@@ -6,3 +6,20 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: NETFLIX
+    schema: RAW
+    tables:
+      - name: RAW_NETFLIX_USER_HISTORY
+      - name: RAW_NETFLIX_TITLES
+      - name: RAW_NETFLIX_WEEKLY_RANKINGS
+  - name: IMDB
+    schema: RAW
+    tables:
+      - name: RAW_IMDB_PEOPLE
+      - name: RAW_IMDB_BLACK_FEMALE_ACTORS
+      - name: RAW_IMDB_NATIONAL_FILM_REGISTRY
+      - name: RAW_IMDB_NONBINARY_IDENTIFYING_PEOPLE
+  - name: OSCARS
+    schema: RAW
+    tables:
+      - name: RAW_OSCARS_NOMINATIONS

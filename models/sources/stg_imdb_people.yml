@@ -1,0 +1,54 @@
+version: 2
+models:
+  - name: stg_imdb_people
+    columns:
+      - name: imdb_person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: primary_name
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: birth_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: death_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: primary_profession
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: known_for_titles
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: is_actor
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_director
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_producer
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_writer
+        description: ""
+        meta:
+          dimension:
+            type: boolean

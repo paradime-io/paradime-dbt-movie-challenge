@@ -1,0 +1,94 @@
+version: 2
+models:
+  - name: stg_netflix_titles
+    columns:
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: cast
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: synopsis
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: primary_genre
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: duration
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: episodes_runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: episodes_count
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: maturity
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre_list
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: moods
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movie_hours
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: movie_minutes
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: total_movie_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: avg_tv_episode_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: time_minutes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: content_type
+        description: ""
+        meta:
+          dimension:
+            type: string

@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: stg_netflix_history
+    columns:
+      - name: date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: title_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: user_id
+        description: ""
+        meta:
+          dimension:
+            type: number

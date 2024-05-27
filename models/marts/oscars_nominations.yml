@@ -1,0 +1,97 @@
+version: 2
+models:
+  - name: oscars_nominations
+    meta:
+      joins:
+        - join: people_actors
+          sql_on: >-
+            ${people_actors.imdb_person_id} =
+            ${oscars_nominations.nominee_imdb_id}
+        - join: films
+          sql_on: ${films.imdb_id} = ${oscars_nominations.imdb_film_id}
+    columns:
+      - name: id
+        description: ""
+        meta:
+          dimension:
+            type: string
+          metrics:
+            num_award_nominations:
+              type: count_distinct
+            num_wins:
+              type: count_distinct
+              filters:
+                - is_winner: true
+      - name: award_nomination_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: nominee_imdb_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: ceremony_number
+        description: sequential number of the ceremony
+        meta:
+          dimension:
+            type: number
+      - name: year
+        description: year of the award ceremony
+        meta:
+          dimension:
+            type: date
+      - name: class
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: canonical_category
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: category
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: film
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_film_id
+        description: fk for imdb film id
+        meta:
+          dimension:
+            type: string
+      - name: is_winner
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: is_multi_film_nomination
+        description: ""
+        meta:
+          dimension:
+            type: boolean
+      - name: imdb_person_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: birth_year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: approximate_age_at_nomination
+        description: ""
+        meta:
+          dimension:
+            type: number
+          metrics:
+            age_during_first_oscar_nomination:
+              type: min

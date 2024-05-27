@@ -1,0 +1,79 @@
+version: 2
+models:
+  - name: stg_imdb_national_film_registry
+    columns:
+      - name: imdb_title_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: created
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: modified
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: description
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: original_title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: url
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: title_type
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: year
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genres
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: num_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: directors
+        description: ""
+        meta:
+          dimension:
+            type: string
