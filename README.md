@@ -27,8 +27,8 @@ My analysis leverages these key data sets:
 - *TMDB_MOVIES*
 
 ### Data Lineage
-- ![OMDB Data Lineage](images/source_omdb_lineage.png)
-- ![TMDB Data Lineage](images/source_tmdb_lineage.png)
+![OMDB Data Lineage](images/source_omdb_lineage.png)
+![TMDB Data Lineage](images/source_tmdb_lineage.png)
 
 ## Methodology
 #### Tools Used
@@ -44,8 +44,8 @@ My analysis leverages these key data sets:
 ### Visualization 1
 - #### Directors' Total Revenue and Revenue per Movie
 - This chart presents the most commercially successful directors, highlighting their box office total and per movie.
-- [Directors' Total Revenue](images/directors_total_revenue.png)
-- [Directors' Revenue per Movie](images/directors_rev_per_movie.png)
+![Directors' Total Revenue](images/directors_total_revenue.png)
+![Directors' Revenue per Movie](images/directors_rev_per_movie.png)
 - **Insights**:
   - Steven Spielberg has generated the highest revenue across his many movies.
     However, if we look at the average revenue per movie for these same directors, the Russo brothers, J.J. Abrams and James Cameron perform the best, showcasing a bit more consinstency with their high-hitting movies.
@@ -54,7 +54,7 @@ My analysis leverages these key data sets:
 ### Visualization 2
 - #### Actor Appearances and IMDb Ratings
 - This visualization shows the number of movie appearances for each actor alongside their average IMDb ratings.
-- [Actor Appearances and IMDb Ratings](images/actor_appearances.png)
+![Actor Appearances and IMDb Ratings](images/actor_appearances.png)
 - **Insights**:
   - I've filtered for titles with at least 10000 IMDB votes, this way we can see actors whose faces we can most frequently see in popular movies.
     Robert De Niro and Nicolas Cage have a tied at the 1st place, but we know all these names very well. 
@@ -64,7 +64,7 @@ My analysis leverages these key data sets:
 ### Visualization 3
 - #### IMDb vs Metascore Ratings
 - This visualization compares the IMDb ratings and Metascore ratings for various movies to understand the differences in user and critic ratings.
-- [IMDb vs Metascore Ratings](images/imdb_vs_metascore.png)
+![IMDb vs Metascore Ratings](images/imdb_vs_metascore.png)
 - **Insights**:
   - This table shows the movies with the highest number of IMDB votes.
     In general, we can say that for these titles, users and critics mostly agree that these are great movies.
@@ -74,7 +74,7 @@ My analysis leverages these key data sets:
 ### Visualization 4
 - #### Fantasy and Sci-Fi genres' evolution
 - This line chart shows the evolution of the Sci-Fi and Fantasy genres over the decades based on their box office revenue.
-- [Fantasy and Sci-Fi genres' evolution](images/scifi-fantasy.png)
+![Fantasy and Sci-Fi genres' evolution](images/scifi-fantasy.png)
 - **Insights**:
   - I've separated the 2 genres, grouping movies into Fantasy if they have both genre tags.
     These two genres stagnated up until the 70s, where a big boost can be seen as they grow together in total revenue.
