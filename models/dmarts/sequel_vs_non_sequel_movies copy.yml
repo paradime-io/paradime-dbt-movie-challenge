@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: sequel_vs_non_sequel_movies
+  - name: sequel_vs_non_sequel_movies_rating
     columns:
       - name: tmdb_id
         description: ""

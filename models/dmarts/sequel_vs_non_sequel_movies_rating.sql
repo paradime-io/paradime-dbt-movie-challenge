@@ -21,7 +21,7 @@ final as (
         inf_budget,
         inf_profit
     from clean_movies
-    order by inf_profit desc
+    order by vote_average desc
     limit 20
 )
 select * from final
