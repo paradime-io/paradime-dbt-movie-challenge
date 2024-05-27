@@ -5,6 +5,10 @@ models:
     meta:
       label: Main people who worked in the movies
       joins:
+        - join: movies
+          sql_on: ${movie_people.imdb_id} = ${movies.imdb_id}
+          type: left      
+          
         - join: people
           sql_on: ${movie_people.person_id} = ${people.person_id}
           type: left

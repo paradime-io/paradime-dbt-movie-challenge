@@ -14,6 +14,7 @@ exposures:
       - ref('movie_stats_by_genre')
       - ref('movie_stats_by_country')
       - ref('people')
+      - ref('movie_people')
 
     owner:
       name: Leticia

@@ -5,9 +5,6 @@ models:
     meta:
       label: Movies
       joins:
-        - join: movie_people
-          sql_on: ${movies.imdb_id} = ${movie_people.imdb_id}
-          type: left      
         - join: academy_awards
           sql_on: ${movies.imdb_id} = ${academy_awards.imdb_id}
           type: left
