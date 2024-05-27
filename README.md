@@ -74,9 +74,12 @@ My analysis leverages these key data sets:
 ### Visualization 4
 - #### Fantasy and Sci-Fi genres' evolution
 - This line chart shows the evolution of the Sci-Fi and Fantasy genres over the decades based on their box office revenue.
-- [Fantasy and Sci-Fi genres' evolution](images/imdb_vs_metascore.png)
+- [Fantasy and Sci-Fi genres' evolution](images/scifi-fantasy.png)
 - **Insights**:
-  - 
+  - I've separated the 2 genres, grouping movies into Fantasy if they have both genre tags.
+    These two genres stagnated up until the 70s, where a big boost can be seen as they grow together in total revenue.
+    They show a very similar trend, however in the 2010s the Sci-Fi genre got a significant lead.
+    I'll be curious to see how this trend will continue in the current decade as new titles and franchises are released.
 
 ## Conclusions
 
