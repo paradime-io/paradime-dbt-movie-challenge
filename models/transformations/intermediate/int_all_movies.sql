@@ -34,7 +34,7 @@ with omdb_cte as (
             else 0
         end is_scifi
     from {{ref('stg_omdb_movies')}}
-    --where genre ilike '%Sci-Fi%'
+    where genre not ilike '%Short%'
 ),
 tmdb_cte as (
     select 
@@ -64,7 +64,7 @@ tmdb_cte as (
             else 0
         end is_scifi
     from {{ref('stg_tmdb_movies')}}
-    --where genre_names ilike '%Science Fiction%'
+    where genre_names not ilike '%Short%'
 ),
 joined as (
     SELECT 

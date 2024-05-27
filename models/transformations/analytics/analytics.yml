@@ -4,19 +4,73 @@ models:
     columns:
       - name: genre
       - name: nr_of_movies
+        meta:
+          metrics:
+            nr_of_movies_metric:
+              type: average
   - name: fct_scifi_vs_all
     columns: 
       - name: is_scifi
       - name: nr_of_movies
+        meta:
+          metrics:
+            nr_of_movies_metric:
+              type: average
       - name: avg_revenue
+        meta:
+          metrics:
+            avg_revenue_metric:
+              type: average
       - name: avg_budget
+        meta:
+          metrics:
+            avg_budget_metric:
+              type: average
       - name: avg_imdb_rating
+        meta:
+          metrics:
+            avg_imdb_rating_metric:
+              type: average
       - name: avg_imdb_votes
+        meta:
+          metrics:
+            avg_imdb_votes_metric:
+              type: average
       - name: sum_imdb_votes
+        meta:
+          metrics:
+            sum_imdb_votes_metric:
+              type: average
       - name: avg_runtime
+        meta:
+          metrics:
+            avg_runtime_metric:
+              type: average
       - name: sum_runtime
+        meta:
+          metrics:
+            sum_runtime_metric:
+              type: average
   - name: fct_compound
     columns:
       - name: is_scifi
       - name: avg_compound_plot
+        meta:
+          metrics:
+            avg_sentiment_plot:
+              type: average
       - name: avg_compound_overview
+        meta:
+          metrics:
+            avg_sentiment_overview:
+              type: average
+      - name: avg_compound_keywords
+        meta:
+          metrics:
+            avg_sentiment_keywords:
+              type: average
+      - name: avg_compound_title
+        meta:
+          metrics:
+            avg_sentiment_title:
+              type: average
