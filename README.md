@@ -46,7 +46,7 @@ My scope was Science Fiction movies and before I jumped into the advanced analyt
 - #### Intro sentence to vizualization
 - #### Image of vizualization
 
-\nr_of_movies_pie_chart.png
+![nr_of_movies_pie_chart](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/9cde8aee-53ef-4307-9819-cb4bab554c2b)
 
 - #### Insights
 
