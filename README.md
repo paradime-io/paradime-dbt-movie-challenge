@@ -64,12 +64,19 @@ My analysis leverages these key data sets:
 ### Visualization 3
 - #### IMDb vs Metascore Ratings
 - This visualization compares the IMDb ratings and Metascore ratings for various movies to understand the differences in user and critic ratings.
-- [Actor Appearances and IMDb Ratings](images/imdb_vs_metascore.png)
+- [IMDb vs Metascore Ratings](images/imdb_vs_metascore.png)
 - **Insights**:
   - This table shows the movies with the highest number of IMDB votes.
     In general, we can say that for these titles, users and critics mostly agree that these are great movies.
     Given the aggregate nature of the IMDB user rating, its ceiling is lower as they can never truly reach 10/10, as we can see The Godfather has one of the highest IMDB scores still not reaching maximum, the lower number of critic reviews can result in a score of 10.
     The biggest difference in users' and critics' taste come in the 2 cult classics, Fight Club and Se7en, which critics didn't adore as much as users.
+
+### Visualization 4
+- #### Fantasy and Sci-Fi genres' evolution
+- This line chart shows the evolution of the Sci-Fi and Fantasy genres over the decades based on their box office revenue.
+- [Fantasy and Sci-Fi genres' evolution](images/imdb_vs_metascore.png)
+- **Insights**:
+  - 
 
 ## Conclusions
 
