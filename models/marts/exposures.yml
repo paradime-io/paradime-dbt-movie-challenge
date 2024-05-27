@@ -13,8 +13,6 @@ exposures:
       - ref('movies')
       - ref('movie_stats_by_genre')
       - ref('movie_stats_by_country')
-      - ref('academy_awards')
-      - ref('movie_people')
       - ref('people')
 
     owner:
