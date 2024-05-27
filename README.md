@@ -29,7 +29,26 @@ My analysis leverages four key data sets:
 - Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
 
 Films
-![image](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/films.png?raw=true)
+![films](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/films.png?raw=true)
+
+**Moods**
+![moods](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/moods.png?raw=true)
+
+**Oscar Nominations**
+![oscar-noms](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/oscar_noms.png?raw=true)
+
+**People - Actors**
+![actors](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/people_actors.png?raw=true)
+
+**TV**
+![tv](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/tv.png?raw=true)
+
+**Watch History**
+![history](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/watch_history.png?raw=true)
+
+**Netflix Weekly Top 10**
+![weekly](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-sperry-classy-org/images/dag/weekly.png?raw=true)
+
 
 ## Methodology
 #### Tools Used
