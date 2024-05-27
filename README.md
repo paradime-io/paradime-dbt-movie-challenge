@@ -20,6 +20,12 @@ This project dives into the analysis and visualization of Movie and TV data!
 
 ## Data Sources and Data Lineage
 
+![test](https://github.dev/paradime-io/paradime-dbt-movie-challenge/blob/movie-leticia-bueno-tecsys-com/screenshots/lineage_graph.png)
+
+
+
+
+
 ### Data Sources
 My analysis leverages two key movies datasets provided by Paradime:
 - OMDB_MOVIES.
