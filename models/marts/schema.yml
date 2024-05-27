@@ -185,7 +185,7 @@ models:
         description: "Year when the movie was released."
         meta:
           dimension:
-            type: number
+            type: date
       - name: lifetime_gross
         description: "Total lifetime gross of movies released in the region and year."
         meta:
@@ -196,3 +196,12 @@ models:
         meta:
           dimension:
             type: number
+          metrics:
+            percent_total_gross_by_region:
+              description: "Percentage of total gross by region and year."
+              type: sum
+              sql: percent_total_gross
+              dimensions:
+                - region
+                - release_year
+              round: 0

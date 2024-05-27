@@ -24,7 +24,7 @@ total_gross_year AS (
 
 SELECT
     htg.region
-    , htg.release_year
+    , TO_DATE(htg.release_year || '-01-01', 'YYYY-MM-DD') AS release_year
     , htg.lifetime_gross
     , (htg.lifetime_gross / tgy.total_gross) * 100 AS percent_total_gross
 FROM 
