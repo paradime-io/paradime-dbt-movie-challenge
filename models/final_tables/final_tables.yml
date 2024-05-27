@@ -159,5 +159,9 @@ models:
           metrics:
             revenue_total:
               type: sum
+      - name: decade
+        meta:
+          dimension:
+            type: string
 
 

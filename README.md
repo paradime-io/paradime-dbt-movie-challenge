@@ -7,7 +7,6 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - Movie Edition](https:/
 2. [Data Sources](#data-sources-and-data-lineage)
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
-   - [Applied Techniques](#applied-techniques)
    - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
    - [Visualization #1](#visualization-1)
@@ -55,7 +54,7 @@ My analysis leverages these key data sets:
 ### Visualization 2
 - #### Actor Appearances and IMDb Ratings
 - This visualization shows the number of movie appearances for each actor alongside their average IMDb ratings.
-- ![Actor Appearances and IMDb Ratings](images/actor_appearances.png)
+- [Actor Appearances and IMDb Ratings](images/actor_appearances.png)
 - **Insights**:
   - I've filtered for titles with at least 10000 IMDB votes, this way we can see actors whose faces we can most frequently see in popular movies.
     Robert De Niro and Nicolas Cage have a tied at the 1st place, but we know all these names very well. 
@@ -65,7 +64,7 @@ My analysis leverages these key data sets:
 ### Visualization 3
 - #### IMDb vs Metascore Ratings
 - This visualization compares the IMDb ratings and Metascore ratings for various movies to understand the differences in user and critic ratings.
-- ![Actor Appearances and IMDb Ratings](images/imdb_vs_metascore.png)
+- [Actor Appearances and IMDb Ratings](images/imdb_vs_metascore.png)
 - **Insights**:
   - This table shows the movies with the highest number of IMDB votes.
     In general, we can say that for these titles, users and critics mostly agree that these are great movies.
