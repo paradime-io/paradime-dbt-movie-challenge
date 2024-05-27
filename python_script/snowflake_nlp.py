@@ -32,7 +32,6 @@ nltk.download([
 stopwords = nltk.corpus.stopwords.words("english")
 
 list_of_columns = ['imdb_id', 'plot', 'overview', 'tagline', 'title', 'keywords']
-# table_name = 'intermediate.int_science_fictions_joined'
 table_name = 'intermediate.int_movies'
 
 load_dotenv()
@@ -54,16 +53,7 @@ def read_snowflake_table_to_df(conn_params, tablename, list_of_columns):
     print('Setting up snowflake connection...')
     # Snowflake connection parameters
     conn = snowflake.connector.connect(**conn_params)
-    
-    '''
-    conn = snowflake.connector.connect(
-        user='istvan.mozes.90@gmail.com',
-        password='istvanmozes9041bng',
-        account='xyb13578',
-        warehouse='TRANSFORMING',
-        database='ISTVANMOZES9041BNG_ANALYTICS',
-    )
-    '''
+
 
     # Create a cursor object
     cur = conn.cursor()
@@ -114,10 +104,8 @@ def frequency(text, top_n):
 def concat_all_rows_in_column(df_column):
     df_column_filtered = df_column.dropna()
     print('Preprocessing data...')
-    #print(f'Creating {df_column} list...')
     all_row_list = df_column_filtered.tolist()
     all_row_concat = ' '.join(all_row_list)
-    #print(f'Done creating {df_column} list...')
 
     return all_row_concat
 
