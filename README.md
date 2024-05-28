@@ -22,6 +22,11 @@ My analysis leverages two key data sets:
 - TMDB_MOVIES
 - OMDB_MOVIES
 
+## Data lineage:
+![lineage_fct_compound](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/a7621645-d8b9-4a9a-b737-85b4caedb583)
+![lineage_fct_genres](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/ee5e8fc7-fa47-4588-bd36-28bd9152ffa0)
+![lineage_fct_scifi_vs_all](https://github.com/moses90/paradime-dbt-movie-challenge/assets/23437333/4f7f13d4-5239-4d85-b755-aae2915af31f)
+
 ## Methodology
 #### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
