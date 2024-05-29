@@ -149,10 +149,11 @@ My analysis leverages four key data sets:
 
 ### Data Sources
 My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
+- omdb_movies
+- tmdb_movies
+- tmdb_tv_series
+- imdb_*
+- 
 
 ### Data Lineage
 [Image]

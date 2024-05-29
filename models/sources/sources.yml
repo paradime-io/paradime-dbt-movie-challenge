@@ -6,3 +6,21 @@ sources:
       - name: TMDB_MOVIES
       - name: OMDB_MOVIES
       - name: TMDB_TV_SERIES
+  - name: ADDITIONAL_DATA
+    database: TONYFANCHERGM42Y_ANALYTICS
+    schema: RAW
+    tables:
+      - name: IMDB_CREW
+      - name: IMDB_NAME_BASIC
+      - name: IMDB_PRINCIPAL
+      - name: IMDB_TITLE_AKAS
+      - name: IMDB_TITLE_EPISODE
+      - name: IMDB_TITLE_RATING
+      - name: IMDB_TITLE_BASIC
+      - name: IMDB_FRANCHISE
+      - name: IMDB_FRANCHISE_RELEASE
+      - name: IMDB_FRANCHISE_RELEASE_TITLE
+      - name: IMDB_BRAND
+      - name: IMDB_BRAND_RELEASE
+      - name: IMDB_BRAND_RELEASE_TITLE
+      - name: ACADEMY_AWARD_NOMINATION

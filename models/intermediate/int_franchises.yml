@@ -1,0 +1,109 @@
+version: 2
+models:
+  - name: int_franchises
+    columns:
+      - name: tmdb_id
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: title
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: release_date
+        description: ""
+        meta:
+          dimension:
+            type: date
+      - name: overview
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: tagline
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: keywords
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: runtime
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: vote_average
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: revenue
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: budget
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: director
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: writer
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: actors
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: awards
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: production
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: dvd
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: imdb_rating
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: metascore
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: imdb_votes
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: box_office
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: genre_names
+        description: ""
+        meta:
+          dimension:
+            type: string
