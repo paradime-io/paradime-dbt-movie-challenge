@@ -117,7 +117,7 @@ I've learnt that the movie industry is very big and constantly evolving. The age
 
 Women are not well represented amongst directors, but many of the most successful actors of the 21st century to date are female.
 
-Before this challenge, I had very limited experience with DBT, had never written a SPARQL query, and had never used Paradime. So the greatest outcome for me has been gaining new skills whilst also satisfying my curiosity about the movie industry!
+Before this challenge, I had very limited experience with dbt, had never written a SPARQL query, and had never used Paradime. So the greatest outcome for me has been gaining new skills whilst also satisfying my curiosity about the movie industry!
 
 
 
