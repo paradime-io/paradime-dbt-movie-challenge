@@ -1,6 +1,5 @@
--- One row per person in the resulting table, including:
--- all relevant fields from dwh_movie_people
--- any summary data aggregated on a per-person basis from other tables, eg. dwh_movies
+-- One row per movie-country combination in the resulting table including
+-- all relevant fields from dwh_movies
 
 with movie_countries as (
     select 
